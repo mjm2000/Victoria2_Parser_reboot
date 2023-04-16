@@ -1,0 +1,5 @@
+# dune init project vic2parser_reboot
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/jimmy/projects/vic2parser_reboot
+# Auto-detected concurrency: 4

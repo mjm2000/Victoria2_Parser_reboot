@@ -1,0 +1,4 @@
+(executable
+ (public_name vic2parser_reboot)
+ (name main)
+ (libraries vic2parser_reboot))
