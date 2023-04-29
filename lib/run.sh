@@ -1,1 +1,1 @@
-utop lexer.ml
+cd ../bin && sh run.sh
