@@ -1,13 +1,234 @@
-type lexems=
-|Keyword of string
-|Bool of bool 
-|Int of string
-|Float of string
-|String of string 
+type lexem_type =
+|KEYWORD 
+|BOOL  
+|INT 
+|FLOAT 
+|STRING
 |EQ
 |LB
 |RB
-|Tag of string 
-|FROM
-|THIS
+|TAG  
+|SCOPE
+|CONDITION
 
+type condition = 
+| ACCEPTED_CULTURE of string
+| ADMINISTRATION_SPENDING of int
+| AGREE_WITH_RULING_PARTY of float
+| AI of bool
+| ALLIANCE_WITH of string
+| ALLOW_MULTIPLE_INSTANCES of bool
+| AND of condition
+| AVERAGE_CONSCIOUSNESS of float
+| AVERAGE_MILITANCY of float
+| BADBOY of float
+| BIG_PRODUCER of string
+| BLOCKADE of int
+| BRIGADES_COMPARE of float
+| CAN_BUILD_FACTORY of bool
+| CAN_BUILD_FACTORY_IN_CAPITAL_STATE of string
+| CAN_CREATE_VASSALS of bool
+| CAN_NATIONALIZE of bool
+| CAPITAL of string
+| CASH_RESERVES of int
+| CASUS_BELLI of string
+| CHECK_VARIABLE of string * int
+| CITIZENSHIP_POLICY of string
+| CIVILIZATION_PROGRESS of float
+| CIVILIZED of bool
+| COLONIAL_NATION of bool
+| CONSCIOUSNESS of int
+| CONSTRUCTING_CB_PROGRESS of float
+| CONSTRUCTING_CB_TYPE of string
+| CONTINENT of string
+| CONTROLLED_BY of string
+| CONTROLLED_BY_REBELS of bool
+| CONTROLS of string
+| COUNTRY_UNITS_IN_PROVINCE of string
+| COUNTRY_UNITS_IN_STATE of string
+| CRIME_FIGHTING of int
+| CRIME_HIGHER_THAN_EDUCATION of bool
+| CRISIS_EXIST of bool
+| CULTURE of string
+| CULTURE_HAS_UNION_TAG of bool
+| DIPLOMATIC_INFLUENCE of string * int
+| ECONOMIC_POLICY of string
+| ECONOMIC_REFORM_NAME of string
+| EDUCATION_SPENDING of int
+| ELECTION of bool
+| EMPTY of bool
+| EVERYDAY_NEEDS of int
+| EXISTS of string
+| FIRE_ONLY_ONCE of bool
+| FLASHPOINT_TENSION of int
+| GOVERNMENT of string
+| GREAT_WARS_ENABLED of bool
+| HAS_BUILDING of string
+| HAS_COUNTRY_FLAG of string
+| HAS_COUNTRY_MODIFIER of string
+| HAS_CRIME of string
+| HAS_CULTURAL_SPHERE of bool
+| HAS_CULTURE_CORE of bool
+| HAS_EMPTY_ADJACENT_PROVINCE of bool
+| HAS_EMPTY_ADJACENT_STATE of bool
+| HAS_FACTORIES of bool
+| HAS_FLASHPOINT of bool
+| HAS_GLOBAL_FLAG of string
+| HAS_LEADER of string
+| HAS_NATIONAL_MINORITY of bool
+| HAS_POP_CULTURE of string
+| HAS_POP_RELIGION of string
+| HAS_POP_TYPE of string
+| HAS_PROVINCE_FLAG of string
+| HAS_PROVINCE_MODIFIER of string
+| HAS_RECENTLY_LOST_WAR of bool
+| HAS_RECENT_IMIGRATION of float
+| HAS_UNCLAIMED_CORES of bool
+| HAVE_CORE_IN of string
+| IDEOLOGY of string
+| IMMEDIATE of string
+| INDUSTRIAL_SCORE of int
+| INVENTION of string
+| INVOLVED_IN_CRISIS of bool
+| IN_DEFAULT of bool
+| IN_SPHERE of string
+| IS_ACCEPTED_CULTURE of bool
+| IS_BLOCKADED of bool
+| IS_CANAL_ENABLED of string
+| IS_CAPITAL of bool
+| IS_CLAIM_CRISIS of bool
+| IS_COASTAL of bool
+| IS_COLONIAL of bool
+| IS_COLONIAL_CRISIS of bool
+| IS_CORE of string
+| IS_CULTURAL_UNION_BOOL of bool
+| IS_CULTURAL_UNION_TAG of string
+| IS_CULTURE_GROUP of string
+| IS_DISARMED of bool
+| IS_GREATER_POWER of bool
+| IS_IDEOLOGY_ENABLED of string
+| IS_INDEPENDANT of bool
+| IS_LIBERATION_CRISIS of bool
+| IS_MOBILISED of bool
+| IS_NEXT_REFORM of string
+| IS_OUR_VASSAL of string
+| IS_OVERSEAS of bool
+| IS_POSSIBLE_VASSAL of string
+| IS_PRIMARY_CULTURE of bool
+| IS_SECONDARY_POWER of bool
+| IS_SPHERE_LEADER_OF of string
+| IS_STATE_CAPITAL of bool
+| IS_STATE_RELIGION of bool
+| IS_SUBSTATE of bool
+| IS_TRIGGERED_ONLY of bool
+| IS_VASSAL of bool
+| LIFE_NEEDS of int
+| LIFE_RATING of int
+| LITERACY of int
+| LOST_NATIONAL of int
+| LUXURY_NEEDS of int
+| MAJOR of string
+| MIDDLE_STRATA_EVERYDAY_NEEDS of float
+| MIDDLE_STRATA_LIFE_NEEDS of float
+| MIDDLE_STRATA_LUXURY_NEEDS of float
+| MIDDLE_TAX of int
+| MILITANCY of int
+| MILITARY_ACCESS of string
+| MILITARY_REFORM_NAME of string
+| MILITARY_SCORE_NAME of string
+| MILITARY_SCORE_NUMBER of int
+| MILITARY_SPENDING of int
+| MINORITIES of bool
+| MONEY of int
+| MONTH of int
+| NATIONALVALUE of string
+| NATIONAL_PROVINCES_OCCUPIED of int
+| NEIGHBOUR of string
+| NOT of condition
+| NUMBER_OF_STATES of int
+| NUM_OF_ALLIES of int
+| NUM_OF_CITIES of int
+| NUM_OF_PORTS of int
+| NUM_OF_REVOLTS of int
+| NUM_OF_SUBSTATES of int
+| NUM_OF_VASSALS of int
+| NUM_OF_VASSALS_NO_SUBSTATES of int
+| OR of  condition
+| OWNED_BY of string
+| OWNS of string
+| PART_OF_SPHERE of bool
+| POLITICAL_MOVEMENT of bool
+| POLITICAL_MOVEMENT_STRENGTH of int
+| POLITICAL_REFORM_NAME of string
+| POLITICAL_REFORM_WANT_NUMBER of int
+| POLITICAL_REFORM_WANT_STRING of string
+| POOR_STRATA_EVERYDAY_NEEDS of float
+| POOR_STRATA_LIFE_NEEDS of float
+| POOR_STRATA_LUXURY_NEEDS of float
+| POOR_TAX of int
+| POP_MAJORITY_CULTURE of string
+| POP_MAJORITY_IDEOLOGY of string
+| POP_MAJORITY_ISSUE of string
+| POP_MAJORITY_RELIGION of string
+| POP_MILITANCY of int
+| PORT of bool
+| PRESTIGE of int
+| PRIMARY_CULTURE of string
+| PRODUCES of string
+| PROVINCE_CONTROL_DAYS of float
+| PROVINCE_ID of string
+| RANK of int
+| REBEL_POWER_FRACTION of int
+| RECRUITED_PERCENTAGE of int
+| REGION of string
+| RELATION of string
+| RELIGION of string
+| RELIGIOUS_POLICY of string
+| REVOLT_PERCENTAGE of int
+| RICH_STRATA_EVERYDAY_NEEDS of float
+| RICH_STRATA_LIFE_NEEDS of float
+| RICH_STRATA_LUXURY_NEEDS of float
+| RICH_TAX of int
+| RULING_PARTY of string
+| RULING_PARTY_IDEOLOGY of string
+| SLAVERY of string
+| SOCIAL_MOVEMENT of bool
+| SOCIAL_MOVEMENT_STRENGTH of string
+| SOCIAL_REFORM_NAME of string
+| SOCIAL_REFORM_WANT_number of int
+| SOCIAL_REFORM_WANT_name of string
+| SOCIAL_SPENDING of int
+| STATE_ID of string
+| STRATA of string
+| STRONGER_ARMY_THAN of string
+| SUBSTATE_OF of string
+| TAG of string
+| TERRAIN of string
+| THIS_CULTURE_UNION of string
+| TOTAL_AMOUNT_OF_DIVISIONS of int
+| TOTAL_AMOUNT_OF_SHIPS of int
+| TOTAL_DEFENSIVES of int
+| TOTAL_NUM_OF_PORTS of int
+| TOTAL_OFFENSIVES of int
+| TOTAL_OF_OURS_SUNK of int
+| TOTAL_POPS of string
+| TOTAL_SEA_BATTLES of int
+| TOTAL_SUNK_BY_US of int
+| TRADE_GOODS of string
+| TRADE_POLICY of string
+| TRUCE_WITH of string
+| TYPE of string
+| UNEMPLOYMENT of int
+| UNEMPLOYMENT_BY_TYPE of string
+| UNITS_IN_PROVINCE of int
+| UNIT_HAS_LEADER of bool
+| UNIT_IN_BATTLE of bool
+| UPPER_HOUSE of string
+| VASSAL_OF of string
+| WAR of bool
+| WAR_EXHAUSTION of int
+| WAR_POLICY of string
+| WAR_SCORE of int
+| WAR_WITH of string
+| WORK_AVAILABLE of string
+| YEAR of int

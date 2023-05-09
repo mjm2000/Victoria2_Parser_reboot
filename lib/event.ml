@@ -1,50 +1,14 @@
 open Types
+open Trigger
 type time_unit = 
     | YEAR of int 
     | MONTH of int 
     | DAY of int 
     | Modifier 
-type country_cond = 
-    |TIME of time_unit
-    |NOT of country_cond list 
-    |AND of country_cond list 
-    |OR of country_cond list
-    |ALL_CORE of country_cond list
-    |ANY_CORE of country_cond list
-    |ANY_GREATER_POWER of country_cond list
-    |ANY_NEIGHBOR_COUNTRY of country_cond list
-    |ANY_OWNED_PROVINCE of country_cond list
-    |ANY_POP of country_cond list
-    |ANY_SPHERE_MEMBER of country_cond list
-    |ANY_STATE of country_cond list
-    |ANY_SUBSTATE of country_cond list
-    |CAPITAL_SCOPE of country_cond list
-    |CULTURAL_UNION of country_cond list
-    |OVERLORD of country_cond list
-    |SPHERE_OWNER of country_cond list
-    |WAR_COUNTRIES of country_cond list
-    |COUNTRY_TAG of string * country_cond list
-    |REGION_NAME of string * country_cond list
-    | MAJOR
 
-   
 
-type province_cond = 
-    |NOT of province_cond list 
-    |AND of province_cond  list 
-    |OR of province_cond list
-    |ANY_CORE of province_cond list
-    |ANY_NEIGHBOR_PROVINCE of province_cond list
-    |ANY_POP of province_cond list
-    |CONTROLLER of province_cond list
-    |OWNER of province_cond list
-    |STATE_SCOPE of province_cond list
-(*
-type pop_cond 
-    location
-    country
-    cultural_union
-*)
+
+
 type country_effect = 
     |Prestige of int 
 type province_effect = 
@@ -53,9 +17,8 @@ type province_effect =
 type mtth = TIME of time_unit 
 
 
-
 type event_items = 
-    |SYNTAX_ERROR of string 
+    |SYNTAX_ERROR of int * int * lexem_type * lexem_type
     |ID of int 
     |TITLE of string
     |DESC of string
@@ -68,59 +31,71 @@ type event_items =
     |CHECK_VARIABLE of bool
     |HAS_GLOBAL_FLAG of bool
     |IS_CANAL_ENABLED of bool
+    |MAJOR of bool
     |NEWS of bool 
     |NEWDS of string 
     |NEWSDM of string 
     |NEWSDL of string 
-    |COUNTRY_TRIGGER of country_cond list 
-    |PROVINCE_TRIGGER of province_cond list
+    |COUNTRY_TRIGGER of condition  list 
+    |PROVINCE_TRIGGER of condition list
     |MTTH of time_unit list    
     |COUNTRY_OPTION of string * country_effect list
     |PROVINCE_OPTION of string * province_effect list
-
-
-let handle_type required_type received_type =  
-    match received_type,required_type with
-    |Float(_) ,   "float"   
-    |Int(_) ,     "int" 
-    |String(_) ,  "string" 
-    |Bool(_) ,    "bool" 
-    |Keyword(_) , "keyword" 
-    |FROM ,       "from" 
-    |THIS ,       "this" 
-    |Tag(_) ,     "tag"-> None  
-    |v,type_val   ->   
-            Some (Printf.sprintf "Expected type:%s Received %s" (Lexer.lexem_to_str v) type_val)
-
-
-
-
-
 type event_type = PROVINCE | COUNTRY
-let rec read_event_body lexems  out event_type = 
+
+
+
+let event lexems event_type =
+let rec read_event_body lexems out = 
     match lexems with 
-    |(RB,_)::ls -> out,ls
-    | (Keyword("id"),_)::(EQ,_)::(value,(x2,y2))::rest -> 
-         let expr = match (handle_type "int" value ) with  
-        |Some syntax_error -> SYNTAX_ERROR(Printf.sprintf "Error %i:%i: %s" x2 y2 syntax_error) 
-        |None -> ID(int_of_string(Lexer.lexem_to_value value) ) 
-        in
-        read_event_body  rest (expr::out) event_type
-   
+    |(RB,_,_)::ls -> out,ls
+    |(KEYWORD,("id"),_)::(EQ,_,_)::(INT, value,(x,y))::rest -> 
+        let v = ID(int_of_string value) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("id"),_)::(EQ,_,_)::(type_value, value,(x,y))::rest -> 
+        let v = SYNTAX_ERROR(x,y,INT,type_value) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("title"),_)::(EQ,_,_)::(STRING,value,(x,y))::rest -> 
+        let v = TITLE ( value) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("title"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest ->
+        let v = SYNTAX_ERROR (x,y,STRING,type_value) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("desc"),_)::(EQ,_,_)::(STRING,value,(x,y))::rest -> 
+        let v = DESC ( value) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("desc"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest -> 
+        let v = SYNTAX_ERROR (x,y,STRING,type_value) in
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("major"),_)::(EQ,_,_)::(STRING,value,(x,y))::rest -> 
+        let v = MAJOR(bool_of_string (value)) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("major"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest -> 
+        let v = SYNTAX_ERROR (x,y,BOOL,type_value) in
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("is_triggered_only"),_)::(EQ,_,_)::(BOOL,value,(x,y))::rest -> 
+        let v = IS_TRIGGERED_ONLY(bool_of_string (value) ) in 
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("is_triggered_only"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest -> 
+        let v = SYNTAX_ERROR (x,y,BOOL,type_value) in
+        read_event_body  rest (v::out) event_type
+    |(KEYWORD,("trigger"),_)::(EQ,_,_)::(LB,_,_)::rest -> 
+        let v = TRIGGER (bool_of_string (value)) in 
+        read_event_body  rest (v::out) event_type
     |_-> out,lexems
+in  
+    read_event_body lexems [] 
 
-
-let read_events lexems =  
+let read_events lexems =   
     let rec read_event_r lexems out =  
         match lexems with
-        |(Keyword("province_event"),_)::(EQ,_)::(LB,_)::ls -> 
+        |(KEYWORD,("province_event"),_)::(EQ,_,_)::(LB,_)::ls -> 
+            let event,rest = read_event_body ls [] PROVINCE in
+            read_event_r rest (event::out)  
+        |(KEYWORD,("country_event"),_)::ls -> 
+            let event,rest = read_event_body ls [] COUNTRY in
+            read_event_r rest (event::out)  
 
-                let event,rest = read_event_body ls [] PROVINCE in
-                read_event_r rest (event::out)  
-        |(Keyword("country_event"),_)::ls -> 
-                let event,rest = read_event_body ls [] COUNTRY in
-                    read_event_r rest (event::out)  
-
-        |_->out
+        |_->out 
     in
     read_event_r lexems [] 

@@ -10,19 +10,6 @@
 !_TAG_FIELD_DESCRIPTION	typeref	/Type and name of a variable or typedef/
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_KIND_DESCRIPTION!DTD	E,entity	/entities/
-!_TAG_KIND_DESCRIPTION!DTD	a,attribute	/attributes/
-!_TAG_KIND_DESCRIPTION!DTD	e,element	/elements/
-!_TAG_KIND_DESCRIPTION!DTD	n,notation	/notations/
-!_TAG_KIND_DESCRIPTION!DTD	p,parameterEntity	/parameter entities/
-!_TAG_KIND_DESCRIPTION!Lua	f,function	/functions/
-!_TAG_KIND_DESCRIPTION!Markdown	S,subsection	/level 2 sections/
-!_TAG_KIND_DESCRIPTION!Markdown	T,l4subsection	/level 4 sections/
-!_TAG_KIND_DESCRIPTION!Markdown	c,chapter	/chapters/
-!_TAG_KIND_DESCRIPTION!Markdown	n,footnote	/footnotes/
-!_TAG_KIND_DESCRIPTION!Markdown	s,section	/sections/
-!_TAG_KIND_DESCRIPTION!Markdown	t,subsubsection	/level 3 sections/
-!_TAG_KIND_DESCRIPTION!Markdown	u,l5subsection	/level 5 sections/
 !_TAG_KIND_DESCRIPTION!OCaml	C,Constructor	/A constructor/
 !_TAG_KIND_DESCRIPTION!OCaml	M,module	/Module or functor/
 !_TAG_KIND_DESCRIPTION!OCaml	c,class	/classes/
@@ -41,43 +28,326 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
-!_TAG_PARSER_VERSION!DTD	0.0	/current.age/
-!_TAG_PARSER_VERSION!Lua	0.0	/current.age/
-!_TAG_PARSER_VERSION!Markdown	0.0	/current.age/
 !_TAG_PARSER_VERSION!OCaml	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/jimmy/projects/vic2parser_reboot/lib/	//
+!_TAG_PROC_CWD	/home/jimmy/projects/victoria_2_parser/lib/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	6.0.0	/p6.0.20221218.0/
-!_TAG_ROLE_DESCRIPTION!DTD!element	attOwner	/attributes owner/
-!_TAG_ROLE_DESCRIPTION!DTD!parameterEntity	condition	/conditions/
-!_TAG_ROLE_DESCRIPTION!DTD!parameterEntity	elementName	/element names/
-!_TAG_ROLE_DESCRIPTION!DTD!parameterEntity	partOfAttDef	/part of attribute definition/
 !_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
 !_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
-Bool	types.ml	/^|Bool of bool $/;"	C	type:lexems
-EQ	types.ml	/^|EQ$/;"	C	type:lexems
-FROM	types.ml	/^|FROM$/;"	C	type:lexems
-Float	types.ml	/^|Float of string$/;"	C	type:lexems
-Handle	handle.ml	/^$/;"	M
-Historical Flavour Mod	HFM/README.md	/^# Historical Flavour Mod$/;"	c
-Int	types.ml	/^|Int of string$/;"	C	type:lexems
-Keyword	types.ml	/^|Keyword of string$/;"	C	type:lexems
-LB	types.ml	/^|LB$/;"	C	type:lexems
+ACCEPTED_CULTURE	types.ml	/^| ACCEPTED_CULTURE of string$/;"	C	type:condition
+ADMINISTRATION_SPENDING	types.ml	/^| ADMINISTRATION_SPENDING of int$/;"	C	type:condition
+AGREE_WITH_RULING_PARTY	types.ml	/^| AGREE_WITH_RULING_PARTY of float$/;"	C	type:condition
+AI	types.ml	/^| AI of bool$/;"	C	type:condition
+ALLIANCE_WITH	types.ml	/^| ALLIANCE_WITH of string$/;"	C	type:condition
+ALLOW_MULTIPLE_INSTANCES	event.ml	/^    |ALLOW_MULTIPLE_INSTANCES of bool$/;"	C	type:event_items
+ALLOW_MULTIPLE_INSTANCES	types.ml	/^| ALLOW_MULTIPLE_INSTANCES of bool$/;"	C	type:condition
+ALL_CORE	event.ml	/^    |ALL_CORE of country_cond list$/;"	C	type:country_cond
+AND	event.ml	/^    |AND of country_cond list $/;"	C	type:country_cond
+AND	types.ml	/^| AND of condition$/;"	C	type:condition
+ANY_CORE	event.ml	/^    |ANY_CORE of country_cond list$/;"	C	type:country_cond
+ANY_GREATER_POWER	event.ml	/^    |ANY_GREATER_POWER of country_cond list$/;"	C	type:country_cond
+ANY_NEIGHBOR_COUNTRY	event.ml	/^    |ANY_NEIGHBOR_COUNTRY of country_cond list$/;"	C	type:country_cond
+ANY_OWNED_PROVINCE	event.ml	/^    |ANY_OWNED_PROVINCE of country_cond list$/;"	C	type:country_cond
+ANY_POP	event.ml	/^    |ANY_POP of country_cond list$/;"	C	type:country_cond
+ANY_SPHERE_MEMBER	event.ml	/^    |ANY_SPHERE_MEMBER of country_cond list$/;"	C	type:country_cond
+ANY_STATE	event.ml	/^    |ANY_STATE of country_cond list$/;"	C	type:country_cond
+ANY_SUBSTATE	event.ml	/^    |ANY_SUBSTATE of country_cond list$/;"	C	type:country_cond
+AVERAGE_CONSCIOUSNESS	types.ml	/^| AVERAGE_CONSCIOUSNESS of float$/;"	C	type:condition
+AVERAGE_MILITANCY	types.ml	/^| AVERAGE_MILITANCY of float$/;"	C	type:condition
+BADBOY	types.ml	/^| BADBOY of float$/;"	C	type:condition
+BIG_PRODUCER	types.ml	/^| BIG_PRODUCER of string$/;"	C	type:condition
+BLOCKADE	types.ml	/^| BLOCKADE of int$/;"	C	type:condition
+BOOL	types.ml	/^|BOOL  $/;"	C	type:lexem_type
+BRIGADES_COMPARE	types.ml	/^| BRIGADES_COMPARE of float$/;"	C	type:condition
+CAN_BUILD_FACTORY	types.ml	/^| CAN_BUILD_FACTORY of bool$/;"	C	type:condition
+CAN_BUILD_FACTORY_IN_CAPITAL_STATE	types.ml	/^| CAN_BUILD_FACTORY_IN_CAPITAL_STATE of string$/;"	C	type:condition
+CAN_CREATE_VASSALS	types.ml	/^| CAN_CREATE_VASSALS of bool$/;"	C	type:condition
+CAN_NATIONALIZE	types.ml	/^| CAN_NATIONALIZE of bool$/;"	C	type:condition
+CAPITAL	types.ml	/^| CAPITAL of string$/;"	C	type:condition
+CAPITAL_SCOPE	event.ml	/^    |CAPITAL_SCOPE of country_cond list$/;"	C	type:country_cond
+CASH_RESERVES	types.ml	/^| CASH_RESERVES of int$/;"	C	type:condition
+CASUS_BELLI	types.ml	/^| CASUS_BELLI of string$/;"	C	type:condition
+CHECK_VARIABLE	event.ml	/^    |CHECK_VARIABLE of bool$/;"	C	type:event_items
+CHECK_VARIABLE	types.ml	/^| CHECK_VARIABLE of string * int$/;"	C	type:condition
+CITIZENSHIP_POLICY	types.ml	/^| CITIZENSHIP_POLICY of string$/;"	C	type:condition
+CIVILIZATION_PROGRESS	types.ml	/^| CIVILIZATION_PROGRESS of float$/;"	C	type:condition
+CIVILIZED	types.ml	/^| CIVILIZED of bool$/;"	C	type:condition
+COLONIAL_NATION	types.ml	/^| COLONIAL_NATION of bool$/;"	C	type:condition
+CONDITION	types.ml	/^|CONDITION$/;"	C	type:lexem_type
+CONSCIOUSNESS	types.ml	/^| CONSCIOUSNESS of int$/;"	C	type:condition
+CONSTRUCTING_CB_PROGRESS	types.ml	/^| CONSTRUCTING_CB_PROGRESS of float$/;"	C	type:condition
+CONSTRUCTING_CB_TYPE	types.ml	/^| CONSTRUCTING_CB_TYPE of string$/;"	C	type:condition
+CONTINENT	types.ml	/^| CONTINENT of string$/;"	C	type:condition
+CONTROLLED_BY	types.ml	/^| CONTROLLED_BY of string$/;"	C	type:condition
+CONTROLLED_BY_REBELS	types.ml	/^| CONTROLLED_BY_REBELS of bool$/;"	C	type:condition
+CONTROLS	types.ml	/^| CONTROLS of string$/;"	C	type:condition
+COUNTRY	event.ml	/^type event_type = PROVINCE | COUNTRY$/;"	C	type:event_type
+COUNTRY_IMMEDIATE	event.ml	/^    |COUNTRY_IMMEDIATE of bool$/;"	C	type:event_items
+COUNTRY_OPTION	event.ml	/^    |COUNTRY_OPTION of string * country_effect list$/;"	C	type:event_items
+COUNTRY_TAG	event.ml	/^    |COUNTRY_TAG of string * country_cond list$/;"	C	type:country_cond
+COUNTRY_TRIGGER	event.ml	/^    |COUNTRY_TRIGGER of condition  list $/;"	C	type:event_items
+COUNTRY_UNITS_IN_PROVINCE	types.ml	/^| COUNTRY_UNITS_IN_PROVINCE of string$/;"	C	type:condition
+COUNTRY_UNITS_IN_STATE	types.ml	/^| COUNTRY_UNITS_IN_STATE of string$/;"	C	type:condition
+CRIME_FIGHTING	types.ml	/^| CRIME_FIGHTING of int$/;"	C	type:condition
+CRIME_HIGHER_THAN_EDUCATION	types.ml	/^| CRIME_HIGHER_THAN_EDUCATION of bool$/;"	C	type:condition
+CRISIS_EXIST	types.ml	/^| CRISIS_EXIST of bool$/;"	C	type:condition
+CULTURAL_UNION	event.ml	/^    |CULTURAL_UNION of country_cond list$/;"	C	type:country_cond
+CULTURE	types.ml	/^| CULTURE of string$/;"	C	type:condition
+CULTURE_HAS_UNION_TAG	types.ml	/^| CULTURE_HAS_UNION_TAG of bool$/;"	C	type:condition
+DAY	event.ml	/^    | DAY of int $/;"	C	type:time_unit
+DESC	event.ml	/^    |DESC of string$/;"	C	type:event_items
+DIPLOMATIC_INFLUENCE	types.ml	/^| DIPLOMATIC_INFLUENCE of string * int$/;"	C	type:condition
+ECONOMIC_POLICY	types.ml	/^| ECONOMIC_POLICY of string$/;"	C	type:condition
+ECONOMIC_REFORM_NAME	types.ml	/^| ECONOMIC_REFORM_NAME of string$/;"	C	type:condition
+EDUCATION_SPENDING	types.ml	/^| EDUCATION_SPENDING of int$/;"	C	type:condition
+ELECTION	types.ml	/^| ELECTION of bool$/;"	C	type:condition
+EMPTY	types.ml	/^| EMPTY of bool$/;"	C	type:condition
+EQ	types.ml	/^|EQ$/;"	C	type:lexem_type
+EVERYDAY_NEEDS	types.ml	/^| EVERYDAY_NEEDS of int$/;"	C	type:condition
+EXISTS	types.ml	/^| EXISTS of string$/;"	C	type:condition
+Event	event.ml	/^open Types$/;"	M
+FIRE_ONLY_ONCE	event.ml	/^    |FIRE_ONLY_ONCE of bool$/;"	C	type:event_items
+FIRE_ONLY_ONCE	types.ml	/^| FIRE_ONLY_ONCE of bool$/;"	C	type:condition
+FLASHPOINT_TENSION	types.ml	/^| FLASHPOINT_TENSION of int$/;"	C	type:condition
+FLOAT	types.ml	/^|FLOAT $/;"	C	type:lexem_type
+GOVERNMENT	types.ml	/^| GOVERNMENT of string$/;"	C	type:condition
+GREAT_WARS_ENABLED	types.ml	/^| GREAT_WARS_ENABLED of bool$/;"	C	type:condition
+HAS_BUILDING	types.ml	/^| HAS_BUILDING of string$/;"	C	type:condition
+HAS_COUNTRY_FLAG	types.ml	/^| HAS_COUNTRY_FLAG of string$/;"	C	type:condition
+HAS_COUNTRY_MODIFIER	types.ml	/^| HAS_COUNTRY_MODIFIER of string$/;"	C	type:condition
+HAS_CRIME	types.ml	/^| HAS_CRIME of string$/;"	C	type:condition
+HAS_CULTURAL_SPHERE	types.ml	/^| HAS_CULTURAL_SPHERE of bool$/;"	C	type:condition
+HAS_CULTURE_CORE	types.ml	/^| HAS_CULTURE_CORE of bool$/;"	C	type:condition
+HAS_EMPTY_ADJACENT_PROVINCE	types.ml	/^| HAS_EMPTY_ADJACENT_PROVINCE of bool$/;"	C	type:condition
+HAS_EMPTY_ADJACENT_STATE	types.ml	/^| HAS_EMPTY_ADJACENT_STATE of bool$/;"	C	type:condition
+HAS_FACTORIES	types.ml	/^| HAS_FACTORIES of bool$/;"	C	type:condition
+HAS_FLASHPOINT	types.ml	/^| HAS_FLASHPOINT of bool$/;"	C	type:condition
+HAS_GLOBAL_FLAG	event.ml	/^    |HAS_GLOBAL_FLAG of bool$/;"	C	type:event_items
+HAS_GLOBAL_FLAG	types.ml	/^| HAS_GLOBAL_FLAG of string$/;"	C	type:condition
+HAS_LEADER	types.ml	/^| HAS_LEADER of string$/;"	C	type:condition
+HAS_NATIONAL_MINORITY	types.ml	/^| HAS_NATIONAL_MINORITY of bool$/;"	C	type:condition
+HAS_POP_CULTURE	types.ml	/^| HAS_POP_CULTURE of string$/;"	C	type:condition
+HAS_POP_RELIGION	types.ml	/^| HAS_POP_RELIGION of string$/;"	C	type:condition
+HAS_POP_TYPE	types.ml	/^| HAS_POP_TYPE of string$/;"	C	type:condition
+HAS_PROVINCE_FLAG	types.ml	/^| HAS_PROVINCE_FLAG of string$/;"	C	type:condition
+HAS_PROVINCE_MODIFIER	types.ml	/^| HAS_PROVINCE_MODIFIER of string$/;"	C	type:condition
+HAS_RECENTLY_LOST_WAR	types.ml	/^| HAS_RECENTLY_LOST_WAR of bool$/;"	C	type:condition
+HAS_RECENT_IMIGRATION	types.ml	/^| HAS_RECENT_IMIGRATION of float$/;"	C	type:condition
+HAS_UNCLAIMED_CORES	types.ml	/^| HAS_UNCLAIMED_CORES of bool$/;"	C	type:condition
+HAVE_CORE_IN	types.ml	/^| HAVE_CORE_IN of string$/;"	C	type:condition
+ID	event.ml	/^    |ID of int $/;"	C	type:event_items
+IDEOLOGY	types.ml	/^| IDEOLOGY of string$/;"	C	type:condition
+IMMEDIATE	types.ml	/^| IMMEDIATE of string$/;"	C	type:condition
+INDUSTRIAL_SCORE	types.ml	/^| INDUSTRIAL_SCORE of int$/;"	C	type:condition
+INT	types.ml	/^|INT $/;"	C	type:lexem_type
+INVENTION	types.ml	/^| INVENTION of string$/;"	C	type:condition
+INVOLVED_IN_CRISIS	types.ml	/^| INVOLVED_IN_CRISIS of bool$/;"	C	type:condition
+IN_DEFAULT	types.ml	/^| IN_DEFAULT of bool$/;"	C	type:condition
+IN_SPHERE	types.ml	/^| IN_SPHERE of string$/;"	C	type:condition
+IS_ACCEPTED_CULTURE	types.ml	/^| IS_ACCEPTED_CULTURE of bool$/;"	C	type:condition
+IS_BLOCKADED	types.ml	/^| IS_BLOCKADED of bool$/;"	C	type:condition
+IS_CANAL_ENABLED	event.ml	/^    |IS_CANAL_ENABLED of bool$/;"	C	type:event_items
+IS_CANAL_ENABLED	types.ml	/^| IS_CANAL_ENABLED of string$/;"	C	type:condition
+IS_CAPITAL	types.ml	/^| IS_CAPITAL of bool$/;"	C	type:condition
+IS_CLAIM_CRISIS	types.ml	/^| IS_CLAIM_CRISIS of bool$/;"	C	type:condition
+IS_COASTAL	types.ml	/^| IS_COASTAL of bool$/;"	C	type:condition
+IS_COLONIAL	types.ml	/^| IS_COLONIAL of bool$/;"	C	type:condition
+IS_COLONIAL_CRISIS	types.ml	/^| IS_COLONIAL_CRISIS of bool$/;"	C	type:condition
+IS_CORE	types.ml	/^| IS_CORE of string$/;"	C	type:condition
+IS_CULTURAL_UNION_BOOL	types.ml	/^| IS_CULTURAL_UNION_BOOL of bool$/;"	C	type:condition
+IS_CULTURAL_UNION_TAG	types.ml	/^| IS_CULTURAL_UNION_TAG of string$/;"	C	type:condition
+IS_CULTURE_GROUP	types.ml	/^| IS_CULTURE_GROUP of string$/;"	C	type:condition
+IS_DISARMED	types.ml	/^| IS_DISARMED of bool$/;"	C	type:condition
+IS_GREATER_POWER	types.ml	/^| IS_GREATER_POWER of bool$/;"	C	type:condition
+IS_IDEOLOGY_ENABLED	types.ml	/^| IS_IDEOLOGY_ENABLED of string$/;"	C	type:condition
+IS_INDEPENDANT	types.ml	/^| IS_INDEPENDANT of bool$/;"	C	type:condition
+IS_LIBERATION_CRISIS	types.ml	/^| IS_LIBERATION_CRISIS of bool$/;"	C	type:condition
+IS_MOBILISED	types.ml	/^| IS_MOBILISED of bool$/;"	C	type:condition
+IS_NEXT_REFORM	types.ml	/^| IS_NEXT_REFORM of string$/;"	C	type:condition
+IS_OUR_VASSAL	types.ml	/^| IS_OUR_VASSAL of string$/;"	C	type:condition
+IS_OVERSEAS	types.ml	/^| IS_OVERSEAS of bool$/;"	C	type:condition
+IS_POSSIBLE_VASSAL	types.ml	/^| IS_POSSIBLE_VASSAL of string$/;"	C	type:condition
+IS_PRIMARY_CULTURE	types.ml	/^| IS_PRIMARY_CULTURE of bool$/;"	C	type:condition
+IS_SECONDARY_POWER	types.ml	/^| IS_SECONDARY_POWER of bool$/;"	C	type:condition
+IS_SPHERE_LEADER_OF	types.ml	/^| IS_SPHERE_LEADER_OF of string$/;"	C	type:condition
+IS_STATE_CAPITAL	types.ml	/^| IS_STATE_CAPITAL of bool$/;"	C	type:condition
+IS_STATE_RELIGION	types.ml	/^| IS_STATE_RELIGION of bool$/;"	C	type:condition
+IS_SUBSTATE	types.ml	/^| IS_SUBSTATE of bool$/;"	C	type:condition
+IS_TRIGGERED_ONLY	event.ml	/^    |IS_TRIGGERED_ONLY of bool$/;"	C	type:event_items
+IS_TRIGGERED_ONLY	types.ml	/^| IS_TRIGGERED_ONLY of bool$/;"	C	type:condition
+IS_VASSAL	types.ml	/^| IS_VASSAL of bool$/;"	C	type:condition
+KEYWORD	types.ml	/^|KEYWORD $/;"	C	type:lexem_type
+LB	types.ml	/^|LB$/;"	C	type:lexem_type
+LIFE_NEEDS	types.ml	/^| LIFE_NEEDS of int$/;"	C	type:condition
+LIFE_RATING	types.ml	/^| LIFE_RATING of int$/;"	C	type:condition
+LITERACY	types.ml	/^| LITERACY of int$/;"	C	type:condition
+LOST_NATIONAL	types.ml	/^| LOST_NATIONAL of int$/;"	C	type:condition
+LUXURY_NEEDS	types.ml	/^| LUXURY_NEEDS of int$/;"	C	type:condition
 Lexer	lexer.ml	/^open Types$/;"	M
-Parser	parser.ml	/^let v2_parser lexems = match lexems with$/;"	M
-RB	types.ml	/^|RB$/;"	C	type:lexems
-String	types.ml	/^|String of string $/;"	C	type:lexems
-Tag	types.ml	/^|Tag $/;"	C	type:lexems
-Types	types.ml	/^type lexems=$/;"	M
-lexem_to_str	handle.ml	/^let lexem_to_str lexem = (match lexem with $/;"	f
-lexems	types.ml	/^type lexems=$/;"	t
+MAJOR	event.ml	/^    |MAJOR of bool$/;"	C	type:event_items
+MAJOR	types.ml	/^| MAJOR of string$/;"	C	type:condition
+MIDDLE_STRATA_EVERYDAY_NEEDS	types.ml	/^| MIDDLE_STRATA_EVERYDAY_NEEDS of float$/;"	C	type:condition
+MIDDLE_STRATA_LIFE_NEEDS	types.ml	/^| MIDDLE_STRATA_LIFE_NEEDS of float$/;"	C	type:condition
+MIDDLE_STRATA_LUXURY_NEEDS	types.ml	/^| MIDDLE_STRATA_LUXURY_NEEDS of float$/;"	C	type:condition
+MIDDLE_TAX	types.ml	/^| MIDDLE_TAX of int$/;"	C	type:condition
+MILITANCY	types.ml	/^| MILITANCY of int$/;"	C	type:condition
+MILITARY_ACCESS	types.ml	/^| MILITARY_ACCESS of string$/;"	C	type:condition
+MILITARY_REFORM_NAME	types.ml	/^| MILITARY_REFORM_NAME of string$/;"	C	type:condition
+MILITARY_SCORE_NAME	types.ml	/^| MILITARY_SCORE_NAME of string$/;"	C	type:condition
+MILITARY_SCORE_NUMBER	types.ml	/^| MILITARY_SCORE_NUMBER of int$/;"	C	type:condition
+MILITARY_SPENDING	types.ml	/^| MILITARY_SPENDING of int$/;"	C	type:condition
+MINORITIES	types.ml	/^| MINORITIES of bool$/;"	C	type:condition
+MONEY	types.ml	/^| MONEY of int$/;"	C	type:condition
+MONTH	event.ml	/^    | MONTH of int $/;"	C	type:time_unit
+MONTH	types.ml	/^| MONTH of int$/;"	C	type:condition
+MTTH	event.ml	/^    |MTTH of time_unit list    $/;"	C	type:event_items
+Modifier	event.ml	/^    | Modifier $/;"	C	type:time_unit
+NATIONALVALUE	types.ml	/^| NATIONALVALUE of string$/;"	C	type:condition
+NATIONAL_PROVINCES_OCCUPIED	types.ml	/^| NATIONAL_PROVINCES_OCCUPIED of int$/;"	C	type:condition
+NEIGHBOUR	types.ml	/^| NEIGHBOUR of string$/;"	C	type:condition
+NEWDS	event.ml	/^    |NEWDS of string $/;"	C	type:event_items
+NEWS	event.ml	/^    |NEWS of bool $/;"	C	type:event_items
+NEWSDL	event.ml	/^    |NEWSDL of string $/;"	C	type:event_items
+NEWSDM	event.ml	/^    |NEWSDM of string $/;"	C	type:event_items
+NOT	event.ml	/^    |NOT of country_cond list $/;"	C	type:country_cond
+NOT	types.ml	/^| NOT of condition$/;"	C	type:condition
+NUMBER_OF_STATES	types.ml	/^| NUMBER_OF_STATES of int$/;"	C	type:condition
+NUM_OF_ALLIES	types.ml	/^| NUM_OF_ALLIES of int$/;"	C	type:condition
+NUM_OF_CITIES	types.ml	/^| NUM_OF_CITIES of int$/;"	C	type:condition
+NUM_OF_PORTS	types.ml	/^| NUM_OF_PORTS of int$/;"	C	type:condition
+NUM_OF_REVOLTS	types.ml	/^| NUM_OF_REVOLTS of int$/;"	C	type:condition
+NUM_OF_SUBSTATES	types.ml	/^| NUM_OF_SUBSTATES of int$/;"	C	type:condition
+NUM_OF_VASSALS	types.ml	/^| NUM_OF_VASSALS of int$/;"	C	type:condition
+NUM_OF_VASSALS_NO_SUBSTATES	types.ml	/^| NUM_OF_VASSALS_NO_SUBSTATES of int$/;"	C	type:condition
+OR	event.ml	/^    |OR of country_cond list$/;"	C	type:country_cond
+OR	types.ml	/^| OR of  condition$/;"	C	type:condition
+OVERLORD	event.ml	/^    |OVERLORD of country_cond list$/;"	C	type:country_cond
+OWNED_BY	types.ml	/^| OWNED_BY of string$/;"	C	type:condition
+OWNS	types.ml	/^| OWNS of string$/;"	C	type:condition
+PART_OF_SPHERE	types.ml	/^| PART_OF_SPHERE of bool$/;"	C	type:condition
+PICTURE	event.ml	/^    |PICTURE of string$/;"	C	type:event_items
+POLITICAL_MOVEMENT	types.ml	/^| POLITICAL_MOVEMENT of bool$/;"	C	type:condition
+POLITICAL_MOVEMENT_STRENGTH	types.ml	/^| POLITICAL_MOVEMENT_STRENGTH of int$/;"	C	type:condition
+POLITICAL_REFORM_NAME	types.ml	/^| POLITICAL_REFORM_NAME of string$/;"	C	type:condition
+POLITICAL_REFORM_WANT_NUMBER	types.ml	/^| POLITICAL_REFORM_WANT_NUMBER of int$/;"	C	type:condition
+POLITICAL_REFORM_WANT_STRING	types.ml	/^| POLITICAL_REFORM_WANT_STRING of string$/;"	C	type:condition
+POOR_STRATA_EVERYDAY_NEEDS	types.ml	/^| POOR_STRATA_EVERYDAY_NEEDS of float$/;"	C	type:condition
+POOR_STRATA_LIFE_NEEDS	types.ml	/^| POOR_STRATA_LIFE_NEEDS of float$/;"	C	type:condition
+POOR_STRATA_LUXURY_NEEDS	types.ml	/^| POOR_STRATA_LUXURY_NEEDS of float$/;"	C	type:condition
+POOR_TAX	types.ml	/^| POOR_TAX of int$/;"	C	type:condition
+POP_MAJORITY_CULTURE	types.ml	/^| POP_MAJORITY_CULTURE of string$/;"	C	type:condition
+POP_MAJORITY_IDEOLOGY	types.ml	/^| POP_MAJORITY_IDEOLOGY of string$/;"	C	type:condition
+POP_MAJORITY_ISSUE	types.ml	/^| POP_MAJORITY_ISSUE of string$/;"	C	type:condition
+POP_MAJORITY_RELIGION	types.ml	/^| POP_MAJORITY_RELIGION of string$/;"	C	type:condition
+POP_MILITANCY	types.ml	/^| POP_MILITANCY of int$/;"	C	type:condition
+PORT	types.ml	/^| PORT of bool$/;"	C	type:condition
+PRESTIGE	types.ml	/^| PRESTIGE of int$/;"	C	type:condition
+PRIMARY_CULTURE	types.ml	/^| PRIMARY_CULTURE of string$/;"	C	type:condition
+PRODUCES	types.ml	/^| PRODUCES of string$/;"	C	type:condition
+PROVINCE	event.ml	/^type event_type = PROVINCE | COUNTRY$/;"	C	type:event_type
+PROVINCE_CONTROL_DAYS	types.ml	/^| PROVINCE_CONTROL_DAYS of float$/;"	C	type:condition
+PROVINCE_ID	types.ml	/^| PROVINCE_ID of string$/;"	C	type:condition
+PROVINCE_IMMEDIATE	event.ml	/^    |PROVINCE_IMMEDIATE of bool$/;"	C	type:event_items
+PROVINCE_OPTION	event.ml	/^    |PROVINCE_OPTION of string * province_effect list$/;"	C	type:event_items
+PROVINCE_TRIGGER	event.ml	/^    |PROVINCE_TRIGGER of condition list$/;"	C	type:event_items
+Prestige	event.ml	/^    |Prestige of int $/;"	C	type:country_effect
+Prestige	event.ml	/^    |Prestige of int $/;"	C	type:province_effect
+RANK	types.ml	/^| RANK of int$/;"	C	type:condition
+RB	types.ml	/^|RB$/;"	C	type:lexem_type
+REBEL_POWER_FRACTION	types.ml	/^| REBEL_POWER_FRACTION of int$/;"	C	type:condition
+RECRUITED_PERCENTAGE	types.ml	/^| RECRUITED_PERCENTAGE of int$/;"	C	type:condition
+REGION	types.ml	/^| REGION of string$/;"	C	type:condition
+REGION_NAME	event.ml	/^    |REGION_NAME of string * country_cond list$/;"	C	type:country_cond
+RELATION	types.ml	/^| RELATION of string$/;"	C	type:condition
+RELIGION	types.ml	/^| RELIGION of string$/;"	C	type:condition
+RELIGIOUS_POLICY	types.ml	/^| RELIGIOUS_POLICY of string$/;"	C	type:condition
+REVOLT_PERCENTAGE	types.ml	/^| REVOLT_PERCENTAGE of int$/;"	C	type:condition
+RICH_STRATA_EVERYDAY_NEEDS	types.ml	/^| RICH_STRATA_EVERYDAY_NEEDS of float$/;"	C	type:condition
+RICH_STRATA_LIFE_NEEDS	types.ml	/^| RICH_STRATA_LIFE_NEEDS of float$/;"	C	type:condition
+RICH_STRATA_LUXURY_NEEDS	types.ml	/^| RICH_STRATA_LUXURY_NEEDS of float$/;"	C	type:condition
+RICH_TAX	types.ml	/^| RICH_TAX of int$/;"	C	type:condition
+RULING_PARTY	types.ml	/^| RULING_PARTY of string$/;"	C	type:condition
+RULING_PARTY_IDEOLOGY	types.ml	/^| RULING_PARTY_IDEOLOGY of string$/;"	C	type:condition
+SCOPE	types.ml	/^|SCOPE$/;"	C	type:lexem_type
+SLAVERY	types.ml	/^| SLAVERY of string$/;"	C	type:condition
+SOCIAL_MOVEMENT	types.ml	/^| SOCIAL_MOVEMENT of bool$/;"	C	type:condition
+SOCIAL_MOVEMENT_STRENGTH	types.ml	/^| SOCIAL_MOVEMENT_STRENGTH of string$/;"	C	type:condition
+SOCIAL_REFORM_NAME	types.ml	/^| SOCIAL_REFORM_NAME of string$/;"	C	type:condition
+SOCIAL_REFORM_WANT_name	types.ml	/^| SOCIAL_REFORM_WANT_name of string$/;"	C	type:condition
+SOCIAL_REFORM_WANT_number	types.ml	/^| SOCIAL_REFORM_WANT_number of int$/;"	C	type:condition
+SOCIAL_SPENDING	types.ml	/^| SOCIAL_SPENDING of int$/;"	C	type:condition
+SPHERE_OWNER	event.ml	/^    |SPHERE_OWNER of country_cond list$/;"	C	type:country_cond
+STATE_ID	types.ml	/^| STATE_ID of string$/;"	C	type:condition
+STRATA	types.ml	/^| STRATA of string$/;"	C	type:condition
+STRING	types.ml	/^|STRING$/;"	C	type:lexem_type
+STRONGER_ARMY_THAN	types.ml	/^| STRONGER_ARMY_THAN of string$/;"	C	type:condition
+SUBSTATE_OF	types.ml	/^| SUBSTATE_OF of string$/;"	C	type:condition
+SYNTAX_ERROR	event.ml	/^    |SYNTAX_ERROR of int * int * lexem_type * lexem_type$/;"	C	type:event_items
+TAG	types.ml	/^| TAG of string$/;"	C	type:condition
+TAG	types.ml	/^|TAG  $/;"	C	type:lexem_type
+TERRAIN	types.ml	/^| TERRAIN of string$/;"	C	type:condition
+THIS_CULTURE_UNION	types.ml	/^| THIS_CULTURE_UNION of string$/;"	C	type:condition
+TIME	event.ml	/^    |TIME of time_unit$/;"	C	type:country_cond
+TIME	event.ml	/^type mtth = TIME of time_unit $/;"	C	type:mtth
+TITLE	event.ml	/^    |TITLE of string$/;"	C	type:event_items
+TOTAL_AMOUNT_OF_DIVISIONS	types.ml	/^| TOTAL_AMOUNT_OF_DIVISIONS of int$/;"	C	type:condition
+TOTAL_AMOUNT_OF_SHIPS	types.ml	/^| TOTAL_AMOUNT_OF_SHIPS of int$/;"	C	type:condition
+TOTAL_DEFENSIVES	types.ml	/^| TOTAL_DEFENSIVES of int$/;"	C	type:condition
+TOTAL_NUM_OF_PORTS	types.ml	/^| TOTAL_NUM_OF_PORTS of int$/;"	C	type:condition
+TOTAL_OFFENSIVES	types.ml	/^| TOTAL_OFFENSIVES of int$/;"	C	type:condition
+TOTAL_OF_OURS_SUNK	types.ml	/^| TOTAL_OF_OURS_SUNK of int$/;"	C	type:condition
+TOTAL_POPS	types.ml	/^| TOTAL_POPS of string$/;"	C	type:condition
+TOTAL_SEA_BATTLES	types.ml	/^| TOTAL_SEA_BATTLES of int$/;"	C	type:condition
+TOTAL_SUNK_BY_US	types.ml	/^| TOTAL_SUNK_BY_US of int$/;"	C	type:condition
+TRADE_GOODS	types.ml	/^| TRADE_GOODS of string$/;"	C	type:condition
+TRADE_POLICY	types.ml	/^| TRADE_POLICY of string$/;"	C	type:condition
+TRUCE_WITH	types.ml	/^| TRUCE_WITH of string$/;"	C	type:condition
+TYPE	types.ml	/^| TYPE of string$/;"	C	type:condition
+Types	types.ml	/^type lexem_type =$/;"	M
+UNEMPLOYMENT	types.ml	/^| UNEMPLOYMENT of int$/;"	C	type:condition
+UNEMPLOYMENT_BY_TYPE	types.ml	/^| UNEMPLOYMENT_BY_TYPE of string$/;"	C	type:condition
+UNITS_IN_PROVINCE	types.ml	/^| UNITS_IN_PROVINCE of int$/;"	C	type:condition
+UNIT_HAS_LEADER	types.ml	/^| UNIT_HAS_LEADER of bool$/;"	C	type:condition
+UNIT_IN_BATTLE	types.ml	/^| UNIT_IN_BATTLE of bool$/;"	C	type:condition
+UPPER_HOUSE	types.ml	/^| UPPER_HOUSE of string$/;"	C	type:condition
+VASSAL_OF	types.ml	/^| VASSAL_OF of string$/;"	C	type:condition
+WAR	types.ml	/^| WAR of bool$/;"	C	type:condition
+WAR_COUNTRIES	event.ml	/^    |WAR_COUNTRIES of country_cond list$/;"	C	type:country_cond
+WAR_EXHAUSTION	types.ml	/^| WAR_EXHAUSTION of int$/;"	C	type:condition
+WAR_POLICY	types.ml	/^| WAR_POLICY of string$/;"	C	type:condition
+WAR_SCORE	types.ml	/^| WAR_SCORE of int$/;"	C	type:condition
+WAR_WITH	types.ml	/^| WAR_WITH of string$/;"	C	type:condition
+WORK_AVAILABLE	types.ml	/^| WORK_AVAILABLE of string$/;"	C	type:condition
+YEAR	event.ml	/^    | YEAR of int $/;"	C	type:time_unit
+YEAR	types.ml	/^| YEAR of int$/;"	C	type:condition
+chars_to_lexem	lexer.ml	/^let chars_to_lexem cl= match (ls_to_str cl) with $/;"	f
+condition	types.ml	/^type condition = $/;"	t
+country_cond	event.ml	/^type country_cond = $/;"	t
+country_effect	event.ml	/^type country_effect = $/;"	t
+create_expr	event.ml	/^let create_expr type_val value f x y = match (handle_type type_val value) with  $/;"	f
+create_value	event.ml	/^        let create_value v = DESC (Lexer.lexem_to_str v) in $/;"	f
+create_value	event.ml	/^        let create_value v = ID (int_of_string (Lexer.lexem_to_str v)) in $/;"	f
+create_value	event.ml	/^        let create_value v = IS_TRIGGERED_ONLY(bool_of_string (Lexer.lexem_to_str v) ) in $/;"	f
+create_value	event.ml	/^        let create_value v = MAJOR (bool_of_string (Lexer.lexem_to_str v) ) in $/;"	f
+create_value	event.ml	/^        let create_value v = TITLE (Lexer.lexem_to_str v) in $/;"	f
+event_items	event.ml	/^type event_items = $/;"	t
+event_type	event.ml	/^type event_type = PROVINCE | COUNTRY$/;"	t
+handle_type	event.ml	/^let handle_type required_type received_type value =  $/;"	f
+lexem_to_str	lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
+lexem_type	types.ml	/^type lexem_type =$/;"	t
 lexer	lexer.ml	/^let lexer file = $/;"	f
 ls_to_str	lexer.ml	/^let ls_to_str ls = $/;"	f
 match_reg	lexer.ml	/^let match_reg reg str= Str.string_match (Str.regexp reg)  str 0 $/;"	f
+mtth	event.ml	/^type mtth = TIME of time_unit $/;"	t
+print_lexem	lexer.ml	/^let print_lexem lexem = Printf.printf "%s:" (lexem_to_str lexem)$/;"	f
+print_lexems	lexer.ml	/^let print_lexems lexems = List.iter (fun (lex,str,(x,y))->print_lexem lex; Printf.printf "%s (%i/;"	f
+province_effect	event.ml	/^type province_effect = $/;"	t
+read_event_body	event.ml	/^let rec read_event_body lexems  out event_type = $/;"	f
+read_events	event.ml	/^let read_events lexems =   $/;"	f
 read_file_str	lexer.ml	/^let read_file_str f : char list= $/;"	f
 str_to_ls	lexer.ml	/^let str_to_ls str = $/;"	f
-v2_parser	parser.ml	/^let v2_parser lexems = match lexems with$/;"	f
+time_unit	event.ml	/^type time_unit = $/;"	t
