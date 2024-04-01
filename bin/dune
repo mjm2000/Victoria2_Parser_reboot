@@ -1,0 +1,7 @@
+(executable
+ (public_name vic2parser_reboot)
+ (name main)
+ (libraries  str vic2parser_reboot )
+ (modes byte)
+ (ocamlc_flags -g)
+ )
