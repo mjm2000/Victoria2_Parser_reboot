@@ -1,4 +1,21 @@
 open Lexer
+type pop_type  = 
+    |ANY_POP 
+    |ARISTOCRATS
+    |ARTISANS
+    |BUREAUCRATS
+    |CAPITALISTS
+    |CLERGYMEN
+    |CLERKS
+    |CRAFTSMEN
+    |FARMERS
+    |LABOURERS
+    |OFFICERS
+    |SLAVES
+    |SOLDIERS
+    |POOR_STRATA
+    |MIDDLE_STRATA
+    |RICH_STRATA
 
 type province_effect =
 |SET_GLOBAL_FLAG of string
@@ -19,10 +36,51 @@ type province_effect =
 |TRADE_GOODS of string
 |CLR_PROVINCE_FLAG of string
 |SET_PROVINCE_FLAG of string
+|LIMIT of Trigger.condition list
+|PROVINCE_ERROR
+|RANDOM_LIST of (int * province_effect list) list
 (*|TAG of string * country_effect list *)
+|POP_SCOPE of pop_type * Pop_effects.pops_effect list 
+
+
+
 
 let province_effects effects =
 let rec province_effects_r effects out = match effects with
+    |(KEYWORD,"any_pop",_)::(EQ,_,_)::(LB,_,_)::rest-> let v,rest = Pop_effects.pops_effects rest in province_effects_r           rest (POP_SCOPE(ANY_POP      ,v)::out)             
+    |(KEYWORD,"aristocrats",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r        rest (POP_SCOPE(ARISTOCRATS  ,v)::out)                
+    |(KEYWORD,"artisans",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r           rest (POP_SCOPE(ARTISANS     ,v)::out)             
+    |(KEYWORD,"bureaucrats",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r        rest (POP_SCOPE(BUREAUCRATS  ,v)::out)                
+    |(KEYWORD,"capitalists",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r        rest (POP_SCOPE(CAPITALISTS  ,v)::out)                
+    |(KEYWORD,"clergymen",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r          rest (POP_SCOPE(CLERGYMEN    ,v)::out)              
+    |(KEYWORD,"clerks",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r             rest (POP_SCOPE(CLERKS       ,v)::out)           
+    |(KEYWORD,"craftsmen",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r          rest (POP_SCOPE(CRAFTSMEN    ,v)::out)              
+    |(KEYWORD,"farmers",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r            rest (POP_SCOPE(FARMERS      ,v)::out)            
+    |(KEYWORD,"labourers",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r          rest (POP_SCOPE(LABOURERS    ,v)::out)              
+    |(KEYWORD,"officers",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r           rest (POP_SCOPE(OFFICERS     ,v)::out)             
+    |(KEYWORD,"slaves",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r             rest (POP_SCOPE(SLAVES       ,v)::out)           
+    |(KEYWORD,"soldiers",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r           rest (POP_SCOPE(SOLDIERS     ,v)::out)             
+    |(KEYWORD,"poor_strata",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r        rest (POP_SCOPE(POOR_STRATA  ,v)::out)                
+    |(KEYWORD,"middle_strata",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r      rest (POP_SCOPE(MIDDLE_STRATA,v)::out)                  
+    |(KEYWORD,"rich_strata",_)::(EQ,_,_)::(LB,_,_)::rest->let v,rest = Pop_effects.pops_effects rest in province_effects_r        rest (POP_SCOPE(RICH_STRATA  ,v)::out)                
+    |(KEYWORD,"random_list",_)::(EQ,_,_)::(LB,_,_)::rest->                        
+        let rec handle_random_list tokens out = match tokens with
+            |(INT,v,_)::(EQ,_,_)::(LB,_,_)::rest ->
+                Printf.printf "YO %s\n" v;
+                let effects,rest = province_effects_r rest [] in
+                handle_random_list rest ((int_of_string v, effects)::out)
+            |(RB,_,_)::rest ->
+              RANDOM_LIST(out),rest 
+            |rest ->
+                    (*ERROR*)
+                (PROVINCE_ERROR),rest
+        in
+        let v,rest = handle_random_list rest [] in
+        province_effects_r rest ((v)::out) 
+
+    |(KEYWORD,"limit",_)::(EQ,_,_)::(LB,_,_)::rest ->
+        let pc,rest= Trigger.province_conditions rest in 
+        province_effects_r rest ((LIMIT(pc))::out)
 	|(KEYWORD,"assimilate",_)::(EQ,_,_)::(BOOL,v,_)::rest->
 		province_effects_r rest ( ((ASSIMILATE((bool_of_string v)))::out)) 
 	|(KEYWORD,"add_core",_)::(EQ,_,_)::(TAG,v,_)::rest->
@@ -70,7 +128,7 @@ let rec province_effects_r effects out = match effects with
         province_effects_r rest (TAG(tag,effects)::out)
     *)
     |(RB,_,_)::rest ->out,rest
-    |rest->out,rest
+    |rest-> out,rest
 in
 province_effects_r effects []
 

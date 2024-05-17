@@ -21,6 +21,7 @@ type event_items =
     |IS_CANAL_ENABLED of bool
     |MAJOR of bool
     |NEWS of bool 
+    |NEWS_TITLE of string
     |NEWDS of string 
     |NEWSDM of string 
     |NEWSDL of string 
@@ -75,10 +76,29 @@ let print_event_item event_item =
         Printf.printf "MTTH: {\n";
         List.iter (fun x -> Printf.printf "\t%s\n" (Mtth.mtth_string x)) times;
         Printf.printf "}\n";
-
+    |SYNTAX_ERROR(exp,type_value,value,x,y)->
+        (Printf.printf "Event Stucture Error at %i:%i value:%s type:%s|expected:%s\n" x
+        y
+        (value)
+        (lexem_to_str type_value)
+        (lexem_to_str exp))
+    |MISSING_BRACKET                      -> Printf.printf "missing_bracket\n"
+    |PICTURE v                            -> Printf.printf "picture %s\n" v
+    |ALLOW_MULTIPLE_INSTANCES v           -> Printf.printf "allow_multiple_instances %b\n" v
+    |FIRE_ONLY_ONCE v                     -> Printf.printf "fire_only_once %b\n" v
+    |CHECK_VARIABLE v                     -> Printf.printf "check_variable %b\n" v
+    |HAS_GLOBAL_FLAG v                    -> Printf.printf "has_global_flag %b\n" v
+    |IS_CANAL_ENABLED v                   -> Printf.printf "is_canal_enabled %b\n" v
+    |NEWS v                               -> Printf.printf "news %b\n" v
+    |NEWS_TITLE v                         -> Printf.printf "news_title %s\n" v
+    |NEWDS v                              -> Printf.printf "newds %s\n" v
+    |NEWSDM v                             -> Printf.printf "newsdm %s\n" v
+    |NEWSDL v                             -> Printf.printf "newsdl %s\n" v
+    |NAME_ERROR (x, y)                    -> Printf.printf "name_error %i %i\n" x y
+    |END_OF_FILE (x, y)                   -> Printf.printf "end_of_file %i %i\n"x y
     
     
-    |_->Printf.printf ""
+    (*|_->Printf.printf ""*)
 
 let print_event event= List.iter print_event_item event  
     
@@ -90,7 +110,7 @@ let event lexems event_type =
 let rec read_event_body lexems out = 
    (* let (_,v,_)=(List.hd lexems) in Printf.printf "nigger:%s\n" v; *)
     match lexems with 
-    |(RB,_,_)::ls ->List.rev out,ls
+    |(RB,_,_)::ls -> List.rev out,ls
     |(KEYWORD,("id"),_)::(EQ,_,_)::(INT, value,_)::rest -> 
         let v = ID(int_of_string value) in 
         read_event_body  rest (v::out)
@@ -100,6 +120,21 @@ let rec read_event_body lexems out =
     |(KEYWORD,("title"),_)::(EQ,_,_)::(STRING,value,_)::rest -> 
         let v = TITLE ( value) in 
         read_event_body  rest (v::out)
+    |(KEYWORD,("news"),_)::(EQ,_,_)::(BOOL,value,_)::rest ->
+        let v = NEWS(bool_of_string value) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("news_title"),_)::(EQ,_,_)::(STRING,value,_)::rest ->
+        let v = NEWS_TITLE(value) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("news_desc_short"),_)::(EQ,_,_)::(STRING,value,_)::rest ->
+        let v = NEWDS(value) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("news_desc_medium"),_)::(EQ,_,_)::(STRING,value,_)::rest ->
+        let v = NEWSDM(value) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("news_desc_long"),_)::(EQ,_,_)::(STRING,value,_)::rest ->
+        let v = NEWSDL(value) in 
+        read_event_body  rest (v::out) 
 
     |(KEYWORD,("title"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest ->
         let v = SYNTAX_ERROR(STRING,type_value,value,x,y) in 
@@ -122,6 +157,13 @@ let rec read_event_body lexems out =
         let v = MAJOR(bool_of_string (value)) in 
         read_event_body  rest (v::out)
     |(KEYWORD,("major"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest -> 
+        let v = SYNTAX_ERROR(BOOL,type_value,value,x,y) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("fire_only_once"),_)::(EQ,_,_)::(BOOL,value,_)::rest -> 
+        
+        let v = FIRE_ONLY_ONCE(bool_of_string (value)) in 
+        read_event_body  rest (v::out)
+    |(KEYWORD,("fire_only_once"),_)::(EQ,_,_)::(type_value,value,(x,y))::rest -> 
         let v = SYNTAX_ERROR(BOOL,type_value,value,x,y) in 
         read_event_body  rest (v::out)
     |(KEYWORD,("is_triggered_only"),_)::(EQ,_,_)::(BOOL,value,_)::rest -> 
@@ -150,14 +192,12 @@ let rec read_event_body lexems out =
     |(KEYWORD,"mean_time_to_happen",_)::(EQ,_,_)::(LB,_,_)::rest -> 
         let mtth,rest = Mtth.mtth rest event_type in 
         let v = MTTH(mtth) in
-        Printf.printf "MEAN TIME\n";
         read_event_body  rest (v::out)
     |(KEYWORD,"option",_)::(EQ,_,_)::(LB,_,_)::rest -> 
         let v,rest = match rest with
         |(KEYWORD,"name",_)::(EQ,_,_)::(STRING,v,_)::rest ->
            (match event_type with  
            |COUNTRY ->  let x,rest = country_effects rest in
-                Printf.printf "%i:values\n" (List.length x);
                COUNTRY_OPTION(v,x),rest
            |PROVINCE ->  let x,rest = (province_effects rest) in
                PROVINCE_OPTION(v,x),rest
@@ -166,8 +206,10 @@ let rec read_event_body lexems out =
         |(_,_,(x,y))::rest-> NAME_ERROR(x,y),rest
         |[]->MISSING_BRACKET,[]
         in 
-
         read_event_body  rest (v::out)
+
+
+
     |(_,_,(x,y))::[]->
         let v = END_OF_FILE(x,y) in 
         read_event_body  [] (v::out)
@@ -191,6 +233,11 @@ let read_events lexems =
             let event_value,rest = event ls COUNTRY in
             read_event_r rest (event_value::out)  
 
+        (*
+        |(_,_,_)::rest -> 
+            (*Printf.printf "value:%s\n" v ;*)
+        read_event_r rest out 
+        *)
         |_-> 
                 out 
     in

@@ -255,6 +255,63 @@ let bool_of_string str = match str with
 
 let province_conditions lexems = 
 let rec condition_r lexems out= match lexems with
+|(CONDITION,("AND"),_)::(EQ,_,_)::(LB,_,_)::rest->
+    let value,rest = condition_r rest [] in
+    let v = AND((value)) in
+    condition_r rest (v::out)
+|(CONDITION,("AND"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR([wrong_type,value,pos],[]) in
+    condition_r rest (v::out)
+|(CONDITION,("OR"),_)::(EQ,_,_)::(LB,_,_)::rest->
+    let value,rest = condition_r rest [] in
+    let v = OR((value)) in
+    condition_r rest (v::out)
+|(CONDITION,("OR"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], []) in
+    condition_r rest (v::out)
+|(CONDITION,("NOT"),_)::(EQ,_,_)::(LB,_,_)::rest->
+    let value,rest = condition_r rest [] in
+    let v = NOT(value) in
+    condition_r rest (v::out)
+|(CONDITION,("NOT"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], []) in
+    condition_r rest (v::out)
+|(KEYWORD,("year"),_)::(EQ,_,_)::(INT,value,_)::rest->
+    let v = YEAR(int_of_string(value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("year"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [INT]) in
+    condition_r rest (v::out)
+|(KEYWORD,("month"),_)::(EQ,_,_)::(INT,value,_)::rest->
+    let v = MONTH(int_of_string(value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("month"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [INT]) in
+    condition_r rest (v::out)
+|(KEYWORD,("allow_multiple_instances"),_)::(EQ,_,_)::(BOOL,value,_)::rest->
+    let v = ALLOW_MULTIPLE_INSTANCES(bool_of_string(value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("allow_multiple_instances"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [BOOL]) in
+    condition_r rest (v::out)
+|(KEYWORD,("fire_only_once"),_)::(EQ,_,_)::(BOOL,value,_)::rest->
+    let v = FIRE_ONLY_ONCE(bool_of_string(value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("fire_only_once"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [BOOL]) in
+    condition_r rest (v::out)
+|(KEYWORD,("is_triggered_only"),_)::(EQ,_,_)::(BOOL,value,_)::rest->
+    let v = IS_TRIGGERED_ONLY(bool_of_string(value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("is_triggered_only"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [BOOL]) in
+    condition_r rest (v::out)
+|(KEYWORD,("major"),_)::(EQ,_,_)::(KEYWORD,value,_)::rest->
+    let v = MAJOR((value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("major"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [KEYWORD]) in
+    condition_r rest (v::out)
 |(KEYWORD,("average_consciousness"),_)::(EQ,_,_)::(FLOAT,value,_)::rest->
     let v = AVERAGE_CONSCIOUSNESS(float_of_string(value)) in
     condition_r rest (v::out)
@@ -429,7 +486,10 @@ let rec condition_r lexems out= match lexems with
 |(KEYWORD,("is_colonial"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
     let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [BOOL]) in
     condition_r rest (v::out)
-|(KEYWORD,("is_core"),_)::(EQ,_,_)::(KEYWORD,value,_)::rest->
+|(KEYWORD,("is_core"),_)::(EQ,_,_)::(TAG,value,_)::rest->
+    let v = IS_CORE((value)) in
+    condition_r rest (v::out)
+|(KEYWORD,("is_core"),_)::(EQ,_,_)::(SCOPE,value,_)::rest->
     let v = IS_CORE((value)) in
     condition_r rest (v::out)
 |(KEYWORD,("is_core"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
@@ -513,11 +573,11 @@ let rec condition_r lexems out= match lexems with
 |(KEYWORD,("province_control_days"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
     let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [FLOAT]) in
     condition_r rest (v::out)
-|(KEYWORD,("province_id"),_)::(EQ,_,_)::(KEYWORD,value,_)::rest->
+|(KEYWORD,("province_id"),_)::(EQ,_,_)::(INT,value,_)::rest->
     let v = PROVINCE_ID((value)) in
     condition_r rest (v::out)
 |(KEYWORD,("province_id"),_)::(EQ,_,_)::(wrong_type,value,pos)::rest->
-    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [KEYWORD]) in
+    let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], [INT]) in
     condition_r rest (v::out)
 |(KEYWORD,("region"),_)::(EQ,_,_)::(KEYWORD,value,_)::rest->
     let v = REGION((value)) in
@@ -580,8 +640,12 @@ let rec condition_r lexems out= match lexems with
     let v = CONDITION_TYPE_ERROR ([wrong_type,value,pos], []) in
     condition_r rest (v::out)
 |(RB,_,_)::rest->List.rev out,rest
-|_->raise (Syntax_error "wrong type") 
+
+|(_,_,(x,y))::[]-> (END_OF_FILE(x,y)::out),[]
+|(type_value,str,(x,y))::rest-> condition_r rest (CONDITION_UNEXPECTED_ERROR(type_value,str,(x,y))::out)
+|[]->out,[]
 in
+
 (condition_r lexems [])
 
 let pop_condition lexems =

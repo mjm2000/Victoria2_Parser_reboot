@@ -22,6 +22,7 @@ let rec string_condition condition =
     in
     check_error "" values expected
 | CONDITION_UNEXPECTED_ERROR(type_value,str,(x,y))-> Printf.sprintf "Error: Unexpected word at (%i,%i) %s of type %s" x y str (lexem_to_str type_value)  
+
 | ACCEPTED_CULTURE(v)->Printf.sprintf "accepted_culture:%s" v
 | ADMINISTRATION_SPENDING(v)->Printf.sprintf "administration_spending:%s" ( string_of_int v)
 | AGREE_WITH_RULING_PARTY(v)->Printf.sprintf "agree_with_ruling_party:%s" ( string_of_float v)

@@ -11,6 +11,9 @@ type lexem_type =
 |SCOPE
 |CONDITION
 
+type lexem = lexem_type * string * (int * int)
+
+
 let read_file_str f : char list= 
     let ic = open_in f in 
     let rec read_all file out = 
