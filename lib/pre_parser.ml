@@ -15,13 +15,12 @@ module HashSet = struct
 
   let mem set item =
     Hashtbl.mem set item
-
   let size set =
       Hashtbl.length set
 
   let list_to_set ls = 
-      let tbl = create in
-      List.foreach (function x-> add tbl x) ls;
+      let tbl = Hashtbl.create (List.length ls) in
+      List.iter (function x-> add tbl x) ls;
       tbl
 end
 
@@ -47,7 +46,6 @@ let rec assignment_list lexems =
             let expet = UNEXPECTED_LEXEM(str,lexem_type),cords in
             let v:assignment = ASSIGN_EXCEPTION(expet) in
             assignment_list_r rest (v::out)
-
  
     in
     assignment_list_r lexems []
@@ -67,6 +65,19 @@ let rec assignment_list lexems =
         |((lexem_type,str,cords)) :: rest -> EXPR_EXCEPTION(UNEXPECTED_LEXEM(str,lexem_type),cords),rest
 
 type param = PARAM of string*string | PARAM_ERROR of exception_value 
+
+let verify_params a expected_as_list = 
+    let expected_as = HashSet.list_to_set expected_as_list in
+    let rec verify_params_r a out = match a with
+    |ASSIGNMENT((lh_type,lh_value,_),LEXEM(rh_type,rh_value,_))::rest when Hashtbl.mem expected_as (lh_type,lh_value,rh_type)   ->
+        verify_params_r rest (PARAM(lh_value,rh_value)::out) 
+    |[]->
+        out
+    |rest ->
+        verify_params_r rest (PARAM_ERROR(END_OF_FILE,(0,0))::out)
+            
+    in
+    verify_params_r a out
 (*let params expected assignment_list =
     let rec check_pattern e al out= match al
         |(ASSIGNMENT((kt,k,_),LEXEM(vt,v,_)) as assignment)::rs when mem e ((kt,k),vt)  -> 

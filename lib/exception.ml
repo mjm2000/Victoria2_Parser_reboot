@@ -29,6 +29,10 @@ let exception_iden_string exp =  match exp with
     |UNEXPECTED_ASSIGNMENT(iden1,lex1,iden2,lex2) ->
         
         Printf.sprintf "Unexpected ASSIGNMENT: %s:%s=%s:%s " iden1 (lexem_to_str lex1) iden2 (lexem_to_str lex2)
+    |UNEXPECTED_ASSIGN_LIST(iden1,lex1) ->
+        
+        Printf.sprintf "Unexpected ASSIGNMENT: %s:%s " iden1 (lexem_to_str lex1)
+
     |UNEXPECTED_RIGHT_BRACKET -> "Unexpected Right Bracket"
     |UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
 

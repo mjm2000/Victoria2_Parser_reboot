@@ -145,15 +145,15 @@ let rec country_effects_r structures out = match structures with
 	|ASSIGNMENT((KEYWORD,"remove_accepted_culture",_),(KEYWORD,v,_))::rest->
 		country_effects_r rest (( (REMOVE_ACCEPTED_CULTURE(v)))::out) 
     |ASSIGNMENT((KEYWORD,"remove_country_modifier",_),(KEYWORD,v,_))::rest->
-		country_effects_r rest (( (REMOVE_COUNTRY_MODIFIER(v)))::out) 
+		country_effects_r rest (((REMOVE_COUNTRY_MODIFIER(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"add_country_modifier",_),ASSIGNMENT_LIST(ls))::rest->
-        let values = param [("name",KEYWORD),("duration",INT)] ls in
-        match values with
-        |PARAM(ASSIGNMENT(NAME,))
-
+        let param_list = verify_params ls [(KEYWORD,"name",KEYWORD),
+                              (KEYWORD,"duration",INT)] in
+       country_effects_r rest (ADD_COUNTRY_MODIFIER(param_list)::out)
 	|ASSIGNMENT((KEYWORD,"add_crisis_interest",_),(BOOL,v,_))::rest->
-		country_effects_r rest (( (ADD_CRISIS_INTEREST(bool_of_string v)))::out) 
-	|ASSIGNMENT((KEYWORD,"badboy",_),(INT,v,_)::rest-> country_effects_r rest ( (BADBOY((int_of_string v))))::out) 
+		country_effects_r rest (((ADD_CRISIS_INTEREST(bool_of_string v)))::out) 
+	|(ASSIGNMENT((KEYWORD,"badboy",_),LEXEM((INT,v,_)))::rest)-> 
+        country_effects_r rest (( (BADBOY((int_of_string v))))::out) 
 	|ASSIGNMENT((KEYWORD,"build_factory_in_capital_state",_),(KEYWORD,v,_))::rest->
 		country_effects_r rest (( (BUILD_FACTORY_IN_CAPITAL_STATE(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"capital",_),(INT,v,_))::rest->
@@ -196,16 +196,17 @@ let rec country_effects_r structures out = match structures with
 		country_effects_r rest (( (RULING_PARTY_IDEOLOGY(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"social_reform",_),(KEYWORD,v,_))::rest->
 		country_effects_r rest (( (SOCIAL_REFORM(v)))::out) 
-	|ASSIGNMENT((KEYWORD,"upper_house",_),ASSIGNMENT_LIST(ls)::(KEYWORD,"ideology",_),(KEYWORD,ideology,_)::(KEYWORD,"value",_),(KEYWORD,value,_)::(LB,_,_))::rest->
+	|ASSIGNMENT((KEYWORD,"upper_house",_),ASSIGNMENT_LIST(ls))::rest->
+        let param_list = verify_params ls [(KEYWORD,"ideology",KEYWORD),
+                              (KEYWORD,"value",KEYWORD)] in
+
 		country_effects_r rest (( (UPPER_HOUSE(ideology,value)))::out) 
-	|ASSIGNMENT((KEYWORD,"add_casus_belli",_),ASSIGNMENT_LIST(ls))::rest ->
-         let target,rest = match rest with
-            |ASSIGNMENT((KEYWORD,("target" as k),_),(TAG,v,_))::rest
-            |ASSIGNMENT((KEYWORD,("target" as k) ,_),(SCOPE,v,_))::rest-> PARAM(k,v)
-            |ASSIGNMENT((KEYWORD,("type" as k),_),(KEYWORD,v,_))::rest -> PARAM(k,v)
-            |ASSIGNMENT((KEYWORD,("months" as k),_),(INT,v,_))::rest-> PARAM(k,v),rest
-            |ASSIGNMENT((kt,k,kcords),(vt,v,vcords)::)::ls->PARAM_ERROR()
-        in
+	|ASSIGNMENT((KEYWORD,"add_casus_belli",_),ASSIGNMENT_LIST(ls))::rest ->          
+            let param_list = verify_params ls 
+                              [(KEYWORD,"ideology",KEYWORD),
+                              (KEYWORD,"value",KEYWORD)] in
+
+		country_effects_r rest (( (UPPER_HOUSE(ideology,value)))::out)
 	|ASSIGNMENT((KEYWORD,"annex_to",_),(TAG,v,_))::rest->
 		country_effects_r rest (( (ANNEX_TO(v)))::out) 
     |ASSIGNMENT((KEYWORD,"annex_to",_),(SCOPE,v,_))::rest->
@@ -229,7 +230,7 @@ let rec country_effects_r structures out = match structures with
 	|ASSIGNMENT((KEYWORD,"create_alliance",_),(TAG,v,_))::rest->
 		country_effects_r rest (( (CREATE_ALLIANCE(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"create_vassal",_),(TAG,v,_))::rest->
-		country_effects_r rest (( (CREATE_VASSAL(v)))::out) 
+		country_effects_r rest (((CREATE_VASSAL(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"diplomatic_influence",_),ASSIGNMENT_LIST(ls))::rest->
         let target,rest = match rest with
             |ASSIGNMENT((KEYWORD,"who",_),(TAG,v,_))::rest
@@ -300,7 +301,6 @@ let rec country_effects_r structures out = match structures with
             |ASSIGNMENT((RB,_,_)::(RB,_,_))::rest ->   None,rest
             |_-> None,rest
             in
-            
 
 
             country_effects_r rest (( (WAR_DETAILED(target,a_goal,casus_belli,call_ally)))::out)
