@@ -66,7 +66,7 @@ let rec assignment_list lexems =
 
 type param = PARAM of string*string | PARAM_ERROR of exception_value 
 
-let verify_params a expected_as_list = 
+let verify_params (a:assignment list) (expected_as_list:(lexem_type*string*lexem_type) list): param list  = 
     let expected_as = HashSet.list_to_set expected_as_list in
     let rec verify_params_r a out = match a with
     |ASSIGNMENT((lh_type,lh_value,_),LEXEM(rh_type,rh_value,_))::rest when Hashtbl.mem expected_as (lh_type,lh_value,rh_type)   ->
@@ -75,9 +75,8 @@ let verify_params a expected_as_list =
         out
     |rest ->
         verify_params_r rest (PARAM_ERROR(END_OF_FILE,(0,0))::out)
-            
     in
-    verify_params_r a out
+    verify_params_r a [] 
 (*let params expected assignment_list =
     let rec check_pattern e al out= match al
         |(ASSIGNMENT((kt,k,_),LEXEM(vt,v,_)) as assignment)::rs when mem e ((kt,k),vt)  -> 
