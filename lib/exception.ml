@@ -5,7 +5,7 @@ type exception_type =
     |END_OF_FILE 
     |UNKNOWN_IDENTIFIER of string 
     |UNEXPECTED_LEXEM of string * lexem_type 
-    |UNEXPECTED_ASSIGNMENT of string * lexem_type *  string * lexem_type 
+    |UNEXPECTED_ASSIGNMENT of string * lexem_type *  string * lexem_type
     |UNEXPECTED_ASSIGN_LIST of string * lexem_type  
     |UNEXPECTED_RIGHT_BRACKET
     |UNEXPECTED_LEFT_BRACKET
@@ -13,15 +13,16 @@ type exception_type =
 
     
 
-type exception_value = exception_type *  (int * int)
+type exception_value = exception_type * (int * int)
 
 
 let exception_iden_string exp =  match exp with
     |TYPE_MISHMASH(iden,expected,received)->
     Printf.sprintf "Incorrect Type: Text=%s Expected Type=%s Received Type=%s" iden (lexem_to_str expected) (lexem_to_str received)  
-
+    
+    
     |END_OF_FILE -> 
-            Printf.sprintf "Unexpected EOF"  
+        Printf.sprintf "Unexpected EOF"  
     |UNKNOWN_IDENTIFIER(string)->
         Printf.sprintf "Unknown Identifier:%s" string  
     |UNEXPECTED_LEXEM(iden,lexem)->

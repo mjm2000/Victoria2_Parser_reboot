@@ -64,15 +64,44 @@ let rec assignment_list lexems =
         |((BOOL,_,_) as lex) :: rest -> LEXEM(lex),rest
         |((lexem_type,str,cords)) :: rest -> EXPR_EXCEPTION(UNEXPECTED_LEXEM(str,lexem_type),cords),rest
 
-type param = PARAM of string*string | PARAM_ERROR of exception_value 
 
-let verify_params (a:assignment list) (expected_as_list:(lexem_type*string*lexem_type) list): param list  = 
-    let expected_as = HashSet.list_to_set expected_as_list in
-    let rec verify_params_r a out = match a with
-    |ASSIGNMENT((lh_type,lh_value,_),LEXEM(rh_type,rh_value,_))::rest when Hashtbl.mem expected_as (lh_type,lh_value,rh_type)   ->
-        verify_params_r rest (PARAM(lh_value,rh_value)::out) 
-    |[]->
-        out
+type assign_symbol_type = KEYWORD_SYMBOL of string*rh_symbol_type 
+                        | TYPE_SYMBOL of lexem_type * rh_symbol_type 
+                        | PARAM_ASSIGN_ERROR of exception_value
+and rh_symbol_type = PARAM_LIST of assign_symbol_type HashSet.t  
+                    | PARAM_VALUE of lexem_type 
+                    | PARAM_RH_ERROR of exception_value
+
+
+
+
+
+type param = PARAM of string * string | PARAM_LIST of param list | PARAM_ERROR of exception_value 
+
+let create_keyword_symbol lh_value rh_type = KEYWORD_SYMBOL(lh_value,PARAM_VALUE(rh_type))
+let create_type_symbol lh_type rh_type = TYPE_SYMBOL(lh_type,PARAM_VALUE(rh_type))
+
+
+
+let create_symbol_list lh_value type_list = 
+    let param_list = List.map ( fun param -> create_symbol(param)) type_list
+    in
+    let value = PARAM_LIST(param_list)
+    in
+    KEYWORD_PARAM(lh_value,value)
+
+
+
+
+(*symbol table deaper*)
+let verify_params (a:assignment list) (expected_as_list:param_lh_type list): param list  = 
+      
+    let rec verify_params_r a out: param list = match a with
+    |ASSIGNMENT((KEYWORD,lh_value,_),LEXEM(rh_type,rh_value,_))::rest ->
+
+    |ASSIGNMENT((lh_type,lh_value,cords),LEXEM(rh_type,rh_value,_))::rest   -> 
+    |ASSIGNMENT((lht,lhv,_),ASSIGNMENT_LIST(rls))::rest ->
+    |[]->out
     |rest ->
         verify_params_r rest (PARAM_ERROR(END_OF_FILE,(0,0))::out)
     in

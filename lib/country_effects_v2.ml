@@ -137,7 +137,7 @@ let rec country_effects_r structures out = match structures with
         let ce,rest = Province_effects.province_effects rest in
         country_effects_r rest ((ANY_STATE(ce))::out)
     |ASSIGNMENT((KEYWORD,"sphere_owner",_),ASSIGNMENT_LIST(ls))::rest->
-        let ce,rest = Trigger.country_conditions rest in
+        let ce,_ = Trigger.country_conditions ls in
         country_effects_r rest ((SPHERE_OWNER(ce))::out)
 
 	|ASSIGNMENT((KEYWORD,"activate_technology",_),LEXEM(KEYWORD,v,_))::rest->
@@ -149,8 +149,8 @@ let rec country_effects_r structures out = match structures with
     |ASSIGNMENT((KEYWORD,"remove_country_modifier",_),LEXEM(KEYWORD,v,_))::rest->
 		country_effects_r rest (((REMOVE_COUNTRY_MODIFIER(v)))::out) 
 	|ASSIGNMENT((KEYWORD,"add_country_modifier",_),ASSIGNMENT_LIST(ls))::rest->
-        let param_list = verify_params ls [(KEYWORD,"name",KEYWORD),
-                              (KEYWORD,"duration",INT)] in
+        let param_list = verify_params ls [REG_PARAM(KEYWORD,"name",KEYWORD),
+                              REG_PARAM(KEYWORD,"duration",INT)] in
        country_effects_r rest (ADD_COUNTRY_MODIFIER(param_list)::out)
 	|ASSIGNMENT((KEYWORD,"add_crisis_interest",_),LEXEM(BOOL,v,_))::rest->
 		country_effects_r rest (((ADD_CRISIS_INTEREST(bool_of_string v)))::out) 
@@ -303,7 +303,7 @@ let rec country_effects_r structures out = match structures with
             |ASSIGNMENT((RB,_,_)::(RB,_,_))::rest ->   None,rest
             |_-> None,rest
             in
-
+            let param_list = verify_params ls [REG_PARAM(KEYWORD,"target",TAG) ] in
 
             country_effects_r rest (( (WAR_DETAILED(target,a_goal,casus_belli,call_ally)))::out)
 		 
@@ -322,12 +322,9 @@ let rec country_effects_r structures out = match structures with
             (*change this later*)
 		country_effects_r rest (( (CHANGE_TAG(v)))::out)
     |ASSIGNMENT((KEYWORD,"change_variable",_),ASSIGNMENT_LIST(ls))::rest->
-            let v,rest= match rest  with
-            |ASSIGNMENT((KEYWORD,"which",_),LEXEM(KEYWORD,v,_))::
-            ASSIGNMENT((KEYWORD,"value",_),LEXEM(INT,i,_)::(RB,_,_))::rest-> (CHANGE_VARIABLE(v,LEXEM(int_of_string i))),rest
-            |rest->ERROR,rest
-        in
-		country_effects_r rest ((v)::out)
+        let v = verify_params ls [REG_PARAM(KEYWORD,"name",KEYWORD);REG_PARAM(KEYWORD,"value",KEYWORD)] in 
+
+		country_effects_r rest (CHANGE_VARIABLE(v)::out)
 
 
 	|ASSIGNMENT((KEYWORD,"clr_country_flag",_),LEXEM(KEYWORD,v,_))::rest->
@@ -340,32 +337,32 @@ let rec country_effects_r structures out = match structures with
 		country_effects_r rest (( (SET_GLOBAL_FLAG(v)))::out) 
 
     |ASSIGNMENT((KEYWORD,"random_list",_),ASSIGNMENT_LIST(ls))::rest->
+        (*int version*)
         let rec handle_random_list tokens out = match tokens with
             |ASSIGNMENT((INT,v,_),ASSIGNMENT_LIST(ls))::rest ->
-                let effects,rest = country_effects_r rest [] in
+                let effects,_ = country_effects_r ls [] in
                 handle_random_list rest (((int_of_string v, effects))::out)
-            |ASSIGNMENT((RB,_,_))::rest ->
-              RANDOM_LIST(out),rest 
-            |_::rest ->
-                    (*ERROR*)
-                (ERROR),rest
             |[]->
-                (ERROR),[]
+               out,[]
+            |_::rest ->
+                (*ADD ERROR*)
+                [],rest
+            
         in
-        let v,rest = handle_random_list rest [] in
-        country_effects_r rest (((v))::out) 
+        let v,_ = handle_random_list ls [] in
+        country_effects_r rest (RANDOM_LIST (v)::out) 
 
     |ASSIGNMENT((KEYWORD,key,_),ASSIGNMENT_LIST(ls))::rest->
-        let ce,rest = Province_effects.province_effects rest in
+        let ce,_ = Province_effects.province_effects ls in
         country_effects_r rest ((REGION_NAME(key,ce))::out)
     
     |ASSIGNMENT((TAG,tag,_),ASSIGNMENT_LIST(ls))::rest->
-        let effects,rest = country_effects_r rest [] in
+        let effects,_ = country_effects_r ls [] in
         country_effects_r rest ((TAG(tag,effects))::out)
     |ASSIGNMENT((KEYWORD,v,(x,y)),LEXEM(lex_type,v2,_))::rest -> 
             let exp = EXCEPTION(Exception.UNEXPECTED_ASSIGNMENT(v,KEYWORD,v2,lex_type),(x,y)) in
             (List.rev (exp::out) ),rest
-    |[] -> (List.rev out),rest
+    |[] -> (List.rev out),[]
     |rest-> (List.rev out),rest
 in
 country_effects_r  effects []
