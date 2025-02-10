@@ -4,7 +4,10 @@ open Type_def
 let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("agree_with_ruling_party"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("cash_reserves"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("consciousness"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("everyday_needs"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
@@ -200,7 +203,7 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("rich_tax"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("ruling_party"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("ruling_party_ideology"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("slavery"),CHOICE_VALUE(["yes_slavery";"no_slavery"]));
+(KEYWORD_SYMBOL("slavery"),CHOICE_VALUE(["yes_slavery";"no_slavery";"freedom_of_womb"]));
 (KEYWORD_SYMBOL("social_movement_strength"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("social_reform_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("social_reform_want"),PARAM_VALUE(FLOAT));
@@ -247,11 +250,9 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("war_policy"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("war_score"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("war_with"),PARAM_VALUE(KEYWORD));
-(TYPE_SYMBOL(TAG),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("total_pops"),PARAM_VALUE(INT));
-]));
+(TYPE_SYMBOL(TAG), COUNTRY_CONDITIONS);
 (TYPE_SYMBOL(KEYWORD),PARAM_VALUE(INT));
-(TYPE_SYMBOL(CONDITION),PROVINCE_CONDITIONS);
+(TYPE_SYMBOL(CONDITION),COUNTRY_CONDITIONS);
 ]
 
 let province_conditions = symbol_table_init [
@@ -334,4 +335,6 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("work_available"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("worker"),PARAM_VALUE(KEYWORD));
 ]));
+(TYPE_SYMBOL(TAG), PROVINCE_CONDITIONS);
+(TYPE_SYMBOL(CONDITION), COUNTRY_CONDITIONS);
 ]

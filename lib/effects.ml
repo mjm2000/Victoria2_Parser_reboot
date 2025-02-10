@@ -97,7 +97,7 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("release"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("release_vassal"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("release_vassal"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("war"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("war"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("target"),PARAM_VALUE(TAG));
@@ -171,7 +171,7 @@ let province_effects = symbol_table_init [
 (KEYWORD_SYMBOL("random_list"),PARAM_LIST(symbol_table_init [
     (TYPE_SYMBOL(INT),COUNTRY_EFFECTS)
 ]));
-(KEYWORD_SYMBOL("limit"),PROVINCE_EFFECTS);
+(KEYWORD_SYMBOL("limit"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("assimilate"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("add_core"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
@@ -223,7 +223,10 @@ let state_effects = symbol_table_init [
 
 let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("assimilate"),PARAM_VALUE(KEYWORD));
-    (KEYWORD_SYMBOL("consciousness"),PARAM_VALUE(FLOAT));
+    (KEYWORD_SYMBOL("consciousness"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
     (KEYWORD_SYMBOL("militancy"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("dominant_issue"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));

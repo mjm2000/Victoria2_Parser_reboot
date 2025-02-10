@@ -85,8 +85,8 @@ and exception_iden_string exp = match exp with
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
-    let _, e, (x, y) = exp in 
-    Printf.sprintf " At (%i,%i): %s, expected:" x y (exception_iden_string e) 
+    let ev, e, (x, y) = exp in 
+    Printf.sprintf " At (%i,%i): %s, expected:%s" x y (exception_iden_string e) (string_expected_value ev)
 
 
 and string_assignment assignment = match assignment with  
@@ -103,11 +103,62 @@ and string_assignment_list al =
     in 
     Printf.sprintf "ASSIGN_LIST(%s)" x
 
-and string_expr (expr:expr) = match expr with
+and string_expr expr = match expr with
     | LEXEM (type_val, str, (x, y)) -> 
         Printf.sprintf "LEXEM(type(%s):value(%s),location(%d,%d))" (lexem_to_str type_val) str x y 
     | ASSIGNMENT_LIST assignment_list -> string_assignment_list assignment_list
     | EXPR_EXCEPTION exception_value -> exception_string exception_value
+and string_rh_symbol pv = match pv with
+    | PARAM_VALUE type_val -> 
+        Printf.sprintf "PARAM_VALUE(type(%s))" (lexem_to_str type_val)
+    | PARAM_LIST (symbol_table) -> 
+        let x = Hashtbl.fold (fun k v acc -> 
+            Printf.sprintf "%s\n\t%s:%s" acc (string_lh_symbol k) (string_rh_symbol v)
+        ) symbol_table "" in
+        Printf.sprintf "PARAM_LIST(%s)" x
+    | PARAM_OPTION (options) ->
+        let x = List.fold_left (fun acc x -> 
+            Printf.sprintf "%s\n\t%s" acc (string_rh_symbol x)
+        ) "" options in
+        Printf.sprintf "PARAM_OPTION(%s)" x
+    | CHOICE_VALUE (choices) ->
+        let x = List.fold_left (fun acc x -> 
+            Printf.sprintf "%s\n\t%s" acc x
+        ) "" choices in
+        Printf.sprintf "CHOICE_VALUE(%s)" x
+    | APPEND_SYMBOLS (symbols, rh) ->
+        let x = List.fold_left (fun acc (lh, rh) -> 
+            Printf.sprintf "%s\n\t%s:%s" acc (string_lh_symbol lh) (string_rh_symbol rh)
+        ) "" symbols in
+        Printf.sprintf "APPEND_SYMBOLS(%s:%s)" x (string_rh_symbol rh)
+    | PROVINCE_MTTH -> "PROVINCE_MTTH"
+    | COUNTRY_MTTH -> "COUNTRY_MTTH"
+    | PROVINCE_EFFECTS -> "PROVINCE_EFFECTS"
+    | PROVINCE_CONDITIONS -> "PROVINCE_CONDITIONS"
+    | COUNTRY_EFFECTS -> "COUNTRY_EFFECTS"
+    | COUNTRY_CONDITIONS -> "COUNTRY_CONDITIONS"
+    | POP_EFFECTS -> "POP_EFFECTS"
+    | POP_CONDITIONS -> "POP_CONDITIONS"
+    | STATE_EFFECTS -> "STATE_EFFECTS"
+
+and string_lh_symbol lh = match lh with
+    | KEYWORD_SYMBOL str -> Printf.sprintf "KEYWORD_SYMBOL(%s)" str
+    | TYPE_SYMBOL lexem -> Printf.sprintf "TYPE_SYMBOL(%s)" (lexem_to_str lexem)
+
+and string_expected_value v = match v with
+    | RHS(ls) -> 
+        let x = List.fold_left (fun acc x -> 
+            match x with
+            | PARAM_LIST(_)-> Printf.sprintf "%s\n\t%s" acc "PARAM_LIST"
+            |_ -> Printf.sprintf "%s\n\t%s" acc (string_rh_symbol x)
+        ) "" ls in
+        Printf.sprintf "RHS(%s)" x 
+    | LHS(ls) -> 
+        let x = List.fold_left (fun acc x -> 
+            Printf.sprintf "%s\n\t%s" acc (string_lh_symbol x)
+        ) "" ls in
+        Printf.sprintf "LHS(%s)" x
+    | NONE -> "NONE"
 
 let get_errors assignments = 
     let rec get_errors_r assignments out = match assignments with
@@ -122,6 +173,7 @@ let get_errors assignments =
     | _::rest -> get_errors_r rest out
 in
 get_errors_r assignments []
+
 let exceptions_string = List.fold_left (fun buffer e -> 
     Printf.sprintf "%s\n%s" buffer (exception_string e)
 ) "" 

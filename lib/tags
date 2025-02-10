@@ -30,6 +30,7 @@ KEYWORD	Lexer.ml	/^|KEYWORD $/;"	C	type:lexem_type
 KEYWORD_SYMBOL	Type_def.ml	/^    |KEYWORD_SYMBOL of string $/;"	C	type:lh_symbol_type
 LB	Lexer.ml	/^|LB$/;"	C	type:lexem_type
 LEXEM	Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
+LEX_ERROR	Lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
 LHS	Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
 Lexer	Lexer.ml	/^type lexem_type =$/;"	M
 Mtth	mtth.ml	/^open Symbol_table$/;"	M
@@ -74,24 +75,25 @@ exception_iden_string	pre_parser.ml	/^and exception_iden_string exp = match exp 
 exception_string	pre_parser.ml	/^and exception_string (exp : exception_value) : string = $/;"	f
 exception_type	Type_def.ml	/^and exception_type = $/;"	t
 exception_value	Type_def.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exceptions_string	pre_parser.ml	/^let exceptions_string = List.fold_left (fun buffer e -> $/;"	v
 expected_value	Type_def.ml	/^and expected_value =$/;"	t
 expr	Type_def.ml	/^type expr = $/;"	t
-expression	pre_parser.ml	/^and expression lexems = match lexems with$/;"	f
+expression	pre_parser.ml	/^and expression lexems = $/;"	f
+get_errors	pre_parser.ml	/^let get_errors assignments = $/;"	f
 lexem	Lexer.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
 lexem_to_str	Lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
 lexem_type	Lexer.ml	/^type lexem_type =$/;"	t
-lexer	Lexer.ml	/^let lexer file = $/;"	f
+lexer	Lexer.ml	/^let lexer f = $/;"	f
 lh_symbol_type	Type_def.ml	/^and lh_symbol_type = $/;"	t
 ls_to_str	Lexer.ml	/^let ls_to_str ls = $/;"	f
 match_reg	Lexer.ml	/^let match_reg reg str= Str.string_match (Str.regexp reg)  str 0  $/;"	f
 pop_conditions	conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
 pop_effects	effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
-print_lexem	Lexer.ml	/^let print_lexem lexem = Printf.printf "%s:" (lexem_to_str lexem)$/;"	f
-print_lexems	Lexer.ml	/^let print_lexems lexems = List.iter (fun (lex,str,(x,y))->print_lexem lex; Printf.printf "%s (%i/;"	f
+print_lexem	Lexer.ml	/^let print_lexem lexem = $/;"	f
+print_lexems	Lexer.ml	/^let print_lexems lexems = $/;"	f
 province_conditions	conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
 province_effects	effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
 province_mtth	mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
-read_file_str	Lexer.ml	/^let read_file_str f : char list= $/;"	f
 rh_symbol_type	Type_def.ml	/^and rh_symbol_type = $/;"	t
 shortest_list	type_verify.ml	/^let shortest_list lists =$/;"	f
 split_list	type_verify.ml	/^let split_list n ls =$/;"	f
@@ -99,8 +101,13 @@ state_effects	effects.ml	/^let state_effects = symbol_table_init [$/;"	v
 str_to_ls	Lexer.ml	/^let str_to_ls str = $/;"	f
 string_assignment	pre_parser.ml	/^and string_assignment assignment = match assignment with  $/;"	f
 string_assignment_list	pre_parser.ml	/^and string_assignment_list al =$/;"	f
-string_expr	pre_parser.ml	/^and string_expr (expr:expr) = match expr with$/;"	f
+string_expected_value	pre_parser.ml	/^and string_expected_value v = match v with$/;"	f
+string_expr	pre_parser.ml	/^and string_expr expr = match expr with$/;"	f
+string_lexem	Lexer.ml	/^let string_lexem lex_value = $/;"	f
+string_lexems	Lexer.ml	/^let string_lexems lexems = $/;"	f
+string_lh_symbol	pre_parser.ml	/^and string_lh_symbol lh = match lh with$/;"	f
 string_of_symbol_table	Type_def.ml	/^let rec string_of_symbol_table symbol_table =$/;"	f
+string_rh_symbol	pre_parser.ml	/^and string_rh_symbol pv = match pv with$/;"	f
 stuctures	structures.ml	/^let stuctures = symbol_table_init [$/;"	v
 symbol_table_init	symbol_table.ml	/^let symbol_table_init symbols =$/;"	f
-type_verify	type_verify.ml	/^let rec type_verify symbol_table assignments exceptions scope = $/;"	f
+type_verify	type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f

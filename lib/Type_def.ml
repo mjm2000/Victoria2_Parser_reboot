@@ -24,7 +24,7 @@ and exception_type =
 and lh_symbol_type = 
     |KEYWORD_SYMBOL of string 
     |TYPE_SYMBOL of lexem_type
-
+(*add label*)
 and rh_symbol_type = 
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
