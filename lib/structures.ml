@@ -69,7 +69,7 @@ let structures = symbol_table_init [
                             PARAM_VALUE(INT);
                             PARAM_VALUE(FLOAT);
                     ]));
-                ],PROVINCE_CONDITIONS));
+                ],COUNTRY_CONDITIONS));
             ]));
             ],
             PROVINCE_EFFECTS)
