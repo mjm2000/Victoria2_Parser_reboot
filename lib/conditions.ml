@@ -17,7 +17,10 @@ let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("life_needs"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("literacy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("luxury_needs"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("militancy"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
@@ -65,7 +68,10 @@ let country_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("administration_spending"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("administration_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("ai"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("alliance_with"),PARAM_OPTION([
     PARAM_VALUE(TAG);
@@ -157,7 +163,10 @@ let country_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("is_vassal"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_substate"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("literacy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("lost_national"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("middle_strata_everyday_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("middle_strata_life_needs"),PARAM_VALUE(FLOAT));
@@ -355,7 +364,10 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("life_rating"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("literacy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("military_spending"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("minorities"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("owned_by"),PARAM_OPTION([
