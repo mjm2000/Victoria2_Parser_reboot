@@ -1,0 +1,8 @@
+Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(1315,9),lhvalue:factor=rhvalue:LEXEM(type(Float):value(0.05),location(1315,16))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(181,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(75),location(181,14))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(193,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(25),location(193,14))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(64,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(95),location(64,14))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(73,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(5),location(73,13))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(118,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(70),location(118,14))))Error here:ASSIGN_LIST(
+	ASSIGNMENT(type:Keyword,location:(127,9),lhvalue:factor=rhvalue:LEXEM(type(Int):value(30),location(127,14))))
