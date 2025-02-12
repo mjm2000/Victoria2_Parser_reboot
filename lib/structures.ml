@@ -57,10 +57,22 @@ let structures = symbol_table_init [
         (KEYWORD_SYMBOL("is_triggered_only"), PARAM_VALUE(BOOL));
         (KEYWORD_SYMBOL("option"), APPEND_SYMBOLS([
             (KEYWORD_SYMBOL("name"),PARAM_VALUE(STRING));
-            (KEYWORD_SYMBOL("ai_chance"),PARAM_VALUE(INT))
-            ], 
-            PROVINCE_EFFECTS
-            )
+            (KEYWORD_SYMBOL("ai_chance"),PARAM_LIST(symbol_table_init [
+                (KEYWORD_SYMBOL("factor"),
+                    PARAM_OPTION([
+                        PARAM_VALUE(INT);
+                        PARAM_VALUE(FLOAT);
+                ]));
+                (KEYWORD_SYMBOL("modifier"),APPEND_SYMBOLS([
+                    (KEYWORD_SYMBOL("factor"),
+                        PARAM_OPTION([
+                            PARAM_VALUE(INT);
+                            PARAM_VALUE(FLOAT);
+                    ]));
+                ],COUNTRY_CONDITIONS));
+            ]));
+            ],
+            COUNTRY_EFFECTS)
         );
         (KEYWORD_SYMBOL("immediate"), PROVINCE_EFFECTS);
     ]));
