@@ -76,7 +76,10 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("social_reform"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("upper_house"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
-    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
 ]));
 (KEYWORD_SYMBOL("add_casus_belli"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("target"),PARAM_OPTION([
