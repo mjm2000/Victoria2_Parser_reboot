@@ -105,7 +105,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("constructing_cb_type"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("controls"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("crime_fighting"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("crime_fighting"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("crisis_exist"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("culture_has_union_tag"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("diplomatic_influence"),PARAM_LIST(symbol_table_init [
