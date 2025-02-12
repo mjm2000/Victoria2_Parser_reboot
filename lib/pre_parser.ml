@@ -147,6 +147,12 @@ and string_lh_symbol lh = match lh with
     | KEYWORD_SYMBOL str -> Printf.sprintf "KEYWORD_SYMBOL(%s)" str
     | TYPE_SYMBOL lexem -> Printf.sprintf "TYPE_SYMBOL(%s)" (lexem_to_str lexem)
 
+and string_symbol_table symbol_table =
+    let x = Hashtbl.fold (fun k v acc -> 
+        Printf.sprintf "%s\n\t%s:%s" acc (string_lh_symbol k) (string_rh_symbol v)
+    ) symbol_table "" in
+    Printf.sprintf "SYMBOL_TABLE(%s)" x
+
 and string_expected_value v = match v with
     | RHS(ls) -> 
         let x = List.fold_left (fun acc x -> 
