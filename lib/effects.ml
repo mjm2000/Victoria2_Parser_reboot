@@ -60,8 +60,8 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("plurality"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("prestige_factor"),PARAM_VALUE(FLOAT));
-(KEYWORD_SYMBOL("primary_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 	]));
