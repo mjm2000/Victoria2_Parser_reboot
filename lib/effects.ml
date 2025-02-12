@@ -101,8 +101,11 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("create_alliance"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("create_vassal"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("diplomatic_influence"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("who"),PARAM_VALUE(SCOPE));
-    (KEYWORD_SYMBOL("who"),PARAM_VALUE(TAG));
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+    ]);
+    );
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("end_military_access"),PARAM_OPTION([
@@ -137,7 +140,10 @@ PARAM_VALUE(SCOPE)
     ]));
 (KEYWORD_SYMBOL("war"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("war"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("target"),PARAM_VALUE(TAG));
+    (KEYWORD_SYMBOL("target"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+    ]));
     (KEYWORD_SYMBOL("attacker_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
     ]));
