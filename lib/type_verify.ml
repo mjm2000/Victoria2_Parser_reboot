@@ -27,6 +27,40 @@ let split_list n ls =
 
     split_list_r [] ls 0
 
+let rec symbol_table_from_rhv rhv = match rhv with
+   |(PROVINCE_MTTH) ->
+      [province_mtth]
+   | (COUNTRY_MTTH) ->
+      [country_mtth]
+   | (PROVINCE_EFFECTS) ->
+      [province_effects]
+   | (PROVINCE_CONDITIONS) ->
+      [province_conditions]
+   | (COUNTRY_EFFECTS) ->
+      [country_effects]
+   | (COUNTRY_CONDITIONS) ->
+      [country_conditions]
+   | (POP_EFFECTS) ->
+      [pop_effects]
+   | (POP_CONDITIONS) ->
+      [pop_conditions]
+   | (STATE_EFFECTS) ->
+      [state_effects]
+    | (STATE_CONDITIONS) ->
+      [state_conditions]
+   | (PARAM_LIST(sub_table))->
+        [sub_table]
+    | PARAM_OPTION(options) ->
+        List.fold_left (fun acc rh ->
+            (symbol_table_from_rhv rh)@acc
+        ) [] options 
+
+    | APPEND_SYMBOLS(appended_symbols,param_value) -> 
+        let param_symbol_tables = symbol_table_from_rhv param_value  
+        in
+        List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
+    | _ -> []
+
 let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
@@ -72,6 +106,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             else 
                 let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
                 ((RHS [rh],e,cords)::exceptions)
+
         |x -> 
            let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
            let expected = (RHS [x]) in
@@ -95,59 +130,38 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |_-> None
         in
 
-     let rec assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
-         |(PROVINCE_MTTH as new_scope) ->
-			type_verify_r province_mtth ls exceptions (RHS[new_scope])
-         | (COUNTRY_MTTH as new_scope) ->
-            type_verify_r country_mtth ls exceptions (RHS[new_scope])
-         | (PROVINCE_EFFECTS as new_scope) ->
-			type_verify_r province_effects ls exceptions (RHS[new_scope])
-         | (PROVINCE_CONDITIONS as new_scope) ->
-			type_verify_r province_conditions ls exceptions (RHS[new_scope])
-         | (COUNTRY_EFFECTS as new_scope) ->
-			type_verify_r country_effects ls exceptions (RHS[new_scope])
-         | (COUNTRY_CONDITIONS as new_scope) ->
-			type_verify_r country_conditions ls exceptions (RHS[new_scope])
-         | (POP_EFFECTS as new_scope) ->
-			type_verify_r pop_effects ls exceptions (RHS[new_scope])
-         | (POP_CONDITIONS as new_scope) ->
-			type_verify_r pop_conditions ls exceptions (RHS[new_scope])
-         | (STATE_EFFECTS as new_scope) ->
-			type_verify_r state_effects ls exceptions (RHS[new_scope])
-         | (PARAM_LIST(sub_table) as new_scope)->
-            type_verify_r sub_table ls exceptions (RHS[new_scope])
-         | (APPEND_SYMBOLS(added_symbols,rest_of_expected_symbols))    ->
-                (*
-            let line,char = cords in 
-            Printf.printf "%s %i %i\n" (Pre_parser.string_rh_symbol x) line char; 
-            *)
-            let symbol_length = List.length added_symbols in
-            let left_half,right_half = split_list symbol_length ls in
-            (*
-            Printf.printf "Left half: %s\n" (Pre_parser.string_expr (ASSIGNMENT_LIST(left_half)));
-            *)
-            let added_table = symbol_table_init added_symbols  in
-
-
-            let exceptions = type_verify_r added_table left_half exceptions (RHS([PARAM_LIST(added_table)])) in
-            assignlist_type_check  (rest_of_expected_symbols) right_half exceptions 
-         | (PARAM_OPTION(options)) ->
-            let shortest_exception_list = (List.map (fun expected_rh_type -> 
-                assignlist_type_check expected_rh_type ls []
-            ) options)
-            |> shortest_list in
-            (match shortest_exception_list with 
-             | Some e -> 
-                     type_verify_r symbol_table rest (e@exceptions) scope
-             | None -> 
-                let e = UNEXPECTED_ASSIGN_LIST(ls)  in
-                type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
+    
+     let  assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
+         |(PROVINCE_MTTH as new_scope) 
+		 | (COUNTRY_MTTH as new_scope) 
+         | (PROVINCE_EFFECTS as new_scope) 
+		 | (PROVINCE_CONDITIONS as new_scope) 
+		 | (COUNTRY_EFFECTS as new_scope) 
+		 | (COUNTRY_CONDITIONS as new_scope) 
+		 | (POP_EFFECTS as new_scope) 
+		 | (POP_CONDITIONS as new_scope) 
+		 | (STATE_EFFECTS as new_scope) 
+         | (STATE_CONDITIONS as new_scope)
+		 | (PARAM_LIST(_) as new_scope)
+         | (APPEND_SYMBOLS(_) as new_scope)     
+         | (PARAM_OPTION(_) as new_scope) ->
+            let symbol_tables = symbol_table_from_rhv new_scope in
+            let exception_lists = List.map (fun symbol_table -> 
+                type_verify_r symbol_table ls [] (RHS([new_scope]))
+            ) symbol_tables    
+            in
+            (match exception_lists with
+            |[] -> exceptions
+            |[exception_list] -> exception_list@exceptions
+            |exception_lists when List.mem [] exception_lists -> 
+                exceptions 
+            |exception_lists -> 
+                let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
+                (v :: exceptions)
             )
-
-        
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
-            type_verify_r symbol_table rest ((RHS[x],e,cords)::exceptions) scope
+            ((RHS[x],e,cords)::exceptions)
         in
         (match expected_rh_type with
         |Some rh -> 

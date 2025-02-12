@@ -32,17 +32,24 @@ let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("social_reform_want"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("strata"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("unemployment"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("location"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("country"),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("cultural_union"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("any_state"),STATE_CONDITIONS);
 (KEYWORD_SYMBOL("any_core"),PROVINCE_CONDITIONS);
-(KEYWORD_SYMBOL("any_neighbor_province"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("all_core"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
 (KEYWORD_SYMBOL("controller"),COUNTRY_CONDITIONS);
-(KEYWORD_SYMBOL("owner"),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("sea_zone"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("state_scope"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
@@ -60,12 +67,24 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("administration_spending"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("ai"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("alliance_with"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(FLOAT));
-(KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("alliance_with"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("average_consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("average_militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("badboy"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("big_producer"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("blockade"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("blockade"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("brigades_compare"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("can_build_factory_in_capital_state"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("crime_higher_than_education"),PARAM_VALUE(BOOL));
@@ -74,12 +93,12 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("capital"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("citizenship_policy"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("civilization_progress"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("civilization_progress"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("colonial_nation"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("constructing_cb_type"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("controls"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("controls"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("crime_fighting"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("crisis_exist"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("culture_has_union_tag"),PARAM_VALUE(BOOL));
@@ -94,7 +113,7 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("economic_reform_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("education_spending"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("election"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("exists"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("exists"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("government"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("great_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("have_core_in"),PARAM_VALUE(TAG));
@@ -112,7 +131,7 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("involved_in_crisis"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_claim_crisis"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_colonial_crisis"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("is_core"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_core"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("is_cultural_union"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
@@ -149,8 +168,8 @@ let country_conditions = symbol_table_init [
 		PARAM_VALUE(SCOPE)
 ]));
 (KEYWORD_SYMBOL("military_reform_name"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("military_score"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("military_score"),PARAM_OPTION([
+        PARAM_VALUE(INT);
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 ]));
@@ -158,7 +177,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("national_provinces_occupied"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("neighbour"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("neighbour"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("num_of_allies"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("num_of_cities"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("num_of_ports"),PARAM_VALUE(INT));
@@ -217,7 +239,10 @@ let country_conditions = symbol_table_init [
         PARAM_VALUE(SCOPE);
     ];
 ));
-(KEYWORD_SYMBOL("tag"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("tag"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("this_culture_union"),PARAM_OPTION([
 	PARAM_VALUE(TAG);
     PARAM_VALUE(SCOPE);
@@ -229,7 +254,6 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("total_num_of_ports"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("total_offensives"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("total_of_ours_sunk"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("tag"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("total_sea_battles"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("total_sunk_by_us"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("trade_policy"),PARAM_VALUE(KEYWORD));
@@ -251,19 +275,36 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("war_score"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("war_with"),PARAM_VALUE(KEYWORD));
 (TYPE_SYMBOL(TAG), COUNTRY_CONDITIONS);
-(TYPE_SYMBOL(KEYWORD),PARAM_VALUE(INT));
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+        PARAM_VALUE(KEYWORD);
+]));
 (TYPE_SYMBOL(CONDITION),COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(INT),PROVINCE_CONDITIONS);
 ]
 
 let province_conditions = symbol_table_init [
+
+(KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("state_scope"),STATE_CONDITIONS);
+(KEYWORD_SYMBOL("any_neighbor_province"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("owner"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
 (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("month"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("fire_only_once"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_triggered_only"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("major"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(FLOAT));
-(KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("average_consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("average_militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("can_build_factory"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("continent"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("controlled_by"),PARAM_OPTION([
@@ -294,7 +335,10 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_province_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("has_recent_imigration"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("has_recent_imigration"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_blockaded"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_capital"),PARAM_VALUE(BOOL));
@@ -308,6 +352,7 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_overseas"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_state_capital"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("life_rating"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("literacy"),PARAM_VALUE(INT));
@@ -322,11 +367,17 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("province_control_days"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("province_id"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("region"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("state_id"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("state_id"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("terrain"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("trade_goods"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("total_pops"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("unemployment"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("total_pops"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
 (KEYWORD_SYMBOL("unemployment_by_type"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(FLOAT));
@@ -335,6 +386,28 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("work_available"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("worker"),PARAM_VALUE(KEYWORD));
 ]));
-(TYPE_SYMBOL(TAG), PROVINCE_CONDITIONS);
-(TYPE_SYMBOL(CONDITION), COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(TAG),COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(CONDITION),  PROVINCE_CONDITIONS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(*maybe errors*)
+(KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
+]
+
+let state_conditions = symbol_table_init [
+    (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
+    (TYPE_SYMBOL(KEYWORD), PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+    ]));
+    (TYPE_SYMBOL(CONDITION), STATE_CONDITIONS);
+    (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
 ]

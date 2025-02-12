@@ -3,6 +3,27 @@ open Lexer
 open Type_def
 
 let country_effects =  symbol_table_init [
+
+(KEYWORD_SYMBOL("random_pop"),POP_EFFECTS);
+(KEYWORD_SYMBOL("random_owned"),PROVINCE_EFFECTS);
+(KEYWORD_SYMBOL("any_country"),COUNTRY_EFFECTS);
+(KEYWORD_SYMBOL("random_country"),COUNTRY_EFFECTS);
+(KEYWORD_SYMBOL("random_state"),STATE_EFFECTS);
+(KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("leadership"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("treasury"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("small_arms"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("cotton"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("ammunition"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("canned_food"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("artillery"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("wine"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("liquor"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("country_event"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
+]));
+
 (KEYWORD_SYMBOL("change_variable"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
@@ -13,7 +34,11 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("add_accepted_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("remove_accepted_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("add_country_modifier"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("name"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+        PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(STRING)
+    ]);
+    );
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("kill_leader"),PARAM_VALUE(KEYWORD));
@@ -27,16 +52,20 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("plurality"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("prestige_factor"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("prestige_factor"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 	]));
 (KEYWORD_SYMBOL("religion"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("slaves"),POP_EFFECTS);
 (KEYWORD_SYMBOL("research_points"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("war_exhaustion"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("years_of_research"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("years_of_research"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+]));
 (KEYWORD_SYMBOL("nationalize"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("economic_reform"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("election"),PARAM_VALUE(BOOL));
@@ -89,15 +118,23 @@ let country_effects =  symbol_table_init [
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 	]));
-(KEYWORD_SYMBOL("military_access"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("military_access"),PARAM_OPTION([
+PARAM_VALUE(TAG);
+PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("neutrality"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("relation"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("who"),PARAM_VALUE(SCOPE));
-    (KEYWORD_SYMBOL("who"),PARAM_VALUE(TAG));
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+    ]));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
-(KEYWORD_SYMBOL("release"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("release_vassal"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("release"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("release_vassal"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+    ]));
 (KEYWORD_SYMBOL("war"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("war"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("target"),PARAM_VALUE(TAG));
@@ -110,7 +147,7 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("call_ally"),PARAM_VALUE(BOOL));
 ]));
 (KEYWORD_SYMBOL("province_event"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("id"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("add_tax_relative_income"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("treasury"),PARAM_VALUE(INT));
@@ -127,7 +164,7 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("any_neighbor_country"),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("any_sphere_member"),PROVINCE_EFFECTS);
-(KEYWORD_SYMBOL("any_state"),PROVINCE_EFFECTS);
+(KEYWORD_SYMBOL("any_state"),STATE_EFFECTS);
 (KEYWORD_SYMBOL("any_substate"),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("capital_scope"),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("country_tag"),PARAM_VALUE(TAG));
@@ -136,8 +173,7 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("region_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("sphere_owner"),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("war_countries"),PROVINCE_EFFECTS);
-(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("random"),COUNTRY_EFFECTS);
+(KEYWORD_SYMBOL("random"),APPEND_SYMBOLS([(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT))],COUNTRY_EFFECTS));
 (KEYWORD_SYMBOL("limit"),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("random_list"),PARAM_LIST(symbol_table_init [
     (TYPE_SYMBOL(INT),COUNTRY_EFFECTS)
@@ -146,12 +182,28 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD)); 
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT))
 ]));
+
 (TYPE_SYMBOL(TAG),COUNTRY_EFFECTS);
 (TYPE_SYMBOL(SCOPE),COUNTRY_EFFECTS);
-(TYPE_SYMBOL(KEYWORD),PROVINCE_EFFECTS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+        PARAM_VALUE(KEYWORD);
+        POP_EFFECTS;
+    ]));
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 ]
 let province_effects = symbol_table_init [ 
+
+(KEYWORD_SYMBOL("random_country"),COUNTRY_EFFECTS);
+(KEYWORD_SYMBOL("random_state"),STATE_EFFECTS);
+(KEYWORD_SYMBOL("random_pop"),POP_EFFECTS);
+(KEYWORD_SYMBOL("clr_country_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("set_country_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("state_scope"),STATE_EFFECTS);
+(KEYWORD_SYMBOL("province_event"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
+]));
 (KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
 (KEYWORD_SYMBOL("aristocrats"),POP_EFFECTS);
 (KEYWORD_SYMBOL("artisans"),POP_EFFECTS);
@@ -178,7 +230,11 @@ let province_effects = symbol_table_init [
 		PARAM_VALUE(SCOPE)
 	]));
 (KEYWORD_SYMBOL("add_province_modifier"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("name"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+        PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(STRING)
+    ]);
+    );
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("duration"),PARAM_VALUE(KEYWORD));
@@ -209,6 +265,7 @@ let province_effects = symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
+(KEYWORD_SYMBOL("owner"),COUNTRY_EFFECTS);
 ]
 
 let state_effects = symbol_table_init [
@@ -219,6 +276,17 @@ let state_effects = symbol_table_init [
 (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("any_owned"),PROVINCE_EFFECTS);
+(KEYWORD_SYMBOL("limit"),STATE_CONDITIONS);
+(KEYWORD_SYMBOL("add_province_modifier"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+        PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(STRING)
+    ]);
+    );
+    (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
+]));
+(TYPE_SYMBOL(KEYWORD),POP_EFFECTS);
 ]
 
 let pop_effects = symbol_table_init [
@@ -227,14 +295,23 @@ let pop_effects = symbol_table_init [
         PARAM_VALUE(INT);
         PARAM_VALUE(FLOAT)
     ]));
-    (KEYWORD_SYMBOL("militancy"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("militancy"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
     (KEYWORD_SYMBOL("dominant_issue"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("factor"),PARAM_VALUE(INT));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+			PARAM_VALUE(FLOAT);
+			PARAM_VALUE(INT);
+		]));
     ]));
     (KEYWORD_SYMBOL("ideology"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("factor"),PARAM_VALUE(INT));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+			PARAM_VALUE(FLOAT);
+			PARAM_VALUE(INT);
+		]));
     ]));
     (KEYWORD_SYMBOL("literacy"),PARAM_VALUE(FLOAT));
     (KEYWORD_SYMBOL("money"),PARAM_VALUE(FLOAT));
@@ -248,12 +325,38 @@ let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("move_pop"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("reduce_pop"),PARAM_VALUE(FLOAT));
-    (KEYWORD_SYMBOL("scaled_consciousness"),PARAM_LIST(symbol_table_init [
-        (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("factor"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
+        PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+			PARAM_VALUE(FLOAT);
+			PARAM_VALUE(INT);
+		]));
+        ]);
+        PARAM_LIST(symbol_table_init [
+            (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+            (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+                PARAM_VALUE(FLOAT);
+                PARAM_VALUE(INT);
+            ]));
+        ]);
     ]));
-    (KEYWORD_SYMBOL("scaled_militancy"),PARAM_LIST(symbol_table_init [
-        (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("factor"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("scaled_militancy"),PARAM_OPTION([
+        PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+			PARAM_VALUE(FLOAT);
+			PARAM_VALUE(INT);
+		]));
+        ]);
+        PARAM_LIST(symbol_table_init [
+            (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+            (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+                PARAM_VALUE(FLOAT);
+                PARAM_VALUE(INT);
+            ]));
+        ]);
     ]));
+    (KEYWORD_SYMBOL("limit"),POP_CONDITIONS);
+    (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
 ]

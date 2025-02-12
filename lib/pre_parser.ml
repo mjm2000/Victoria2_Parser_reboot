@@ -82,6 +82,7 @@ and exception_iden_string exp = match exp with
 
     | UNEXPECTED_RIGHT_BRACKET -> "Unexpected Right Bracket"
     | UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
+    | MULTIPLE_CHOICE(_)-> "Multiple Choice "
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
@@ -139,6 +140,7 @@ and string_rh_symbol pv = match pv with
     | COUNTRY_CONDITIONS -> "COUNTRY_CONDITIONS"
     | POP_EFFECTS -> "POP_EFFECTS"
     | POP_CONDITIONS -> "POP_CONDITIONS"
+    | STATE_CONDITIONS -> "STATE_CONDITIONS"
     | STATE_EFFECTS -> "STATE_EFFECTS"
 
 and string_lh_symbol lh = match lh with

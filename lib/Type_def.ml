@@ -21,6 +21,7 @@ and exception_type =
     |UNEXPECTED_ASSIGN_LIST of assignment list 
     |UNEXPECTED_RIGHT_BRACKET
     |UNEXPECTED_LEFT_BRACKET
+    |MULTIPLE_CHOICE of exception_value list list
 and lh_symbol_type = 
     |KEYWORD_SYMBOL of string 
     |TYPE_SYMBOL of lexem_type
@@ -40,6 +41,7 @@ and rh_symbol_type =
     |POP_EFFECTS
     |POP_CONDITIONS
     |STATE_EFFECTS
+    |STATE_CONDITIONS
 
 
 
@@ -75,6 +77,7 @@ let rec string_of_symbol_table symbol_table =
         |COUNTRY_MTTH -> "COUNTRY_MTTH"
         |PROVINCE_EFFECTS -> "PROVINCE_EFFECTS"
         |PROVINCE_CONDITIONS -> "PROVINCE_CONDITIONS"
+        |STATE_CONDITIONS -> "STATE_CONDITIONS"
         |COUNTRY_EFFECTS -> "COUNTRY_EFFECTS"
         |COUNTRY_CONDITIONS -> "COUNTRY_CONDITIONS"
         |POP_EFFECTS -> "POP_EFFECTS"

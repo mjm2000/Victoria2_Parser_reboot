@@ -5,7 +5,10 @@ let country_mtth = symbol_table_init [
     (KEYWORD_SYMBOL("months"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("modifier"),APPEND_SYMBOLS([
-        (KEYWORD_SYMBOL("factor"),PARAM_VALUE(FLOAT));
+       (KEYWORD_SYMBOL("factor"),PARAM_OPTION[
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]);
     ],COUNTRY_CONDITIONS));
 ]
 let province_mtth = symbol_table_init [
