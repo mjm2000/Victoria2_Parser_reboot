@@ -56,6 +56,8 @@ let rec symbol_table_from_rhv rhv = match rhv with
         ) [] options 
 
     | APPEND_SYMBOLS(appended_symbols,param_value) -> 
+
+        Printf.printf "Print Symbol_table:%s" (Pre_parser.string_symbol_table symbol_table);
         let param_symbol_tables = symbol_table_from_rhv param_value  
         in
         List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
@@ -163,7 +165,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             (*
             Printf.printf "Error here:%s" (Pre_parser.string_assignment_list ls);
             *)
-            Printf.printf "Print Symbol_table:%s" (Pre_parser.string_symbol_table symbol_table);
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
         in
