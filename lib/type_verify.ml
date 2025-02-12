@@ -160,7 +160,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 (v :: exceptions)
             )
          | (x) -> 
-            Printf.printf "Error here:%s" (string_assignment_list (ASSIGNMENT_LIST(ls)));
+            Printf.printf "Error here:%s" (Pre_parser.string_assignment_list (ASSIGNMENT_LIST(ls)));
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
         in
