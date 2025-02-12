@@ -96,7 +96,7 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("crime_higher_than_education"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("can_nationalize"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("can_create_vassals"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("capital"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("citizenship_policy"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("civilization_progress"),PARAM_VALUE(INT));
@@ -335,8 +335,14 @@ let province_conditions = symbol_table_init [
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 ]));
-(KEYWORD_SYMBOL("crime_fighting"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("education_spending"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("crime_fighting"),PARAM_OPTION ([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("education_spending"), PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("empty"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("flashpoint_tension"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("has_building"),PARAM_VALUE(KEYWORD));
