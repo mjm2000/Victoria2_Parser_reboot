@@ -57,7 +57,6 @@ let rec symbol_table_from_rhv rhv = match rhv with
 
     | APPEND_SYMBOLS(appended_symbols,param_value) -> 
 
-        Printf.printf "Print Symbol_table:%s" (Pre_parser.string_symbol_table symbol_table);
         let param_symbol_tables = symbol_table_from_rhv param_value  
         in
         List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
