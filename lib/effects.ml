@@ -4,6 +4,13 @@ open Type_def
 
 let country_effects =  symbol_table_init [
 
+(KEYWORD_SYMBOL("dominant_issue"),PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+			PARAM_VALUE(FLOAT);
+			PARAM_VALUE(INT);
+		]));
+    ]));
 (KEYWORD_SYMBOL("random_pop"),POP_EFFECTS);
 (KEYWORD_SYMBOL("random_owned"),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("any_country"),COUNTRY_EFFECTS);
