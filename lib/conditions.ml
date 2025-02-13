@@ -151,9 +151,11 @@ let country_conditions = symbol_table_init [
         PARAM_VALUE(SCOPE);
         PARAM_VALUE(BOOL);
 ]));
-(KEYWORD_SYMBOL("is_culture_group"),
+(KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE);
+        PARAM_VALUE(BOOL);
+])
 );
 (KEYWORD_SYMBOL("is_disarmed"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_greater_power"),PARAM_VALUE(BOOL));
