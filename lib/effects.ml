@@ -343,7 +343,10 @@ let pop_effects = symbol_table_init [
 		]));
     ]));
     (KEYWORD_SYMBOL("literacy"),PARAM_VALUE(FLOAT));
-    (KEYWORD_SYMBOL("money"),PARAM_VALUE(FLOAT));
+    (KEYWORD_SYMBOL("money"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
     (*move issue percent*)
     (KEYWORD_SYMBOL("move_issue_percent"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("from"),PARAM_VALUE(KEYWORD));
