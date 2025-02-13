@@ -450,6 +450,8 @@ let province_conditions = symbol_table_init [
 
 (KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
 (*maybe errors*)
+(KEYWORD_SYMBOL("is_greater_power"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
  (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
