@@ -330,6 +330,7 @@ let country_conditions = symbol_table_init [
 ]
 
 let province_conditions = symbol_table_init [
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 (TYPE_SYMBOL(INT),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("can_build_in_province"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("building"),PARAM_VALUE(KEYWORD));
