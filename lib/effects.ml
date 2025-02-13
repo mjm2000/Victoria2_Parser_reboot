@@ -350,6 +350,13 @@ let province_effects = symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("owner"),COUNTRY_EFFECTS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+        PARAM_VALUE(KEYWORD);
+        POP_EFFECTS;
+        PROVINCE_EFFECTS;
+]));
 
 ]
 
@@ -486,5 +493,6 @@ let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("limit"),POP_CONDITIONS);
     (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
+    
 
 ]
