@@ -6,6 +6,8 @@ let country_effects =  symbol_table_init [
 
 
 (*potential errors*)
+(KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
+
 (KEYWORD_SYMBOL("change_tag"),PARAM_OPTION([
         PARAM_VALUE(TAG);
         PARAM_VALUE(KEYWORD)
@@ -253,6 +255,8 @@ PARAM_VALUE(SCOPE)
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 ]
 let province_effects = symbol_table_init [ 
+
+(KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 (*potential errors*)
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("add_country_modifier"),PARAM_LIST(symbol_table_init [
@@ -480,4 +484,5 @@ let pop_effects = symbol_table_init [
     ]));
     (KEYWORD_SYMBOL("limit"),POP_CONDITIONS);
     (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 ]
