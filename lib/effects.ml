@@ -310,7 +310,10 @@ let state_effects = symbol_table_init [
     );
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
 ]));
-(TYPE_SYMBOL(KEYWORD),POP_EFFECTS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+        POP_EFFECTS;
+        PROVINCE_EFFECTS;
+    ]));
 ]
 
 let pop_effects = symbol_table_init [
