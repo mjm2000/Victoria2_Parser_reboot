@@ -242,7 +242,6 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("accepted_culture"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("rank"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("rebel_power_fraction"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("recruited_percentage"),PARAM_VALUE(INT));
@@ -451,6 +450,7 @@ let province_conditions = symbol_table_init [
 
 (KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
 (*maybe errors*)
+(KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
  (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
