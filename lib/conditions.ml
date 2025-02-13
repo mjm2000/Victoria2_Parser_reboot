@@ -76,6 +76,7 @@ let country_conditions = symbol_table_init [
     PARAM_VALUE(INT);
 ]));
 (KEYWORD_SYMBOL("ai"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("AI"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("alliance_with"),PARAM_OPTION([
     PARAM_VALUE(TAG);
     PARAM_VALUE(SCOPE)
