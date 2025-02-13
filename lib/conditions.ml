@@ -446,6 +446,8 @@ let province_conditions = symbol_table_init [
 (TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
+    (*error maybe*)
+    PARAM_VALUE(KEYWORD);
 ]));
 
 (KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
