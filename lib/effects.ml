@@ -211,6 +211,7 @@ PARAM_VALUE(SCOPE)
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 ]
 let province_effects = symbol_table_init [ 
+(*potential errors*)
 (KEYWORD_SYMBOL("add_country_modifier"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("name"),PARAM_OPTION([
         PARAM_VALUE(KEYWORD);
@@ -218,6 +219,14 @@ let province_effects = symbol_table_init [
     ]);
     );
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
+]));
+(KEYWORD_SYMBOL("relation"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+    ]
+    ));
+    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 
 (KEYWORD_SYMBOL("random_country"),COUNTRY_EFFECTS);
