@@ -3,7 +3,7 @@ open Lexer
 open Type_def
 
 let country_effects =  symbol_table_init [
-
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("dominant_issue"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
@@ -35,6 +35,7 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
+
 (KEYWORD_SYMBOL("set_global_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("clr_global_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("activate_technology"),PARAM_VALUE(KEYWORD));
@@ -213,6 +214,7 @@ PARAM_VALUE(SCOPE)
 ]
 let province_effects = symbol_table_init [ 
 (*potential errors*)
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("add_country_modifier"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("name"),PARAM_OPTION([
         PARAM_VALUE(KEYWORD);
