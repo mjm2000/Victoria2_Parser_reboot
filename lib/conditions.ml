@@ -299,7 +299,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("total_sea_battles"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("total_sunk_by_us"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("trade_policy"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("truce_with"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("truce_with"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
