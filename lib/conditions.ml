@@ -341,7 +341,8 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("continent"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("controlled_by"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
-		PARAM_VALUE(SCOPE)
+        PARAM_VALUE(SCOPE);
+        CHOICE_VALUE(["owner";"sphere_owner";"any_country"]);
 	]));
 (KEYWORD_SYMBOL("controlled_by_rebels"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("country_units_in_province"),PARAM_OPTION([
