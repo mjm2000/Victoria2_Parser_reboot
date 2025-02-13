@@ -3,6 +3,14 @@ open Lexer
 open Type_def
 
 let country_effects =  symbol_table_init [
+
+
+(*potential errors*)
+(KEYWORD_SYMBOL("change_tag"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(KEYWORD)
+]));
+
 (KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
     PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
@@ -201,7 +209,6 @@ PARAM_VALUE(SCOPE)
 ]));
 (KEYWORD_SYMBOL("add_tax_relative_income"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("treasury"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("change_tag"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("change_tag_no_core_switch"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("clr_country_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("set_country_flag"),PARAM_VALUE(KEYWORD));
