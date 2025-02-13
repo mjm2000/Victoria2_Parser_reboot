@@ -215,7 +215,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("political_reform_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("political_reform_want"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("poor_strata_everyday_needs"),PARAM_VALUE(FLOAT));
-(KEYWORD_SYMBOL("poor_strata_life_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("poor_strata_life_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("poor_strata_luxury_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("poor_tax"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("pop_majority_culture"),PARAM_VALUE(KEYWORD));

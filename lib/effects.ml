@@ -3,6 +3,39 @@ open Lexer
 open Type_def
 
 let country_effects =  symbol_table_init [
+(KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
+    PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+		PARAM_VALUE(FLOAT);
+		PARAM_VALUE(INT);
+	]));
+    ]);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
+    ]);
+]));
+(KEYWORD_SYMBOL("scaled_militancy"),PARAM_OPTION([
+    PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+		PARAM_VALUE(FLOAT);
+		PARAM_VALUE(INT);
+	]));
+    ]);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
+    ]);
+]));
+
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("dominant_issue"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("value"),PARAM_VALUE(KEYWORD));
@@ -330,6 +363,39 @@ let state_effects = symbol_table_init [
         POP_EFFECTS;
         PROVINCE_EFFECTS;
     ]));
+
+(KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
+    PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+		PARAM_VALUE(FLOAT);
+		PARAM_VALUE(INT);
+	]));
+    ]);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
+    ]);
+]));
+(KEYWORD_SYMBOL("scaled_militancy"),PARAM_OPTION([
+    PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+		PARAM_VALUE(FLOAT);
+		PARAM_VALUE(INT);
+	]));
+    ]);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("issue"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("factor"),PARAM_OPTION([
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
+    ]);
+]));
 
 ]
 
