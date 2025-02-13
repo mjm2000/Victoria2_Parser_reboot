@@ -294,6 +294,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
 (KEYWORD_SYMBOL("change_region_name"),PARAM_VALUE(STRING));
 (KEYWORD_SYMBOL("flashpoint_tension"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
