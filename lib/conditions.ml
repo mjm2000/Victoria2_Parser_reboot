@@ -14,10 +14,7 @@ let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_pop_religion"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
+(KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("life_needs"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
@@ -151,10 +148,13 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_core"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("is_cultural_union"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
-		PARAM_VALUE(SCOPE)
+        PARAM_VALUE(SCOPE);
+        PARAM_VALUE(BOOL);
 ]));
-(KEYWORD_SYMBOL("is_cultural_union"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_culture_group"),
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+);
 (KEYWORD_SYMBOL("is_disarmed"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_greater_power"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_ideology_enabled"),PARAM_VALUE(KEYWORD));
