@@ -48,6 +48,7 @@ let pop_conditions = symbol_table_init [
 ]
 let country_conditions = symbol_table_init [
 (*maybe errors*)
+(KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
