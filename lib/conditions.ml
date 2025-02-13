@@ -257,7 +257,10 @@ let country_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("religious_policy"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("revolt_percentage"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("revolt_percentage"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("rich_strata_everyday_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("rich_strata_life_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("rich_strata_luxury_needs"),PARAM_VALUE(FLOAT));
