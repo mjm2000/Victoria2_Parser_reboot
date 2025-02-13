@@ -435,6 +435,7 @@ let province_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (*maybe errors*)
+(KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
