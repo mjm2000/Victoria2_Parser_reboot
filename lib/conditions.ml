@@ -47,7 +47,7 @@ let pop_conditions = symbol_table_init [
 (TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
-((*maybe errors*)
+(*maybe errors*)
 (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
