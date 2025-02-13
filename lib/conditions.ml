@@ -47,6 +47,7 @@ let pop_conditions = symbol_table_init [
 (TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("any_state"),STATE_CONDITIONS);
@@ -429,6 +430,7 @@ let province_conditions = symbol_table_init [
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
 ]));
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
 (*maybe errors*)
 (KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
