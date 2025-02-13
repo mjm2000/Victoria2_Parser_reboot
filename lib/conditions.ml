@@ -309,6 +309,7 @@ let country_conditions = symbol_table_init [
 ]
 
 let province_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("can_build_in_province"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("building"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("limit_to_world_greatest_level"),PARAM_VALUE(BOOL));
