@@ -255,7 +255,7 @@ PARAM_VALUE(SCOPE)
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 ]
 let province_effects = symbol_table_init [ 
-
+(TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 (KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("add_crime"),PARAM_VALUE(KEYWORD));
 (*potential errors*)
