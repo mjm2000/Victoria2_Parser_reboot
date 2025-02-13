@@ -10,7 +10,7 @@ let country_effects =  symbol_table_init [
         PARAM_VALUE(TAG);
         PARAM_VALUE(KEYWORD)
 ]));
-
+(KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
     PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
@@ -345,6 +345,7 @@ let province_effects = symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("owner"),COUNTRY_EFFECTS);
+
 ]
 
 let state_effects = symbol_table_init [
