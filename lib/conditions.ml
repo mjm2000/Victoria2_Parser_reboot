@@ -139,7 +139,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_unclaimed_cores"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("industrial_score"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("in_sphere"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("in_sphere"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("in_default"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("invention"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("involved_in_crisis"),PARAM_VALUE(BOOL));
