@@ -463,4 +463,6 @@ let state_conditions = symbol_table_init [
     ]));
     (TYPE_SYMBOL(CONDITION), STATE_CONDITIONS);
     (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
+    (*error maybe*)
+    (KEYWORD_SYMBOL("has_building"),PARAM_VALUE(KEYWORD));
 ]
