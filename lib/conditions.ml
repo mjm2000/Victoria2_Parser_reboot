@@ -276,7 +276,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("total_sunk_by_us"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("trade_policy"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("truce_with"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("unemployment"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("unit_has_leader"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("upper_house"),PARAM_LIST(symbol_table_init [
