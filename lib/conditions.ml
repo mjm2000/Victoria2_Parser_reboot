@@ -456,6 +456,7 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("relation"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("who"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
