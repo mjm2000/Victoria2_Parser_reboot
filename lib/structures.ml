@@ -9,6 +9,8 @@ let structures = symbol_table_init [
         (KEYWORD_SYMBOL("desc"), PARAM_VALUE(STRING));
         (KEYWORD_SYMBOL("picture"), PARAM_VALUE(STRING));
         (KEYWORD_SYMBOL("major"),PARAM_VALUE(BOOL));
+        (KEYWORD_SYMBOL("election"),PARAM_VALUE(BOOL));
+        (KEYWORD_SYMBOL("issue_group"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
         (KEYWORD_SYMBOL("mean_time_to_happen"), COUNTRY_MTTH);
         (KEYWORD_SYMBOL("is_triggered_only"), PARAM_VALUE(BOOL));
