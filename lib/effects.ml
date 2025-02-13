@@ -69,9 +69,12 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("artillery"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("wine"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("liquor"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("country_event"),PARAM_LIST(symbol_table_init [
-    (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
-    (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("country_event"),PARAM_OPTION(
+    [PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
+        (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
+    ]);
+    PARAM_VALUE(INT)
 ]));
 
 (KEYWORD_SYMBOL("change_variable"),PARAM_LIST(symbol_table_init [
