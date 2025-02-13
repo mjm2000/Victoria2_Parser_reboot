@@ -439,6 +439,8 @@ let state_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));
     (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
+
     (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
     (TYPE_SYMBOL(KEYWORD), PARAM_OPTION([
         PARAM_VALUE(INT);
