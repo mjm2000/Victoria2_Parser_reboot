@@ -228,7 +228,8 @@ let province_effects = symbol_table_init [
     ));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
-
+(*end errors*)
+(KEYWORD_SYMBOL("set_global_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("random_country"),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("random_state"),STATE_EFFECTS);
 (KEYWORD_SYMBOL("random_pop"),POP_EFFECTS);
