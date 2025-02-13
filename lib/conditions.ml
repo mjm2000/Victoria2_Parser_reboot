@@ -47,6 +47,7 @@ let pop_conditions = symbol_table_init [
 (TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
 (KEYWORD_SYMBOL("any_state"),STATE_CONDITIONS);
 (KEYWORD_SYMBOL("any_core"),PROVINCE_CONDITIONS);
