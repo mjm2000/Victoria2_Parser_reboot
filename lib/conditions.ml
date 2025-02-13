@@ -476,6 +476,7 @@ let state_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
     (KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("has_flashpoint"),PARAM_VALUE(BOOL));
     (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
