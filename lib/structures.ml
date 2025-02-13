@@ -49,7 +49,10 @@ let structures = symbol_table_init [
         (KEYWORD_SYMBOL("id"), PARAM_VALUE(INT));
         (KEYWORD_SYMBOL("title"), PARAM_VALUE(STRING));
         (KEYWORD_SYMBOL("desc"), PARAM_VALUE(STRING));
-        (KEYWORD_SYMBOL("picture"), PARAM_VALUE(STRING));
+         (KEYWORD_SYMBOL("picture"), PARAM_OPTION([
+            PARAM_VALUE(STRING);
+            PARAM_VALUE(KEYWORD)
+        ]));
         (KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
         (KEYWORD_SYMBOL("news"),PARAM_VALUE(BOOL));
         (KEYWORD_SYMBOL("news_desc_short"),PARAM_VALUE(STRING));
