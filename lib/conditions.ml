@@ -130,7 +130,10 @@ let country_conditions = symbol_table_init [
     PARAM_VALUE(INT);
 ]));
 (KEYWORD_SYMBOL("election"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("exists"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("exists"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(BOOL);
+]));
 (KEYWORD_SYMBOL("government"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("great_wars_enabled"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("have_core_in"),PARAM_VALUE(TAG));
