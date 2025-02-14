@@ -154,6 +154,7 @@ let country_effects =  symbol_table_init [
 	]));
     (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("months"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("state_province_id"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("create_alliance"),PARAM_OPTION([
         PARAM_VALUE(TAG);
@@ -215,10 +216,12 @@ PARAM_VALUE(SCOPE)
     (KEYWORD_SYMBOL("attacker_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("country"),PARAM_VALUE(TAG));
+        (KEYWORD_SYMBOL("state_province_id"),PARAM_VALUE(INT));
     ]));
     (KEYWORD_SYMBOL("defender_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("country"),PARAM_VALUE(TAG));
+        (KEYWORD_SYMBOL("state_province_id"),PARAM_VALUE(INT));
     ]));
     (KEYWORD_SYMBOL("call_ally"),PARAM_VALUE(BOOL));
     ])
