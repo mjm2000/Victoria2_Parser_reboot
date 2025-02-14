@@ -108,7 +108,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("can_nationalize"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("can_create_vassals"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("casus_belli"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+]));
 (KEYWORD_SYMBOL("citizenship_policy"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("civilization_progress"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
