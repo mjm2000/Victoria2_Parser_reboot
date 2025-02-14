@@ -208,6 +208,7 @@ PARAM_VALUE(SCOPE)
     ]));
     (KEYWORD_SYMBOL("defender_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
+        (KEYWORD_SYMBOL("country"),PARAM_VALUE(TAG));
     ]));
     (KEYWORD_SYMBOL("call_ally"),PARAM_VALUE(BOOL));
     ])
