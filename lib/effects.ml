@@ -381,7 +381,7 @@ let province_effects = symbol_table_init [
         POP_EFFECTS;
         PROVINCE_EFFECTS;
 ]));
-
+(KEYWORD_SYMBOL("random"),APPEND_SYMBOLS([(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT))],COUNTRY_EFFECTS));
 ]
 
 let state_effects = symbol_table_init [
@@ -440,10 +440,13 @@ let state_effects = symbol_table_init [
         ]));
     ]);
 ]));
+(KEYWORD_SYMBOL("random"),APPEND_SYMBOLS([(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT))],COUNTRY_EFFECTS));
 
 ]
 
 let pop_effects = symbol_table_init [
+    (KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
+    (KEYWORD_SYMBOL("random"),APPEND_SYMBOLS([(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT))],COUNTRY_EFFECTS));
     (KEYWORD_SYMBOL("assimilate"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("consciousness"),PARAM_OPTION([
         PARAM_VALUE(INT);
