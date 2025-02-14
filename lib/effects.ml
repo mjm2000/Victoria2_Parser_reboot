@@ -276,6 +276,7 @@ PARAM_VALUE(SCOPE)
 ]
 let province_effects = symbol_table_init [ 
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
+(TYPE_SYMBOL(TAG),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("add_crime"),PARAM_VALUE(KEYWORD));
 (*potential errors*)
@@ -513,6 +514,5 @@ let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("limit"),POP_CONDITIONS);
     (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
-    
 
 ]
