@@ -175,7 +175,11 @@ let country_effects =  symbol_table_init [
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
 	]));
-(KEYWORD_SYMBOL("end_war"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("end_war"),PARAM_OPTION(
+    [PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE)
+]
+));
 (KEYWORD_SYMBOL("inherit"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
