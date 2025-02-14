@@ -212,7 +212,10 @@ PARAM_VALUE(SCOPE)
 (KEYWORD_SYMBOL("province_event"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
 ]));
-(KEYWORD_SYMBOL("add_tax_relative_income"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("add_tax_relative_income"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
 (KEYWORD_SYMBOL("treasury"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("change_tag_no_core_switch"),PARAM_VALUE(TAG));
 (KEYWORD_SYMBOL("clr_country_flag"),PARAM_VALUE(KEYWORD));
