@@ -447,7 +447,7 @@ let province_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("pop_militancy"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("port"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("province_control_days"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("province_control_days"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("province_id"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("region"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("state_id"),PARAM_VALUE(INT));
