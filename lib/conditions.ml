@@ -170,6 +170,8 @@ let country_conditions = symbol_table_init [
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE);
         PARAM_VALUE(BOOL);
+        PARAM_VALUE(KEYWORD)
+
 ])
 );
 (KEYWORD_SYMBOL("is_disarmed"),PARAM_VALUE(BOOL));
