@@ -155,8 +155,14 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("months"),PARAM_VALUE(INT));
 ]));
-(KEYWORD_SYMBOL("create_alliance"),PARAM_VALUE(TAG));
-(KEYWORD_SYMBOL("create_vassal"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("create_alliance"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("create_vassal"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+    ]));
 (KEYWORD_SYMBOL("diplomatic_influence"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("who"),PARAM_OPTION([
         PARAM_VALUE(TAG);
