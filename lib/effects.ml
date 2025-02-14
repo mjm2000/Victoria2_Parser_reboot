@@ -195,8 +195,9 @@ PARAM_VALUE(SCOPE)
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE)
     ]));
-(KEYWORD_SYMBOL("war"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("war"),PARAM_LIST(symbol_table_init [
+(KEYWORD_SYMBOL("war"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("target"),PARAM_OPTION([
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE);
@@ -208,6 +209,7 @@ PARAM_VALUE(SCOPE)
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
     ]));
     (KEYWORD_SYMBOL("call_ally"),PARAM_VALUE(BOOL));
+    ])
 ]));
 (KEYWORD_SYMBOL("province_event"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("id"),PARAM_VALUE(INT));
