@@ -90,13 +90,19 @@ let country_conditions = symbol_table_init [
     PARAM_VALUE(FLOAT);
     PARAM_VALUE(INT);
 ]));
-(KEYWORD_SYMBOL("badboy"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("badboy"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("big_producer"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("blockade"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
 ]));
-(KEYWORD_SYMBOL("brigades_compare"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("brigades_compare"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("can_build_factory_in_capital_state"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("crime_higher_than_education"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("can_nationalize"),PARAM_VALUE(BOOL));
@@ -271,7 +277,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("social_movement_strength"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("social_reform_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("social_reform_want"),PARAM_VALUE(FLOAT));
-(KEYWORD_SYMBOL("social_spending"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("social_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("stronger_army_than"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
