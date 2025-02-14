@@ -515,6 +515,9 @@ let province_conditions = symbol_table_init [
     ));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
+(*pop scope*)
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
 ]
 
 let state_conditions = symbol_table_init [
