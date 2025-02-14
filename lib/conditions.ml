@@ -469,6 +469,10 @@ let province_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("work_available"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("worker"),PARAM_VALUE(KEYWORD));
 ]));
+(KEYWORD_SYMBOL("exists"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(BOOL);
+]));
 (TYPE_SYMBOL(TAG),COUNTRY_CONDITIONS);
 (TYPE_SYMBOL(CONDITION),  PROVINCE_CONDITIONS);
 (TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
