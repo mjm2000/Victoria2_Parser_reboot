@@ -224,7 +224,10 @@ let country_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("national_provinces_occupied"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("national_provinces_occupied"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("neighbour"),PARAM_OPTION([
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE)
