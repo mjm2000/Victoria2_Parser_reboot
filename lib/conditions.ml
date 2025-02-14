@@ -9,14 +9,20 @@ let pop_conditions = symbol_table_init [
     PARAM_VALUE(INT);
 ]));
 (KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("everyday_needs"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("everyday_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_pop_religion"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("life_needs"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("life_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
     PARAM_VALUE(INT);
@@ -203,7 +209,10 @@ let country_conditions = symbol_table_init [
     PARAM_VALUE(FLOAT);
     PARAM_VALUE(INT);
 ]));
-(KEYWORD_SYMBOL("lost_national"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("lost_national"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("middle_strata_everyday_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("middle_strata_life_needs"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("middle_strata_luxury_needs"),PARAM_VALUE(FLOAT));
