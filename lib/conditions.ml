@@ -476,7 +476,10 @@ let province_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("unemployment_by_type"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
-    (KEYWORD_SYMBOL("value"),PARAM_VALUE(FLOAT));
+    (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
 ]));
 (KEYWORD_SYMBOL("units_in_province"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("work_available"),PARAM_LIST(symbol_table_init [
