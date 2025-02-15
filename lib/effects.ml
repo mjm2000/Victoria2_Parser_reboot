@@ -499,7 +499,10 @@ let pop_effects = symbol_table_init [
     (*move_pop,int*)
     (KEYWORD_SYMBOL("move_pop"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
-    (KEYWORD_SYMBOL("reduce_pop"),PARAM_VALUE(FLOAT));
+    (KEYWORD_SYMBOL("reduce_pop"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
     (KEYWORD_SYMBOL("scaled_consciousness"),PARAM_OPTION([
         PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
