@@ -6,7 +6,7 @@ let country_effects =  symbol_table_init [
 
 
 (*potential errors*)
-(KEYWORD_SYMBOL("move_issue_percent"),PARAM_LIST(symbol_table_init [
+(KEYWORD_SYMBOL("move_issue_percentage"),PARAM_LIST(symbol_table_init [
 (KEYWORD_SYMBOL("from"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("to"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("value"),PARAM_OPTION([
@@ -509,7 +509,7 @@ let pop_effects = symbol_table_init [
         PARAM_VALUE(FLOAT)
     ]));
     (*move issue percent*)
-    (KEYWORD_SYMBOL("move_issue_percent"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("move_issue_percentage"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("from"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("to"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("value"),PARAM_OPTION([
