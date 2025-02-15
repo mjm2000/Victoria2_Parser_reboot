@@ -77,11 +77,13 @@ let rec type_verify_r symbol_table assignments exceptions scope =
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-
+                 print_endline "Ky";
             Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
+            print_endline "T";
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
+            Printf.printf "none\n" 
             None
      in
      let rec assign_type_check expected_rh_type exceptions =  
