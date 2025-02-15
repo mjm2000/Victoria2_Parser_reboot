@@ -161,7 +161,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     Printf.printf "(Error here:%s)\n" (Pre_parser.string_assignment_list ls);
                     print_endline "----------------------------------------";
                     *)
-                    if not (Hashtbl.mem symbol_table_i (KEYWORD_SYMBOL "from")) then print_endline "Yes";
+                    if  (Hashtbl.mem symbol_table_i (KEYWORD_SYMBOL "from")) then print_endline "Yes";
 
                 );
 
