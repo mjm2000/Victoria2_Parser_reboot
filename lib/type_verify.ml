@@ -82,6 +82,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
             Printf.printf "none  %s\n" lh_value;
+            (print_endline (Pre_parser.string_symbol_table symbol_table));
+
             None
      in
      let rec assign_type_check expected_rh_type exceptions =  
@@ -122,9 +124,11 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let exceptions = assign_type_check rh exceptions in
         type_verify_r symbol_table rest exceptions scope
     |None ->
+            (*
             print_endline lh_value;
             if not (Hashtbl.mem symbol_table (KEYWORD_SYMBOL lh_value)) then print_endline "Not found" else print_endline "Found";
             (print_endline (Pre_parser.string_symbol_table symbol_table));
+    )
         
         let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
