@@ -6,6 +6,8 @@ let country_effects =  symbol_table_init [
 
 
 (*potential errors*)
+
+(KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 (KEYWORD_SYMBOL("move_issue_percentage"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("to"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("from"),PARAM_VALUE(KEYWORD));
@@ -14,7 +16,6 @@ let country_effects =  symbol_table_init [
         PARAM_VALUE(INT)
     ]));
 ]));
-(KEYWORD_SYMBOL("country"),COUNTRY_EFFECTS);
 
 (KEYWORD_SYMBOL("change_tag"),PARAM_OPTION([
         PARAM_VALUE(TAG);
