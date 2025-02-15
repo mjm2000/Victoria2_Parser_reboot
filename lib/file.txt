@@ -23152,3 +23152,5 @@ SYMBOL_TABLE(
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
 	TYPE_SYMBOL(Int):POP_EFFECTS))
+[newcomp 1079af5] Commit on run
+ 2 files changed, 23156 insertions(+), 2 deletions(-)
