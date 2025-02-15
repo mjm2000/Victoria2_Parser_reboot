@@ -148,8 +148,11 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (APPEND_SYMBOLS(_) as new_scope)     
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
+
             let exception_lists = List.map (fun symbol_table -> 
-                
+                if lh_value = "move_issue_percentage" then
+                    Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
+
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
             ) symbol_tables    
             in
@@ -159,6 +162,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |exception_lists when List.mem [] exception_lists -> 
                 exceptions 
             |exception_lists -> 
+
 
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
@@ -178,7 +182,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         |None -> 
             let e = UNKNOWN_IDENTIFIER(lh_value) in
 
-                Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
         )
     |(ASSIGNMENT ((_, _, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
