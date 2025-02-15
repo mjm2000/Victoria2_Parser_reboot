@@ -520,4 +520,42 @@ Error here:RHS(
 	PARAM_VALUE(type(Int))
 	PARAM_VALUE(type(Float)))):COUNTRY_EFFECTS))Error here:RHS(
 	PROVINCE_EFFECTS)Error here:RHS(
-	PROVINCE_EFFECTS)
+	PROVINCE_EFFECTS)On branch newcomp
+Your branch is up to date with 'origin/newcomp'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   run.sh
+	deleted:    ../lib/country_effects.ml
+	deleted:    ../lib/country_effects_v2.ml
+	deleted:    ../lib/effect_string.ml
+	deleted:    ../lib/event.ml
+	deleted:    ../lib/exception.ml
+	deleted:    ../lib/ideas.txt
+	modified:   ../lib/lexer.ml
+	deleted:    ../lib/pop_effects.ml
+	deleted:    ../lib/production.ml
+	deleted:    ../lib/province_effects.ml
+	deleted:    ../lib/trigger.ml
+	deleted:    ../lib/trigger_string.ml
+	deleted:    ../lib/triggers.json
+	modified:   ../vic2parser_reboot.opam
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	../.gitignore
+	../HFM-Development.zip
+	../HFM.mod
+	../TGC/
+	.vim/
+	output_assign.txt
+	output_assignments.txt
+	output_errors.txt
+	output_lexems.txt
+	output_syntax.txt
+	../effects.html
+	../get_html_values.py
+	../lib/.vim/
+
+no changes added to commit (use "git add" and/or "git commit -a")
