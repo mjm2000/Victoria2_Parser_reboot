@@ -149,14 +149,14 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            let exception_lists = List.map (fun symbol_table -> 
+            let exception_lists = List.map (fun symbol_table_i -> 
                 if lh_value = "move_issue_percentage" then
                     print_endline "----------------------------------------";
-                    Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
+                    Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table symbol_table_i);
                     Printf.printf "Error here:%s)\n" (Pre_parser.string_assignment_list ls);
                     print_endline "----------------------------------------";
 
-                type_verify_r symbol_table ls [] (RHS([new_scope]))
+                type_verify_r symbol_table_i ls [] (RHS([new_scope]))
             ) symbol_tables    
             in
             (match exception_lists with
@@ -171,9 +171,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 (v :: exceptions)
             )
          | (x) -> 
-            (*
-            Printf.printf "Error here:%s" (Pre_parser.string_assignment_list ls);
-            *)
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
         in
