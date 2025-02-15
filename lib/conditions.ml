@@ -16,7 +16,11 @@ let pop_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_pop_religion"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
@@ -455,7 +459,11 @@ let province_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("is_ideology_enabled"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_overseas"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
 (KEYWORD_SYMBOL("is_state_capital"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
@@ -531,7 +539,11 @@ let province_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (*pop scope*)
-(KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(BOOL);
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+]));
 (KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
 ]
