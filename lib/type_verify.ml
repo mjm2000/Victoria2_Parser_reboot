@@ -73,7 +73,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 
     *)
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
-    if not (Hashtbl.mem symbol_table (KEYWORD_SYMBOL lh_value)) then print_endline "Not found" else print_endline "Found";
+    if not (Hashtbl.mem symbol_table (KEYWORD_SYMBOL lh_value)) then print_endline "Not found";
 
      let expected_rh_type = 
          match lh_type with
