@@ -99,13 +99,19 @@ let country_effects =  symbol_table_init [
 (KEYWORD_SYMBOL("remove_country_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("add_crisis_interest"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("add_crisis_temperature"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("badboy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("badboy"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
 (KEYWORD_SYMBOL("build_factory_in_capital_state"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("plurality"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("prestige"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
 (KEYWORD_SYMBOL("prestige_factor"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
     PARAM_VALUE(KEYWORD);

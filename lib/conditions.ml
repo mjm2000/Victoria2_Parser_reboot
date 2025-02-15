@@ -78,7 +78,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("immediate"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("check_variable"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
-    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+    ]));
 ]));
 (KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
