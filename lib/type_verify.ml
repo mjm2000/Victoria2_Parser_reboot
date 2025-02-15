@@ -160,7 +160,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 exceptions 
             |exception_lists -> 
 
-                Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
             )
@@ -178,6 +177,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             type_verify_r symbol_table rest exceptions scope
         |None -> 
             let e = UNKNOWN_IDENTIFIER(lh_value) in
+
+                Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
         )
     |(ASSIGNMENT ((_, _, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
