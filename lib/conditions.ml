@@ -170,7 +170,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_cultural_sphere"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("has_leader"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_leader"),PARAM_OPTION([
+    PARAM_VALUE(STRING);
+    PARAM_VALUE(KEYWORD);
+]));
 (KEYWORD_SYMBOL("has_recently_lost_war"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("has_unclaimed_cores"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
@@ -378,6 +381,11 @@ let country_conditions = symbol_table_init [
 ]));
 (TYPE_SYMBOL(CONDITION),COUNTRY_CONDITIONS);
 (TYPE_SYMBOL(INT),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
 ]
 
 let province_conditions = symbol_table_init [
