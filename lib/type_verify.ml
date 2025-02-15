@@ -102,7 +102,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               )
         |CHOICE_VALUE(choices) as rh -> 
 
-            Printf.printf "Error here:%s\n" (lh_value);
 
             if List.mem rh_value choices then 
                 exceptions
@@ -161,6 +160,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 exceptions 
             |exception_lists -> 
 
+                Printf.printf "Error here:%s\n" (lh_value);
 
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
