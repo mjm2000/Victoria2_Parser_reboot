@@ -2,6 +2,7 @@ open Lexer
 open Symbol_table
 open Type_def
 let pop_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("agree_with_ruling_party"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("cash_reserves"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("consciousness"),PARAM_OPTION([
@@ -80,7 +81,7 @@ let country_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("administration_spending"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
     PARAM_VALUE(INT);
@@ -524,9 +525,12 @@ let province_conditions = symbol_table_init [
 (*pop scope*)
 (KEYWORD_SYMBOL("is_primary_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
 ]
 
 let state_conditions = symbol_table_init [
+    (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
+
     (KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
     (KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));

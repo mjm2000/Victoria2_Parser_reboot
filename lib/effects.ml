@@ -450,7 +450,7 @@ let state_effects = symbol_table_init [
 
 let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("random_list"),PARAM_LIST(symbol_table_init [
-        (TYPE_SYMBOL(INT),COUNTRY_EFFECTS)
+        (TYPE_SYMBOL(INT),POP_EFFECTS)
     ]));
 
     (KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
