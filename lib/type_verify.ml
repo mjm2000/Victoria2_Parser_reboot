@@ -122,7 +122,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         if lh_value == "from" then
             (print_endline "from";
             print_endline (Pre_parser.string_symbol_table symbol_table);
-           )
+            );
         let e = UNKNOWN_IDENTIFIER(lh_value) in             
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     )
