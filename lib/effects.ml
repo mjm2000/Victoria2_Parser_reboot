@@ -213,7 +213,10 @@ PARAM_VALUE(SCOPE)
         PARAM_VALUE(SCOPE)
     ]));
 (KEYWORD_SYMBOL("war"),PARAM_OPTION([
-    PARAM_VALUE(TAG);
+    PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+    ]);
     PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("target"),PARAM_OPTION([
         PARAM_VALUE(TAG);
@@ -221,12 +224,18 @@ PARAM_VALUE(SCOPE)
     ]));
     (KEYWORD_SYMBOL("attacker_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("country"),PARAM_VALUE(TAG));
+        (KEYWORD_SYMBOL("country"),PARAM_OPTION([
+            PARAM_VALUE(TAG);
+            PARAM_VALUE(SCOPE);
+        ]));
         (KEYWORD_SYMBOL("state_province_id"),PARAM_VALUE(INT));
     ]));
     (KEYWORD_SYMBOL("defender_goal"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("casus_belli"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("country"),PARAM_VALUE(TAG));
+        (KEYWORD_SYMBOL("country"),PARAM_OPTION([
+            PARAM_VALUE(TAG);
+            PARAM_VALUE(SCOPE);
+        ]));
         (KEYWORD_SYMBOL("state_province_id"),PARAM_VALUE(INT));
     ]));
     (KEYWORD_SYMBOL("call_ally"),PARAM_VALUE(BOOL));
@@ -280,6 +289,7 @@ PARAM_VALUE(SCOPE)
         PARAM_VALUE(KEYWORD);
         POP_EFFECTS;
         PROVINCE_EFFECTS;
+        STATE_EFFECTS;
     ]));
 (TYPE_SYMBOL(INT),PROVINCE_EFFECTS);
 ]
