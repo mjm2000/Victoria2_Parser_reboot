@@ -77,13 +77,15 @@ let rec type_verify_r symbol_table assignments exceptions scope =
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
+            if not (Hashtbl.mem symbol_table (KEYWORD_SYMBOL lh_value)) then print_endline "Not found";
+
             Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
 
             if not (Hashtbl.mem symbol_table (KEYWORD_SYMBOL lh_value)) then print_endline "Not found";
-                 None
+            None
      in
      let rec assign_type_check expected_rh_type exceptions =  
         match expected_rh_type with
