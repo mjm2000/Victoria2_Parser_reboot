@@ -152,6 +152,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             let exception_lists = List.map (fun symbol_table -> 
                 if lh_value = "move_issue_percentage" then
                     Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
+                    Printf.printf "Error here:%s)\n" (Pre_parser.string_assignment_list ls);
 
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
             ) symbol_tables    
