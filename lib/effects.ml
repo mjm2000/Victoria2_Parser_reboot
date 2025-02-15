@@ -449,6 +449,10 @@ let state_effects = symbol_table_init [
 ]
 
 let pop_effects = symbol_table_init [
+    (KEYWORD_SYMBOL("random_list"),PARAM_LIST(symbol_table_init [
+        (TYPE_SYMBOL(INT),COUNTRY_EFFECTS)
+    ]));
+
     (KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
     (KEYWORD_SYMBOL("random"),APPEND_SYMBOLS([(KEYWORD_SYMBOL("chance"),PARAM_VALUE(INT))],COUNTRY_EFFECTS));
     (KEYWORD_SYMBOL("assimilate"),PARAM_VALUE(KEYWORD));
@@ -474,7 +478,6 @@ let pop_effects = symbol_table_init [
 			PARAM_VALUE(INT);
 		]));
     ]));
-    (TYPE_SYMBOL(KEYWORD),PARAM_VALUE(INT));    
 
     (KEYWORD_SYMBOL("literacy"),PARAM_VALUE(FLOAT));
     (KEYWORD_SYMBOL("money"),PARAM_OPTION([

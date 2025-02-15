@@ -50,6 +50,9 @@ let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("cultural_union"),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+    PARAM_VALUE(INT);
+]));
 (TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
