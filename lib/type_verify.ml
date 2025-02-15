@@ -119,8 +119,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let exceptions = assign_type_check rh exceptions in
         type_verify_r symbol_table rest exceptions scope
     |None ->
-        Printf.printf "IDEN:%s(\n" lh_value;
-        Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
         let e = UNKNOWN_IDENTIFIER(lh_value) in             
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     )
@@ -161,6 +159,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |exception_lists when List.mem [] exception_lists -> 
                 exceptions 
             |exception_lists -> 
+
+                Printf.printf "Error here:%s)\n" (Pre_parser.string_symbol_table  symbol_table);
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
             )
