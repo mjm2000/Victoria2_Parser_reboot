@@ -1,0 +1,22 @@
+Ky
+none
+from
+Found
+SYMBOL_TABLE(
+	KEYWORD_SYMBOL(value):PARAM_OPTION(
+	PARAM_VALUE(type(Float))
+	PARAM_VALUE(type(Int)))
+	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
+Ky
+Ky
+none
+from
+Found
+SYMBOL_TABLE(
+	KEYWORD_SYMBOL(value):PARAM_OPTION(
+	PARAM_VALUE(type(Float))
+	PARAM_VALUE(type(Int)))
+	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
+Ky

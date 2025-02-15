@@ -83,7 +83,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline "T";
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
-            Printf.printf "none\n" 
+                 Printf.printf "none\n";
             None
      in
      let rec assign_type_check expected_rh_type exceptions =  
