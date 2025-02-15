@@ -347,7 +347,10 @@ let province_effects = symbol_table_init [
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
 ]));
 (KEYWORD_SYMBOL("duration"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("change_controller"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("change_controller"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("fort"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("infrastructure"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("life_rating"),PARAM_VALUE(INT));
@@ -471,6 +474,8 @@ let pop_effects = symbol_table_init [
 			PARAM_VALUE(INT);
 		]));
     ]));
+    (TYPE_SYMBOL(KEYWORD),PARAM_VALUE(INT));    
+
     (KEYWORD_SYMBOL("literacy"),PARAM_VALUE(FLOAT));
     (KEYWORD_SYMBOL("money"),PARAM_OPTION([
         PARAM_VALUE(INT);
