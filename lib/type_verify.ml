@@ -81,7 +81,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
-            Printf.printf "none \n %s" lh_value;
+            Printf.printf "none  %s\n" lh_value;
             None
      in
      let rec assign_type_check expected_rh_type exceptions =  
