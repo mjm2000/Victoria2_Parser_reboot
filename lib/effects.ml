@@ -504,7 +504,10 @@ let pop_effects = symbol_table_init [
     (KEYWORD_SYMBOL("move_issue_percent"),PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("from"),PARAM_VALUE(KEYWORD));
         (KEYWORD_SYMBOL("to"),PARAM_VALUE(KEYWORD));
-        (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+        (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT)
+        ]));
     ]));
     (*move_pop,int*)
     (KEYWORD_SYMBOL("move_pop"),PARAM_VALUE(INT));
