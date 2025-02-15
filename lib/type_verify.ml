@@ -162,7 +162,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 then
                     Printf.printf "Error here:%s" (Pre_parser.string_assignment_list ls);
                     (*print_scope*)
-                    Printf.printf "Error here:%s" (string_rh_symbol scope);
+                    Printf.printf "Error here:%s" (Pre_parser.string_rh_symbol scope);
 
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
