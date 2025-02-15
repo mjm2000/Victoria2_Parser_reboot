@@ -158,7 +158,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |exception_lists when List.mem [] exception_lists -> 
                 exceptions 
             |exception_lists -> 
-                if lh_type == "move_issue_percentage"
+                if lh_value == "move_issue_percentage"
                 then
                     Printf.printf "Error here:%s" (Pre_parser.string_assignment_list ls);
                     (*print_scope*)
