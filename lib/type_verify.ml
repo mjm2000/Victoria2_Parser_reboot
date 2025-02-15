@@ -119,9 +119,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let exceptions = assign_type_check rh exceptions in
         type_verify_r symbol_table rest exceptions scope
     |None ->
-        (*print_endline lh_value; 
-        print_endline (Pre_parser.string_symbol_table symbol_table);
-        *)
+        if lh_value = "from" then print_endline (Pre_parser.string_symbol_table symbol_table);
+        
             
         let e = UNKNOWN_IDENTIFIER(lh_value) in             
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
@@ -162,7 +161,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     Printf.printf "(Error here:%s)\n" (Pre_parser.string_assignment_list ls);
                     print_endline "----------------------------------------";
                     *)
-                    if  (Hashtbl.mem symbol_table_i (KEYWORD_SYMBOL "from")) then print_endline "Yes";
 
                 );
 
