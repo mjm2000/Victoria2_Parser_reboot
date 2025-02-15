@@ -55,6 +55,7 @@ let pop_conditions = symbol_table_init [
     PARAM_VALUE(INT);
 ]));
 (TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
 (*maybe errors*)
@@ -276,7 +277,11 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("pop_majority_religion"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("pop_militancy"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("primary_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(KEYWORD);
+]));
 (KEYWORD_SYMBOL("accepted_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("rank"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("rebel_power_fraction"),PARAM_VALUE(INT));

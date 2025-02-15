@@ -114,10 +114,10 @@ let country_effects =  symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("prestige_factor"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(KEYWORD);
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
-	]));
+]));
 (KEYWORD_SYMBOL("religion"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("slaves"),POP_EFFECTS);
 (KEYWORD_SYMBOL("research_points"),PARAM_VALUE(INT));
