@@ -63,7 +63,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
     | _ -> []
 
 let type_verify symbol_table assignments =
-let rec type_verify_r symbol_table_inner assignments exceptions scope = 
+let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
     (*
     |ASSIGNMENT ((KEYWORD,lh_value,cords), _)::rest 
@@ -76,9 +76,9 @@ let rec type_verify_r symbol_table_inner assignments exceptions scope =
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-            Hashtbl.find_opt symbol_table_inner (KEYWORD_SYMBOL(lh_value)) 
+            Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
-            Hashtbl.find_opt symbol_table_inner (TYPE_SYMBOL(any_type))
+            Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> None
      in
      let rec assign_type_check expected_rh_type exceptions =  
