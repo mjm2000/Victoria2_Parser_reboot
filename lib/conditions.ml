@@ -22,7 +22,11 @@ let pop_conditions = symbol_table_init [
     PARAM_VALUE(BOOL);
 ]));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("is_culture_group"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(KEYWORD)
+]));
 (KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("life_needs"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
@@ -73,7 +77,7 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
 (KEYWORD_SYMBOL("controller"),COUNTRY_CONDITIONS);
 (KEYWORD_SYMBOL("sea_zone"),PROVINCE_CONDITIONS);
-(KEYWORD_SYMBOL("state_scope"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("state_scope"),STATE_CONDITIONS);
 (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("month"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
@@ -565,6 +569,7 @@ let state_conditions = symbol_table_init [
     (KEYWORD_SYMBOL("has_flashpoint"),PARAM_VALUE(BOOL));
     (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("remove_province_modifier"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
 
     (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
