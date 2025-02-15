@@ -1,4 +1,4 @@
-Error here:value
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -61,8 +61,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -125,8 +125,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -189,8 +189,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -253,8 +253,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -317,8 +317,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -381,8 +381,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -445,8 +445,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -509,8 +509,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -573,8 +573,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -637,8 +637,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -701,8 +701,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -765,8 +765,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -829,8 +829,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -893,8 +893,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -957,8 +957,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1021,110 +1021,110 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1187,8 +1187,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1251,8 +1251,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1315,8 +1315,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1379,8 +1379,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1443,8 +1443,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1507,8 +1507,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1571,8 +1571,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1635,20 +1635,20 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1711,8 +1711,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1775,8 +1775,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1839,8 +1839,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1903,8 +1903,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -1967,8 +1967,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2031,8 +2031,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2095,8 +2095,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2159,32 +2159,32 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2247,8 +2247,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2311,8 +2311,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2375,8 +2375,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2439,8 +2439,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2503,8 +2503,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2567,8 +2567,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2631,8 +2631,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2695,20 +2695,20 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2771,8 +2771,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2835,8 +2835,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2899,8 +2899,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -2963,8 +2963,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3027,8 +3027,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3091,8 +3091,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3155,8 +3155,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3219,32 +3219,32 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3307,8 +3307,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3371,8 +3371,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3435,8 +3435,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3499,8 +3499,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3563,8 +3563,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3627,8 +3627,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3691,8 +3691,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3755,8 +3755,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3819,8 +3819,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3883,8 +3883,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -3947,8 +3947,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4011,14 +4011,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4081,8 +4081,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4145,8 +4145,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4209,8 +4209,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4273,8 +4273,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4337,8 +4337,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4401,8 +4401,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4465,8 +4465,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4529,8 +4529,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4593,8 +4593,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4657,8 +4657,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4721,8 +4721,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4785,8 +4785,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4849,14 +4849,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4919,8 +4919,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -4983,8 +4983,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5047,8 +5047,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5111,8 +5111,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5175,8 +5175,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5239,8 +5239,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5303,8 +5303,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5367,8 +5367,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5431,8 +5431,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5495,8 +5495,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5559,8 +5559,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5623,8 +5623,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5687,14 +5687,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5757,8 +5757,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5821,8 +5821,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5885,8 +5885,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -5949,8 +5949,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6013,8 +6013,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6077,8 +6077,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6141,8 +6141,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6205,8 +6205,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6269,8 +6269,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6333,8 +6333,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6397,8 +6397,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6461,8 +6461,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6525,14 +6525,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6595,8 +6595,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6659,8 +6659,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6723,8 +6723,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6787,8 +6787,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6851,8 +6851,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6915,8 +6915,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -6979,8 +6979,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7043,8 +7043,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7107,8 +7107,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7171,8 +7171,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7235,8 +7235,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7299,8 +7299,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7363,14 +7363,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7433,8 +7433,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7497,8 +7497,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7561,8 +7561,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7625,8 +7625,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7689,8 +7689,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7753,8 +7753,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7817,8 +7817,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7881,8 +7881,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -7945,8 +7945,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8009,8 +8009,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8073,8 +8073,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8137,8 +8137,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8201,14 +8201,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8271,8 +8271,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8335,8 +8335,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8399,8 +8399,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8463,8 +8463,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8527,8 +8527,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8591,8 +8591,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8655,8 +8655,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8719,8 +8719,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8783,8 +8783,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8847,8 +8847,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8911,8 +8911,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -8975,8 +8975,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9039,14 +9039,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9109,8 +9109,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9173,8 +9173,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9237,8 +9237,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9301,8 +9301,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9365,8 +9365,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9429,8 +9429,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9493,8 +9493,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9557,8 +9557,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9621,8 +9621,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9685,8 +9685,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9749,8 +9749,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9813,8 +9813,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9877,14 +9877,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -9947,8 +9947,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:remove_core
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:remove_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10011,14 +10011,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:remove_core
+	PARAM_VALUE(type(Int)))))
+IDEN:remove_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10081,378 +10081,378 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:from
+	PARAM_VALUE(type(Int)))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:add_core
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10515,8 +10515,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10579,8 +10579,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10643,8 +10643,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10707,8 +10707,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10771,8 +10771,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10835,8 +10835,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10899,8 +10899,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:add_core
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -10963,8 +10963,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11027,8 +11027,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11091,8 +11091,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11155,8 +11155,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11219,8 +11219,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11283,8 +11283,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11347,8 +11347,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11411,8 +11411,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11475,8 +11475,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11539,8 +11539,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11603,8 +11603,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11667,8 +11667,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11731,8 +11731,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11795,8 +11795,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11859,8 +11859,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11923,8 +11923,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -11987,8 +11987,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12051,8 +12051,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12115,8 +12115,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12179,8 +12179,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12243,8 +12243,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12307,8 +12307,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12371,110 +12371,110 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12537,8 +12537,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12601,8 +12601,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12665,8 +12665,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12729,8 +12729,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12793,8 +12793,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12857,8 +12857,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12921,8 +12921,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -12985,20 +12985,20 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13061,8 +13061,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13125,8 +13125,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13189,8 +13189,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13253,8 +13253,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13317,8 +13317,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13381,8 +13381,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13445,8 +13445,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13509,32 +13509,32 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13597,8 +13597,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13661,8 +13661,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13725,8 +13725,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13789,8 +13789,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13853,8 +13853,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13917,8 +13917,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -13981,8 +13981,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14045,20 +14045,20 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14121,8 +14121,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14185,8 +14185,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14249,8 +14249,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14313,8 +14313,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14377,8 +14377,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14441,8 +14441,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14505,8 +14505,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14569,32 +14569,32 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:ideology
+	PARAM_VALUE(type(Int)))))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:value
+	PARAM_VALUE(type(Int)))))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14657,8 +14657,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14721,8 +14721,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14785,8 +14785,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14849,8 +14849,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14913,8 +14913,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -14977,8 +14977,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15041,8 +15041,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15105,8 +15105,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15169,8 +15169,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15233,8 +15233,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15297,8 +15297,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15361,14 +15361,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15431,8 +15431,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15495,8 +15495,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15559,8 +15559,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15623,8 +15623,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15687,8 +15687,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15751,8 +15751,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15815,8 +15815,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15879,8 +15879,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -15943,8 +15943,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16007,8 +16007,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16071,8 +16071,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16135,8 +16135,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16199,14 +16199,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16269,8 +16269,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16333,8 +16333,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16397,8 +16397,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16461,8 +16461,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16525,8 +16525,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16589,8 +16589,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16653,8 +16653,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16717,8 +16717,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16781,8 +16781,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16845,8 +16845,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16909,8 +16909,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -16973,8 +16973,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17037,14 +17037,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17107,8 +17107,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17171,8 +17171,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17235,8 +17235,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17299,8 +17299,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17363,8 +17363,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17427,8 +17427,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17491,8 +17491,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17555,8 +17555,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17619,8 +17619,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17683,8 +17683,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17747,8 +17747,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17811,8 +17811,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17875,14 +17875,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -17945,8 +17945,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18009,8 +18009,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18073,8 +18073,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18137,8 +18137,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18201,8 +18201,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18265,8 +18265,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18329,8 +18329,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18393,8 +18393,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18457,8 +18457,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18521,8 +18521,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18585,8 +18585,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18649,8 +18649,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18713,14 +18713,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18783,8 +18783,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18847,8 +18847,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18911,8 +18911,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -18975,8 +18975,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19039,8 +19039,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19103,8 +19103,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19167,8 +19167,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19231,8 +19231,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19295,8 +19295,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19359,8 +19359,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19423,8 +19423,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19487,8 +19487,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19551,14 +19551,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19621,8 +19621,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19685,8 +19685,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19749,8 +19749,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19813,8 +19813,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19877,8 +19877,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -19941,8 +19941,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20005,8 +20005,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20069,8 +20069,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20133,8 +20133,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20197,8 +20197,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20261,8 +20261,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20325,8 +20325,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20389,14 +20389,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20459,8 +20459,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20523,8 +20523,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20587,8 +20587,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20651,8 +20651,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20715,8 +20715,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20779,8 +20779,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20843,8 +20843,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20907,8 +20907,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -20971,8 +20971,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21035,8 +21035,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21099,8 +21099,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:value
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:value(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21163,8 +21163,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:factor
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:factor(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21227,14 +21227,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:add_core
+	PARAM_VALUE(type(Int)))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21297,8 +21297,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:remove_core
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:remove_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21361,14 +21361,14 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:remove_core
+	PARAM_VALUE(type(Int)))))
+IDEN:remove_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21431,378 +21431,378 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:ideology
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:ideology(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(issue):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(factor):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
-	PARAM_VALUE(type(Int))))
-Error here:from
+	PARAM_VALUE(type(Int)))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:from
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:from(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(value):PARAM_OPTION(
 	PARAM_VALUE(type(Float))
 	PARAM_VALUE(type(Int)))
 	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
-	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
-Error here:add_core
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword))))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21865,8 +21865,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21929,8 +21929,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -21993,8 +21993,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22057,8 +22057,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22121,8 +22121,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22185,8 +22185,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22249,8 +22249,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:add_core
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:add_core(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22313,8 +22313,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22377,8 +22377,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22441,8 +22441,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22505,8 +22505,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:name
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:name(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22569,8 +22569,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:personality
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:personality(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22633,8 +22633,8 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
-Error here:background
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
+IDEN:background(
 Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(ideology):PARAM_LIST(
 	KEYWORD_SYMBOL(value):PARAM_VALUE(type(Keyword))
@@ -22697,4 +22697,4 @@ Error here:SYMBOL_TABLE(
 	KEYWORD_SYMBOL(pop_type):PARAM_VALUE(type(Keyword))
 	KEYWORD_SYMBOL(move_pop):PARAM_VALUE(type(Int))
 	KEYWORD_SYMBOL(random_list):PARAM_LIST(
-	TYPE_SYMBOL(Int):POP_EFFECTS))
+	TYPE_SYMBOL(Int):POP_EFFECTS)))
