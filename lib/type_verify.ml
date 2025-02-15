@@ -160,9 +160,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |exception_lists -> 
                 if lh_value == "move_issue_percentage"
                 then
-                    Printf.printf "Error here:%s" (Pre_parser.string_assignment_list ls);
-                    (*print_scope*)
-                    Printf.printf "Error here:%s" (Pre_parser.string_expected_value scope);
+                    Printf.printf "Error here:%s" (Pre_parser.string_lh_symbol (lh_value));
+
 
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
