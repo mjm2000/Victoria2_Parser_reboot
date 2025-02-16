@@ -1,0 +1,16 @@
+none  from
+SYMBOL_TABLE(
+	KEYWORD_SYMBOL(value):PARAM_OPTION(
+	PARAM_VALUE(type(Float))
+	PARAM_VALUE(type(Int)))
+	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
+within?true
+none  from
+SYMBOL_TABLE(
+	KEYWORD_SYMBOL(value):PARAM_OPTION(
+	PARAM_VALUE(type(Float))
+	PARAM_VALUE(type(Int)))
+	KEYWORD_SYMBOL(from):PARAM_VALUE(type(Keyword))
+	KEYWORD_SYMBOL(to):PARAM_VALUE(type(Keyword)))
+within?true

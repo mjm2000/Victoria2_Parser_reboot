@@ -83,7 +83,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          |_-> 
             Printf.printf "none  %s\n" lh_value;
             (print_endline (Pre_parser.string_symbol_table symbol_table));
-            Printf.printf "within?%b\n" (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value));
+            Printf.printf "within?%b\n" (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)));
 
             None
      in
