@@ -17,6 +17,7 @@ let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("has_pop_religion"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
     PARAM_VALUE(TAG);
     PARAM_VALUE(SCOPE);
     PARAM_VALUE(BOOL);
