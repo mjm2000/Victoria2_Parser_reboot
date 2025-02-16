@@ -415,6 +415,10 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(KEYWORD_SYMBOL("remove_core"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+	]));
 (KEYWORD_SYMBOL("remove_province_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("any_pop"),POP_EFFECTS);
 (KEYWORD_SYMBOL("change_region_name"),PARAM_OPTION([
