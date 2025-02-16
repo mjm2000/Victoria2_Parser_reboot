@@ -142,7 +142,10 @@ let country_conditions = symbol_table_init [
 ]));
 (KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("colonial_nation"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("constructing_cb_type"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("controls"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("crime_fighting"),PARAM_OPTION([

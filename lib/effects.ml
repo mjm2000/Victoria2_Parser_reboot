@@ -475,6 +475,7 @@ let state_effects = symbol_table_init [
 ]
 
 let pop_effects = symbol_table_init [
+    (KEYWORD_SYMBOL("location"),PROVINCE_EFFECTS);
     (KEYWORD_SYMBOL("random_list"),PARAM_LIST(symbol_table_init [
         (TYPE_SYMBOL(INT),POP_EFFECTS)
     ]));
