@@ -155,16 +155,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 
             let exception_lists = List.map (fun symbol_table_i -> 
 
-                    (*
-                (
-                if lh_value = "move_issue_percentage" then
-                    print_endline "----------------------------------------";
-                    Printf.printf "(Error here:%s)\n" (Pre_parser.string_symbol_table symbol_table_i);
-                    Printf.printf "(Error here:%s)\n" (Pre_parser.string_assignment_list ls);
-                    print_endline "----------------------------------------";
-
-                );
-                *)
 
                 type_verify_r symbol_table_i ls [] (RHS([new_scope]))
                 
@@ -191,7 +181,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 
             type_verify_r symbol_table rest exceptions scope
         |None -> 
-            Printf.printf "Error: %s\n" lh_value;
             let e = UNKNOWN_IDENTIFIER(lh_value) in
 
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
