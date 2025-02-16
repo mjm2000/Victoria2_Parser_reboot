@@ -407,6 +407,7 @@ let province_effects = symbol_table_init [
         PARAM_VALUE(FLOAT);
         PARAM_VALUE(INT);
         PARAM_VALUE(KEYWORD);
+        STATE_EFFECTS;
         POP_EFFECTS;
         PROVINCE_EFFECTS;
 ]));
