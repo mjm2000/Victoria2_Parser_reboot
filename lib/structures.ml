@@ -5,8 +5,14 @@ open Type_def
 let structures = symbol_table_init [
     (KEYWORD_SYMBOL("country_event"), PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("id"), PARAM_VALUE(INT));
-        (KEYWORD_SYMBOL("title"), PARAM_VALUE(STRING));
-        (KEYWORD_SYMBOL("desc"), PARAM_VALUE(STRING));
+        (KEYWORD_SYMBOL("title"), PARAM_OPTION([
+            PARAM_VALUE(STRING);
+            PARAM_VALUE(KEYWORD)
+        ]));
+        (KEYWORD_SYMBOL("desc"), PARAM_OPTION([
+            PARAM_VALUE(STRING);
+            PARAM_VALUE(KEYWORD)
+        ]));
         (KEYWORD_SYMBOL("picture"), PARAM_OPTION([
             PARAM_VALUE(STRING);
             PARAM_VALUE(KEYWORD)
@@ -47,8 +53,14 @@ let structures = symbol_table_init [
     ]));
     (KEYWORD_SYMBOL("province_event"), PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("id"), PARAM_VALUE(INT));
-        (KEYWORD_SYMBOL("title"), PARAM_VALUE(STRING));
-        (KEYWORD_SYMBOL("desc"), PARAM_VALUE(STRING));
+        (KEYWORD_SYMBOL("title"), PARAM_OPTION([
+            PARAM_VALUE(STRING);
+            PARAM_VALUE(KEYWORD)
+        ]));
+        (KEYWORD_SYMBOL("desc"), PARAM_OPTION([
+            PARAM_VALUE(STRING);
+            PARAM_VALUE(KEYWORD)
+        ]));
          (KEYWORD_SYMBOL("picture"), PARAM_OPTION([
             PARAM_VALUE(STRING);
             PARAM_VALUE(KEYWORD)
