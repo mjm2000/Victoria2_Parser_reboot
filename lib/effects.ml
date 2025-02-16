@@ -420,6 +420,10 @@ let state_effects = symbol_table_init [
     PARAM_VALUE(KEYWORD);
     PARAM_VALUE(STRING)
 ]));
+(KEYWORD_SYMBOL("add_core"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
 (KEYWORD_SYMBOL("flashpoint_tension"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_colony"),PARAM_VALUE(BOOL));
