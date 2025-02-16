@@ -31,7 +31,10 @@ let structures = symbol_table_init [
         (KEYWORD_SYMBOL("news_desc_long"),PARAM_VALUE(STRING));
         (KEYWORD_SYMBOL("trigger"), COUNTRY_CONDITIONS);
         (KEYWORD_SYMBOL("option"), APPEND_SYMBOLS([
-            (KEYWORD_SYMBOL("name"),PARAM_VALUE(STRING));
+            (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+                PARAM_VALUE(STRING);
+                PARAM_VALUE(KEYWORD)
+            ]));
             (KEYWORD_SYMBOL("ai_chance"),PARAM_LIST(symbol_table_init [
                 (KEYWORD_SYMBOL("factor"),
                     PARAM_OPTION([
