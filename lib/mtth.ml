@@ -1,6 +1,7 @@
 open Symbol_table
 open Type_def
 let country_mtth = symbol_table_init [
+    (KEYWORD_SYMBOL("years"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("months"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
@@ -12,6 +13,7 @@ let country_mtth = symbol_table_init [
     ],COUNTRY_CONDITIONS));
 ]
 let province_mtth = symbol_table_init [
+    (KEYWORD_SYMBOL("years"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("months"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("days"),PARAM_VALUE(INT));
