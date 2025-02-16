@@ -76,7 +76,10 @@ let structures = symbol_table_init [
         (KEYWORD_SYMBOL("mean_time_to_happen"), PROVINCE_MTTH);
         (KEYWORD_SYMBOL("is_triggered_only"), PARAM_VALUE(BOOL));
         (KEYWORD_SYMBOL("option"), APPEND_SYMBOLS([
-            (KEYWORD_SYMBOL("name"),PARAM_VALUE(STRING));
+            (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+                PARAM_VALUE(STRING);
+                PARAM_VALUE(KEYWORD)
+            ]));
             (KEYWORD_SYMBOL("ai_chance"),PARAM_LIST(symbol_table_init [
                 (KEYWORD_SYMBOL("factor"),
                     PARAM_OPTION([
