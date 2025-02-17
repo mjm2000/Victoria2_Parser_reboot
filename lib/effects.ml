@@ -415,6 +415,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(KEYWORD_SYMBOL("infrastructure"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("remove_core"),PARAM_OPTION([
 		PARAM_VALUE(TAG);
 		PARAM_VALUE(SCOPE)
