@@ -38,7 +38,10 @@ let pop_conditions = symbol_table_init [
     PARAM_VALUE(INT);
 ]));
 (KEYWORD_SYMBOL("luxury_needs"),PARAM_VALUE(INT));
-(KEYWORD_SYMBOL("militancy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("political_movement"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("political_reform_want"),PARAM_VALUE(FLOAT));
