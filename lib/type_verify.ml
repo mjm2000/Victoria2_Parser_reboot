@@ -165,7 +165,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     |more->get_exceptions (more::acc)  xs
                     )
             in
-            get_exceptions f symbol_tables [] 
+            get_exceptions [] symbol_tables
             in
             (match exception_lists with
             |[] -> exceptions
