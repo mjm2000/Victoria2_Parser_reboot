@@ -17,7 +17,7 @@ let shortest_list lists =
   in
   find_shortest (None, max_int) lists
 let fold_until_empty f lst =
-let rec fold_until_empty_r f lst:((lh_symbol_type, rh_symbol_type) Hashtbl.t list) acc:list list =
+let rec fold_until_empty_r f lst acc  =
   match lst with
   | [] -> acc
   | x::xs -> 
