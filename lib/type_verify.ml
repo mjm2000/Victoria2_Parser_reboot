@@ -28,27 +28,27 @@ let split_list n ls =
     split_list_r [] ls 0
 
 let rec symbol_table_from_rhv rhv = match rhv with
-   |(PROVINCE_MTTH) ->
-      [province_mtth]
-   | (COUNTRY_MTTH) ->
-      [country_mtth]
-   | (PROVINCE_EFFECTS) ->
-      [province_effects]
-   | (PROVINCE_CONDITIONS) ->
-      [province_conditions]
-   | (COUNTRY_EFFECTS) ->
-      [country_effects]
-   | (COUNTRY_CONDITIONS) ->
-      [country_conditions]
-   | (POP_EFFECTS) ->
-      [pop_effects]
-   | (POP_CONDITIONS) ->
-      [pop_conditions]
-   | (STATE_EFFECTS) ->
-      [state_effects]
+    |(PROVINCE_MTTH) ->
+        [province_mtth]
+    | (COUNTRY_MTTH) ->
+        [country_mtth]
+    | (PROVINCE_EFFECTS) ->
+        [province_effects]
+    | (PROVINCE_CONDITIONS) ->
+        [province_conditions]
+    | (COUNTRY_EFFECTS) ->
+        [country_effects]
+    | (COUNTRY_CONDITIONS) ->
+        [country_conditions]
+    | (POP_EFFECTS) ->
+        [pop_effects]
+    | (POP_CONDITIONS) ->
+        [pop_conditions]
+    | (STATE_EFFECTS) ->
+        [state_effects;country_effects;province_effects]
     | (STATE_CONDITIONS) ->
-      [state_conditions]
-   | (PARAM_LIST(sub_table))->
+        [state_conditions;country_conditions;province_conditions]
+    | (PARAM_LIST(sub_table))->
         [sub_table]
     | PARAM_OPTION(options) ->
         List.fold_left (fun acc rh ->
@@ -153,12 +153,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            let exception_lists = List.map (fun symbol_table_i -> 
-
-
+            let exception_lists = List.fold_until (fun symbol_table_i -> 
                 type_verify_r symbol_table_i ls [] (RHS([new_scope]))
-                
-            ) symbol_tables    
+            ) [] symbol_tables    (fun acc -> acc == []) 
             in
             (match exception_lists with
             |[] -> exceptions
