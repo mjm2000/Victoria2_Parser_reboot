@@ -160,7 +160,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               match lst with
               | [] -> acc
               | top_table::xs -> 
-                    (match (type_verify_r top_table ls [] (RHS([new_scope])))
+                    (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] ->[]
                     |more->fold_until_empty_r (more::acc)  xs
                     )
