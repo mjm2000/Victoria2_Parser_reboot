@@ -73,6 +73,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         type_verify_r symbol_table rest exceptions scope
 
     *)
+    printf "type_verify_r\n";
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
 
      let expected_rh_type = 
