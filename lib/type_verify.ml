@@ -16,15 +16,18 @@ let shortest_list lists =
           find_shortest (shortest, shortest_len) tl
   in
   find_shortest (None, max_int) lists
-
-let rec fold_until_empty f acc lst =
+let fold_until_empty f lst =
+let rec fold_until_empty_r f lst acc =
   match lst with
   | [] -> acc
   | x::xs -> 
         (match (f x) with
         |[] ->[]
-        |more->fold_until_empty f (more::acc)  xs
+        |more->fold_until_empty_r f (more::acc)  xs
+
         )
+in
+fold_until_empty_r f lst []
 
 let split_list n ls =
     let rec split_list_r lh rh i = match rh with
