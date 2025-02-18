@@ -20,8 +20,11 @@ let shortest_list lists =
 let rec fold_until_empty f acc lst =
   match lst with
   | [] -> acc
-  | [] :: xs -> []
-  | x::xs -> fold_until_empty f (f acc x) xs
+  | x::xs -> 
+        (match (f x) with
+        |[] ->[]
+        |more->fold_until_empty f (more::acc)  xs
+        )
 
 let split_list n ls =
     let rec split_list_r lh rh i = match rh with
@@ -159,9 +162,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            let exception_lists = fold_until_empty (fun acc symbol_table_i -> 
-                ((type_verify_r symbol_table_i ls [] (RHS([new_scope])))::acc)
-            ) [] symbol_tables 
+            let exception_lists = fold_until_empty (fun symbol_table_i -> 
+                ((type_verify_r symbol_table_i ls [] (RHS([new_scope]))))
+            ) symbol_tables 
             in
             (match exception_lists with
             |[] -> exceptions
