@@ -68,7 +68,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
 
-     Printf.printf "lh_type:%s\n" (lexem_to_str lh_type);
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
