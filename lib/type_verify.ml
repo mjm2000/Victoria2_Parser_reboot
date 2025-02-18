@@ -155,23 +155,18 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             let symbol_tables = symbol_table_from_rhv new_scope in
 
 
-            let fold_until_empty f lst =
-            let rec fold_until_empty_r f lst acc  =
+            let exception_lists =
+            let rec get_exceptions lst acc  =
               match lst with
               | [] -> acc
-              | x::xs -> 
-                    (match (f x) with
+              | top_table::xs -> 
+                    (match (type_verify_r top_table ls [] (RHS([new_scope])))
                     |[] ->[]
-                    |more->fold_until_empty_r f (more::acc)  xs
+                    |more->fold_until_empty_r (more::acc)  xs
                     )
             in
-            fold_until_empty_r f lst []
+            get_exceptions f symbol_tables [] in
 
-            in
-
-            let exception_lists = fold_until_empty (fun (symbol_table_i : ((lh_symbol_type, rh_symbol_type) Hashtbl.t)) -> 
-    type_verify_r symbol_table_i ls [] (RHS([new_scope]))
-) symbol_tables
             in
             (match exception_lists with
             |[] -> exceptions
