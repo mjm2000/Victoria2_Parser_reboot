@@ -24,7 +24,6 @@ let rec fold_until_empty_r f lst acc =
         (match (f x) with
         |[] ->[]
         |more->fold_until_empty_r f (more::acc)  xs
-
         )
 in
 fold_until_empty_r f lst []
