@@ -17,6 +17,12 @@ let shortest_list lists =
   in
   find_shortest (None, max_int) lists
 
+let rec fold_until_empty f acc lst =
+  match lst with
+  | [] -> acc
+  | [] :: xs -> []
+  | x::xs -> fold_until f (f acc x) xs
+
 let split_list n ls =
     let rec split_list_r lh rh i = match rh with
     |hd::rest when i < n -> 
