@@ -163,7 +163,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             let symbol_tables = symbol_table_from_rhv new_scope in
 
             let exception_lists = fold_until_empty (fun symbol_table_i -> 
-                let x = type_verify_r symbol_table_i ls [] (RHS([new_scope]))
+                let x = type_verify_r symbol_table_i ls [] (RHS([new_scope])) in
                 x
             ) symbol_tables 
             in
