@@ -159,7 +159,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            let exception_lists = List.fold_until (fun symbol_table_i -> 
+            let exception_lists = fold_until_empty (fun symbol_table_i -> 
                 type_verify_r symbol_table_i ls [] (RHS([new_scope]))
             ) [] symbol_tables    (fun acc -> acc == []) 
             in
@@ -169,8 +169,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |exception_lists when List.mem [] exception_lists -> 
                 exceptions 
             |exception_lists -> 
-
-
                 let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
                 (v :: exceptions)
             )
