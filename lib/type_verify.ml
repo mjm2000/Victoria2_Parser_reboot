@@ -71,8 +71,10 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
             Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
+        (*
          |_ when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)))  -> 
             Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
+        *)
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
