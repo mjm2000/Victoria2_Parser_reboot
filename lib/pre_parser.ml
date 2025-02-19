@@ -82,7 +82,7 @@ and exception_iden_string exp = match exp with
 
     | UNEXPECTED_RIGHT_BRACKET -> "Unexpected Right Bracket"
     | UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
-    | MULTIPLE_CHOICE(ls)-> "Multiple Choice %" (exception_string (List.hd ls))
+    | MULTIPLE_CHOICE(ls)-> "Multiple Choice %s" (exception_string (List.hd ls))
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
