@@ -148,7 +148,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            
+            print_endline (Pre_parser.string_assign_list ls); 
             let exception_lists =
             let rec get_exceptions lst acc  =
               match lst with
