@@ -158,7 +158,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             let exception_lists = List.map (fun symbol_table ->
                 my_var := !my_var + 1; 
                 print_endline (string_of_int !my_var);
-                type_verify_r symbol_table ls [] (RHS([new_scope]))
+                List.map (fun assignment ->
+                    type_verify_r symbol_table assignment [] (RHS([new_scope]))
+                )ls
             ) symbol_tables 
 
                 (*
