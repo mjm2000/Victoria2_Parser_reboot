@@ -156,6 +156,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 
             let exception_lists = List.map (fun symbol_table ->
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
+            ) symbol_tables 
 
                 (*
             let rec get_exceptions lst acc  =
