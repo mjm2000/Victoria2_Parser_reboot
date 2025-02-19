@@ -158,17 +158,17 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
             ) symbol_tables 
             *)
-            let rec get_exceptions lst acc  =
+            let rec get_exceptions lst =
               match lst with
               | [] -> (RHS [new_scope],UNEXPECTED_ASSIGN_LIST(ls),cords)::exceptions
               | top_table::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |more->
-                    get_exceptions xs (more::acc)
+                    get_exceptions xs
                  )
             in
-            get_exceptions symbol_tables []
+            get_exceptions symbol_tables 
             
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
