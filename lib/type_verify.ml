@@ -154,10 +154,10 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             *)
             let exception_lists =
             let rec get_exceptions lst acc  =
+              my_var := my_var + 1;
               match lst with
               | [] -> acc
               | top_table::xs -> 
-                    my_var := !my_var + 1;
                     
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] -> []
