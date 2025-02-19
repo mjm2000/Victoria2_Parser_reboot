@@ -5,7 +5,7 @@ open Type_def
 open Mtth
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
-let calls = ref 0
+let my_var = ref 0
 let shortest_list lists =
   let rec find_shortest (shortest, shortest_len) = function
     | [] -> shortest
