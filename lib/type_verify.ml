@@ -153,40 +153,23 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_rh_symbol new_scope);
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
-            List.length symbol_tables |> string_of_int|> print_endline;
+            (*
             let exception_lists = List.map (fun symbol_table ->
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
             ) symbol_tables 
-
-                (*
+            *)
             let rec get_exceptions lst acc  =
-
               match lst with
-              | [] -> acc
+              | [] -> (MULTIPLE_CHOICE(acc)::exceptions)
               | top_table::xs -> 
-                            
-                my_var := !my_var + 1;
-                print_endline (string_of_int !my_var);
-                    (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
-                    |[] -> []
-                    |more->
-
-                            get_exceptions xs (more::acc)
-                    )
+                 (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
+                 |[] -> []
+                 |more->
+                    get_exceptions xs (more::acc)
+                 )
             in
             get_exceptions symbol_tables []
-
-            *)
-            in
-            (match exception_lists with
-            |[] -> exceptions
-            |[exception_list] -> exception_list@exceptions
-            |exception_lists when List.mem [] exception_lists -> 
-                exceptions 
-            |exception_lists -> 
-                let v = (RHS([new_scope]),(MULTIPLE_CHOICE(exception_lists)),cords) in
-                (v :: exceptions)
-            )
+            
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
@@ -213,5 +196,4 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 in
 List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])))
 
-let () = Printf.printf "calls:%d\n" !my_var;
   
