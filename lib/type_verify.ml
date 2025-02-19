@@ -96,7 +96,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 |top::rest ->
                     (match (assign_type_check top []) with
                     |[] -> exceptions 
-                    |new_exceptions-> shortest_exception_list_r rest 
+                    |_-> shortest_exception_list_r rest 
                     )
             in
             shortest_exception_list_r options  
@@ -164,7 +164,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               | top_table::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
-                 |more->
+                 |_->
                     get_exceptions xs
                  )
             in
