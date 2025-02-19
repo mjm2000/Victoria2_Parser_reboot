@@ -91,12 +91,12 @@ let rec type_verify_r symbol_table assignments exceptions scope =
            (((RHS [epv]),e,cords)::exceptions) 
         |PARAM_OPTION(options) ->
 
-            let rec shortest_exception_list_r options expanded_exceptions = match options with 
-                |[] -> ((RHS options,MULTIPLE_CHOICE(expanded_exceptions),cords)::exceptions)
+            let rec shortest_exception_list_r options = match options with 
+                |[] -> ((RHS options,UNEXPECTED_LEXEM(rh_value,rh_type),cords)::exceptions)
                 |top::rest ->
                     (match (assign_type_check top []) with
                     |[] -> exceptions 
-                    |new_exceptions-> shortest_exception_list_r rest (new_exceptions::expanded_exceptions)
+                    |new_exceptions-> shortest_exception_list_r rest 
                     )
             in
             shortest_exception_list_r options [] 
@@ -160,7 +160,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             *)
             let rec get_exceptions lst acc  =
               match lst with
-              | [] -> (RHS [new_scope],MULTIPLE_CHOICE(acc),cords)::exceptions
+              | [] -> (RHS [new_scope],UNEXPECTED_ASSIGN_LIST(ls),cords)::exceptions
               | top_table::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
