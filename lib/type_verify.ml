@@ -90,7 +90,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         |(PARAM_VALUE(erh_type) as epv) when erh_type !=  rh_type  ->
            let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
            (((RHS [epv]),e,cords)::exceptions) 
-        |PARAM_OPTION(options) as rh ->
+        |PARAM_OPTION(options) ->
 
             let rec shortest_exception_list_r options expanded_exceptions = match options with 
                 |[] -> ((RHS options,MULTIPLE_CHOICE(expanded_exceptions),cords)::exceptions)
