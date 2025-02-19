@@ -147,19 +147,22 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (APPEND_SYMBOLS(_) as new_scope)     
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
-
+            (*
+            print_endline (Pre_parser.string_rh_symbol new_scope);
             print_endline (Pre_parser.string_assignment_list ls); 
+            *)
             let exception_lists =
             let rec get_exceptions lst acc  =
               match lst with
               | [] -> acc
               | top_table::xs -> 
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
+                    |[] -> []
                     |more->
                             get_exceptions xs (more::acc)
                     )
             in
-
+            List.length symbol_tables |> string_of_int |> print_endline;  
             get_exceptions symbol_tables []
             in
             (match exception_lists with
