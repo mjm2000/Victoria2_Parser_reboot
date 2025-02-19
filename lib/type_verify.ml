@@ -151,8 +151,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             
             let exception_lists =
             let rec get_exceptions lst acc  =
-
-                print_endline (Pre_parser.string_symbol_table (List.hd lst));
               match lst with
               | [] -> acc
               | top_table::xs -> 
