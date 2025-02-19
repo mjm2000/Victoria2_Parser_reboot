@@ -82,7 +82,7 @@ and exception_iden_string exp = match exp with
 
     | UNEXPECTED_RIGHT_BRACKET -> "Unexpected Right Bracket"
     | UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
-    | MULTIPLE_CHOICE(ls)-> "Multiple Choice %s" (exception_string (List.hd ls))
+    | MULTIPLE_CHOICE(ls)-> "Multiple Choice %s" (exceptions_string (List.hd ls))
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
@@ -168,7 +168,7 @@ and string_expected_value v = match v with
         Printf.sprintf "LHS(%s)" x
     | NONE -> "NONE"
 
-let get_errors assignments = 
+and get_errors assignments = 
     let rec get_errors_r assignments out = match assignments with
     | ((ASSIGN_EXCEPTION (e)) :: rest) ->
         get_errors_r rest (e :: out)
@@ -182,6 +182,6 @@ let get_errors assignments =
 in
 get_errors_r assignments []
 
-let exceptions_string = List.fold_left (fun buffer e -> 
+and exceptions_string = List.fold_left (fun buffer e -> 
     Printf.sprintf "%s\n%s" buffer (exception_string e)
 ) "" 
