@@ -153,7 +153,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_rh_symbol new_scope);
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
-            List.length symbol_tables |> print_endline;
+            List.length symbol_tables |> string_of_int |> print_endline;
+             
             let exception_lists = List.map (fun symbol_table ->
                 my_var := !my_var + 1; 
                 print_endline (string_of_int !my_var);
