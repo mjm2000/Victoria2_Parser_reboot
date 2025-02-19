@@ -152,9 +152,11 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_rh_symbol new_scope);
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
+
+            my_var := !my_var + 1;
             let exception_lists =
+
             let rec get_exceptions lst acc  =
-              my_var := !my_var + 1;
               match lst with
               | [] -> acc
               | top_table::xs -> 
