@@ -88,12 +88,14 @@ and exception_string (exp : exception_value) : string =
     (*add expected value printer*)
     let ev, e, (x, y) = exp in 
     Printf.sprintf " At (%i,%i): %s, expected:%s" x y (exception_iden_string e) (string_expected_value ev)
-and exceptions_string = 
+and exceptions_string ls = 
     let rec exceptions_string_r ls out = match ls with
         | [] -> out
         | x :: rest -> 
             let x = exception_string x in
             exceptions_string_r rest (Printf.sprintf "%s\n\t%s" out x)
+    in
+    exceptions_string_r ls ""
 
 and string_assignment assignment = match assignment with  
     | ASSIGNMENT ((tlh, vlh, (x,y)), rh) ->
