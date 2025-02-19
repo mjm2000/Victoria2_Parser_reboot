@@ -68,7 +68,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
         let x,y = cords in
-        Printf.printf "%s:%d %d scope:%s\n" lh_value x y (string_expected_value scope);
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -83,7 +82,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
      let rec assign_type_check expected_rh_type exceptions =  
         match expected_rh_type with
         |PARAM_VALUE(erh_type) when erh_type = rh_type  -> 
-
+            (*
+            Printf.printf "%s:%d %d scope:%s\n" lh_value x y (Pre_parser.string_expected_value scope);
+            *)
             exceptions 
         |(PARAM_VALUE(erh_type) as epv) when erh_type !=  rh_type  ->
            let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
@@ -148,7 +149,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-
+            
+                            print_endline ("LOOP TOO LONG");
             let exception_lists =
             let rec get_exceptions lst acc  =
               match lst with
@@ -157,7 +159,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] ->[]
                     |more->
-                            print_endline "LOOP";
                             get_exceptions xs (more::acc)
                     )
             in
