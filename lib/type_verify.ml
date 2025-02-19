@@ -6,6 +6,7 @@ open Mtth
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 let my_var = ref 0
+
 let shortest_list lists =
   let rec find_shortest (shortest, shortest_len) = function
     | [] -> shortest
@@ -153,14 +154,15 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
 
-             my_var := !my_var + 1;
             let exception_lists =
 
             let rec get_exceptions lst acc  =
+
               match lst with
               | [] -> acc
               | top_table::xs -> 
-                    
+                            
+                my_var := !my_var + 1;
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] -> []
                     |more->
