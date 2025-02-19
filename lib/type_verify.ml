@@ -164,8 +164,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     (match lowest_exception with
                         |Some e -> e@exceptions
                         |None -> 
-
-                                pirnt_endline "No exceptions found";
+                                print_endline "No exceptions found";
                                 exceptions
                     )
               | top_table::xs -> 
