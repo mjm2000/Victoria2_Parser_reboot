@@ -99,7 +99,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     |new_exceptions-> shortest_exception_list_r rest 
                     )
             in
-            shortest_exception_list_r options [] 
+            shortest_exception_list_r options  
 
         |CHOICE_VALUE(choices) as rh -> 
 
