@@ -70,6 +70,7 @@ let pop_conditions = symbol_table_init [
 (TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
 ]
 let country_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("overlord"),COUNTRY_CONDITIONS);
 (*maybe errors*)
 (KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
