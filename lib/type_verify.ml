@@ -172,7 +172,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     get_exceptions xs (Some exceptions) 
                  )
             in
-            get_exceptions symbol_tables 
+            get_exceptions symbol_tables None
             
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
