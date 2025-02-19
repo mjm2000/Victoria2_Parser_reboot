@@ -89,9 +89,11 @@ and exception_string (exp : exception_value) : string =
     let ev, e, (x, y) = exp in 
     Printf.sprintf " At (%i,%i): %s, expected:%s" x y (exception_iden_string e) (string_expected_value ev)
 and exceptions_string = 
-    let v = List.fold_left (fun buffer e -> Printf.sprintf "%s\n%s" buffer (exception_string e)) ""
-    in
-    v 
+    let rec exceptions_string_r ls out = match ls with
+        | [] -> out
+        | x :: rest -> 
+            let x = exception_string x in
+            exceptions_string_r rest (Printf.sprintf "%s\n\t%s" out x)
 
 and string_assignment assignment = match assignment with  
     | ASSIGNMENT ((tlh, vlh, (x,y)), rh) ->
