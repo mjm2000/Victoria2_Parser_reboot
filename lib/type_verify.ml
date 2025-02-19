@@ -153,7 +153,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
 
-            my_var := !my_var + 1;
+             my_var := !my_var + 1;
             let exception_lists =
 
             let rec get_exceptions lst acc  =
@@ -203,7 +203,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
     | [] -> 
            exceptions
 in
-List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])));
+List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])))
 
   
-Printf.printf "calls:%d\n" !my_var;
