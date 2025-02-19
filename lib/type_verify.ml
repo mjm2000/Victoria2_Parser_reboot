@@ -91,6 +91,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
            let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
            (((RHS [epv]),e,cords)::exceptions) 
         |PARAM_OPTION(options) as rh ->
+            Printf.printf "Checking assignment: %s\n" lh_value;
               let shortest_exception_list = (List.map (fun expected_rh_type -> 
                 assign_type_check expected_rh_type [] 
               ) options)
