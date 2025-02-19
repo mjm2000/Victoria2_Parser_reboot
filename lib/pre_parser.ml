@@ -82,7 +82,8 @@ and exception_iden_string exp = match exp with
 
     | UNEXPECTED_RIGHT_BRACKET -> "Unexpected Right Bracket"
     | UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
-    | MULTIPLE_CHOICE(ls)-> Printf.sprintf "Multiple Choice %s" (exceptions_string (List.hd ls))
+    | MULTIPLE_CHOICE(ls)-> 
+            Printf.sprintf "Multiple Choice %s" (exception_lists_string (ls))
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
@@ -96,6 +97,14 @@ and exceptions_string ls =
             exceptions_string_r rest (Printf.sprintf "%s\n\t%s" out x)
     in
     exceptions_string_r ls ""
+and exception_lists_string ls = 
+    let rec exception_lists_string_r ls out = match ls with
+        | [] -> out
+        | x :: rest -> 
+            let x = exceptions_string x in
+            exception_lists_string_r rest (Printf.sprintf "%s\n\t%s" out x)
+    in
+    exception_lists_string_r ls ""
 
 and string_assignment assignment = match assignment with  
     | ASSIGNMENT ((tlh, vlh, (x,y)), rh) ->
