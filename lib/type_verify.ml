@@ -158,14 +158,18 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 type_verify_r symbol_table ls [] (RHS([new_scope]))
             ) symbol_tables 
             *)
-            let rec get_exceptions lst =
+            let rec get_exceptions lst lowest_exception=
               match lst with
-              | [] -> (RHS [new_scope],UNEXPECTED_ASSIGN_LIST(ls),cords)::exceptions
+              | [] -> 
+                    (match lowest_exception with
+                        |Some e -> e@exceptions
+                        |None -> exceptions
+                    )
               | top_table::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
-                 |_->
-                    get_exceptions xs
+                 |exceptions->
+                    get_exceptions xs (Some exceptions) 
                  )
             in
             get_exceptions symbol_tables 
