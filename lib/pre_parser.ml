@@ -88,9 +88,7 @@ and exception_string (exp : exception_value) : string =
     (*add expected value printer*)
     let ev, e, (x, y) = exp in 
     Printf.sprintf " At (%i,%i): %s, expected:%s" x y (exception_iden_string e) (string_expected_value ev)
-and exceptions_string = List.fold_left (fun buffer e -> 
-    Printf.sprintf "%s\n%s" buffer (exception_string e)
-) ""
+and exceptions_string = List.fold_left (fun buffer e -> Printf.sprintf "%s\n%s" buffer (exception_string e)) ""
 
 and string_assignment assignment = match assignment with  
     | ASSIGNMENT ((tlh, vlh, (x,y)), rh) ->
