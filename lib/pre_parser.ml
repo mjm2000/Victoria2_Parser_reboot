@@ -1,7 +1,7 @@
 open Lexer
 open Type_def
 
-let assignments ls = 
+let rec assignments ls = 
     let rec assignments_r out rest = match rest with 
         | [] -> (List.rev out)
         | lexems -> 
