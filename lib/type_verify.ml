@@ -205,4 +205,5 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 in
 List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])))
 
+let () = Printf.printf "calls:%d\n" !my_var;
   
