@@ -91,17 +91,17 @@ let rec type_verify_r symbol_table assignments exceptions scope =
            let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
            (((RHS [epv]),e,cords)::exceptions) 
         |PARAM_OPTION(options) as rh ->
-            Printf.printf "Checking assignment: %s\n" lh_value;
-              let shortest_exception_list = (List.map (fun expected_rh_type -> 
-                assign_type_check expected_rh_type [] 
-              ) options)
-              |> shortest_list in
-              (match shortest_exception_list with 
-               | Some e -> type_verify_r symbol_table rest (e@exceptions) scope
-               | None -> 
-                  let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
-                  ((RHS([rh]),e,cords)::exceptions)
-              )
+
+            let rec shortest_exception_list_r options expanded_exceptions = match options with 
+                |[] -> (CHOICE(expanded_exceptions))::exceptions
+                |top::rest ->
+                    (match assign_type_check top expanded_exceptions with
+                    |[] -> exceptions 
+                    |new_exceptions-> shortest_exception_list_r rest new_exceptions
+                    )
+            in
+            shortest_exception_list_r options [] 
+
         |CHOICE_VALUE(choices) as rh -> 
 
 
