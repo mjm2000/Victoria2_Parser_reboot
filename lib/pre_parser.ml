@@ -170,7 +170,7 @@ and string_expected_value v = match v with
         Printf.sprintf "LHS(%s)" x
     | NONE -> "NONE"
 
-and get_errors assignments = 
+let get_errors assignments = 
     let rec get_errors_r assignments out = match assignments with
     | ((ASSIGN_EXCEPTION (e)) :: rest) ->
         get_errors_r rest (e :: out)
