@@ -5,6 +5,7 @@ open Type_def
 open Mtth
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
+let calls = ref 0
 let shortest_list lists =
   let rec find_shortest (shortest, shortest_len) = function
     | [] -> shortest
@@ -156,13 +157,15 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               match lst with
               | [] -> acc
               | top_table::xs -> 
+                    my_var := !my_var + 1;
+                    
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] -> []
                     |more->
+
                             get_exceptions xs (more::acc)
                     )
             in
-            List.length symbol_tables |> string_of_int |> Printf.printf "(%s) symbol_tables length:%s \n" lh_value;  
             get_exceptions symbol_tables []
             in
             (match exception_lists with
@@ -198,6 +201,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
     | [] -> 
            exceptions
 in
+Printf.printf "calls:%d\n" !my_var;
 List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])))
 
   
