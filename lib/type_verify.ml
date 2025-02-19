@@ -67,7 +67,8 @@ let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
-    print_endline (string_of_int cords);
+        let x,y = cords in
+        Printf.printf "%s:%d %d scope:%s\n" lh_value x y (string_expected_value scope);
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -155,7 +156,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               | top_table::xs -> 
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] ->[]
-                    |more->get_exceptions xs (more::acc)
+                    |more->
+                            print_endline "LOOP";
+                            get_exceptions xs (more::acc)
                     )
             in
             get_exceptions symbol_tables []
