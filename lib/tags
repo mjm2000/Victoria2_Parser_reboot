@@ -13,26 +13,27 @@ APPEND_SYMBOLS	Type_def.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_
 ASSIGNMENT	Type_def.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
 ASSIGNMENT_LIST	Type_def.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
 ASSIGN_EXCEPTION	Type_def.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
-BOOL	Lexer.ml	/^|BOOL  $/;"	C	type:lexem_type
+BOOL	lexer.ml	/^|BOOL  $/;"	C	type:lexem_type
 CHOICE_VALUE	Type_def.ml	/^    |CHOICE_VALUE of string list $/;"	C	type:rh_symbol_type
-CONDITION	Lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
+CONDITION	lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
 COUNTRY_CONDITIONS	Type_def.ml	/^    |COUNTRY_CONDITIONS$/;"	C	type:rh_symbol_type
 COUNTRY_EFFECTS	Type_def.ml	/^    |COUNTRY_EFFECTS$/;"	C	type:rh_symbol_type
 COUNTRY_MTTH	Type_def.ml	/^    |COUNTRY_MTTH$/;"	C	type:rh_symbol_type
 Conditions	conditions.ml	/^open Lexer$/;"	M
 END_OF_FILE	Type_def.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
-EQ	Lexer.ml	/^|EQ$/;"	C	type:lexem_type
+EQ	lexer.ml	/^|EQ$/;"	C	type:lexem_type
 EXPR_EXCEPTION	Type_def.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
 Effects	effects.ml	/^open Symbol_table$/;"	M
-FLOAT	Lexer.ml	/^|FLOAT $/;"	C	type:lexem_type
-INT	Lexer.ml	/^|INT $/;"	C	type:lexem_type
-KEYWORD	Lexer.ml	/^|KEYWORD $/;"	C	type:lexem_type
+FLOAT	lexer.ml	/^|FLOAT $/;"	C	type:lexem_type
+INT	lexer.ml	/^|INT $/;"	C	type:lexem_type
+KEYWORD	lexer.ml	/^|KEYWORD $/;"	C	type:lexem_type
 KEYWORD_SYMBOL	Type_def.ml	/^    |KEYWORD_SYMBOL of string $/;"	C	type:lh_symbol_type
-LB	Lexer.ml	/^|LB$/;"	C	type:lexem_type
+LB	lexer.ml	/^|LB$/;"	C	type:lexem_type
 LEXEM	Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
-LEX_ERROR	Lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
+LEX_ERROR	lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
 LHS	Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
-Lexer	Lexer.ml	/^type lexem_type =$/;"	M
+Lexer	lexer.ml	/^type lexem_type =$/;"	M
+MULTIPLE_CHOICE	Type_def.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
 Mtth	mtth.ml	/^open Symbol_table$/;"	M
 NONE	Type_def.ml	/^    | NONE $/;"	C	type:expected_value
 PARAM_LIST	Type_def.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
@@ -44,14 +45,15 @@ PROVINCE_CONDITIONS	Type_def.ml	/^    |PROVINCE_CONDITIONS$/;"	C	type:rh_symbol_
 PROVINCE_EFFECTS	Type_def.ml	/^    |PROVINCE_EFFECTS$/;"	C	type:rh_symbol_type
 PROVINCE_MTTH	Type_def.ml	/^    |PROVINCE_MTTH$/;"	C	type:rh_symbol_type
 Pre_parser	pre_parser.ml	/^open Lexer$/;"	M
-RB	Lexer.ml	/^|RB$/;"	C	type:lexem_type
+RB	lexer.ml	/^|RB$/;"	C	type:lexem_type
 RHS	Type_def.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
-SCOPE	Lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
+SCOPE	lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
+STATE_CONDITIONS	Type_def.ml	/^    |STATE_CONDITIONS$/;"	C	type:rh_symbol_type
 STATE_EFFECTS	Type_def.ml	/^    |STATE_EFFECTS$/;"	C	type:rh_symbol_type
-STRING	Lexer.ml	/^|STRING$/;"	C	type:lexem_type
+STRING	lexer.ml	/^|STRING$/;"	C	type:lexem_type
 Structures	structures.ml	/^open Symbol_table$/;"	M
 Symbol_table	symbol_table.ml	/^let symbol_table_init symbols =$/;"	M
-TAG	Lexer.ml	/^|TAG  $/;"	C	type:lexem_type
+TAG	lexer.ml	/^|TAG  $/;"	C	type:lexem_type
 TYPE_MISHMASH	Type_def.ml	/^    |TYPE_MISHMASH of string  * lexem_type * lexem_type $/;"	C	type:exception_type
 TYPE_SYMBOL	Type_def.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
 Type_def	Type_def.ml	/^open Lexer$/;"	M
@@ -62,11 +64,12 @@ UNEXPECTED_LEFT_BRACKET	Type_def.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:ex
 UNEXPECTED_LEXEM	Type_def.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type $/;"	C	type:exception_type
 UNEXPECTED_RIGHT_BRACKET	Type_def.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
 UNKNOWN_IDENTIFIER	Type_def.ml	/^    |UNKNOWN_IDENTIFIER of string $/;"	C	type:exception_type
+append_table	symbol_table.ml	/^let append_table symbol_table symbols = $/;"	f
 assignment	Type_def.ml	/^and assignment = $/;"	t
 assignment	pre_parser.ml	/^and assignment lex = match lex with$/;"	f
 assignment_list	pre_parser.ml	/^and assignment_list lexems = $/;"	f
 assignments	pre_parser.ml	/^let rec assignments ls = $/;"	f
-chars_to_lexem	Lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
+chars_to_lexem	lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
 country_conditions	conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
 country_effects	effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
 country_mtth	mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
@@ -80,34 +83,37 @@ expected_value	Type_def.ml	/^and expected_value =$/;"	t
 expr	Type_def.ml	/^type expr = $/;"	t
 expression	pre_parser.ml	/^and expression lexems = $/;"	f
 get_errors	pre_parser.ml	/^let get_errors assignments = $/;"	f
-lexem	Lexer.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
-lexem_to_str	Lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
-lexem_type	Lexer.ml	/^type lexem_type =$/;"	t
-lexer	Lexer.ml	/^let lexer f = $/;"	f
+lexem	lexer.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
+lexem_to_str	lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
+lexem_type	lexer.ml	/^type lexem_type =$/;"	t
+lexer	lexer.ml	/^let lexer f = $/;"	f
 lh_symbol_type	Type_def.ml	/^and lh_symbol_type = $/;"	t
-ls_to_str	Lexer.ml	/^let ls_to_str ls = $/;"	f
-match_reg	Lexer.ml	/^let match_reg reg str= Str.string_match (Str.regexp reg)  str 0  $/;"	f
+ls_to_str	lexer.ml	/^let ls_to_str ls = $/;"	f
+match_reg	lexer.ml	/^let match_reg reg str= Str.string_match (Str.regexp reg)  str 0  $/;"	f
 pop_conditions	conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
 pop_effects	effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
-print_lexem	Lexer.ml	/^let print_lexem lexem = $/;"	f
-print_lexems	Lexer.ml	/^let print_lexems lexems = $/;"	f
+print_lexem	lexer.ml	/^let print_lexem lexem = $/;"	f
+print_lexems	lexer.ml	/^let print_lexems lexems = $/;"	f
 province_conditions	conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
 province_effects	effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
 province_mtth	mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
 rh_symbol_type	Type_def.ml	/^and rh_symbol_type = $/;"	t
 shortest_list	type_verify.ml	/^let shortest_list lists =$/;"	f
 split_list	type_verify.ml	/^let split_list n ls =$/;"	f
+state_conditions	conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
 state_effects	effects.ml	/^let state_effects = symbol_table_init [$/;"	v
-str_to_ls	Lexer.ml	/^let str_to_ls str = $/;"	f
+str_to_ls	lexer.ml	/^let str_to_ls str = $/;"	f
 string_assignment	pre_parser.ml	/^and string_assignment assignment = match assignment with  $/;"	f
 string_assignment_list	pre_parser.ml	/^and string_assignment_list al =$/;"	f
 string_expected_value	pre_parser.ml	/^and string_expected_value v = match v with$/;"	f
 string_expr	pre_parser.ml	/^and string_expr expr = match expr with$/;"	f
-string_lexem	Lexer.ml	/^let string_lexem lex_value = $/;"	f
-string_lexems	Lexer.ml	/^let string_lexems lexems = $/;"	f
+string_lexem	lexer.ml	/^let string_lexem lex_value = $/;"	f
+string_lexems	lexer.ml	/^let string_lexems lexems = $/;"	f
 string_lh_symbol	pre_parser.ml	/^and string_lh_symbol lh = match lh with$/;"	f
 string_of_symbol_table	Type_def.ml	/^let rec string_of_symbol_table symbol_table =$/;"	f
 string_rh_symbol	pre_parser.ml	/^and string_rh_symbol pv = match pv with$/;"	f
-stuctures	structures.ml	/^let stuctures = symbol_table_init [$/;"	v
+string_symbol_table	pre_parser.ml	/^and string_symbol_table symbol_table =$/;"	f
+structures	structures.ml	/^let structures = symbol_table_init [$/;"	v
+symbol_table_from_rhv	type_verify.ml	/^let rec symbol_table_from_rhv rhv = match rhv with$/;"	f
 symbol_table_init	symbol_table.ml	/^let symbol_table_init symbols =$/;"	f
 type_verify	type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f
