@@ -67,7 +67,6 @@ let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
-        let x,y = cords in
      let expected_rh_type = 
          match lh_type with
          |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -150,9 +149,10 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             let symbol_tables = symbol_table_from_rhv new_scope in
 
             
-                            print_endline ("LOOP TOO LONG");
             let exception_lists =
             let rec get_exceptions lst acc  =
+
+                print_endline (string_symbol_table (List.hd lst));
               match lst with
               | [] -> acc
               | top_table::xs -> 
@@ -162,6 +162,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                             get_exceptions xs (more::acc)
                     )
             in
+
             get_exceptions symbol_tables []
             in
             (match exception_lists with
