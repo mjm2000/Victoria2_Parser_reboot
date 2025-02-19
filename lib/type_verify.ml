@@ -46,9 +46,9 @@ let rec symbol_table_from_rhv rhv = match rhv with
     | (POP_CONDITIONS) ->
         [pop_conditions]
     | (STATE_EFFECTS) ->
-        [state_effects;country_effects;province_effects]
+        [state_effects]
     | (STATE_CONDITIONS) ->
-        [state_conditions;country_conditions;province_conditions]
+        [state_conditions]
     | (PARAM_LIST(sub_table))->
         [sub_table]
     | PARAM_OPTION(options) ->
@@ -148,7 +148,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
 
-            print_endline (Pre_parser.string_assign_list ls); 
+            print_endline (Pre_parser.string_assignment_list ls); 
             let exception_lists =
             let rec get_exceptions lst acc  =
               match lst with
