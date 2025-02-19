@@ -162,7 +162,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                             get_exceptions xs (more::acc)
                     )
             in
-            List.length symbol_tables |> string_of_int |> print_endline;  
+            List.length symbol_tables |> string_of_int |> Printf.printf "(%s) symbol_tables length:%s \n" lh_value;  
             get_exceptions symbol_tables []
             in
             (match exception_lists with
