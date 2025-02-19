@@ -154,8 +154,10 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             print_endline (Pre_parser.string_assignment_list ls); 
             *)
 
-            let exception_lists =
+            let exception_lists = List.map (fun symbol_table ->
+                type_verify_r symbol_table ls [] (RHS([new_scope]))
 
+                (*
             let rec get_exceptions lst acc  =
 
               match lst with
@@ -163,12 +165,14 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               | top_table::xs -> 
                             
                 my_var := !my_var + 1;
+                print_endline (string_of_int !my_var);
                     (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                     |[] -> []
                     |more->
 
                             get_exceptions xs (more::acc)
                     )
+            *)
             in
             get_exceptions symbol_tables []
             in
