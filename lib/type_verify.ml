@@ -93,7 +93,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         |PARAM_OPTION(options) as rh ->
 
             let rec shortest_exception_list_r options expanded_exceptions = match options with 
-                |[] -> (CHOICE(expanded_exceptions))::exceptions
+                |[] -> (MULTIPLE_CHOICE(expanded_exceptions))::exceptions
                 |top::rest ->
                     (match assign_type_check top expanded_exceptions with
                     |[] -> exceptions 
