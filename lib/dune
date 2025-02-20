@@ -1,4 +1,4 @@
 (library
  (name vic2parser_reboot)
-(libraries re2 vic2parser_reboot)
+ (libraries re2 )
  )
