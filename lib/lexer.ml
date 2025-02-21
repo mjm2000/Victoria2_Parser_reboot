@@ -1,4 +1,4 @@
-open Re2.Std
+
 type lexem_type =
 |KEYWORD 
 |BOOL  
@@ -25,12 +25,10 @@ let ls_to_str ls =
     Buffer.contents buf
 
 let match_reg reg str = 
-  match Regex.create reg with
-  | Ok pattern -> Regex.matches pattern str <> []
+  match Re2.create reg with
+  | Ok pattern -> Re2.matches pattern str 
   | Error _ -> false  (* Handle invalid regex gracefully *)
-    
 
-let match_reg reg str= Str.string_match (Str.regexp reg)  str 0  
 
 let chars_to_lexem cl= match (cl) with 
           |iv when match_reg "-?[0-9]+$" iv -> INT
