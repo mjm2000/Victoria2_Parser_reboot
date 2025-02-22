@@ -6,7 +6,7 @@ let decisions = symbol_table_init [
             (KEYWORD_SYMBOL "potential",COUNTRY_CONDITIONS);
             (KEYWORD_SYMBOL "allow",COUNTRY_CONDITIONS);
             (KEYWORD_SYMBOL "effect",COUNTRY_EFFECTS);
-            (KEYWORD_SYMBOL("ai_chance"),PARAM_LIST(symbol_table_init [
+            (KEYWORD_SYMBOL("ai_will_do"),PARAM_LIST(symbol_table_init [
                 (KEYWORD_SYMBOL("factor"),
                     PARAM_OPTION([
                         PARAM_VALUE(INT);
