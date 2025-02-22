@@ -45,11 +45,11 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
         List.iter 
         (function
             |"events" as entry->
+                
                 let raw_events = Array.to_list (Sys.readdir (Filename.concat path entry)) in
                 let refined_events = filter_files raw_events event_files in
                 
                 List.iter (fun event_file -> 
-
                     let event_file = Filename.concat (Filename.concat path entry) event_file in
                     let lexems:Lexer.lexem list= event_file |> Lexer.lexer  in
                     (
@@ -78,7 +78,9 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                     );
                     (assignments
                     |> Type_verify.type_verify Events.events  
-                    |> (fun x -> if x <> [] then 
+                    |> (fun x -> 
+                        if x <> [] then 
+                            print_endline "Type Errors";
                         x 
                         |> Pre_parser.exceptions_string 
                         |> output_to_file event_file type_errors;
