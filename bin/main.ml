@@ -30,7 +30,7 @@ let () =
     let doc = "My_program does nothing but output 'cow'." in
     let info = Cmd.info "my_program" ~doc in
     let files_arg title doc =
-        Arg.(value & pos_all string [] & info [title] ~doc)
+        Arg.(value & opt (list string) [] & info [title] ~doc)
     in
 let filter_files raw_files selected_files = match selected_files with
     |Some files -> List.filter (fun x -> Array.mem x files) raw_files
