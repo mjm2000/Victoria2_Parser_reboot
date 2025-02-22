@@ -29,20 +29,26 @@ let () =
     in
     let doc = "My_program does nothing but output 'cow'." in
     let info = Cmd.info "my_program" ~doc in
+    let files_arg title doc =
+        Arg.(value & pos_all string [] & info [title] ~doc)
+    in
+let filter_files raw_files selected_files = match selected_files with
+    |Some files -> List.filter (fun x -> Array.mem x files) raw_files
+    |None -> raw_files
+    in
     
-let parse_env mod_home lex_output ast_output ast_errors type_errors files = 
+let parse_env mod_home lex_output ast_output ast_errors type_errors selected_categories event_files= 
     match mod_home with
     |Some path when folder_exists path ->
-        let raw_entries = Sys.readdir path in
-        let entries = match files with 
-            |Some files -> Array.filter (fun x -> Array.mem x files) raw_entries
-            |None -> raw_entries
-        in
-        Array.iter 
+        let raw_entries = Array.to_list(Sys.readdir path) in
+        let refined_categories = filter_files raw_entries selected_categories in 
+        List.iter 
         (function
             |"events" as entry->
-                let events = Sys.readdir (Filename.concat path entry) in
-                Array.iter (fun event_file -> 
+                let raw_events = Array.to_list (Sys.readdir (Filename.concat path entry)) in
+                let refined_events = filter_files raw_events event_files in
+                
+                List.iter (fun event_file -> 
                     let event_file = Filename.concat (Filename.concat path entry) event_file in
                     let lexems:Lexer.lexem list= event_file |> Lexer.lexer  in
                     (
@@ -75,11 +81,11 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors files =
                         |> output_to_file event_file type_errors;
                         ); 
                     );
-                    ) events
+                ) refined_events; 
                 
 
         |_-> ()
-        ) entries;
+        ) refined_categories;
 
         |_-> ()
     in
@@ -90,7 +96,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors files =
         $ (make_arg "ao" "document")
         $ (make_arg "ae" "document")
         $ (make_arg "te" "document")
-        $ (make_arg "f" "document")
+        $ (files_arg "f" "document")
     ) in
     let cmd = Cmd.v info term 
     in
