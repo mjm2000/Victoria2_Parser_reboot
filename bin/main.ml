@@ -79,8 +79,6 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                     (assignments
                     |> Type_verify.type_verify Events.events  
                     |> (fun x -> 
-                        if x <> [] then 
-                            print_endline "Type Errors";
                         x 
                         |> Pre_parser.exceptions_string 
                         |> output_to_file event_file type_errors;
