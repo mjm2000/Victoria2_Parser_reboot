@@ -24,14 +24,12 @@ let ls_to_str ls =
     Buffer.contents buf
 
 let match_reg reg str = 
-  match Re2.create (Printf.sprintf "(?-u)%s" reg) with
-  | Ok pattern -> Re2.matches pattern str 
-  | Error _ -> false  (* Handle invalid regex gracefully *)
-
+    let regex = Re2.create_exn reg in
+    Re2.matches regex str
 
 let chars_to_lexem cl= match (cl) with 
           |iv when match_reg "^-?[0-9]+$" iv -> INT
-          |fv when match_reg "^-?(0|[1-9][0-9]*)\\.[0-9]+" fv -> FLOAT 
+          |fv when match_reg "^-?(0|[1-9][0-9]*)\\.[0-9]+$" fv -> FLOAT 
           |"NOT"|"AND"|"OR"|"not"|"and"|"or" -> CONDITION 
           |tag when match_reg  "^[A-Z][A-Z][A-Z]$" tag->
                   TAG 

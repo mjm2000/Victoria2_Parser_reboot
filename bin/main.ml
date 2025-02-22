@@ -30,9 +30,14 @@ let () =
     let doc = "My_program does nothing but output 'cow'." in
     let info = Cmd.info "my_program" ~doc in
     
-let parse_env mod_home lex_output ast_output ast_errors type_errors = 
+let parse_env mod_home lex_output ast_output ast_errors type_errors files = 
     match mod_home with
     |Some path when folder_exists path ->
+        let raw_entries = Sys.readdir path in
+        let entries = match files with 
+            |Some files -> Array.filter (fun x -> Array.mem x files) raw_entries
+            |None -> raw_entries
+        in
         Array.iter 
         (function
             |"events" as entry->
@@ -74,7 +79,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors =
                 
 
         |_-> ()
-        ) (Sys.readdir path);
+        ) entries;
 
         |_-> ()
     in
@@ -85,6 +90,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors =
         $ (make_arg "ao" "document")
         $ (make_arg "ae" "document")
         $ (make_arg "te" "document")
+        $ (make_arg "f" "document")
     ) in
     let cmd = Cmd.v info term 
     in
