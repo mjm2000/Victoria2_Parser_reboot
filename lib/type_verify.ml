@@ -77,7 +77,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
          |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
-                 print_endline (Pre_parser.string_expected_value scope);
+                 print_endline (lh_value);
             None
      in
      let rec assign_type_check expected_rh_type exceptions =  
