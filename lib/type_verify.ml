@@ -176,10 +176,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |exceptions->
-                    print_endline ("(");
-                    print_endline lh_value;
-                    print_endline ("error2");
-                    print_endline (")");
                     get_exceptions xs (Some exceptions) 
                  )
             in
