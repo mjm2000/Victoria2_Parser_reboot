@@ -49,6 +49,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                 let refined_events = filter_files raw_events event_files in
                 
                 List.iter (fun event_file -> 
+
                     let event_file = Filename.concat (Filename.concat path entry) event_file in
                     let lexems:Lexer.lexem list= event_file |> Lexer.lexer  in
                     (
@@ -58,6 +59,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                     );
                     if ast_output = None &&  ast_errors =None && type_errors = None then ();
                         
+
                     let assignments = lexems |> Pre_parser.assignments in
 
                     (assignments
@@ -67,7 +69,8 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
 
                     (assignments
                     |> Pre_parser.get_errors  
-                    |>  (fun x -> if x <> [] then 
+                    |>  (fun x ->     
+                        if x <> [] then 
                         x 
                         |> Pre_parser.exceptions_string 
                         |> output_to_file event_file  ast_errors 
@@ -83,8 +86,8 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                     );
                 ) refined_events; 
                 
-
-        |_-> ()
+            
+            |_-> ()
         ) refined_categories;
 
         |_-> ()
