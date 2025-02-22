@@ -11,6 +11,11 @@ let decisions = symbol_table_init [
             (KEYWORD_SYMBOL "news_desc_short",PARAM_VALUE(STRING));
             (KEYWORD_SYMBOL "news_desc_medium",PARAM_VALUE(STRING));
             (KEYWORD_SYMBOL "news_desc_long",PARAM_VALUE(STRING));
+            (KEYWORD_SYMBOL "news_desc_image",PARAM_VALUE(STRING));
+            (KEYWORD_SYMBOL("picture"), PARAM_OPTION([
+                PARAM_VALUE(STRING);
+                PARAM_VALUE(KEYWORD)
+            ]));
             (KEYWORD_SYMBOL("ai_will_do"),PARAM_LIST(symbol_table_init [
                 (KEYWORD_SYMBOL("factor"),
                     PARAM_OPTION([
