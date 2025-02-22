@@ -124,28 +124,6 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                         ); 
                     );
                 ) refined_decisions; 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
-            
             |_-> ()
         ) refined_categories;
 
