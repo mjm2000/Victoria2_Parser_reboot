@@ -397,7 +397,10 @@ let province_effects = symbol_table_init [
 (KEYWORD_SYMBOL("trade_goods"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("clr_province_flag"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("set_province_flag"),PARAM_VALUE(KEYWORD));
-(KEYWORD_SYMBOL("change_province_name"),PARAM_VALUE(STRING));
+(KEYWORD_SYMBOL("change_province_name"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
+    PARAM_VALUE(STRING);
+]));
 (KEYWORD_SYMBOL("change_variable"),PARAM_LIST(symbol_table_init [
     (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
     (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
