@@ -133,7 +133,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |_-> None
         in
 
-     Printf.printf "except %s"  (Pre_parser.exceptions_string exceptions);
+     Printf.printf "except %s\n"  (Pre_parser.exceptions_string exceptions);
      let  assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          |(PROVINCE_MTTH as new_scope) 
 		 | (COUNTRY_MTTH as new_scope) 
