@@ -133,7 +133,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |_-> None
         in
 
-     Printf.printf "except %s\n"  (Pre_parser.exceptions_string exceptions);
      let  assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          |(PROVINCE_MTTH as new_scope) 
 		 | (COUNTRY_MTTH as new_scope) 
@@ -152,7 +151,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               match lst with
               | [] -> lowest_exception@exceptions
               | top_table::xs -> 
-                 (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
+                 (match (type_verify_r top_table ls exceptions (RHS([new_scope]))) with
                  |[] ->  
                          []
                  |exceptions->
