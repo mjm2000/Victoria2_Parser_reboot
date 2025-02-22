@@ -7,6 +7,7 @@ let decisions = symbol_table_init [
             (KEYWORD_SYMBOL "allow",COUNTRY_CONDITIONS);
             (KEYWORD_SYMBOL "effect",COUNTRY_EFFECTS);
             (KEYWORD_SYMBOL "news",PARAM_VALUE(BOOL));
+            (KEYWORD_SYMBOL "news_title",PARAM_VALUE(STRING));
             (KEYWORD_SYMBOL "news_desc_short",PARAM_VALUE(STRING));
             (KEYWORD_SYMBOL "news_desc_medium",PARAM_VALUE(STRING));
             (KEYWORD_SYMBOL "news_desc_large",PARAM_VALUE(STRING));
