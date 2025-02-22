@@ -45,7 +45,6 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
         List.iter 
         (function
             |"events" as entry->
-                
                 let raw_events = Array.to_list (Sys.readdir (Filename.concat path entry)) in
                 let refined_events = filter_files raw_events event_files in
                 
@@ -85,6 +84,66 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                         ); 
                     );
                 ) refined_events; 
+            |"decisions" as entry ->
+                let raw_decisions = Array.to_list (Sys.readdir (Filename.concat path entry)) in
+                let refined_decisions = filter_files raw_decisions event_files in
+                
+                List.iter (fun event_file -> 
+                    let event_file = Filename.concat (Filename.concat path entry) event_file in
+                    let lexems:Lexer.lexem list= event_file |> Lexer.lexer  in
+                    (
+                    lexems 
+                    |> Lexer.string_lexems 
+                    |> output_to_file event_file lex_output;
+                    );
+                    if ast_output = None &&  ast_errors =None && type_errors = None then ();
+                        
+                                                                                                
+                    let assignments = lexems |> Pre_parser.assignments in
+                                                                                                
+                    (assignments
+                    |> Pre_parser.string_assignment_list  
+                    |> output_to_file event_file ast_output;    
+                    );
+                                                                                                
+                    (assignments
+                    |> Pre_parser.get_errors  
+                    |>  (fun x ->     
+                        if x <> [] then 
+                        x 
+                        |> Pre_parser.exceptions_string 
+                        |> output_to_file event_file  ast_errors 
+                    )
+                    );
+                    (assignments
+                    |> Type_verify.type_verify Decisions.decisions  
+                    |> (fun x -> 
+                        x 
+                        |> Pre_parser.exceptions_string 
+                        |> output_to_file event_file type_errors;
+                        ); 
+                    );
+                ) refined_decisions; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 
             
             |_-> ()
