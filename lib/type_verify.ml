@@ -121,7 +121,6 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let exceptions = assign_type_check rh exceptions in
         type_verify_r symbol_table rest exceptions scope
     |None ->
-        print_endline (lh_value);
         let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     )
@@ -172,6 +171,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |exceptions->
+                    print_endline ("error");
                     get_exceptions xs (Some exceptions) 
                  )
             in
