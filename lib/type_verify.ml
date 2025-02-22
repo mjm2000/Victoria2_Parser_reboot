@@ -147,18 +147,28 @@ let rec type_verify_r symbol_table assignments exceptions scope =
 		 | (STATE_EFFECTS as new_scope) 
          | (STATE_CONDITIONS as new_scope)
 		 | (PARAM_LIST(_) as new_scope)
-         | (APPEND_SYMBOLS(_) as new_scope)     
+         | (APPEND_SYMBOLS(_) as new_scope)  ->
+            let symbol_tables = symbol_table_from_rhv new_scope in
+            let rec get_exceptions lst lowest_exception=
+              match lst with
+              | [] -> 
+                    (match lowest_exception with
+                        |Some e -> e@exceptions
+                        |None -> 
+                                exceptions
+                    )
+              | top_table::xs -> 
+                 (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
+                 |[] -> []
+                 |exceptions->
+                    print_endline ("error");
+                    get_exceptions xs  (exceptions@lowest_exception) 
+                 )
+            in
+            get_exceptions symbol_tables []
+
          | (PARAM_OPTION(_) as new_scope) ->
             let symbol_tables = symbol_table_from_rhv new_scope in
-            (*
-            print_endline (Pre_parser.string_rh_symbol new_scope);
-            print_endline (Pre_parser.string_assignment_list ls); 
-            *)
-            (*
-            let exception_lists = List.map (fun symbol_table ->
-                type_verify_r symbol_table ls [] (RHS([new_scope]))
-            ) symbol_tables 
-            *)
             let rec get_exceptions lst lowest_exception=
               match lst with
               | [] -> 
