@@ -23,8 +23,8 @@ let () =
     *)
     let output_to_file file_name arg str = 
         match arg with
-        |Some "stdout" -> Printf.printf "%s:%s" file_name str
-        |Some ol -> Printf.fprintf (open_out ol) "%s:%s" file_name str 
+        |Some "stdout" -> Printf.printf "%s:%s\n" file_name str
+        |Some ol -> Printf.fprintf (open_out ol) "%s:%s\n" file_name str 
         |None -> () 
     in
     let doc = "My_program does nothing but output 'cow'." in
