@@ -153,9 +153,11 @@ let rec type_verify_r symbol_table assignments exceptions scope =
               | [] -> lowest_exception@exceptions
               | top_table::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
-                 |[] -> []
-                 |exceptions->
+                 |[] ->     
+
                     print_endline "exceptions";
+                         []
+                 |exceptions->
                     get_exceptions xs  (exceptions@lowest_exception) 
                  )
             in
