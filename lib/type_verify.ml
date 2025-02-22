@@ -163,6 +163,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             get_exceptions symbol_tables []
 
          | (PARAM_OPTION(_) as new_scope) ->
+            print_endline lh_value;
             let symbol_tables = symbol_table_from_rhv new_scope in
             let rec get_exceptions lst lowest_exception=
               match lst with
