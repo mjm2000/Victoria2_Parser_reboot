@@ -16,6 +16,7 @@ let decisions = symbol_table_init [
                 PARAM_VALUE(STRING);
                 PARAM_VALUE(KEYWORD)
             ]));
+            (KEYWORD_SYMBOL "alert",PARAM_VALUE(BOOL));
             (KEYWORD_SYMBOL("ai_will_do"),PARAM_LIST(symbol_table_init [
                 (KEYWORD_SYMBOL("factor"),
                     PARAM_OPTION([
