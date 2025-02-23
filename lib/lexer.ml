@@ -34,6 +34,8 @@ let chars_to_lexem cl= match (cl) with
           |"NOT"|"AND"|"OR"|"not"|"and"|"or" -> CONDITION 
           |tag when match_reg  "^[A-Z][A-Z][A-Z]$" tag->
                   TAG 
+          | tag when match_reg "^[A-Z][0-9][0-9]$" tag->
+                  TAG
           |"yes"|"no" -> BOOL 
           |"FROM"|"THIS"|"this"|"from" -> SCOPE 
           |_-> KEYWORD

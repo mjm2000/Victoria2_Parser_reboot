@@ -104,6 +104,20 @@ let country_effects =  symbol_table_init [
     );
     (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
 ]));
+(KEYWORD_SYMBOL("add_country_modifier"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("name"),PARAM_OPTION([
+        PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(STRING)
+    ]);
+    );
+    (KEYWORD_SYMBOL("duration"),PARAM_VALUE(INT));
+]));
+(KEYWORD_SYMBOL("define_general"),PARAM_LIST( symbol_table_init [
+    (KEYWORD_SYMBOL("name"),PARAM_VALUE(STRING));
+    (KEYWORD_SYMBOL("personality"),PARAM_VALUE(KEYWORD););
+    (KEYWORD_SYMBOL("background"),PARAM_VALUE(KEYWORD));
+]));
+
 (KEYWORD_SYMBOL("kill_leader"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("remove_country_modifier"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("add_crisis_interest"),PARAM_VALUE(BOOL));

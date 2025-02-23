@@ -22,6 +22,7 @@ let pop_conditions = symbol_table_init [
     PARAM_VALUE(SCOPE);
     PARAM_VALUE(BOOL);
 ]));
+(KEYWORD_SYMBOL("always"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
     PARAM_VALUE(TAG);
@@ -389,7 +390,10 @@ let country_conditions = symbol_table_init [
 		PARAM_VALUE(SCOPE)
 ]));
 (KEYWORD_SYMBOL("war"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("war_exhaustion"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("war_exhaustion"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
 (KEYWORD_SYMBOL("war_policy"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("war_score"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("war_with"),PARAM_OPTION([
