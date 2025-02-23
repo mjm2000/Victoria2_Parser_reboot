@@ -48,7 +48,7 @@ and lexem_list lexems =
             (match(expression rest) with 
             |(LEXEM(_,_,_) as v),rest -> 
                 lexem_list_r rest (v :: out)
-            |((ASSIGNMENT_LIST ( (ASSIGNMENT((_,_,cords),_) )::_) ) as al),rest ->
+            |((ASSIGNMENT_LIST ( (ASSIGNMENT((_,_,cords),_) )::_)as al ) ),rest ->
                 let all_types = [PARAM_VALUE KEYWORD;
                 PARAM_VALUE INT; 
                 PARAM_VALUE STRING;
