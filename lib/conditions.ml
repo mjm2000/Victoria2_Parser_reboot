@@ -198,7 +198,10 @@ let country_conditions = symbol_table_init [
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE)
 ]));
-(KEYWORD_SYMBOL("in_default"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("in_default"),PARAM_OPTION([
+    PARAM_VALUE(BOOL);
+    PARAM_VALUE(SCOPE);
+]));
 (KEYWORD_SYMBOL("invention"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("involved_in_crisis"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("is_claim_crisis"),PARAM_VALUE(BOOL));
@@ -346,6 +349,10 @@ let country_conditions = symbol_table_init [
     ];
 ));
 (KEYWORD_SYMBOL("tag"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("TAG"),PARAM_OPTION([
         PARAM_VALUE(TAG);
         PARAM_VALUE(SCOPE)
 ]));

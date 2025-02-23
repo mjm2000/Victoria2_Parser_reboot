@@ -30,6 +30,7 @@ let match_reg reg str =
 let chars_to_lexem cl= match (cl) with 
           |iv when match_reg "^-?[0-9]+$" iv -> INT
           |fv when match_reg "^-?(0|[1-9][0-9]*)?\\.[0-9]+$" fv -> FLOAT 
+          |"TAG"-> KEYWORD
           |"NOT"|"AND"|"OR"|"not"|"and"|"or" -> CONDITION 
           |tag when match_reg  "^[A-Z][A-Z][A-Z]$" tag->
                   TAG 
