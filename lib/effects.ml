@@ -126,7 +126,15 @@ let country_effects =  symbol_table_init [
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT)
 ]));
-(KEYWORD_SYMBOL("build_factory_in_capital_state"),PARAM_OPTION( [
+(KEYWORD_SYMBOL("build_factory_in_capital_state"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("in_whole_capital_state"),PARAM_VALUE(BOOL));
+        (KEYWORD_SYMBOL("limit_to_world_greatest_level"),PARAM_VALUE(BOOL););
+    ]);
+    ])
+);
+(KEYWORD_SYMBOL("build_factory_in_capital"),PARAM_OPTION([
     PARAM_VALUE(KEYWORD);
     PARAM_LIST(symbol_table_init [
         (KEYWORD_SYMBOL("in_whole_capital_state"),PARAM_VALUE(BOOL));
