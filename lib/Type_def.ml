@@ -1,6 +1,7 @@
 open Lexer
 type expr = 
     |LEXEM of lexem
+    |LEXEM_LIST of lexem list
     |ASSIGNMENT_LIST of assignment list
     |EXPR_EXCEPTION of exception_value  
 and assignment = 
