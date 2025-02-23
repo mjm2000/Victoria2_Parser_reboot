@@ -48,8 +48,25 @@ and lexem_list lexems =
             (match(expression rest) with 
             |(LEXEM(_,_,_) as v),rest -> 
                 lexem_list_r rest (v :: out)
-            |x, ((_,_,cords)::rest) ->
-                EXPR_EXCEPTION(e, (UNEXPECTED_EXPR x), cords)
+            |(ASSIGNMENT_LIST ((ASSIGNMENT(_,_,cords))::_)) as al,rest ->
+                let all_types = [PARAM_VALUE KEYWORD;
+                PARAM_VALUE INT; 
+                PARAM_VALUE STRING;
+                PARAM_VALUE FLOAT] in
+                let v = EXPR_EXCEPTION(RHS(all_types), UNEXPECTED_ASSIGN_LIST(al),cords) in
+                lexem_list_r rest (v :: out)
+            |(ASSIGNMENT_LIST (ASSIGN_EXCEPTION(ae)::_)) as al ,rest ->
+                lexem_list_r rest (EXPR_EXCEPTION(ae) :: out) 
+            |(ASSIGNMENT_LIST ([]) as al,(_,_,cords)::tail ->
+                let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD], UNEXPECTED_ASSIGNMENT(ASSIGNMENT_LIST al), cords) in
+                lexem_list_r tail (v :: out)
+
+            |(EXPR_EXCEPTION (_) as e ,rest) ->
+                lexem_list_r rest (e :: out)
+            |(LEXEM_LIST (ll)   ,rest) ->
+                let v = UNEXPECTED_EXPR_LIST(ll) in
+                lexem_list_r rest (v :: out)
+
 
             )
     in
