@@ -142,6 +142,14 @@ let country_effects =  symbol_table_init [
     ]);
     ])
 );
+(KEYWORD_SYMBOL("build_railway_in_capital"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
+    PARAM_LIST(symbol_table_init [
+        (KEYWORD_SYMBOL("in_whole_capital_state"),PARAM_VALUE(BOOL));
+        (KEYWORD_SYMBOL("limit_to_world_greatest_level"),PARAM_VALUE(BOOL););
+    ]);
+    ])
+);
 (KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
 (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
