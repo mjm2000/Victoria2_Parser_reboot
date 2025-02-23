@@ -117,6 +117,11 @@ let country_effects =  symbol_table_init [
     (KEYWORD_SYMBOL("personality"),PARAM_VALUE(KEYWORD););
     (KEYWORD_SYMBOL("background"),PARAM_VALUE(KEYWORD));
 ]));
+(KEYWORD_SYMBOL("define_admiral"),PARAM_LIST( symbol_table_init [
+    (KEYWORD_SYMBOL("name"),PARAM_VALUE(STRING));
+    (KEYWORD_SYMBOL("personality"),PARAM_VALUE(KEYWORD););
+    (KEYWORD_SYMBOL("background"),PARAM_VALUE(KEYWORD));
+]));
 
 (KEYWORD_SYMBOL("kill_leader"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("remove_country_modifier"),PARAM_VALUE(KEYWORD));
