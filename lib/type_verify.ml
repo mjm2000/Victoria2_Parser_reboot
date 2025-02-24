@@ -67,7 +67,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
 let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
-    |(ASSIGNMENT((lh_type,lh_value,_), LEXEM_LIST(ls)))::rest ->
+    |ASSIGNMENT((lh_type,lh_value,_), LEXEM_LIST(ls))::rest ->
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
