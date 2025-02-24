@@ -79,26 +79,20 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let rec assign_type_check expected_rh_type ls exceptions =  
             match expected_rh_type,ls with
             |_,[] -> exceptions
-            |PARAM_VALUE(erh_type),LEXEM(rh_type,rh_value,cords)::rest when erh_type = lh_type  -> 
-                assign_type_check expected_rh_type ls exceptions 
-            |(PARAM_VALUE(erh_type) as epv) when erh_type !=  lh_type  ->
-                let e = (TYPE_MISHMASH(lh_value, erh_type, lh_type)) in
-                assign_type_check expected_rh_type (((RHS [epv]),e,ls)::exceptions) 
-
-            |PARAM_OPTION(options) ->
-                let rec shortest_exception_list_r options = match options with 
-                    |[] -> ((RHS options,UNEXPECTED_EXPR_LIST(ls),ls)::exceptions)
-                    |top::rest ->
-                        (match (assign_type_check top []) with
-                        |[] -> exceptions 
-                        |_-> shortest_exception_list_r rest 
-                        )
-                in
-                shortest_exception_list_r options  
+            |LEXEM_LIST(erh_type),(LEXEM(rh_type,rh_value,cords)::rest) when erh_type = lh_type  -> 
+                assign_type_check erh_type rest exceptions
             |_ -> 
+                let e = UNEXPECTED_EXPR_LIST(ls) in
+                let expected = (RHS [expected_rh_type]) in
+                ((expected,e,ls)::exceptions)
 
-            assign_type_check 
-        type_verify_r symbol_table rest exceptions scope
+        in
+        match expected_rh_type with
+            |Some rhs -> assign_type_check rhs ls exceptions
+            |None -> 
+                let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
+                assign_type_check expected_rh_type ls ((scope,e,ls)::exceptions)
+            type_verify_r symbol_table rest exceptions scope
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
          match lh_type with
