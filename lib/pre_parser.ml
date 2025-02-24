@@ -37,6 +37,7 @@ and assignment_list lexems =
             assignment_list_r rest (v :: out)
     in
     assignment_list_r lexems []
+
 and lexem_list lexems = 
     let rec lexem_list_r lexems out = match lexems with
         | (RB, _, _) :: rest -> (List.rev out), rest
@@ -81,8 +82,8 @@ and expression lexems =
                 let v, rest = assignment_list rest in 
                 ASSIGNMENT_LIST v, rest
         |_ -> 
-            let v, rest = expression_list rest in
-            v, rest
+            let v, rest = lexem_list rest in
+            LEXEM_LIST(v), rest
         )
     | (RB, _, cords) :: rest -> 
         EXPR_EXCEPTION (RHS [PARAM_VALUE LB], UNEXPECTED_RIGHT_BRACKET, cords), rest
