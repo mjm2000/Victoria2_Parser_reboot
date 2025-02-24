@@ -99,11 +99,13 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 assign_type_check expected_rh_type ls new_exceptions
 
         in
-        match expected_rh_type with
-            |Some rhs -> assign_type_check rhs ls exceptions
+        (match expected_rh_type with
+            |Some rhs ->  let new_exceptions = assign_type_check rhs ls exceptions in
+                type_verify_r symbol_table rest new_exceptions scope
             |None -> 
                 let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
-                assign_type_check expected_rh_type ls ((scope,e,ls)::exceptions)
+                type_verify_r symbol_table rest ((scope,e,assign_cords)::exceptions) scope
+            )
 
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
