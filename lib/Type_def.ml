@@ -1,7 +1,7 @@
 open Lexer
 type expr = 
     |LEXEM of lexem
-    |LEXEM_LIST of lexem list
+    |LEXEM_LIST of expr list
     |ASSIGNMENT_LIST of assignment list
     |EXPR_EXCEPTION of exception_value  
 and assignment = 
@@ -20,6 +20,8 @@ and exception_type =
     |UNEXPECTED_LEXEM of string * lexem_type 
     |UNEXPECTED_ASSIGNMENT of assignment 
     |UNEXPECTED_ASSIGN_LIST of assignment list 
+    |UNEXPECTED_EXPR_LIST of expr list
+    |UNEXPECTED_EXPR of expr
     |UNEXPECTED_RIGHT_BRACKET
     |UNEXPECTED_LEFT_BRACKET
     |MULTIPLE_CHOICE of exception_value list list
