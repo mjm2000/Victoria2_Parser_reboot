@@ -93,6 +93,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 let e = UNEXPECTED_EXPR_LIST(ls) in
                 let expected = (RHS [expected_rh_type]) in
                 ((expected,e,ls)::exceptions)
+        
 
         in
         match expected_rh_type with
