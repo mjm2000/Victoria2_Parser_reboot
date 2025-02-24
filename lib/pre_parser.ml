@@ -197,6 +197,12 @@ and string_rh_symbol pv = match pv with
             Printf.sprintf "%s\n\t%s:%s" acc (string_lh_symbol lh) (string_rh_symbol rh)
         ) "" symbols in
         Printf.sprintf "APPEND_SYMBOLS(%s:%s)" x (string_rh_symbol rh)
+    | VALUE_LIST (values) ->
+        let x = List.fold_left (fun acc x -> 
+            Printf.sprintf "%s\n\t%s" acc (string_rh_symbol x)
+        ) "" values in
+        Printf.sprintf "VALUE_LIST(%s)" x
+
     | PROVINCE_MTTH -> "PROVINCE_MTTH"
     | COUNTRY_MTTH -> "COUNTRY_MTTH"
     | PROVINCE_EFFECTS -> "PROVINCE_EFFECTS"
@@ -207,6 +213,7 @@ and string_rh_symbol pv = match pv with
     | POP_CONDITIONS -> "POP_CONDITIONS"
     | STATE_CONDITIONS -> "STATE_CONDITIONS"
     | STATE_EFFECTS -> "STATE_EFFECTS"
+
 
 and string_lh_symbol lh = match lh with
     | KEYWORD_SYMBOL str -> Printf.sprintf "KEYWORD_SYMBOL(%s)" str
