@@ -63,7 +63,7 @@ and lexem_list lexems =
 
             |(EXPR_EXCEPTION (_) as e ,rest) ->
                 lexem_list_r rest (e :: out)
-            |(LEXEM_LIST ((_,_,cords)::_) as ll   ,rest) ->
+            |( (LEXEM_LIST ((_,_,cords)::_) as ll)   ,rest) ->
                 let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD],UNEXPECTED_EXPR_LIST(ll),cords) in
                 lexem_list_r rest (v :: out)
             _-> rest, out
