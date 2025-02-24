@@ -33,6 +33,7 @@ and rh_symbol_type =
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
     |PARAM_OPTION of rh_symbol_type list
+    |VALUE_LIST of rh_symbol_type 
     |CHOICE_VALUE of string list 
     |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type 
     |PROVINCE_MTTH
