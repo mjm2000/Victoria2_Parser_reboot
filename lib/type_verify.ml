@@ -76,7 +76,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
             |_-> None
         in
-        let rec assign_type_check expected_rh_type ls exceptions =  
+        let rec assign_type_check (expected_rh_type:rh_symbol_type) ls exceptions =  
             match expected_rh_type,ls with
             |_,[] -> exceptions
             |VALUE_LIST(list_erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
@@ -90,10 +90,10 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 |PARAM_OPTION(options) ->
                     let rec shortest_exception_list_r options = match options with 
                         |[] -> ((RHS options,UNEXPECTED_LEXEM(rh_value,rh_type),cords)::exceptions)
-                        |top::rest ->
+                        |top::rest_types ->
                             (match (assign_type_check top rest []) with
                             |[] -> exceptions 
-                            |_-> shortest_exception_list_r rest 
+                            |_-> shortest_exception_list_r rest_types 
                             )
                     in
                     let exceptions = shortest_exception_list_r options in
