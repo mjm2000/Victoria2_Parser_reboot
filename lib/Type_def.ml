@@ -77,6 +77,9 @@ let rec string_of_symbol_table symbol_table =
                 ) "" append_list in
                 let rh_string = string_rh rh_value in
                 Printf.sprintf "APPEND_SYMBOLS(%s:%s)" append_list rh_string
+        |VALUE_LIST(rh_value) -> 
+                let rh_string = string_rh rh_value in
+                Printf.sprintf "VALUE_LIST(%s)" rh_string
         |PROVINCE_MTTH -> "PROVINCE_MTTH"
         |COUNTRY_MTTH -> "COUNTRY_MTTH"
         |PROVINCE_EFFECTS -> "PROVINCE_EFFECTS"
