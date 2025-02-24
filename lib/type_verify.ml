@@ -88,6 +88,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     let expected = (RHS [expected_rh_type]) in
                     ((expected,e,cords)::exceptions)
                 )
+
             |_,_ -> 
                 let e = UNEXPECTED_EXPR_LIST(ls) in
                 let expected = (RHS [expected_rh_type]) in
@@ -99,7 +100,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |None -> 
                 let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
                 assign_type_check expected_rh_type ls ((scope,e,ls)::exceptions)
-            type_verify_r symbol_table rest exceptions scope
+
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
          match lh_type with
