@@ -67,7 +67,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
 let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
-    |ASSIGNMENT((lh_type,lh_value,_), LEXEM_LIST(ls))::rest ->
+    |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -79,21 +79,24 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let rec assign_type_check expected_rh_type ls exceptions =  
             match expected_rh_type,ls with
             |_,[] -> exceptions
-            |VALUE_LIST(erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
-                (match erh_type with
+            |VALUE_LIST(list_erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
+                (match list_erh_type with
                 |PARAM_VALUE(erh_type) when erh_type = rh_type  -> 
-                    assign_type_check erh_type rest exceptions
+                    assign_type_check expected_rh_type rest exceptions
+                |PARAM_VALUE(erh_type) when erh_type !=  rh_type  ->
+                    let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
+                    let new_exceptions=((RHS [PARAM_VALUE(erh_type)],e,cords)::exceptions) in
+                    assign_type_check expected_rh_type rest new_exceptions
                 |_ ->
                     let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
                     let expected = (RHS [expected_rh_type]) in
                     ((expected,e,cords)::exceptions)
                 )
-
             |_,_ -> 
                 let e = UNEXPECTED_EXPR_LIST(ls) in
                 let expected = (RHS [expected_rh_type]) in
-                ((expected,e,ls)::exceptions)
-        
+                let new_exceptions =((expected,e,assign_cords)::exceptions) in
+                assign_type_check expected_rh_type ls new_exceptions
 
         in
         match expected_rh_type with
