@@ -87,6 +87,17 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                     let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
                     let new_exceptions=((RHS [PARAM_VALUE(erh_type)],e,cords)::exceptions) in
                     assign_type_check expected_rh_type rest new_exceptions
+                |PARAM_OPTION(options) ->
+                    let rec shortest_exception_list_r options = match options with 
+                        |[] -> ((RHS options,UNEXPECTED_LEXEM(rh_value,rh_type),cords)::exceptions)
+                        |top::rest ->
+                            (match (assign_type_check top rest []) with
+                            |[] -> exceptions 
+                            |_-> shortest_exception_list_r rest 
+                            )
+                    in
+                    let exceptions = shortest_exception_list_r options in
+                    assign_type_check expected_rh_type rest exceptions
                 |_ ->
                     let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
                     let expected = (RHS [expected_rh_type]) in
