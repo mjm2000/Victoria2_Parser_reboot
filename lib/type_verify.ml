@@ -79,8 +79,15 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         let rec assign_type_check expected_rh_type ls exceptions =  
             match expected_rh_type,ls with
             |_,[] -> exceptions
-            |LEXEM_LIST(erh_type),(LEXEM(rh_type,rh_value,cords)::rest) when erh_type = rh_type  -> 
-                assign_type_check erh_type rest exceptions
+            |LEXEM_LIST(erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
+                (match erh_type with
+                |PARAM_VALUE(erh_type) when erh_type = rh_type  -> 
+                    assign_type_check erh_type rest exceptions
+                |_ ->
+                    let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
+                    let expected = (RHS [expected_rh_type]) in
+                    ((expected,e,cords)::exceptions)
+                )
             |_ -> 
                 let e = UNEXPECTED_EXPR_LIST(ls) in
                 let expected = (RHS [expected_rh_type]) in
