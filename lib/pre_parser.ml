@@ -127,6 +127,7 @@ and exception_iden_string exp = match exp with
             Printf.sprintf "Multiple Choice %s" (exception_lists_string (ls))
     | UNEXPECTED_EXPR_LIST (ls) ->
         List.fold_left (fun acc x -> Printf.sprintf "%s\n\t%s" acc (string_expr x)) "" ls
+    | UNEXPECTED_EXPR (e) -> string_expr e
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
@@ -166,6 +167,11 @@ and string_assignment_list al =
 and string_expr expr = match expr with
     | LEXEM (type_val, str, (x, y)) -> 
         Printf.sprintf "LEXEM(type(%s):value(%s),location(%d,%d))" (lexem_to_str type_val) str x y 
+    | LEXEM_LIST lexem_list ->
+        let x = List.fold_left (fun acc x -> 
+            Printf.sprintf "%s\n\t%s" acc (string_expr x)
+        ) "" lexem_list in
+        Printf.sprintf "LEXEM_LIST(%s)" x
     | ASSIGNMENT_LIST assignment_list -> string_assignment_list assignment_list
     | EXPR_EXCEPTION exception_value -> exception_string exception_value
 and string_rh_symbol pv = match pv with
