@@ -125,6 +125,8 @@ and exception_iden_string exp = match exp with
     | UNEXPECTED_LEFT_BRACKET -> "Unexpected Left Bracket"
     | MULTIPLE_CHOICE(ls)-> 
             Printf.sprintf "Multiple Choice %s" (exception_lists_string (ls))
+    | UNEXPECTED_EXPR_LIST (ls) ->
+        List.fold_left (fun acc x -> Printf.sprintf "%s\n\t%s" acc (string_expr x)) "" ls
 
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
