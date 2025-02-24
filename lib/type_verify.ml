@@ -76,13 +76,15 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
             |_-> None
         in
-        let rec assign_type_check expected_rh_type exceptions =  
-            match expected_rh_type with
-            |PARAM_VALUE(erh_type) when erh_type = lh_type  -> 
-                exceptions 
+        let rec assign_type_check expected_rh_type ls exceptions =  
+            match expected_rh_type,ls with
+            |_,[] -> exceptions
+            |PARAM_VALUE(erh_type),LEXEM(rh_type,rh_value,cords)::rest when erh_type = lh_type  -> 
+                assign_type_check expected_rh_type ls exceptions 
             |(PARAM_VALUE(erh_type) as epv) when erh_type !=  lh_type  ->
                 let e = (TYPE_MISHMASH(lh_value, erh_type, lh_type)) in
-                (((RHS [epv]),e,ls)::exceptions) 
+                assign_type_check expected_rh_type (((RHS [epv]),e,ls)::exceptions) 
+
             |PARAM_OPTION(options) ->
                 let rec shortest_exception_list_r options = match options with 
                     |[] -> ((RHS options,UNEXPECTED_EXPR_LIST(ls),ls)::exceptions)
@@ -95,6 +97,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                 shortest_exception_list_r options  
             |_ -> 
 
+            assign_type_check 
         type_verify_r symbol_table rest exceptions scope
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
