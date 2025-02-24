@@ -124,7 +124,46 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                         ); 
                     );
                 ) refined_decisions; 
-            |_-> ()
+            |"countries"  -> ()
+            |"common" as entry-> 
+                let raw_common = Array.to_list (Sys.readdir (Filename.concat path entry)) in
+                let refined_common = filter_files raw_common in
+                List.iter (fun entry -> 
+                    let common_file = Filename.concat (Filename.concat path entry) entry in
+                    match entry with
+                    |"countries" -> ()
+                    |"bookmarks.txt" -> ()
+                    |"buildings.txt" -> ()
+                    |"cb_types.txt" -> ()
+                    |"countries.txt" -> ()
+                    |"cot_colors.txt" -> ()
+                    |"crime.txt" -> ()
+                    |"cultures.txt" -> ()
+                    |"defines.lua" -> ()
+                    |"event_modifiers.txt" -> ()
+                    |"goods.txt" -> ()
+                    |"graphicalculturetype.txt" -> ()
+                    |"ideologies.txt" -> ()
+                    |"issues.txt" -> ()
+                    |"national_focus.txt" -> ()
+                    |"nationalvalue.txt" -> ()
+                    |"on_actions.txt" -> ()
+                    |"pop_types.txt" -> ()
+                    |"production_types.txt" -> ()
+                    |"rebel_types.txt" -> ()
+                    |"religion.txt" -> ()
+                    |"static_modifiers.txt" -> ()
+                    |"technology.txt" -> ()
+                    |"traits.txt" -> ()
+                    |"triggered_modifiers.txt" -> ()
+                    |entry -> Printf.printf "File %s not recognized\n" entry
+                    )
+                refined_common;
+
+                ()
+
+            |_ -> ();
+            ()
         ) refined_categories;
 
         |_-> ()

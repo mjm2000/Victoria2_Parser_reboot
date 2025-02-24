@@ -53,3 +53,8 @@ let buildings = symbol_table_init [
         (KEYWORD_SYMBOL "advanced_factory", PARAM_VALUE BOOL);
     ]));
 ]
+let cb_types = symbol_table_init [
+    (KEYWORD_SYMBOL "peace_order", VALUE_LIST (PARAM_VALUE KEYWORD));
+
+
+]
