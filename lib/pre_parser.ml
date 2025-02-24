@@ -55,10 +55,10 @@ and lexem_list lexems =
                 PARAM_VALUE FLOAT] in
                 let v = EXPR_EXCEPTION(RHS(all_types), UNEXPECTED_ASSIGN_LIST(al),cords) in
                 lexem_list_r rest (v :: out)
-            |(ASSIGNMENT_LIST (ASSIGN_EXCEPTION(ae)::_)) as al ,rest ->
+            |(ASSIGNMENT_LIST (ASSIGN_EXCEPTION(ae)::_)) ,rest ->
                 lexem_list_r rest (EXPR_EXCEPTION(ae) :: out) 
-            |(ASSIGNMENT_LIST ([])  as al), ((_,_,cords)::tail) ->
-                let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD], UNEXPECTED_ASSIGN_LIST( al), cords) in
+            |(ASSIGNMENT_LIST ([]) ), ((_,_,cords)::tail) ->
+                    let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD], UNEXPECTED_ASSIGN_LIST( []), cords) in
                 lexem_list_r tail (v :: out)
 
             |(EXPR_EXCEPTION (_) as e ,rest) ->
