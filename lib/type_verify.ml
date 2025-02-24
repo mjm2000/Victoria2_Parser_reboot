@@ -67,6 +67,35 @@ let rec symbol_table_from_rhv rhv = match rhv with
 let type_verify symbol_table assignments =
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
+    |(ASSIGNMENT((lh_type,lh_value,_), LEXEM_LIST(ls)))::rest ->
+        let expected_rh_type = 
+            match lh_type with
+            |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
+               Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
+            |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
+               Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
+            |_-> None
+        in
+        let rec assign_type_check expected_rh_type exceptions =  
+            match expected_rh_type with
+            |PARAM_VALUE(erh_type) when erh_type = lh_type  -> 
+                exceptions 
+            |(PARAM_VALUE(erh_type) as epv) when erh_type !=  lh_type  ->
+                let e = (TYPE_MISHMASH(lh_value, erh_type, lh_type)) in
+                (((RHS [epv]),e,ls)::exceptions) 
+            |PARAM_OPTION(options) ->
+                let rec shortest_exception_list_r options = match options with 
+                    |[] -> ((RHS options,UNEXPECTED_EXPR_LIST(ls),ls)::exceptions)
+                    |top::rest ->
+                        (match (assign_type_check top []) with
+                        |[] -> exceptions 
+                        |_-> shortest_exception_list_r rest 
+                        )
+                in
+                shortest_exception_list_r options  
+            |_ -> 
+
+        type_verify_r symbol_table rest exceptions scope
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
          match lh_type with
