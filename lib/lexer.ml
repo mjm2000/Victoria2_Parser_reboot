@@ -10,6 +10,7 @@ type lexem_type =
 |TAG  
 |SCOPE
 |CONDITION
+|DATE
 |LEX_ERROR
 
 type lexem = lexem_type * string * (int * int)
@@ -32,10 +33,12 @@ let chars_to_lexem cl= match (cl) with
           |fv when match_reg "^-?(0|[1-9][0-9]*)?\\.[0-9]+$" fv -> FLOAT 
           |"TAG"-> KEYWORD
           |"NOT"|"AND"|"OR"|"not"|"and"|"or" -> CONDITION 
+          |tag when match_reg  "^[0-9]{4}\\.[0-9][0-9]?\\.[0-9][0-9]?$" tag->
+              DATE 
           |tag when match_reg  "^[A-Z][A-Z][A-Z]$" tag->
-                  TAG 
+              TAG 
           | tag when match_reg "^[A-Z][0-9][0-9]$" tag->
-                  TAG
+              TAG
           |"yes"|"no" -> BOOL 
           |"FROM"|"THIS"|"this"|"from" -> SCOPE 
           |_-> KEYWORD
@@ -95,6 +98,7 @@ let lexem_to_str lexem =match lexem with
 | CONDITION ->"Conditional"
 | BOOL ->     "Bool"      
 | LEX_ERROR ->"Lex Error"
+| DATE ->     "Date"
 
 
 let string_lexem lex_value = 

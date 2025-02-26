@@ -212,7 +212,6 @@ and string_rh_symbol pv = match pv with
     | PROVINCE_MODIFIERS -> "PROVINCE_MODIFIERS"
     | COUNTRY_MODIFIERS -> "COUNTRY_MODIFIERS"
 
-
 and string_lh_symbol lh = match lh with
     | KEYWORD_SYMBOL str -> Printf.sprintf "KEYWORD_SYMBOL(%s)" str
     | TYPE_SYMBOL lexem -> Printf.sprintf "TYPE_SYMBOL(%s)" (lexem_to_str lexem)
