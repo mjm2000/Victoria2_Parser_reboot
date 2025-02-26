@@ -1,6 +1,7 @@
 open Symbol_table
 open Effects
 open Conditions
+open Modifiers
 open Type_def
 open Mtth
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
@@ -50,6 +51,10 @@ let rec symbol_table_from_rhv rhv = match rhv with
         [state_effects]
     | (STATE_CONDITIONS) ->
         [state_conditions]
+    | COUNTRY_MODIFIERS ->
+        [country_modifiers]
+    | PROVINCE_MODIFIERS ->
+        [province_modifiers]
     | (PARAM_LIST(sub_table))->
         [sub_table]
     | PARAM_OPTION(options) ->

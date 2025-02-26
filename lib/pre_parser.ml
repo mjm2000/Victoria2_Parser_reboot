@@ -209,6 +209,8 @@ and string_rh_symbol pv = match pv with
     | POP_CONDITIONS -> "POP_CONDITIONS"
     | STATE_CONDITIONS -> "STATE_CONDITIONS"
     | STATE_EFFECTS -> "STATE_EFFECTS"
+    | PROVINCE_MODIFIERS -> "PROVINCE_MODIFIERS"
+    | COUNTRY_MODIFIERS -> "COUNTRY_MODIFIERS"
 
 
 and string_lh_symbol lh = match lh with
