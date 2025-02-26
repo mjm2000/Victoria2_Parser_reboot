@@ -46,6 +46,8 @@ and rh_symbol_type =
     |POP_CONDITIONS
     |STATE_EFFECTS
     |STATE_CONDITIONS
+    |PROVINCE_MODIFIERS
+    |COUNTRY_MODIFIERS
 
 
 

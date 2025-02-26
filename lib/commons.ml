@@ -307,7 +307,8 @@ let country_colors = symbol_table_init [
     ]));
 ]
 let crime = symbol_table_init [
-    (TYPE_SYMBOL KEYWORD,PARAM_LIST (symbol_table_init [
+    (TYPE_SYMBOL KEYWORD,APPEND_SYMBOLS([
         (KEYWORD_SYMBOL "trigger", POP_CONDITIONS);
-    ]))
+    ],PROVINCE_MODIFIERS));
+
 ]
