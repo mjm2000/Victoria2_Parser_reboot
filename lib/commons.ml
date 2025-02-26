@@ -117,483 +117,7 @@ let goods = symbol_table_init [
         ]));
     ]));
 ]
-(*
-# If you add types, and use those tags, do not change them without changing everywhere they are used. #
 
-## Conservative Parties ##
-conservative_group = {
-	# Conservatives #
-	conservative = {
-		color = { 10 10 250 }
-		can_reduce_militancy = yes
-
-		add_political_reform = {
-			base = 0
-			group = {
-				modifier = {
-					factor = 0.1
-					OR = { 
-						militancy = 3
-						political_movement_strength = 0.3
-					}
-				}
-				#modifier = {
-				#	factor = 0.1
-				#	OR = { 
-				#		militancy = 4
-				#		political_movement_strength = 0.4
-				#	}
-				#}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 5
-						political_movement_strength = 0.5
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 6
-						political_movement_strength = 0.6
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 7
-						political_movement_strength = 0.7
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 8
-						political_movement_strength = 0.8
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 9
-						political_movement_strength = 0.9
-					}
-				}
-			}
-		}
-		remove_political_reform = {
-			base = 0
-		}
-		add_social_reform = {
-			base = 0
-			group = {
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 2
-						social_movement_strength = 0.2
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 3
-						social_movement_strength = 0.3
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 4
-						social_movement_strength = 0.4
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 5
-						social_movement_strength = 0.5
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 6
-						social_movement_strength = 0.6
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 7
-						social_movement_strength = 0.7
-					}
-				}
-			}
-
-		}
-		remove_social_reform = {
-			base = 0
-		}
-		add_military_reform = {
-			base = 0.5
-		}
-		add_economic_reform = {
-			base = -0.5
-		}
-	}
-
-	# Reactionaries #
-	reactionary = {
-		color = { 30 30 100 }
-
-		add_political_reform = {
-			base = 0
-		}
-		remove_political_reform = {
-			base = 1
-		}
-		add_social_reform = {
-			base = 0
-		}
-		remove_social_reform = {
-			base = 1
-		}
-		add_military_reform = {
-			base = -1
-		}
-		add_economic_reform = {
-			base = -1
-		}
-	}
-
-	tribalist = {
-		color = { 139 69 19 }
-
-		add_political_reform = {
-			base = 0
-		}
-		remove_political_reform = {
-			base = 1
-		}
-		add_social_reform = {
-			base = 0
-		}
-		remove_social_reform = {
-			base = 1
-		}
-		add_military_reform = {
-			base = -1
-		}
-		add_economic_reform = {
-			base = -1
-		}
-	}
-}
-
-## Fascist & Ultra-Nationalist Parties ##
-fascist_group = {
-	# Fascists #
-	fascist = {
-		uncivilized = no
-		color = { 60 60 60 }
-		date = 1900.1.1
-
-		add_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = fascist }
-			}
-		}
-		remove_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = fascist }
-			}
-		}
-		add_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = fascist }
-			}
-		}
-		remove_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = fascist }
-			}
-		}
-	}
-}
-
-## Liberal Parties ##
-liberal_group = {
-	# Radicals #
-	anarcho_liberal = {
-		color = { 150 150 10 }
-		#I removed the date as Radicalism predates the game timeline, but requires all country files to be updated.
-		uncivilized = no
-
-		add_political_reform = {
-			base = 1
-		}
-		remove_political_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = anarcho_liberal }
-			}
-		}
-		add_social_reform = {
-			base = 1
-		}
-		remove_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = anarcho_liberal }
-			}
-		}
-
-		add_military_reform = {
-			base = -1
-		}
-
-		add_economic_reform = {
-			base = -1
-		}
-	}
-
-	# Liberals #
-	liberal = {
-		color = { 255 255 0 }
-
-		add_political_reform = {
-			base = 1
-		}
-		remove_political_reform = {
-			base = 0
-		}
-		add_social_reform = {
-			base = 0
-			group = {
-				modifier = {
-					factor = 0.1
-					OR = { 
-						militancy = 4
-						social_movement_strength = 0.4
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 5
-						social_movement_strength = 0.5
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 6
-						social_movement_strength = 0.6
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 7
-						social_movement_strength = 0.7
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 8
-						social_movement_strength = 0.8
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 9
-						social_movement_strength = 0.9
-					}
-				}
-			}
-		}
-		remove_social_reform = {
-			base = 0
-		}
-		add_military_reform = {
-			base = 0.5
-		}
-		add_economic_reform = {
-			base = 1
-		}
-	}
-}
-
-## Socialist & Communist Parties ##
-socialist_group = {
-	# Syndicalists #
-	anarchist = {
-		uncivilized = no
-		color = { 150 60 60 }
-		date = 1872.9.15 #The day the anarchists expelled by the IWA formed their own "Anti-authoritarian International"
-
-		add_political_reform = {
-			base = 1
-		}
-		remove_political_reform = {
-			base = 0
-		}
-		add_social_reform = {
-			base = 1
-		}
-		remove_social_reform = {
-			base = 0
-		}
-	}
-
-	# Communists #
-	communist = {
-		uncivilized = no
-		color = { 150 10 10 }
-		date = 1900.1.1 #Close The turn of the century and to the II Congress of the RSDLP during which the first split between marxist and revisionist social democrats was consummated in the August of 1903 (respectively Bolsheviks and Mensheviks)
-
-		add_political_reform = {
-			base = 0
-			group = { #this was broken
-				modifier = {
-					factor = 0.3
-					OR = {
-						militancy = 8
-						political_movement_strength = 0.7
-					}
-				}
-				modifier = {
-					factor = 0.3
-					OR = {
-						militancy = 9
-						political_movement_strength = 0.8
-					}
-				}
-				modifier = {
-					factor = 0.3
-					OR = {
-						militancy = 9.5
-						political_movement_strength = 0.9
-					}
-				}
-			}
-		}
-		remove_political_reform = {
-			base = 1
-		}
-		add_social_reform = {
-			base = 1
-			modifier = {
-				factor = -1
-				NOT = { ruling_party_ideology = communist }
-			}
-		}
-		remove_social_reform = {
-			base = 0
-		}
-	}
-
-	# Socialists #
-	socialist = {
-		uncivilized = no
-		color = { 255 0 0 }
-		date = 1864.9.29 #First International
-
-		add_political_reform = {
-			base = 0
-			group = {
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 1
-						political_movement_strength = 0.1
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 2
-						political_movement_strength = 0.2
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 3
-						political_movement_strength = 0.3
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 4
-						political_movement_strength = 0.4
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 5
-						political_movement_strength = 0.5
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 6
-						political_movement_strength = 0.6
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 7
-						political_movement_strength = 0.7
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 8
-						political_movement_strength = 0.8
-					}
-				}
-				modifier = {
-					factor = 0.1
-					OR = {
-						militancy = 9
-						political_movement_strength = 0.9
-					}
-				}
-			}
-		}
-		remove_political_reform = {
-			base = 0
-		}
-		add_social_reform = {
-			base = 1
-		}
-		remove_social_reform = {
-			base = 0
-		}
-	}
-}
-
-
- *)
 
 let ideologies = symbol_table_init [
     (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
@@ -602,17 +126,335 @@ let ideologies = symbol_table_init [
             (KEYWORD_SYMBOL "date", PARAM_VALUE DATE);
             (KEYWORD_SYMBOL "color", VALUE_LIST (PARAM_VALUE INT));
             (KEYWORD_SYMBOL "can_reduce_militancy", PARAM_VALUE BOOL);
-            (KEYWORD_SYMBOL "add_political_reform", PARAM_LIST (symbol_table_init [
-                (KEYWORD_SYMBOL "base", PARAM_VALUE FLOAT);
+            (KEYWORD_SYMBOL "remove_political_reform", PARAM_LIST (symbol_table_init [
+                (KEYWORD_SYMBOL "base", PARAM_OPTION ([
+                    PARAM_VALUE FLOAT;
+                    PARAM_VALUE INT
+                ]));
                 (KEYWORD_SYMBOL "group", PARAM_LIST (symbol_table_init [
                     (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
                         (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
                             PARAM_VALUE FLOAT;
                             PARAM_VALUE INT
                         ]));
-                    ],COUNTRY_CONDITIONS));
+                    ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
                 ]));
-            ]))
+            ]));
+            (KEYWORD_SYMBOL "add_political_reform", PARAM_LIST (symbol_table_init [
+                (KEYWORD_SYMBOL "base", PARAM_OPTION ([
+                    PARAM_VALUE FLOAT;
+                    PARAM_VALUE INT
+                ]));
+                (KEYWORD_SYMBOL "group", PARAM_LIST (symbol_table_init [
+                    (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
+                        (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+                            PARAM_VALUE FLOAT;
+                            PARAM_VALUE INT
+                        ]));
+                    ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
+                ]));
+            ]));
+            (KEYWORD_SYMBOL "add_social_reform", PARAM_LIST (symbol_table_init [
+                (KEYWORD_SYMBOL "base", PARAM_OPTION ([
+                    PARAM_VALUE FLOAT;
+                    PARAM_VALUE INT
+                ]));
+                (KEYWORD_SYMBOL "group", PARAM_LIST (symbol_table_init [
+                    (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
+                        (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+                            PARAM_VALUE FLOAT;
+                            PARAM_VALUE INT
+                        ]));
+                    ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
+                ]));
+            ]));
+            (KEYWORD_SYMBOL "remove_social_reform", PARAM_LIST (symbol_table_init [
+                (KEYWORD_SYMBOL "base", PARAM_OPTION ([
+                    PARAM_VALUE FLOAT;
+                    PARAM_VALUE INT
+                ]));
+                (KEYWORD_SYMBOL "group", PARAM_LIST (symbol_table_init [
+                    (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
+                        (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+                            PARAM_VALUE FLOAT;
+                            PARAM_VALUE INT
+                        ]));
+                    ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
+                ]));
+            ]));
+
+
+            
+
         ]));
     ]));
+]
+(*
+{
+
+	trade_policy = {
+
+		protectionism = {
+			max_tariff = 1
+			min_tariff = -0.25
+		}
+
+		free_trade = {
+			max_tariff = 0.25
+			min_tariff = -1
+		}
+	}
+
+	economic_policy = {
+
+		laissez_faire = {
+			max_tax = 0.75
+			factory_owner_cost = 0.25
+			factory_output = 0.1
+			import_cost = -0.25
+			#factory_owner_cost = 5.0
+
+			rules = {
+				build_factory = no
+				build_bank = yes
+				build_university = yes
+				expand_factory = no
+				open_factory = no
+				destroy_factory = no
+				build_railway = no
+				factory_priority = no
+				can_subsidise = no
+				pop_build_factory = yes
+				pop_expand_factory = yes
+				pop_open_factory = yes
+				delete_factory_if_no_input = yes
+				pop_build_factory_invest = yes
+				pop_expand_factory_invest = yes
+				open_factory_invest = yes
+				allow_foreign_investment = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = no
+			}
+		}
+
+		interventionism = {
+			factory_owner_cost = 0.5
+			import_cost = 0.25
+
+			rules = {
+				build_factory = no
+				build_bank = yes
+				build_university = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = yes
+				pop_open_factory = yes
+				delete_factory_if_no_input = no
+				pop_build_factory_invest = yes
+				pop_expand_factory_invest = yes
+				open_factory_invest = yes
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				allow_foreign_investment = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+
+		state_capitalism = {
+			import_cost = 0.5
+			min_tax = 0.25
+			factory_owner_cost = 0.8
+
+			rules = {
+				build_factory = yes
+				build_bank = yes
+				build_university = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = no
+				pop_open_factory = yes
+				delete_factory_if_no_input = no
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+
+		planned_economy = {
+			import_cost = 0.75
+			min_tax = 0.5
+			factory_throughput = 0.25
+			factory_owner_cost = 0.8	#-1 negative costs, can't build.
+
+			rules = {
+				build_factory = yes
+				build_bank = yes
+				build_university = yes
+				expand_factory = yes
+				open_factory = yes
+				destroy_factory = yes
+				build_railway = yes
+				factory_priority = yes
+				can_subsidise = yes
+				pop_build_factory = yes
+				pop_expand_factory = yes
+				pop_open_factory = yes
+				delete_factory_if_no_input = no
+				build_factory_invest = yes
+				expand_factory_invest = yes
+				build_railway_invest = yes
+				can_invest_in_pop_projects = yes
+			}
+		}
+	}
+
+	religious_policy = {
+
+		pro_atheism = {
+			#no effect
+		}
+
+		secularized = {
+			#no effect
+		}
+
+		pluralism = {
+			#no effect
+		}
+
+		moralism = {
+			#no effect
+		}
+	}
+
+	citizenship_policy = { # TODO there was talk of reworking this to increase immigration but reduce assimilation instead
+
+		residency = {
+		}
+
+		limited_citizenship = {
+			global_assimilation_rate = 0.05
+		}
+
+		full_citizenship = {
+			global_assimilation_rate = 0.1
+		}
+	}
+
+	war_policy = {
+
+		jingoism = {
+			max_military_spending = 1.0
+			supply_consumption = 0.25
+			war_exhaustion_effect = 0.5
+			is_jingoism = yes
+			cb_generation_speed_modifier = 0.3
+			mobilization_impact = 4
+			org_regain = 0.5
+			war_exhaustion = -0.2
+			reinforce_speed = 0.5
+		}
+
+		pro_military = {
+			max_military_spending = 1.0
+			war_exhaustion_effect = 0.7
+			supply_consumption = 0.1
+			cb_generation_speed_modifier = 0.2
+			mobilization_impact = 3
+			org_regain = 0.25
+			war_exhaustion = -0.1
+			reinforce_speed = 0.25
+		}
+
+		anti_military = {
+			max_military_spending = 0.5
+			supply_consumption = -0.1
+			war_exhaustion_effect = 1.2
+			cb_generation_speed_modifier = -0.2
+			mobilization_impact = 2
+			org_regain = -0.25
+			reinforce_speed = -0.25
+			assimilation_rate = 0.15
+			research_points_modifier = 0.1
+			war_exhaustion = 0.1
+			global_pop_militancy_modifier = -0.005
+		}
+
+		pacifism = {
+			max_military_spending = 0.4
+			supply_consumption = -0.25
+			war_exhaustion_effect = 1.5
+			cb_generation_speed_modifier = -0.4
+			mobilization_impact = 1
+			org_regain = -0.5
+			reinforce_speed = -0.5
+			assimilation_rate = 0.3
+			research_points_modifier = 0.2
+			war_exhaustion = 0.2
+			global_pop_militancy_modifier = -0.02
+		}
+	}
+
+	social_policy = {
+
+		no_state_interference = {
+			# Audax Validator "." Ignore_NEXT
+			max_social_spending = 0.5
+		}
+
+		colonial_spending_policy = {
+			# Audax Validator "." Ignore_NEXT
+			max_social_spending = 0.01
+		}
+
+		no_position_set = {
+			# Audax Validator "." Ignore_NEXT
+			min_social_spending = 0.0
+			# Audax Validator "." Ignore_NEXT
+			max_social_spending = 1.0
+		}
+
+		populist_welfare = {
+			# Audax Validator "." Ignore_NEXT
+			min_social_spending = 0.15
+		}
+
+		welfare_state = {
+			# Audax Validator "." Ignore_NEXT
+			min_social_spending = 0.33
+		}
+	}
+}
+
+
+
+
+ *)
+let issues = symbol_table_init [
+    (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
+        (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
+            (TYPE_SYMBOL KEYWORD, (APPEND_SYMBOLS ([
+                    (KEYWORD_SYMBOL,"rules",PARAM_LIST(symbol_table_init [(TYPE_SYMBOL KEYWORD, PARAM_VALUE BOOL);]))
+
+                    ],COUNTRY_MODIFIERS);
+            )
+            );
+            ]
+        );
+    ]
+    )
+    );
+
 ]
