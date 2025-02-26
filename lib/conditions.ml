@@ -287,7 +287,10 @@ let country_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("num_of_vassals_no_substates"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("owns"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("part_of_sphere"),PARAM_VALUE(BOOL));
-(KEYWORD_SYMBOL("political_movement_strength"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("political_movement_strength"),PARAM_OPTION ([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
 (KEYWORD_SYMBOL("political_reform_name"),PARAM_VALUE(KEYWORD));
 (KEYWORD_SYMBOL("political_reform_want"),PARAM_VALUE(FLOAT));
 (KEYWORD_SYMBOL("poor_strata_everyday_needs"),PARAM_OPTION([
