@@ -37,7 +37,7 @@ let filter_files raw_files selected_files = match selected_files with
     |None -> raw_files
     in
     
-let parse_env mod_home lex_output ast_output ast_errors type_errors selected_categories event_files= 
+let parse_env mod_home lex_output ast_output ast_errors type_errors selected_categories event_files common_files = 
     match mod_home with
     |Some path when folder_exists path ->
         let raw_entries = Array.to_list(Sys.readdir path) in
@@ -127,43 +127,39 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
             |"countries"  -> ()
             |"common" as entry-> 
                 let raw_common = Array.to_list (Sys.readdir (Filename.concat path entry)) in
-                let refined_common = filter_files raw_common in
-                match refined_common with
-                    |Some refined_common ->
-
-                    List.iter (fun entry -> 
-                        let common_file = Filename.concat (Filename.concat path entry) entry in
-                        match entry with
-                        |"countries" -> ()
-                        |"bookmarks.txt" -> ()
-                        |"buildings.txt" -> ()
-                        |"cb_types.txt" -> ()
-                        |"countries.txt" -> ()
-                        |"cot_colors.txt" -> ()
-                        |"crime.txt" -> ()
-                        |"cultures.txt" -> ()
-                        |"defines.lua" -> ()
-                        |"event_modifiers.txt" -> ()
-                        |"goods.txt" -> ()
-                        |"graphicalculturetype.txt" -> ()
-                        |"ideologies.txt" -> ()
-                        |"issues.txt" -> ()
-                        |"national_focus.txt" -> ()
-                        |"nationalvalue.txt" -> ()
-                        |"on_actions.txt" -> ()
-                        |"pop_types.txt" -> ()
-                        |"production_types.txt" -> ()
-                        |"rebel_types.txt" -> ()
-                        |"religion.txt" -> ()
-                        |"static_modifiers.txt" -> ()
-                        |"technology.txt" -> ()
-                        |"traits.txt" -> ()
-                        |"triggered_modifiers.txt" -> ()
-                        |entry -> Printf.printf "File %s not recognized\n" entry
-                        )
-                    refined_common;
-                |None -> ();
-
+                let refined_common = filter_files raw_common common_files in
+                List.iter (fun entry -> 
+                    let common_file = Filename.concat (Filename.concat path entry) entry in
+                    print_endline common_file;
+                    match entry with
+                    |"countries" -> ()
+                    |"bookmarks.txt" -> ()
+                    |"buildings.txt" -> ()
+                    |"cb_types.txt" -> ()
+                    |"countries.txt" -> ()
+                    |"cot_colors.txt" -> ()
+                    |"crime.txt" -> ()
+                    |"cultures.txt" -> ()
+                    |"defines.lua" -> ()
+                    |"event_modifiers.txt" -> ()
+                    |"goods.txt" -> ()
+                    |"graphicalculturetype.txt" -> ()
+                    |"ideologies.txt" -> ()
+                    |"issues.txt" -> ()
+                    |"national_focus.txt" -> ()
+                    |"nationalvalue.txt" -> ()
+                    |"on_actions.txt" -> ()
+                    |"pop_types.txt" -> ()
+                    |"production_types.txt" -> ()
+                    |"rebel_types.txt" -> ()
+                    |"religion.txt" -> ()
+                    |"static_modifiers.txt" -> ()
+                    |"technology.txt" -> ()
+                    |"traits.txt" -> ()
+                    |"triggered_modifiers.txt" -> ()
+                    |entry -> Printf.printf "File %s not recognized\n" entry
+                    )
+                refined_common;
                 ()
 
             |_ -> ();
