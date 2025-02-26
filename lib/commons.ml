@@ -446,7 +446,8 @@ let issues = symbol_table_init [
     (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
         (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
             (TYPE_SYMBOL KEYWORD, (APPEND_SYMBOLS ([
-                    (KEYWORD_SYMBOL,"rules",PARAM_LIST(symbol_table_init [(TYPE_SYMBOL KEYWORD, PARAM_VALUE BOOL);]))
+                    (KEYWORD_SYMBOL,"rules",PARAM_LIST(
+                        symbol_table_init [(TYPE_SYMBOL KEYWORD, PARAM_VALUE BOOL);]))
 
                     ],COUNTRY_MODIFIERS);
             )
