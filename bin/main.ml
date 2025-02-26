@@ -177,6 +177,7 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
         $ (make_arg "te" "document")
         $ (files_arg "c" "document")
         $ (files_arg "e" "document")
+        $ (files_arg "cf" "document")
     ) in
     let cmd = Cmd.v info term 
     in
