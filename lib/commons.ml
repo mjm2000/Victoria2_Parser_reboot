@@ -446,16 +446,23 @@ let issues = symbol_table_init [
     (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
         (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
             (TYPE_SYMBOL KEYWORD, (APPEND_SYMBOLS ([
-                    (KEYWORD_SYMBOL,"rules",PARAM_LIST(
-                        symbol_table_init [(TYPE_SYMBOL KEYWORD, PARAM_VALUE BOOL);]))
+                (KEYWORD_SYMBOL "rules",PARAM_LIST (symbol_table_init [
+                    (TYPE_SYMBOL KEYWORD, PARAM_VALUE BOOL); 
+                ]));
+                (KEYWORD_SYMBOL "allow", COUNTRY_CONDITIONS);
+                (KEYWORD_SYMBOL "on_execute", PARAM_LIST (symbol_table_init [
+                    (KEYWORD_SYMBOL "effect", COUNTRY_EFFECTS);
+                ]));
 
-                    ],COUNTRY_MODIFIERS);
-            )
-            );
-            ]
-        );
-    ]
-    )
-    );
-
+                ],COUNTRY_MODIFIERS);
+            ));
+        ]));
+    ]));
 ]
+let national_focus =  symbol_table_init [
+    (TYPE_SYMBOL KEYWORD, (PARAM_LIST (symbol_table_init [
+        (TYPE_SYMBOL KEYWORD,(APPEND_SYMBOLS ([(KEYWORD_SYMBOL "limit",COUNTRY_CONDITIONS)]),PROVINCE_MODIFIERS)); 
+    ])));
+     
+]
+    
