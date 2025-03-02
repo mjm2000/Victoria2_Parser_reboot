@@ -129,7 +129,8 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                 let raw_common = Array.to_list (Sys.readdir (Filename.concat path entry)) in
                 let refined_common = filter_files raw_common common_files in
                 List.iter (fun entry -> 
-                    print_endline entry;
+                    let common_file = (Filename.concat path entry) in
+                    print_endline common_file;
                     match entry with
                     |"countries" -> ()
                     |"bookmarks.txt" -> ()
