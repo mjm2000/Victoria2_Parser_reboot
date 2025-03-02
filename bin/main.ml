@@ -150,7 +150,22 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
                     |"nationalvalue.txt" -> ()
                     |"on_actions.txt" -> ()
                     |"pop_types.txt" -> ()
-                    |"production_types.txt" -> ()
+                    |"production_types.txt" -> 
+                        let lexems:Lexer.lexem list= common_file |> Lexer.lexer  in
+                        (
+                        lexems 
+                        |> Lexer.string_lexems 
+                        |> output_to_file common_file lex_output;
+                        );
+                    if ast_output = None &&  ast_errors =None && type_errors = None then ();
+                        
+                                                                                                
+                    let assignments = lexems |> Pre_parser.assignments in
+                                                                                                
+                    (assignments
+                    |> Pre_parser.string_assignment_list  
+                    |> output_to_file common_file ast_output;    
+                    );
                     |"rebel_types.txt" -> ()
                     |"religion.txt" -> ()
                     |"static_modifiers.txt" -> ()

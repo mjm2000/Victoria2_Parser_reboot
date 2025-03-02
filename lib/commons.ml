@@ -189,259 +189,7 @@ let ideologies = symbol_table_init [
         ]));
     ]));
 ]
-(*
-{
 
-	trade_policy = {
-
-		protectionism = {
-			max_tariff = 1
-			min_tariff = -0.25
-		}
-
-		free_trade = {
-			max_tariff = 0.25
-			min_tariff = -1
-		}
-	}
-
-	economic_policy = {
-
-		laissez_faire = {
-			max_tax = 0.75
-			factory_owner_cost = 0.25
-			factory_output = 0.1
-			import_cost = -0.25
-			#factory_owner_cost = 5.0
-
-			rules = {
-				build_factory = no
-				build_bank = yes
-				build_university = yes
-				expand_factory = no
-				open_factory = no
-				destroy_factory = no
-				build_railway = no
-				factory_priority = no
-				can_subsidise = no
-				pop_build_factory = yes
-				pop_expand_factory = yes
-				pop_open_factory = yes
-				delete_factory_if_no_input = yes
-				pop_build_factory_invest = yes
-				pop_expand_factory_invest = yes
-				open_factory_invest = yes
-				allow_foreign_investment = yes
-				build_railway_invest = yes
-				can_invest_in_pop_projects = no
-			}
-		}
-
-		interventionism = {
-			factory_owner_cost = 0.5
-			import_cost = 0.25
-
-			rules = {
-				build_factory = no
-				build_bank = yes
-				build_university = yes
-				expand_factory = yes
-				open_factory = yes
-				destroy_factory = yes
-				build_railway = yes
-				factory_priority = yes
-				can_subsidise = yes
-				pop_build_factory = yes
-				pop_expand_factory = yes
-				pop_open_factory = yes
-				delete_factory_if_no_input = no
-				pop_build_factory_invest = yes
-				pop_expand_factory_invest = yes
-				open_factory_invest = yes
-				build_factory_invest = yes
-				expand_factory_invest = yes
-				build_railway_invest = yes
-				allow_foreign_investment = yes
-				can_invest_in_pop_projects = yes
-			}
-		}
-
-		state_capitalism = {
-			import_cost = 0.5
-			min_tax = 0.25
-			factory_owner_cost = 0.8
-
-			rules = {
-				build_factory = yes
-				build_bank = yes
-				build_university = yes
-				expand_factory = yes
-				open_factory = yes
-				destroy_factory = yes
-				build_railway = yes
-				factory_priority = yes
-				can_subsidise = yes
-				pop_build_factory = yes
-				pop_expand_factory = no
-				pop_open_factory = yes
-				delete_factory_if_no_input = no
-				build_factory_invest = yes
-				expand_factory_invest = yes
-				build_railway_invest = yes
-				can_invest_in_pop_projects = yes
-			}
-		}
-
-		planned_economy = {
-			import_cost = 0.75
-			min_tax = 0.5
-			factory_throughput = 0.25
-			factory_owner_cost = 0.8	#-1 negative costs, can't build.
-
-			rules = {
-				build_factory = yes
-				build_bank = yes
-				build_university = yes
-				expand_factory = yes
-				open_factory = yes
-				destroy_factory = yes
-				build_railway = yes
-				factory_priority = yes
-				can_subsidise = yes
-				pop_build_factory = yes
-				pop_expand_factory = yes
-				pop_open_factory = yes
-				delete_factory_if_no_input = no
-				build_factory_invest = yes
-				expand_factory_invest = yes
-				build_railway_invest = yes
-				can_invest_in_pop_projects = yes
-			}
-		}
-	}
-
-	religious_policy = {
-
-		pro_atheism = {
-			#no effect
-		}
-
-		secularized = {
-			#no effect
-		}
-
-		pluralism = {
-			#no effect
-		}
-
-		moralism = {
-			#no effect
-		}
-	}
-
-	citizenship_policy = { # TODO there was talk of reworking this to increase immigration but reduce assimilation instead
-
-		residency = {
-		}
-
-		limited_citizenship = {
-			global_assimilation_rate = 0.05
-		}
-
-		full_citizenship = {
-			global_assimilation_rate = 0.1
-		}
-	}
-
-	war_policy = {
-
-		jingoism = {
-			max_military_spending = 1.0
-			supply_consumption = 0.25
-			war_exhaustion_effect = 0.5
-			is_jingoism = yes
-			cb_generation_speed_modifier = 0.3
-			mobilization_impact = 4
-			org_regain = 0.5
-			war_exhaustion = -0.2
-			reinforce_speed = 0.5
-		}
-
-		pro_military = {
-			max_military_spending = 1.0
-			war_exhaustion_effect = 0.7
-			supply_consumption = 0.1
-			cb_generation_speed_modifier = 0.2
-			mobilization_impact = 3
-			org_regain = 0.25
-			war_exhaustion = -0.1
-			reinforce_speed = 0.25
-		}
-
-		anti_military = {
-			max_military_spending = 0.5
-			supply_consumption = -0.1
-			war_exhaustion_effect = 1.2
-			cb_generation_speed_modifier = -0.2
-			mobilization_impact = 2
-			org_regain = -0.25
-			reinforce_speed = -0.25
-			assimilation_rate = 0.15
-			research_points_modifier = 0.1
-			war_exhaustion = 0.1
-			global_pop_militancy_modifier = -0.005
-		}
-
-		pacifism = {
-			max_military_spending = 0.4
-			supply_consumption = -0.25
-			war_exhaustion_effect = 1.5
-			cb_generation_speed_modifier = -0.4
-			mobilization_impact = 1
-			org_regain = -0.5
-			reinforce_speed = -0.5
-			assimilation_rate = 0.3
-			research_points_modifier = 0.2
-			war_exhaustion = 0.2
-			global_pop_militancy_modifier = -0.02
-		}
-	}
-
-	social_policy = {
-
-		no_state_interference = {
-			# Audax Validator "." Ignore_NEXT
-			max_social_spending = 0.5
-		}
-
-		colonial_spending_policy = {
-			# Audax Validator "." Ignore_NEXT
-			max_social_spending = 0.01
-		}
-
-		no_position_set = {
-			# Audax Validator "." Ignore_NEXT
-			min_social_spending = 0.0
-			# Audax Validator "." Ignore_NEXT
-			max_social_spending = 1.0
-		}
-
-		populist_welfare = {
-			# Audax Validator "." Ignore_NEXT
-			min_social_spending = 0.15
-		}
-
-		welfare_state = {
-			# Audax Validator "." Ignore_NEXT
-			min_social_spending = 0.33
-		}
-	}
-}
-
-
-
-
- *)
 let issues = symbol_table_init [
     (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
         (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
@@ -461,8 +209,50 @@ let issues = symbol_table_init [
 ]
 let national_focus =  symbol_table_init [
     (TYPE_SYMBOL KEYWORD, (PARAM_LIST (symbol_table_init [
-        (TYPE_SYMBOL KEYWORD,(APPEND_SYMBOLS ([(KEYWORD_SYMBOL "limit",COUNTRY_CONDITIONS)]),PROVINCE_MODIFIERS)); 
+        (TYPE_SYMBOL KEYWORD,(APPEND_SYMBOLS ([
+            (TYPE_SYMBOL KEYWORD, PARAM_OPTION [PARAM_VALUE INT;PARAM_VALUE FLOAT]);
+            (KEYWORD_SYMBOL "limit",PROVINCE_CONDITIONS);
+            (KEYWORD_SYMBOL "own_provinces", PARAM_VALUE BOOL);
+            (KEYWORD_SYMBOL "has_flashpoint", PARAM_VALUE BOOL);
+
+        ],PROVINCE_MODIFIERS))); 
     ])));
      
 ]
+
+let nationalvalue = symbol_table_init [
+    (TYPE_SYMBOL KEYWORD, COUNTRY_MODIFIERS);
+]
+let on_actions = symbol_table_init [
+    (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
+        (TYPE_SYMBOL INT, PARAM_VALUE INT); 
+    ]));
+]
+let pop_types = symbol_table_init [
+    (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+        PARAM_VALUE FLOAT;
+        PARAM_VALUE INT
+    ]));
+    (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
+        (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+            PARAM_VALUE FLOAT;
+            PARAM_VALUE INT
+        ]));
+    ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
+
+    (KEYWORD_SYMBOL "group", PARAM_LIST (symbol_table_init [
+        (KEYWORD_SYMBOL "modifier", APPEND_SYMBOLS ([
+            (KEYWORD_SYMBOL "factor", PARAM_OPTION ([
+                PARAM_VALUE FLOAT;
+                PARAM_VALUE INT
+            ]));
+        ],PARAM_OPTION [ POP_CONDITIONS; COUNTRY_CONDITIONS; PROVINCE_CONDITIONS]));
+    ]));
+]
+
+let production_type = symbol_table_init [
+    (KEYWORD_SYMBOL "efficiency", PARAM_LIST(symbol_table_init [
+        TYPE_SYMBOL KEYWORD,PARAM_VALUE FLOAT;
+    ]));
     
+]
