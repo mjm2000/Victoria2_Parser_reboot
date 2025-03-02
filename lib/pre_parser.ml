@@ -46,31 +46,8 @@ and lexem_list lexems =
         | [] -> 
                 (List.rev (EXPR_EXCEPTION (RHS [PARAM_VALUE KEYWORD], END_OF_FILE, (1, 1)) :: out), [])
         | rest -> 
-            (match(expression rest) with 
-            |(LEXEM(_,_,_) as v),rest -> 
-                lexem_list_r rest (v :: out)
-            |((ASSIGNMENT_LIST ( (ASSIGNMENT((_,_,cords),_) )::_ as al) ) ),rest ->
-                let all_types = [PARAM_VALUE KEYWORD;
-                PARAM_VALUE INT; 
-                PARAM_VALUE STRING;
-                PARAM_VALUE FLOAT] in
-                let v = EXPR_EXCEPTION(RHS(all_types), UNEXPECTED_ASSIGN_LIST(al),cords) in
-                lexem_list_r rest (v :: out)
-            |(ASSIGNMENT_LIST (ASSIGN_EXCEPTION(ae)::_)) ,rest ->
-                lexem_list_r rest (EXPR_EXCEPTION(ae) :: out) 
-            |(ASSIGNMENT_LIST ([]) ), ((_,_,cords)::tail) ->
-                    let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD], UNEXPECTED_ASSIGN_LIST( []), cords) in
-                lexem_list_r tail (v :: out)
-
-            |(EXPR_EXCEPTION (_) as e ,rest) ->
-                lexem_list_r rest (e :: out)
-            (*|( (LEXEM_LIST ((_,_,cords)::_) as ll)   ,rest) ->
-                let v = EXPR_EXCEPTION(RHS [PARAM_VALUE KEYWORD],UNEXPECTED_EXPR_LIST(ll),cords) in
-                lexem_list_r rest (v :: out)
-            *)
-            |_->List.rev out ,rest
-
-            )
+            let e,rest =expression rest in
+            lexem_list_r rest (e :: out)
     in
     lexem_list_r lexems [] 
 
