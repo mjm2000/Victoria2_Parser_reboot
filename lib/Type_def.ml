@@ -29,9 +29,15 @@ and lh_symbol_type =
     |KEYWORD_SYMBOL of string 
     |TYPE_SYMBOL of lexem_type
 (*add label*)
+and symbol_amount =
+    |Required of int
+    |Optional 
+
 and rh_symbol_type = 
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
+    |NUMBER
+    |PROVINCE_ID
     |PARAM_OPTION of rh_symbol_type list
     |VALUE_LIST of rh_symbol_type 
     |CHOICE_VALUE of string list 

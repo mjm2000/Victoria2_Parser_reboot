@@ -251,8 +251,41 @@ let pop_types = symbol_table_init [
 ]
 
 let production_type = symbol_table_init [
-    (KEYWORD_SYMBOL "efficiency", PARAM_LIST(symbol_table_init [
-        TYPE_SYMBOL KEYWORD,PARAM_VALUE FLOAT;
+    (TYPE_SYMBOL KEYWORD, PARAM_LIST (symbol_table_init [
+        (KEYWORD_SYMBOL "efficiency", PARAM_LIST(symbol_table_init [
+            TYPE_SYMBOL KEYWORD,PARAM_VALUE FLOAT;
+        ]));
+        (KEYWORD_SYMBOL "owner", PARAM_LIST (symbol_table_init [
+            KEYWORD_SYMBOL "poptype", PARAM_VALUE KEYWORD;
+            KEYWORD_SYMBOL "effect", PARAM_VALUE KEYWORD;
+            KEYWORD_SYMBOL "effect_multiplier", PARAM_VALUE FLOAT;
+        ]));
+        (KEYWORD_SYMBOL "employees", VALUE_LIST (PARAM_LIST (symbol_table_init [
+            KEYWORD_SYMBOL "poptype", PARAM_VALUE KEYWORD;
+            KEYWORD_SYMBOL "effect", PARAM_VALUE KEYWORD;
+            KEYWORD_SYMBOL "amount", PARAM_VALUE FLOAT;
+            KEYWORD_SYMBOL "effect_multiplier", PARAM_VALUE FLOAT;
+        ])));
+        (KEYWORD_SYMBOL "type", PARAM_VALUE KEYWORD);
+        (KEYWORD_SYMBOL "workforce", PARAM_OPTION [
+            PARAM_VALUE FLOAT;
+            PARAM_VALUE INT;
+        ] );
+        (KEYWORD_SYMBOL "value", PARAM_VALUE FLOAT);
+        (KEYWORD_SYMBOL "input_goods", PARAM_LIST (symbol_table_init [
+            (TYPE_SYMBOL KEYWORD, NUMBER);
+        ])); 
     ]));
     
 ]
+
+
+
+
+
+
+
+
+
+
+
