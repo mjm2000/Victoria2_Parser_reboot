@@ -1,4 +1,4 @@
 (library
- (name ParadoxErrorChecker)
+ (name ParadoxModErrorChecker)
  (libraries re2)
  )
