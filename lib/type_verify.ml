@@ -1,3 +1,4 @@
+open Victoria2
 open Symbol_table
 open Effects
 open Conditions
