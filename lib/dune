@@ -1,4 +1,4 @@
 (library
- (name vic2parser_reboot)
+ (name ParadoxErrorChecker)
  (libraries re2)
  )
