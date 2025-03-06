@@ -1,4 +1,4 @@
-open ParadoxErrorChecker 
+open ParadoxModErrorChecker 
 open Cmdliner
 let () = 
    let folder_exists folder_path = Sys.file_exists folder_path && Sys.is_directory folder_path
