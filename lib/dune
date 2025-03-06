@@ -1,4 +1,4 @@
 (library
  (name ParadoxModErrorChecker)
- (libraries re2)
+ (libraries re2 victoria2)
  )
