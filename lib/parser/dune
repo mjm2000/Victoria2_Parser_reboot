@@ -1,4 +1,4 @@
 (library
  (name parser)
- (libraries Lexer re2)
+ (libraries TypeDef Lexer re2)
  );;

@@ -1,0 +1,4 @@
+(library
+ (name TypeDef)
+ (libraries Lexer re2)
+ );;

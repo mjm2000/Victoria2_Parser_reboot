@@ -1,4 +1,4 @@
 (library
  (name SyntaxChecker)
- (libraries parser re2)
+ (libraries SymbolTable Parser re2)
  )
