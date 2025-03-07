@@ -1,10 +1,5 @@
-open Victoria2
 open Symbol_table
-open Victoria2.Effects
-open Victoria2.Conditions
-open Victoria2.Modifiers
 open Type_def
-open Victoria2.Mtth
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
