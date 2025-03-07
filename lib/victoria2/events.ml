@@ -1,5 +1,5 @@
 open SymbolTable
-open Type_def
+open TypeDef
 
 
 let events = symbol_table_init [

@@ -1,4 +1,4 @@
-open Type_def
+open TypeDef
 open SymbolTable
 let decisions = symbol_table_init [
     (KEYWORD_SYMBOL("political_decisions"),PARAM_LIST(symbol_table_init [

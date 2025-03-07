@@ -1,4 +1,4 @@
-open Type_def
+open TypeDef
 open SymbolTable
 
 

@@ -1,5 +1,5 @@
 open SymbolTable
-open Type_def
+open TypeDef
 
 let country_modifiers = symbol_table_init [
     (KEYWORD_SYMBOL "administrative_efficiency_modifier", PARAM_OPTION[

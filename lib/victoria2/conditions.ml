@@ -1,5 +1,5 @@
-open Parser.SymbolTable
-open Parser.Type_def
+open SymbolTable
+open TypeDef
 let pop_conditions = symbol_table_init [
 (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
 (KEYWORD_SYMBOL("agree_with_ruling_party"),PARAM_VALUE(FLOAT));

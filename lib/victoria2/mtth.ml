@@ -1,5 +1,5 @@
 open SymbolTable
-open Type_def
+open TypeDef
 let country_mtth = symbol_table_init [
     (KEYWORD_SYMBOL("years"),PARAM_VALUE(INT));
     (KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
