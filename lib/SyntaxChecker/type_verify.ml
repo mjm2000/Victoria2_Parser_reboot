@@ -1,4 +1,4 @@
-open Symbol_table
+open SymbolTable
 open Type_def
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
