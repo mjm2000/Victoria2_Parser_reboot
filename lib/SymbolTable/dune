@@ -1,0 +1,4 @@
+(library
+ (name SymbolTable)
+ (libraries parser re2)
+ )
