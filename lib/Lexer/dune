@@ -1,4 +1,4 @@
 (library
- (name lexer)
+ (name Lexer)
  (libraries re2)
  )
