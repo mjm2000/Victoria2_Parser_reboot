@@ -1,5 +1,4 @@
 (library
  (name Lexer)
- (public_name lexer)
  (libraries re2)
  )
