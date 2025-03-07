@@ -1,5 +1,5 @@
 (library
- (name victoria2)
+ (name Victoria2)
  (modules
    Commons
    Conditions
