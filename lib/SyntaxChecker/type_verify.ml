@@ -1,5 +1,5 @@
 open SymbolTable
-open Parser 
+open TypeDef
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
