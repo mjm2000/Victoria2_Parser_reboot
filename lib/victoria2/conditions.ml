@@ -1,0 +1,610 @@
+open Parser.SymbolTable
+open Parser.Type_def
+let pop_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("agree_with_ruling_party"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("cash_reserves"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("everyday_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_pop_religion"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(KEYWORD);
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
+(KEYWORD_SYMBOL("always"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(KEYWORD)
+]));
+(KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("life_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("luxury_needs"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("political_movement"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("political_reform_want"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("pop_majority_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_ideology"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_issue"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_religion"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("religion"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("social_movement"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("social_reform_want"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("strata"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("location"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("country"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("cultural_union"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("pop_type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+    PARAM_VALUE(INT);
+]));
+(TYPE_SYMBOL(CONDITION), POP_CONDITIONS);
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
+]
+let country_conditions = symbol_table_init [
+(KEYWORD_SYMBOL("always"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("overlord"),COUNTRY_CONDITIONS);
+(*maybe errors*)
+(KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("any_state"),STATE_CONDITIONS);
+(KEYWORD_SYMBOL("any_core"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("all_core"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
+(KEYWORD_SYMBOL("controller"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("sea_zone"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("state_scope"),STATE_CONDITIONS);
+(KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("month"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("fire_only_once"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_triggered_only"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("major"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("immediate"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("check_variable"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("which"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+    ]));
+]));
+(KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("administration_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("ai"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("AI"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("alliance_with"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("average_consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("average_militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("badboy"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("big_producer"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("blockade"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("brigades_compare"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("can_build_factory_in_capital_state"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("crime_higher_than_education"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("can_nationalize"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("can_create_vassals"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("capital"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("casus_belli"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+]));
+(KEYWORD_SYMBOL("citizenship_policy"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("civilization_progress"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("colonial_nation"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("constructing_cb_progress"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("constructing_cb_type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("controls"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("crime_fighting"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("crisis_exist"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("culture_has_union_tag"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("diplomatic_influence"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+    ]));
+    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+]));
+(KEYWORD_SYMBOL("economic_policy"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("economic_reform_name"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("education_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("election"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("exists"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(BOOL);
+]));
+(KEYWORD_SYMBOL("government"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("great_wars_enabled"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("have_core_in"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_cultural_sphere"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_leader"),PARAM_OPTION([
+    PARAM_VALUE(STRING);
+    PARAM_VALUE(KEYWORD);
+]));
+(KEYWORD_SYMBOL("has_recently_lost_war"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_unclaimed_cores"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("industrial_score"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("in_sphere"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("in_default"),PARAM_OPTION([
+    PARAM_VALUE(BOOL);
+    PARAM_VALUE(SCOPE);
+]));
+(KEYWORD_SYMBOL("invention"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("involved_in_crisis"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_claim_crisis"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_colonial_crisis"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_core"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("is_cultural_union"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+        PARAM_VALUE(BOOL);
+]));
+(KEYWORD_SYMBOL("is_culture_group"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+        PARAM_VALUE(BOOL);
+        PARAM_VALUE(KEYWORD)
+
+])
+);
+(KEYWORD_SYMBOL("is_disarmed"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_greater_power"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_ideology_enabled"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_independant"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_liberation_crisis"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_mobilised"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_next_reform"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_our_vassal"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("is_possible_vassal"),PARAM_VALUE(TAG));
+(KEYWORD_SYMBOL("is_secondary_power"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_sphere_leader_of"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("is_vassal"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_substate"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("lost_national"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("middle_strata_everyday_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("middle_strata_life_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("middle_strata_luxury_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("middle_tax"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("military_access"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("military_reform_name"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("military_score"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("military_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("money"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("national_provinces_occupied"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("neighbour"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("num_of_allies"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_cities"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_ports"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_revolts"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("number_of_states"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_substates"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_vassals"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("num_of_vassals_no_substates"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("owns"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("part_of_sphere"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("political_movement_strength"),PARAM_OPTION ([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("political_reform_name"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("political_reform_want"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("poor_strata_everyday_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("poor_strata_life_needs"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("poor_strata_luxury_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("poor_tax"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("pop_majority_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_ideology"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_religion"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_militancy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("prestige"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(KEYWORD);
+]));
+(KEYWORD_SYMBOL("accepted_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("rank"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("rebel_power_fraction"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("recruited_percentage"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("relation"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+    ]
+    ));
+    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+]));
+(KEYWORD_SYMBOL("religious_policy"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("revolt_percentage"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("rich_strata_everyday_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("rich_strata_life_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("rich_strata_luxury_needs"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("rich_tax"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("ruling_party"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("ruling_party_ideology"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("slavery"),CHOICE_VALUE(["yes_slavery";"no_slavery";"freedom_of_womb"]));
+(KEYWORD_SYMBOL("social_movement_strength"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("social_reform_name"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("social_reform_want"),PARAM_VALUE(FLOAT));
+(KEYWORD_SYMBOL("social_spending"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("stronger_army_than"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("substate_of"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+    ];
+));
+(KEYWORD_SYMBOL("tag"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("TAG"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("this_culture_union"),PARAM_OPTION([
+	PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(KEYWORD);
+]));
+(KEYWORD_SYMBOL("total_amount_of_divisions"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_amount_of_ships"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_defensives"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_num_of_ports"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_offensives"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_of_ours_sunk"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_sea_battles"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("total_sunk_by_us"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("trade_policy"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("truce_with"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("unit_has_leader"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("upper_house"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("ideology"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("value"),PARAM_VALUE(FLOAT));
+]));
+(KEYWORD_SYMBOL("vassal_of"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("war"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("war_exhaustion"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("war_policy"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("war_score"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("war_with"),PARAM_OPTION([
+        PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE)
+]));
+(TYPE_SYMBOL(TAG), COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+        PARAM_VALUE(KEYWORD);
+]));
+(TYPE_SYMBOL(CONDITION),COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(INT),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
+]
+
+let province_conditions = symbol_table_init [
+(TYPE_SYMBOL(SCOPE),COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(INT),PROVINCE_CONDITIONS);
+(TYPE_SYMBOL(TAG),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("can_build_in_province"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("building"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("limit_to_world_greatest_level"),PARAM_VALUE(BOOL));
+]));
+(KEYWORD_SYMBOL("has_global_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("state_scope"),STATE_CONDITIONS);
+(KEYWORD_SYMBOL("any_neighbor_province"),PROVINCE_CONDITIONS);
+(KEYWORD_SYMBOL("owner"),COUNTRY_CONDITIONS);
+(KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
+(KEYWORD_SYMBOL("year"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("month"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("allow_multiple_instances"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("fire_only_once"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_triggered_only"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("major"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("average_consciousness"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("average_militancy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("can_build_factory"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("continent"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("controlled_by"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+        PARAM_VALUE(SCOPE);
+        CHOICE_VALUE(["owner";"sphere_owner";"any_country"]);
+	]));
+(KEYWORD_SYMBOL("controlled_by_rebels"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("country_units_in_province"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("country_units_in_state"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("crime_fighting"),PARAM_OPTION ([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("education_spending"), PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("empty"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("flashpoint_tension"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("has_building"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_crime"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_culture_core"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_empty_adjacent_province"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_empty_adjacent_state"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_factories"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_flashpoint"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_national_minority"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_province_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_recent_imigration"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+]));
+(KEYWORD_SYMBOL("is_accepted_culture"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_blockaded"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_capital"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_coastal"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_core"),PARAM_OPTION([
+	PARAM_VALUE(TAG);
+	PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("is_ideology_enabled"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("is_overseas"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+    PARAM_VALUE(BOOL);
+]));
+(KEYWORD_SYMBOL("is_state_capital"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_state_religion"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("life_rating"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("literacy"),PARAM_OPTION([
+    PARAM_VALUE(FLOAT);
+    PARAM_VALUE(INT);
+]));
+(KEYWORD_SYMBOL("military_spending"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("minorities"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("owned_by"),PARAM_OPTION([
+	PARAM_VALUE(TAG);
+	PARAM_VALUE(SCOPE)
+]));
+(KEYWORD_SYMBOL("pop_militancy"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("port"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("province_control_days"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("province_id"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("region"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("state_id"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("terrain"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("trade_goods"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("total_pops"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
+(KEYWORD_SYMBOL("unemployment"),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT)
+]));
+(KEYWORD_SYMBOL("unemployment_by_type"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("type"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("value"),PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT)
+    ]));
+]));
+(KEYWORD_SYMBOL("units_in_province"),PARAM_VALUE(INT));
+(KEYWORD_SYMBOL("work_available"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("worker"),PARAM_VALUE(KEYWORD));
+]));
+(KEYWORD_SYMBOL("exists"),PARAM_OPTION([
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(BOOL);
+]));
+(TYPE_SYMBOL(TAG),COUNTRY_CONDITIONS);
+(TYPE_SYMBOL(CONDITION),  PROVINCE_CONDITIONS);
+(TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
+    PARAM_VALUE(INT);
+    PARAM_VALUE(FLOAT);
+    (*error maybe*)
+    PARAM_VALUE(KEYWORD);
+]));
+
+(KEYWORD_SYMBOL("has_province_modifier"),PARAM_VALUE(KEYWORD));
+(*maybe errors*)
+(KEYWORD_SYMBOL("is_greater_power"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("civilized"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
+ (KEYWORD_SYMBOL("nationalvalue"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("world_wars_enabled"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_country_flag"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_country_modifier"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("has_pop_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("pop_majority_culture"),PARAM_VALUE(KEYWORD));
+(KEYWORD_SYMBOL("relation"),PARAM_LIST(symbol_table_init [
+    (KEYWORD_SYMBOL("who"),PARAM_OPTION([
+		PARAM_VALUE(TAG);
+		PARAM_VALUE(SCOPE)
+    ]
+    ));
+    (KEYWORD_SYMBOL("value"),PARAM_VALUE(INT));
+]));
+(*pop scope*)
+(KEYWORD_SYMBOL("is_primary_culture"),PARAM_OPTION([
+    PARAM_VALUE(BOOL);
+    PARAM_VALUE(TAG);
+    PARAM_VALUE(SCOPE);
+]));
+(KEYWORD_SYMBOL("unit_in_battle"),PARAM_VALUE(BOOL));
+(KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
+]
+
+let state_conditions = symbol_table_init [
+    (KEYWORD_SYMBOL("is_canal_enabled"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("infrastructure"),PARAM_VALUE(KEYWORD)); 
+    (KEYWORD_SYMBOL("produces"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("is_slave"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("is_colonial"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("has_flashpoint"),PARAM_VALUE(BOOL));
+    (KEYWORD_SYMBOL("average_militancy"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("average_consciousness"),PARAM_VALUE(INT));
+    (KEYWORD_SYMBOL("remove_province_modifier"),PARAM_VALUE(KEYWORD));
+    (KEYWORD_SYMBOL("any_pop"),POP_CONDITIONS);
+
+    (KEYWORD_SYMBOL("has_pop_type"),PARAM_VALUE(KEYWORD));
+    (TYPE_SYMBOL(KEYWORD), PARAM_OPTION([
+        PARAM_VALUE(INT);
+        PARAM_VALUE(FLOAT);
+    ]));
+    (TYPE_SYMBOL(CONDITION), STATE_CONDITIONS);
+    (KEYWORD_SYMBOL("any_owned_province"),PROVINCE_CONDITIONS);
+    (*error maybe*)
+    (KEYWORD_SYMBOL("has_building"),PARAM_VALUE(KEYWORD));
+]

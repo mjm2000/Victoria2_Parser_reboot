@@ -1,0 +1,13 @@
+(library
+ (name victoria2)
+ (modules
+   Commons
+   Conditions
+   Decisions
+   Effects
+   Events
+   Modifiers
+   Mtth
+ )
+ (libraries SymbolTable parser re2)
+ )
