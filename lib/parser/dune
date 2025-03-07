@@ -1,4 +1,4 @@
 (library
  (name parser)
- (libraries re2)
+ (libraries lexer re2)
  )
