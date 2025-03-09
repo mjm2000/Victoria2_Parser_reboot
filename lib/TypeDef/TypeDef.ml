@@ -57,7 +57,7 @@ module FunctionalHashTable : sig
   val find : ('k, 'v) t -> 'k -> 'v option
   val remove : ('k, 'v) t -> 'k -> ('k, 'v) t
   end = struct
-  module M = Map.Make(lh_symbol_type) (* Change String to any comparable type *)
+  module M = Map.Make(String) (* Change String to any comparable type *)
 
   type ('k, 'v) t = 'v M.t
 
