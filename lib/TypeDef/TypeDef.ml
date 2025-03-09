@@ -43,21 +43,31 @@ and rh_symbol_type =
     |CHOICE_VALUE of string list 
     |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type 
     |SubTable of string
-    |PROVINCE_MTTH
-    |COUNTRY_MTTH
-    |PROVINCE_EFFECTS
-    |PROVINCE_CONDITIONS
-    |COUNTRY_EFFECTS
-    |COUNTRY_CONDITIONS
-    |POP_EFFECTS
-    |POP_CONDITIONS
-    |STATE_EFFECTS
-    |STATE_CONDITIONS
-    |PROVINCE_MODIFIERS
-    |COUNTRY_MODIFIERS
+   
 
 
 
 and exception_value = expected_value * exception_type * (int * int)
 
 
+module FunctionalHashTable : sig
+  type ('k, 'v) t
+  val empty : ('k, 'v) t
+  val add : ('k, 'v) t -> 'k -> 'v -> ('k, 'v) t
+  val find : ('k, 'v) t -> 'k -> 'v option
+  val remove : ('k, 'v) t -> 'k -> ('k, 'v) t
+  end = struct
+  module M = Map.Make(lh_symbol_type) (* Change String to any comparable type *)
+
+  type ('k, 'v) t = 'v M.t
+
+  let empty = M.empty
+
+  let add table key value = M.add key value table
+
+  let find table key = 
+    try Some (M.find key table) 
+    with Not_found -> None
+
+  let remove table key = M.remove key table
+end
