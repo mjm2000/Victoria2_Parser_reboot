@@ -50,16 +50,16 @@ and rh_symbol_type =
 and exception_value = expected_value * exception_type * (int * int)
 
 
-module FunctionalHashTable : sig
-  type ('k, 'v) t
-  val empty : ('k, 'v) t
-  val add : ('k, 'v) t -> 'k -> 'v -> ('k, 'v) t
-  val find : ('k, 'v) t -> 'k -> 'v option
-  val remove : ('k, 'v) t -> 'k -> ('k, 'v) t
-  end = struct
-  module M = Map.Make(String) (* Change String to any comparable type *)
+module FunctionalHashTable (K : Map.OrderedType) : sig
+  type 'v t
+  val empty : 'v t
+  val add : 'v t -> K.t -> 'v -> 'v t
+  val find : 'v t -> K.t -> 'v option
+  val remove : 'v t -> K.t -> 'v t
+end = struct
+  module M = Map.Make(K)
 
-  type ('k, 'v) t = 'v M.t
+  type 'v t = 'v M.t
 
   let empty = M.empty
 
@@ -71,3 +71,23 @@ module FunctionalHashTable : sig
 
   let remove table key = M.remove key table
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
