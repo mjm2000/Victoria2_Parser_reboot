@@ -27,30 +27,6 @@ let split_list n ls =
     split_list_r [] ls 0
 
 let rec symbol_table_from_rhv rhv = match rhv with
-    |(PROVINCE_MTTH) ->
-        [province_mtth]
-    | (COUNTRY_MTTH) ->
-        [country_mtth]
-    | (PROVINCE_EFFECTS) ->
-        [province_effects]
-    | (PROVINCE_CONDITIONS) ->
-        [province_conditions]
-    | (COUNTRY_EFFECTS) ->
-        [country_effects]
-    | (COUNTRY_CONDITIONS) ->
-        [country_conditions]
-    | (POP_EFFECTS) ->
-        [pop_effects]
-    | (POP_CONDITIONS) ->
-        [pop_conditions]
-    | (STATE_EFFECTS) ->
-        [state_effects]
-    | (STATE_CONDITIONS) ->
-        [state_conditions]
-    | COUNTRY_MODIFIERS ->
-        [country_modifiers]
-    | PROVINCE_MODIFIERS ->
-        [province_modifiers]
     | (PARAM_LIST(sub_table))->
         [sub_table]
     | PARAM_OPTION(options) ->
@@ -185,18 +161,7 @@ let rec type_verify_r symbol_table assignments exceptions scope =
             |_-> None
         in
 
-     let  assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
-         |(PROVINCE_MTTH as new_scope) 
-		 | (COUNTRY_MTTH as new_scope) 
-         | (PROVINCE_EFFECTS as new_scope) 
-		 | (PROVINCE_CONDITIONS as new_scope) 
-		 | (COUNTRY_EFFECTS as new_scope) 
-		 | (COUNTRY_CONDITIONS as new_scope) 
-		 | (POP_EFFECTS as new_scope) 
-		 | (POP_CONDITIONS as new_scope) 
-		 | (STATE_EFFECTS as new_scope) 
-         | (STATE_CONDITIONS as new_scope)
-		 | (PARAM_LIST(_) as new_scope)
+     let assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          | (APPEND_SYMBOLS(_) as new_scope)  ->
             let symbol_tables = symbol_table_from_rhv new_scope in
             let rec get_exceptions lst lowest_exception=
@@ -230,7 +195,9 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                  )
             in
             get_exceptions symbol_tables None
-            
+         | SubTable(sub_table) -> 
+            type_verify_r sub_table ls exceptions (RHS([new_scope])) 
+
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
