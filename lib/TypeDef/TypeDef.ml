@@ -1,4 +1,25 @@
 open Lexer
+module FunctionalHashTable (K : Map.OrderedType) : sig
+  type 'v t
+  val empty : 'v t
+  val add : 'v t -> K.t -> 'v -> 'v t
+  val find : 'v t -> K.t -> 'v option
+  val remove : 'v t -> K.t -> 'v t
+end = struct
+  module M = Map.Make(K)
+
+  type 'v t = 'v M.t
+
+  let empty = M.empty
+
+  let add table key value = M.add key value table
+
+  let find table key = 
+    try Some (M.find key table) 
+    with Not_found -> None
+
+  let remove table key = M.remove key table
+end
 type expr = 
     |LEXEM of lexem
     |LEXEM_LIST of expr list
@@ -50,27 +71,7 @@ and rh_symbol_type =
 and exception_value = expected_value * exception_type * (int * int)
 
 
-module FunctionalHashTable (K : Map.OrderedType) : sig
-  type 'v t
-  val empty : 'v t
-  val add : 'v t -> K.t -> 'v -> 'v t
-  val find : 'v t -> K.t -> 'v option
-  val remove : 'v t -> K.t -> 'v t
-end = struct
-  module M = Map.Make(K)
 
-  type 'v t = 'v M.t
-
-  let empty = M.empty
-
-  let add table key value = M.add key value table
-
-  let find table key = 
-    try Some (M.find key table) 
-    with Not_found -> None
-
-  let remove table key = M.remove key table
-end
 
 
 
