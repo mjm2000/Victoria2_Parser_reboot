@@ -9,129 +9,201 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	5.9.0	//
-APPEND_SYMBOLS	Type_def.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type $/;"	C	type:rh_symbol_type
-ASSIGNMENT	Type_def.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
-ASSIGNMENT_LIST	Type_def.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
-ASSIGN_EXCEPTION	Type_def.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
-BOOL	lexer.ml	/^|BOOL  $/;"	C	type:lexem_type
-CHOICE_VALUE	Type_def.ml	/^    |CHOICE_VALUE of string list $/;"	C	type:rh_symbol_type
-CONDITION	lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
-COUNTRY_CONDITIONS	Type_def.ml	/^    |COUNTRY_CONDITIONS$/;"	C	type:rh_symbol_type
-COUNTRY_EFFECTS	Type_def.ml	/^    |COUNTRY_EFFECTS$/;"	C	type:rh_symbol_type
-COUNTRY_MODIFIERS	Type_def.ml	/^    |COUNTRY_MODIFIERS$/;"	C	type:rh_symbol_type
-COUNTRY_MTTH	Type_def.ml	/^    |COUNTRY_MTTH$/;"	C	type:rh_symbol_type
-Commons	commons.ml	/^open Symbol_table$/;"	M
-Conditions	conditions.ml	/^open Lexer$/;"	M
-Decisions	decisions.ml	/^open Type_def$/;"	M
-END_OF_FILE	Type_def.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
-EQ	lexer.ml	/^|EQ$/;"	C	type:lexem_type
-EXPR_EXCEPTION	Type_def.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
-Effects	effects.ml	/^open Symbol_table$/;"	M
-Events	events.ml	/^open Symbol_table$/;"	M
-FLOAT	lexer.ml	/^|FLOAT $/;"	C	type:lexem_type
-INT	lexer.ml	/^|INT $/;"	C	type:lexem_type
-KEYWORD	lexer.ml	/^|KEYWORD $/;"	C	type:lexem_type
-KEYWORD_SYMBOL	Type_def.ml	/^    |KEYWORD_SYMBOL of string $/;"	C	type:lh_symbol_type
-LB	lexer.ml	/^|LB$/;"	C	type:lexem_type
-LEXEM	Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
-LEXEM_LIST	Type_def.ml	/^    |LEXEM_LIST of expr list$/;"	C	type:expr
-LEX_ERROR	lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
-LHS	Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
-Lexer	lexer.ml	/^type lexem_type =$/;"	M
-MULTIPLE_CHOICE	Type_def.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
-Modifiers	modifiers.ml	/^open Symbol_table$/;"	M
-Mtth	mtth.ml	/^open Symbol_table$/;"	M
-NONE	Type_def.ml	/^    | NONE $/;"	C	type:expected_value
-PARAM_LIST	Type_def.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
-PARAM_OPTION	Type_def.ml	/^    |PARAM_OPTION of rh_symbol_type list$/;"	C	type:rh_symbol_type
-PARAM_VALUE	Type_def.ml	/^    |PARAM_VALUE of lexem_type $/;"	C	type:rh_symbol_type
-POP_CONDITIONS	Type_def.ml	/^    |POP_CONDITIONS$/;"	C	type:rh_symbol_type
-POP_EFFECTS	Type_def.ml	/^    |POP_EFFECTS$/;"	C	type:rh_symbol_type
-PROVINCE_CONDITIONS	Type_def.ml	/^    |PROVINCE_CONDITIONS$/;"	C	type:rh_symbol_type
-PROVINCE_EFFECTS	Type_def.ml	/^    |PROVINCE_EFFECTS$/;"	C	type:rh_symbol_type
-PROVINCE_MODIFIERS	Type_def.ml	/^    |PROVINCE_MODIFIERS$/;"	C	type:rh_symbol_type
-PROVINCE_MTTH	Type_def.ml	/^    |PROVINCE_MTTH$/;"	C	type:rh_symbol_type
-Pre_parser	pre_parser.ml	/^open Lexer$/;"	M
-RB	lexer.ml	/^|RB$/;"	C	type:lexem_type
-RHS	Type_def.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
-SCOPE	lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
-STATE_CONDITIONS	Type_def.ml	/^    |STATE_CONDITIONS$/;"	C	type:rh_symbol_type
-STATE_EFFECTS	Type_def.ml	/^    |STATE_EFFECTS$/;"	C	type:rh_symbol_type
-STRING	lexer.ml	/^|STRING$/;"	C	type:lexem_type
-Symbol_table	symbol_table.ml	/^let symbol_table_init symbols =$/;"	M
-TAG	lexer.ml	/^|TAG  $/;"	C	type:lexem_type
-TYPE_MISHMASH	Type_def.ml	/^    |TYPE_MISHMASH of string  * lexem_type * lexem_type $/;"	C	type:exception_type
-TYPE_SYMBOL	Type_def.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
-Type_def	Type_def.ml	/^open Lexer$/;"	M
-Type_verify	type_verify.ml	/^open Symbol_table$/;"	M
-UNEXPECTED_ASSIGNMENT	Type_def.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
-UNEXPECTED_ASSIGN_LIST	Type_def.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
-UNEXPECTED_EXPR	Type_def.ml	/^    |UNEXPECTED_EXPR of expr$/;"	C	type:exception_type
-UNEXPECTED_EXPR_LIST	Type_def.ml	/^    |UNEXPECTED_EXPR_LIST of expr list$/;"	C	type:exception_type
-UNEXPECTED_LEFT_BRACKET	Type_def.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
-UNEXPECTED_LEXEM	Type_def.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type $/;"	C	type:exception_type
-UNEXPECTED_RIGHT_BRACKET	Type_def.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
-UNKNOWN_IDENTIFIER	Type_def.ml	/^    |UNKNOWN_IDENTIFIER of string $/;"	C	type:exception_type
-VALUE_LIST	Type_def.ml	/^    |VALUE_LIST of rh_symbol_type $/;"	C	type:rh_symbol_type
-append_table	symbol_table.ml	/^let append_table symbol_table symbols = $/;"	f
-assignment	Type_def.ml	/^and assignment = $/;"	t
-assignment	pre_parser.ml	/^and assignment lex = match lex with$/;"	f
-assignment_list	pre_parser.ml	/^and assignment_list lexems = $/;"	f
-assignments	pre_parser.ml	/^let rec assignments ls = $/;"	f
-bookmarks	commons.ml	/^let bookmarks = symbol_table_init [$/;"	v
-buildings	commons.ml	/^let buildings = symbol_table_init [$/;"	v
-cb_types	commons.ml	/^let cb_types = symbol_table_init [$/;"	v
-chars_to_lexem	lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
-countries	commons.ml	/^let countries = symbol_table_init [$/;"	v
-country_colors	commons.ml	/^let country_colors = symbol_table_init [$/;"	v
-country_conditions	conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
-country_effects	effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
-country_modifiers	modifiers.ml	/^let country_modifiers = symbol_table_init [$/;"	v
-country_mtth	mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
-crime	commons.ml	/^let crime = symbol_table_init [$/;"	v
-current_length	type_verify.ml	/^        let current_length = List.length hd in$/;"	v
-decisions	decisions.ml	/^let decisions = symbol_table_init [$/;"	v
-events	events.ml	/^let events = symbol_table_init [$/;"	v
-exception_iden_string	pre_parser.ml	/^and exception_iden_string exp = match exp with$/;"	f
-exception_lists_string	pre_parser.ml	/^and exception_lists_string ls = $/;"	f
-exception_string	pre_parser.ml	/^and exception_string (exp : exception_value) : string = $/;"	f
-exception_type	Type_def.ml	/^and exception_type = $/;"	t
-exception_value	Type_def.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
-exceptions_string	pre_parser.ml	/^and exceptions_string ls = $/;"	f
-expected_value	Type_def.ml	/^and expected_value =$/;"	t
-expr	Type_def.ml	/^type expr = $/;"	t
-expression	pre_parser.ml	/^and expression lexems = $/;"	f
-get_errors	pre_parser.ml	/^let get_errors assignments = $/;"	f
-lexem	lexer.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
-lexem_list	pre_parser.ml	/^and lexem_list lexems = $/;"	f
-lexem_to_str	lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
-lexem_type	lexer.ml	/^type lexem_type =$/;"	t
-lexer	lexer.ml	/^let lexer f = $/;"	f
-lh_symbol_type	Type_def.ml	/^and lh_symbol_type = $/;"	t
-ls_to_str	lexer.ml	/^let ls_to_str ls = $/;"	f
-match_reg	lexer.ml	/^let match_reg reg str = $/;"	f
-pop_conditions	conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
-pop_effects	effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
-print_lexem	lexer.ml	/^let print_lexem lexem = $/;"	f
-print_lexems	lexer.ml	/^let print_lexems lexems = $/;"	f
-province_conditions	conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
-province_effects	effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
-province_modifiers	modifiers.ml	/^let province_modifiers = symbol_table_init [$/;"	v
-province_mtth	mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
-rh_symbol_type	Type_def.ml	/^and rh_symbol_type = $/;"	t
-shortest_list	type_verify.ml	/^let shortest_list lists =$/;"	f
-split_list	type_verify.ml	/^let split_list n ls =$/;"	f
-state_conditions	conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
-state_effects	effects.ml	/^let state_effects = symbol_table_init [$/;"	v
-string_assignment	pre_parser.ml	/^and string_assignment assignment = match assignment with  $/;"	f
-string_assignment_list	pre_parser.ml	/^and string_assignment_list al =$/;"	f
-string_expected_value	pre_parser.ml	/^and string_expected_value v = match v with$/;"	f
-string_expr	pre_parser.ml	/^and string_expr expr = match expr with$/;"	f
-string_lexem	lexer.ml	/^let string_lexem lex_value = $/;"	f
-string_lexems	lexer.ml	/^let string_lexems lexems = $/;"	f
-string_lh_symbol	pre_parser.ml	/^and string_lh_symbol lh = match lh with$/;"	f
-string_rh_symbol	pre_parser.ml	/^and string_rh_symbol pv = match pv with$/;"	f
-string_symbol_table	pre_parser.ml	/^and string_symbol_table symbol_table =$/;"	f
-symbol_table_from_rhv	type_verify.ml	/^let rec symbol_table_from_rhv rhv = match rhv with$/;"	f
-symbol_table_init	symbol_table.ml	/^let symbol_table_init symbols =$/;"	f
-type_verify	type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f
+APPEND_SYMBOLS	Parser/Type_def.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type $/;"	C	type:rh_symbol_type
+APPEND_SYMBOLS	TypeDef/TypeDef.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type $/;"	C	type:rh_symbol_type
+ASSIGNMENT	Parser/Type_def.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
+ASSIGNMENT	TypeDef/TypeDef.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
+ASSIGNMENT_LIST	Parser/Type_def.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
+ASSIGNMENT_LIST	TypeDef/TypeDef.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
+ASSIGN_EXCEPTION	Parser/Type_def.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
+ASSIGN_EXCEPTION	TypeDef/TypeDef.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
+BOOL	Lexer/Lexer.ml	/^|BOOL  $/;"	C	type:lexem_type
+CHOICE_VALUE	Parser/Type_def.ml	/^    |CHOICE_VALUE of string list $/;"	C	type:rh_symbol_type
+CHOICE_VALUE	TypeDef/TypeDef.ml	/^    |CHOICE_VALUE of string list $/;"	C	type:rh_symbol_type
+CONDITION	Lexer/Lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
+COUNTRY_CONDITIONS	Parser/Type_def.ml	/^    |COUNTRY_CONDITIONS$/;"	C	type:rh_symbol_type
+COUNTRY_EFFECTS	Parser/Type_def.ml	/^    |COUNTRY_EFFECTS$/;"	C	type:rh_symbol_type
+COUNTRY_MODIFIERS	Parser/Type_def.ml	/^    |COUNTRY_MODIFIERS$/;"	C	type:rh_symbol_type
+COUNTRY_MTTH	Parser/Type_def.ml	/^    |COUNTRY_MTTH$/;"	C	type:rh_symbol_type
+Commons	Victoria2/commons.ml	/^open TypeDef$/;"	M
+Conditions	Victoria2/conditions.ml	/^open SymbolTable$/;"	M
+DATE	Lexer/Lexer.ml	/^|DATE$/;"	C	type:lexem_type
+Decisions	Victoria2/decisions.ml	/^open TypeDef$/;"	M
+END_OF_FILE	Parser/Type_def.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
+END_OF_FILE	TypeDef/TypeDef.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
+EQ	Lexer/Lexer.ml	/^|EQ$/;"	C	type:lexem_type
+EXPR_EXCEPTION	Parser/Type_def.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
+EXPR_EXCEPTION	TypeDef/TypeDef.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
+Effects	Victoria2/effects.ml	/^open SymbolTable$/;"	M
+Events	Victoria2/events.ml	/^open SymbolTable$/;"	M
+FLOAT	Lexer/Lexer.ml	/^|FLOAT $/;"	C	type:lexem_type
+FunctionalHashTable	TypeDef/TypeDef.ml	/^module FunctionalHashTable (K : Map.OrderedType) : sig$/;"	M
+INT	Lexer/Lexer.ml	/^|INT $/;"	C	type:lexem_type
+KEYWORD	Lexer/Lexer.ml	/^|KEYWORD $/;"	C	type:lexem_type
+KEYWORD_SYMBOL	Parser/Type_def.ml	/^    |KEYWORD_SYMBOL of string $/;"	C	type:lh_symbol_type
+KEYWORD_SYMBOL	TypeDef/TypeDef.ml	/^    |KEYWORD_SYMBOL of string $/;"	C	type:lh_symbol_type
+LB	Lexer/Lexer.ml	/^|LB$/;"	C	type:lexem_type
+LEXEM	Parser/Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
+LEXEM	TypeDef/TypeDef.ml	/^    |LEXEM of lexem$/;"	C	type:expr
+LEXEM_LIST	Parser/Type_def.ml	/^    |LEXEM_LIST of expr list$/;"	C	type:expr
+LEXEM_LIST	TypeDef/TypeDef.ml	/^    |LEXEM_LIST of expr list$/;"	C	type:expr
+LEX_ERROR	Lexer/Lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
+LHS	Parser/Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
+LHS	TypeDef/TypeDef.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
+Lexer	Lexer/Lexer.ml	/^type lexem_type =$/;"	M
+M	TypeDef/TypeDef.ml	/^  module M = Map.Make(K)$/;"	M
+MULTIPLE_CHOICE	Parser/Type_def.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
+MULTIPLE_CHOICE	TypeDef/TypeDef.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
+Modifiers	Victoria2/modifiers.ml	/^open SymbolTable$/;"	M
+Mtth	Victoria2/mtth.ml	/^open SymbolTable$/;"	M
+NONE	Parser/Type_def.ml	/^    | NONE $/;"	C	type:expected_value
+NONE	TypeDef/TypeDef.ml	/^    | NONE $/;"	C	type:expected_value
+NUMBER	Parser/Type_def.ml	/^    |NUMBER$/;"	C	type:rh_symbol_type
+NUMBER	TypeDef/TypeDef.ml	/^    |NUMBER$/;"	C	type:rh_symbol_type
+Optional	Parser/Type_def.ml	/^    |Optional $/;"	C	type:symbol_amount
+Optional	TypeDef/TypeDef.ml	/^    |Optional $/;"	C	type:symbol_amount
+PARAM_LIST	Parser/Type_def.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
+PARAM_LIST	TypeDef/TypeDef.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
+PARAM_OPTION	Parser/Type_def.ml	/^    |PARAM_OPTION of rh_symbol_type list$/;"	C	type:rh_symbol_type
+PARAM_OPTION	TypeDef/TypeDef.ml	/^    |PARAM_OPTION of rh_symbol_type list$/;"	C	type:rh_symbol_type
+PARAM_VALUE	Parser/Type_def.ml	/^    |PARAM_VALUE of lexem_type $/;"	C	type:rh_symbol_type
+PARAM_VALUE	TypeDef/TypeDef.ml	/^    |PARAM_VALUE of lexem_type $/;"	C	type:rh_symbol_type
+POP_CONDITIONS	Parser/Type_def.ml	/^    |POP_CONDITIONS$/;"	C	type:rh_symbol_type
+POP_EFFECTS	Parser/Type_def.ml	/^    |POP_EFFECTS$/;"	C	type:rh_symbol_type
+PROVINCE_CONDITIONS	Parser/Type_def.ml	/^    |PROVINCE_CONDITIONS$/;"	C	type:rh_symbol_type
+PROVINCE_EFFECTS	Parser/Type_def.ml	/^    |PROVINCE_EFFECTS$/;"	C	type:rh_symbol_type
+PROVINCE_ID	Parser/Type_def.ml	/^    |PROVINCE_ID$/;"	C	type:rh_symbol_type
+PROVINCE_ID	TypeDef/TypeDef.ml	/^    |PROVINCE_ID$/;"	C	type:rh_symbol_type
+PROVINCE_MODIFIERS	Parser/Type_def.ml	/^    |PROVINCE_MODIFIERS$/;"	C	type:rh_symbol_type
+PROVINCE_MTTH	Parser/Type_def.ml	/^    |PROVINCE_MTTH$/;"	C	type:rh_symbol_type
+Parser	Parser/Parser.ml	/^open Lexer$/;"	M
+RB	Lexer/Lexer.ml	/^|RB$/;"	C	type:lexem_type
+RHS	Parser/Type_def.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
+RHS	TypeDef/TypeDef.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
+Required	Parser/Type_def.ml	/^    |Required of int$/;"	C	type:symbol_amount
+Required	TypeDef/TypeDef.ml	/^    |Required of int$/;"	C	type:symbol_amount
+SCOPE	Lexer/Lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
+STATE_CONDITIONS	Parser/Type_def.ml	/^    |STATE_CONDITIONS$/;"	C	type:rh_symbol_type
+STATE_EFFECTS	Parser/Type_def.ml	/^    |STATE_EFFECTS$/;"	C	type:rh_symbol_type
+STRING	Lexer/Lexer.ml	/^|STRING$/;"	C	type:lexem_type
+SubTable	TypeDef/TypeDef.ml	/^    |SubTable of string$/;"	C	type:rh_symbol_type
+SymbolTable	SymbolTable/SymbolTable.ml	/^let symbol_table_init symbols =$/;"	M
+TAG	Lexer/Lexer.ml	/^|TAG  $/;"	C	type:lexem_type
+TYPE_MISHMASH	Parser/Type_def.ml	/^    |TYPE_MISHMASH of string  * lexem_type * lexem_type $/;"	C	type:exception_type
+TYPE_MISHMASH	TypeDef/TypeDef.ml	/^    |TYPE_MISHMASH of string  * lexem_type * lexem_type $/;"	C	type:exception_type
+TYPE_SYMBOL	Parser/Type_def.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
+TYPE_SYMBOL	TypeDef/TypeDef.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
+TypeDef	TypeDef/TypeDef.ml	/^open Lexer$/;"	M
+Type_def	Parser/Type_def.ml	/^open Lexer$/;"	M
+Type_verify	SyntaxChecker/type_verify.ml	/^open SymbolTable$/;"	M
+UNEXPECTED_ASSIGNMENT	Parser/Type_def.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
+UNEXPECTED_ASSIGNMENT	TypeDef/TypeDef.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
+UNEXPECTED_ASSIGN_LIST	Parser/Type_def.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
+UNEXPECTED_ASSIGN_LIST	TypeDef/TypeDef.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
+UNEXPECTED_EXPR	Parser/Type_def.ml	/^    |UNEXPECTED_EXPR of expr$/;"	C	type:exception_type
+UNEXPECTED_EXPR	TypeDef/TypeDef.ml	/^    |UNEXPECTED_EXPR of expr$/;"	C	type:exception_type
+UNEXPECTED_EXPR_LIST	Parser/Type_def.ml	/^    |UNEXPECTED_EXPR_LIST of expr list$/;"	C	type:exception_type
+UNEXPECTED_EXPR_LIST	TypeDef/TypeDef.ml	/^    |UNEXPECTED_EXPR_LIST of expr list$/;"	C	type:exception_type
+UNEXPECTED_LEFT_BRACKET	Parser/Type_def.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_LEFT_BRACKET	TypeDef/TypeDef.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_LEXEM	Parser/Type_def.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type $/;"	C	type:exception_type
+UNEXPECTED_LEXEM	TypeDef/TypeDef.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type $/;"	C	type:exception_type
+UNEXPECTED_RIGHT_BRACKET	Parser/Type_def.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_RIGHT_BRACKET	TypeDef/TypeDef.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
+UNKNOWN_IDENTIFIER	Parser/Type_def.ml	/^    |UNKNOWN_IDENTIFIER of string $/;"	C	type:exception_type
+UNKNOWN_IDENTIFIER	TypeDef/TypeDef.ml	/^    |UNKNOWN_IDENTIFIER of string $/;"	C	type:exception_type
+VALUE_LIST	Parser/Type_def.ml	/^    |VALUE_LIST of rh_symbol_type $/;"	C	type:rh_symbol_type
+VALUE_LIST	TypeDef/TypeDef.ml	/^    |VALUE_LIST of rh_symbol_type $/;"	C	type:rh_symbol_type
+Victoria2	Victoria2/victoria2.ml	/^open SymbolTable$/;"	M
+add	TypeDef/TypeDef.ml	/^  let add table key value = M.add key value table$/;"	f
+append_table	SymbolTable/SymbolTable.ml	/^let append_table symbol_table symbols = $/;"	f
+assignment	Parser/Parser.ml	/^and assignment lex = match lex with$/;"	f
+assignment	Parser/Type_def.ml	/^and assignment = $/;"	t
+assignment	TypeDef/TypeDef.ml	/^and assignment = $/;"	t
+assignment_list	Parser/Parser.ml	/^and assignment_list lexems = $/;"	f
+assignments	Parser/Parser.ml	/^let rec assignments ls = $/;"	f
+bookmarks	Victoria2/commons.ml	/^let bookmarks = symbol_table_init [$/;"	v
+buildings	Victoria2/commons.ml	/^let buildings = symbol_table_init [$/;"	v
+cb_types	Victoria2/commons.ml	/^let cb_types = symbol_table_init [$/;"	v
+chars_to_lexem	Lexer/Lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
+countries	Victoria2/commons.ml	/^let countries = symbol_table_init [$/;"	v
+country_colors	Victoria2/commons.ml	/^let country_colors = symbol_table_init [$/;"	v
+country_conditions	Victoria2/conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
+country_effects	Victoria2/effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
+country_modifiers	Victoria2/modifiers.ml	/^let country_modifiers = symbol_table_init [$/;"	v
+country_mtth	Victoria2/mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
+crime	Victoria2/commons.ml	/^let crime = symbol_table_init [$/;"	v
+current_length	SyntaxChecker/type_verify.ml	/^        let current_length = List.length hd in$/;"	v
+decisions	Victoria2/decisions.ml	/^let decisions = symbol_table_init [$/;"	v
+empty	TypeDef/TypeDef.ml	/^  let empty = M.empty$/;"	v
+event_modifiers	Victoria2/commons.ml	/^let event_modifiers = symbol_table_init [$/;"	v
+events	Victoria2/events.ml	/^let events = symbol_table_init [$/;"	v
+exception_iden_string	Parser/Parser.ml	/^and exception_iden_string exp = match exp with$/;"	f
+exception_lists_string	Parser/Parser.ml	/^and exception_lists_string ls = $/;"	f
+exception_string	Parser/Parser.ml	/^and exception_string (exp : exception_value) : string = $/;"	f
+exception_type	Parser/Type_def.ml	/^and exception_type = $/;"	t
+exception_type	TypeDef/TypeDef.ml	/^and exception_type = $/;"	t
+exception_value	Parser/Type_def.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exception_value	TypeDef/TypeDef.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exceptions_string	Parser/Parser.ml	/^and exceptions_string ls = $/;"	f
+expected_value	Parser/Type_def.ml	/^and expected_value =$/;"	t
+expected_value	TypeDef/TypeDef.ml	/^and expected_value =$/;"	t
+expr	Parser/Type_def.ml	/^type expr = $/;"	t
+expr	TypeDef/TypeDef.ml	/^type expr = $/;"	t
+expression	Parser/Parser.ml	/^and expression lexems = $/;"	f
+find	TypeDef/TypeDef.ml	/^  let find table key = $/;"	f
+get_errors	Parser/Parser.ml	/^let get_errors assignments = $/;"	f
+goods	Victoria2/commons.ml	/^let goods = symbol_table_init [$/;"	v
+ideologies	Victoria2/commons.ml	/^let ideologies = symbol_table_init [$/;"	v
+issues	Victoria2/commons.ml	/^let issues = symbol_table_init [$/;"	v
+lexem	Lexer/Lexer.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
+lexem_list	Parser/Parser.ml	/^and lexem_list lexems = $/;"	f
+lexem_to_str	Lexer/Lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
+lexem_type	Lexer/Lexer.ml	/^type lexem_type =$/;"	t
+lexer	Lexer/Lexer.ml	/^let lexer f = $/;"	f
+lh_symbol_type	Parser/Type_def.ml	/^and lh_symbol_type = $/;"	t
+lh_symbol_type	TypeDef/TypeDef.ml	/^and lh_symbol_type = $/;"	t
+ls_to_str	Lexer/Lexer.ml	/^let ls_to_str ls = $/;"	f
+match_reg	Lexer/Lexer.ml	/^let match_reg reg str = $/;"	f
+national_focus	Victoria2/commons.ml	/^let national_focus =  symbol_table_init [$/;"	v
+nationalvalue	Victoria2/commons.ml	/^let nationalvalue = symbol_table_init [$/;"	v
+on_actions	Victoria2/commons.ml	/^let on_actions = symbol_table_init [$/;"	v
+pop_conditions	Victoria2/conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
+pop_effects	Victoria2/effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
+pop_types	Victoria2/commons.ml	/^let pop_types = symbol_table_init [$/;"	v
+print_lexem	Lexer/Lexer.ml	/^let print_lexem lexem = $/;"	f
+print_lexems	Lexer/Lexer.ml	/^let print_lexems lexems = $/;"	f
+production_type	Victoria2/commons.ml	/^let production_type = symbol_table_init [$/;"	v
+province_conditions	Victoria2/conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
+province_effects	Victoria2/effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
+province_modifiers	Victoria2/modifiers.ml	/^let province_modifiers = symbol_table_init [$/;"	v
+province_mtth	Victoria2/mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
+rebel_type	Victoria2/commons.ml	/^let rebel_type = symbol_table_init [$/;"	v
+religion	Victoria2/commons.ml	/^let religion = symbol_table_init [$/;"	v
+remove	TypeDef/TypeDef.ml	/^  let remove table key = M.remove key table$/;"	f
+rh_symbol_type	Parser/Type_def.ml	/^and rh_symbol_type = $/;"	t
+rh_symbol_type	TypeDef/TypeDef.ml	/^and rh_symbol_type = $/;"	t
+shortest_list	SyntaxChecker/type_verify.ml	/^let shortest_list lists =$/;"	f
+split_list	SyntaxChecker/type_verify.ml	/^let split_list n ls =$/;"	f
+state_conditions	Victoria2/conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
+state_effects	Victoria2/effects.ml	/^let state_effects = symbol_table_init [$/;"	v
+static_modifiers	Victoria2/commons.ml	/^let static_modifiers = symbol_table_init [$/;"	v
+string_assignment	Parser/Parser.ml	/^and string_assignment assignment = match assignment with  $/;"	f
+string_assignment_list	Parser/Parser.ml	/^and string_assignment_list al =$/;"	f
+string_expected_value	Parser/Parser.ml	/^and string_expected_value v = match v with$/;"	f
+string_expr	Parser/Parser.ml	/^and string_expr expr = match expr with$/;"	f
+string_lexem	Lexer/Lexer.ml	/^let string_lexem lex_value = $/;"	f
+string_lexems	Lexer/Lexer.ml	/^let string_lexems lexems = $/;"	f
+string_lh_symbol	Parser/Parser.ml	/^and string_lh_symbol lh = match lh with$/;"	f
+string_rh_symbol	Parser/Parser.ml	/^and string_rh_symbol pv = match pv with$/;"	f
+string_symbol_table	Parser/Parser.ml	/^and string_symbol_table symbol_table =$/;"	f
+symbol_amount	Parser/Type_def.ml	/^and symbol_amount =$/;"	t
+symbol_amount	TypeDef/TypeDef.ml	/^and symbol_amount =$/;"	t
+symbol_table_from_rhv	SyntaxChecker/type_verify.ml	/^let rec symbol_table_from_rhv rhv = match rhv with$/;"	f
+symbol_table_init	SymbolTable/SymbolTable.ml	/^let symbol_table_init symbols =$/;"	f
+t	TypeDef/TypeDef.ml	/^  type 'v t = 'v M.t$/;"	t
+tech_schools	Victoria2/commons.ml	/^let tech_schools = symbol_table_init [$/;"	v
+traits	Victoria2/commons.ml	/^let traits = symbol_table_init [$/;"	v
+triggered_modifiers	Victoria2/commons.ml	/^let triggered_modifiers = symbol_table_init [$/;"	v
+type_verify	SyntaxChecker/type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f
+victoria2	Victoria2/victoria2.ml	/^let victoria2 = symbol_table_init [$/;"	v
