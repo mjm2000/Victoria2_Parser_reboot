@@ -49,12 +49,14 @@ and exception_type =
 and lh_symbol_type = 
     |KEYWORD_SYMBOL of string 
     |TYPE_SYMBOL of lexem_type
+    |Catalog_Left of string * lh_symbol_type
 (*add label*)
 and symbol_amount =
     |Required of int
     |Optional 
 
 and rh_symbol_type = 
+    |Catalog_Right of string * rh_symbol_type
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
     |NUMBER
@@ -69,26 +71,3 @@ and rh_symbol_type =
 
 
 and exception_value = expected_value * exception_type * (int * int)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

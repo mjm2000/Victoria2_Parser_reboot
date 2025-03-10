@@ -109,10 +109,13 @@ let rec type_verify_r symbol_table assignments exceptions scope =
      in
      let rec assign_type_check expected_rh_type exceptions =  
         match expected_rh_type with
+        |NUMBER ->
+            if rh_type = FLOAT || rh_type = INT then 
+                exceptions
+            else 
+                let e = (TYPE_MISHMASH(lh_value, FLOAT, rh_type)) in
+                ((RHS [PARAM_VALUE(FLOAT)],e,cords)::exceptions)
         |PARAM_VALUE(erh_type) when erh_type = rh_type  -> 
-            (*
-            Printf.printf "%s:%d %d scope:%s\n" lh_value x y (Pre_parser.string_expected_value scope);
-            *)
             exceptions 
         |(PARAM_VALUE(erh_type) as epv) when erh_type !=  rh_type  ->
            let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
