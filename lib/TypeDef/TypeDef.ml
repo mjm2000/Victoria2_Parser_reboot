@@ -49,7 +49,7 @@ and exception_type =
 and lh_symbol_type = 
     |KEYWORD_SYMBOL of string 
     |TYPE_SYMBOL of lexem_type
-    |Catalog_Left of string * lh_symbol_type
+    |CatalogLeft of string * lh_symbol_type
 (*add label*)
 and symbol_amount =
     |Required of int
