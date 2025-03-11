@@ -57,6 +57,7 @@ and symbol_amount =
     |Optional 
 
 and rh_symbol_type = 
+    |DefinedTypeRight of string
     |Catalog_Right of string * rh_symbol_type
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
