@@ -62,6 +62,11 @@ and rh_symbol_type =
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
     |NUMBER
+    |WholeNumber
+    |Integer
+    |PositiveDecimal
+    |NegativeDecimal
+    |Decimal
     |PROVINCE_ID
     |PARAM_OPTION of rh_symbol_type list
     |VALUE_LIST of rh_symbol_type 
