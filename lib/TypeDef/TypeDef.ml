@@ -62,6 +62,7 @@ and rh_symbol_type =
     |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t
     |PARAM_VALUE of lexem_type 
     |LINK
+    |Inherit of (lh_symbol_type * rh_symbol_type) list * string list
     |NUMBER
     |WholeNumber
     |Integer
