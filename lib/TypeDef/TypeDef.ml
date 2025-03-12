@@ -63,6 +63,7 @@ and rh_symbol_type =
     |PARAM_VALUE of lexem_type 
     |LINK
     |Inherit of (lh_symbol_type * rh_symbol_type) list * string list
+    |Literal of string
     |NUMBER
     |WholeNumber
     |Integer
