@@ -42,7 +42,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
     | _ -> []
 
 let type_verify outer_symbol_table directory=
-let rec type_verify_r symbol_table assignments exceptions scope = 
+let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type = 
