@@ -1,5 +1,5 @@
 (library
  (name ParadoxModErrorChecker)
- (libraries re2 victoria2)
+ (libraries re2)
  )
 (include_subdirs no)
