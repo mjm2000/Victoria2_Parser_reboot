@@ -41,7 +41,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
         List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
     | _ -> []
 
-let type_verify symbol_table assignments =
+let type_verify outer_symbol_table directory=
 let rec type_verify_r symbol_table assignments exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
@@ -198,7 +198,8 @@ let rec type_verify_r symbol_table assignments exceptions scope =
                  )
             in
             get_exceptions symbol_tables None
-         | SubTable(sub_table) -> 
+        |DefinedTypeRight(type_name) as new_scope ->
+            let sub_table = Hashtbl.find outer_symbol_table type_name in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
 
          | (x) -> 
@@ -220,11 +221,14 @@ let rec type_verify_r symbol_table assignments exceptions scope =
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     |ASSIGN_EXCEPTION((expected,exception_val,cords))::rest -> 
         type_verify_r symbol_table rest ((expected,exception_val,cords)::exceptions) scope
-
-    
     | [] -> 
            exceptions
 in
-List.rev (type_verify_r symbol_table assignments [] (RHS([PARAM_LIST(symbol_table)])))
-
+List.map (function  
+    |filepath, symbol_table_key ->
+        let current_context= Hashtbl.find symbol_table_key directory in
+        let lexems = Lexer.lexer filepath in
+        let assignments = Parser.assignments lexems in
+        type_verify_r current_context assignments [] (RHS([DefinedTypeRight(symbol_table_key)])) 
+) directory 
   
