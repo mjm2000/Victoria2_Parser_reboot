@@ -22,7 +22,7 @@ let () =
 
     let output = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths in
     
-    
+    () 
     
     
     
