@@ -1,6 +1,34 @@
 open ParadoxModErrorChecker 
 open Cmdliner
+
+
 let () = 
+     
+
+    
+    let make_arg title shorter doc  = 
+        Arg.(value & opt (some string) None & info [title;shorter] ~doc) 
+    in
+    let game = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
+    let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
+    let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
+
+    
+    let match_game game  = match game with
+    |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
+    |_ -> None
+    in
+    SyntaxChecker.type_verify "Victoria2"
+    ()
+    
+    
+    
+    
+    
+    
+    
+    
+   (*
    let folder_exists folder_path = Sys.file_exists folder_path && Sys.is_directory folder_path
    in
     (*
@@ -197,5 +225,4 @@ let parse_env mod_home lex_output ast_output ast_errors type_errors selected_cat
     let cmd = Cmd.v info term 
     in
     Cmd.eval cmd |> Printf.printf "%i\n";
-     
-     
+    *) 
