@@ -1,5 +1,6 @@
 open ParadoxModErrorChecker 
 open Cmdliner
+open SyntaxChecker
 
 
 let () = 
@@ -18,8 +19,7 @@ let () =
     |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
-    SyntaxChecker.type_verify "Victoria2"
-    ()
+    let output = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths in
     
     
     
