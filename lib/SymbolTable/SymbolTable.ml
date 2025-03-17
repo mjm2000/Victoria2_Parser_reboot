@@ -1,3 +1,6 @@
+open Containers
+
+
 let symbol_table_init symbols =
     let symbol_list_size = List.length symbols in
     let symbol_table = Hashtbl.create symbol_list_size in

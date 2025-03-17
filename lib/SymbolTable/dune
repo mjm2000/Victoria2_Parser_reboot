@@ -1,4 +1,4 @@
 (library
  (name SymbolTable)
- (libraries Parser re2)
+ (libraries Parser re2 containers)
  )
