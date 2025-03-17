@@ -41,7 +41,7 @@ let rec symbol_table_from_rhv rhv = match rhv with
         List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
     | _ -> []
 
-let type_verify outer_symbol_table directory=
+let type_verify outer_symbol_table directory home_dir=
 let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
