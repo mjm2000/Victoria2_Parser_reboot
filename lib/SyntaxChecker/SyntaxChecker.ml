@@ -227,7 +227,7 @@ in
 List.map (function  
     |filepath, (symbol_table_key:string) ->
         let current_context= Hashtbl.find outer_symbol_table symbol_table_key in
-        let lexems = Lexer.lexer filepath in
+        let lexems = Lexer.lexer (Filename.concat home_dir filepath) in
         let assigns:(assignment list) = Parser.assignments lexems in
         type_verify_r current_context assigns [] (RHS([DefinedTypeRight(symbol_table_key)])) 
 ) directory 
