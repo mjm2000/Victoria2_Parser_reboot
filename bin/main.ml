@@ -6,7 +6,7 @@ open SyntaxChecker
 let () = 
      
 
-    
+    (* 
     let make_arg title shorter doc  = 
         Arg.(value & opt (some string) None & info [title;shorter] ~doc) 
     in
@@ -19,7 +19,7 @@ let () =
     |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
-
+    *)
     let output = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths in
     
     () 
