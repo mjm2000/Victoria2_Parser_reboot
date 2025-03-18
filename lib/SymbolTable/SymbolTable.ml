@@ -24,11 +24,11 @@ let append_table symbol_table symbols =
             add_symbols tail
         | [] -> ()
     in
-    add_symbols symbols; 
+    add_symbols symbols;; 
     
 
 let combine_table_pair table_take table_give = 
-  Hashtbl.iter (fun key value -> Hashtbl.replace table_take key value) table_give
+    Hashtbl.iter (fun key value -> Hashtbl.replace table_take key value) table_give ;;
 
 let combine_table_list tables = 
   let table = Hashtbl.create 500 in
@@ -43,4 +43,4 @@ let lookup symbol_table symbol =
 let init_table = Hashtbl.create 1
 
 let member symbol_table symbol = 
-    Hashtbl.mem symbol_table symbol
+    Hashtbl.mem symbol_table symbol;;
