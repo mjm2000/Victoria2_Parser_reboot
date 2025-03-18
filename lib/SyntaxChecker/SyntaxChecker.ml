@@ -35,23 +35,23 @@ let type_verify outer_symbol_table directory home_dir=
         sub_table
 
     | Inherit(appended_symbols,tables) -> 
-        let symbol_tables = List.map (Hashtbl.find outer_symbol_table) tables in
+        let symbol_tables = List.map (lookup outer_symbol_table) tables in
         let table = combine_table_list symbol_tables in
-        List.iter (fun (key,value) -> Hashtbl.add table key value)  appended_symbols;
+        append_table table appended_symbols;
         table
 
 
-    | _ -> Hashtbl.create 0
+    | _ -> init_table
     in
 let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type = 
             match lh_type with
-            |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-               Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
-            |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
-               Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
+            |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
+               Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
+            |any_type when member symbol_table (TYPE_SYMBOL(any_type)) ->  
+               Some (lookup symbol_table (TYPE_SYMBOL(any_type)))
             |_-> None
         in
         let rec assign_type_check (expected_rh_type:rh_symbol_type) ls exceptions =  
@@ -100,11 +100,11 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
     |ASSIGNMENT((lh_type,lh_value,_), LEXEM((rh_type,rh_value,cords)))::rest  ->
      let expected_rh_type = 
          match lh_type with
-         |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-            Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
-         |_ when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)))  -> 
-            Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
-         |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
+         |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
+            Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
+         |_ when (member symbol_table (KEYWORD_SYMBOL(lh_value)))  -> 
+            Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
+         |any_type when member symbol_table (TYPE_SYMBOL(any_type)) ->  
             Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
          |_-> 
             None
