@@ -105,7 +105,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
          |_ when (member symbol_table (KEYWORD_SYMBOL(lh_value)))  -> 
             Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
          |any_type when member symbol_table (TYPE_SYMBOL(any_type)) ->  
-            Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
+            Some ( lookup symbol_table (TYPE_SYMBOL(any_type)))
          |_-> 
             None
      in
@@ -159,10 +159,10 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
     |ASSIGNMENT((lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
         let expected_rh_type = 
             match lh_type with
-            |KEYWORD when (Hashtbl.mem symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-               Hashtbl.find_opt symbol_table (KEYWORD_SYMBOL(lh_value)) 
-            |any_type when Hashtbl.mem symbol_table (TYPE_SYMBOL(any_type)) ->  
-               Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
+            |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
+               Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
+            |any_type when member symbol_table (TYPE_SYMBOL(any_type)) ->  
+               Some( lookup symbol_table (TYPE_SYMBOL(any_type)) )
             |_-> None
         in
 
@@ -201,7 +201,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
             in
             get_exceptions symbol_tables None
         |DefinedTypeRight(type_name) as new_scope ->
-            let sub_table = Hashtbl.find outer_symbol_table type_name in
+            let sub_table = lookup outer_symbol_table type_name in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
 
          | (x) -> 
