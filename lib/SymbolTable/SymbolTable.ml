@@ -36,6 +36,6 @@ let combine_table_list tables =
   table
 
 let lookup symbol_table symbol = 
-    match Hashtbl.find_opt symbol_table symbol with
+    match CCHashtbl.find_opt symbol_table symbol with
     | Some value -> value
     | None -> raise (Invalid_argument ("Symbol " ^ symbol ^ " not found"))
