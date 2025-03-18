@@ -202,7 +202,8 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
             in
             get_exceptions symbol_tables None
         |DefinedTypeRight(type_name) as new_scope ->
-            let sub_table = lookup outer_symbol_table type_name in
+            let rhs = lookup outer_symbol_table type_name in
+            let sub_table = symbol_table_from_rhv sub_table in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
 
          | (x) -> 
