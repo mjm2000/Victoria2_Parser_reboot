@@ -36,10 +36,13 @@ let type_verify outer_symbol_table directory home_dir=
 
     | Inherit(appended_symbols,tables) -> 
         let symbol_tables = List.map (Hashtbl.find outer_symbol_table) tables in
-        combine_table_list symbol_tables
+        let table = combine_table_list symbol_tables in
+        List.iter (fun (key,value) -> Hashtbl.add table key value)  appended_symbols;
+        table
 
 
     | _ -> Hashtbl.create 0
+    in
 let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
