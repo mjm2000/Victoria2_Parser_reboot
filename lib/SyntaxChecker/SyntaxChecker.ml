@@ -59,11 +59,11 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
             match expected_rh_type,ls with
             |_,[] -> exceptions
             |VALUE_LIST(list_erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
-                let cur_type:lexem_type = rh_type in 
+                let cur_type = rh_type in 
                 (match list_erh_type with
-                |PARAM_VALUE(erh_type:lexem_type) when erh_type = cur_type  -> 
+                |PARAM_VALUE(erh_type) when erh_type = cur_type  -> 
                     assign_type_check expected_rh_type rest exceptions
-                |PARAM_VALUE(erh_type:lexem_type) when erh_type !=  rh_type  ->
+                |PARAM_VALUE(erh_type) when erh_type !=  rh_type  ->
                     let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
                     let new_exceptions=((RHS [PARAM_VALUE(erh_type)],e,cords)::exceptions) in
                     assign_type_check expected_rh_type rest new_exceptions
