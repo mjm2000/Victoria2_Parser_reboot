@@ -1,5 +1,5 @@
 open Containers
-
+open CCHashtbl
 
 let symbol_table_init symbols =
     let symbol_list_size = List.length symbols in
