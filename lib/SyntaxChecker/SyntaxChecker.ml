@@ -26,22 +26,20 @@ let split_list n ls =
 
     split_list_r [] ls 0
 
-let rec symbol_table_from_rhv rhv = match rhv with
-    | (PARAM_LIST(sub_table))->
-        [sub_table]
-    | PARAM_OPTION(options) ->
-        List.fold_left (fun acc rh ->
-            (symbol_table_from_rhv rh)@acc
-        ) [] options 
 
-    | APPEND_SYMBOLS(appended_symbols,param_value) -> 
 
-        let param_symbol_tables = symbol_table_from_rhv param_value  
-        in
-        List.map (fun symbol_table -> append_table symbol_table appended_symbols) param_symbol_tables
-    | _ -> []
 
 let type_verify outer_symbol_table directory home_dir=
+    let rec symbol_table_from_rhv rhv = match rhv with
+    | (PARAM_LIST(sub_table))->
+        sub_table
+
+    | Inherit(appended_symbols,param_value) -> 
+        let symbol_tables = List.map (Hashtbl.find outer_symbol_table) appended_symbols in
+        combine_table_list symbol_tables
+
+
+    | _ -> Hashtbl.create 0
 let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->

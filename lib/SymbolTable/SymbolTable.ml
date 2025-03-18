@@ -26,3 +26,11 @@ let append_table symbol_table symbols =
     in
     add_symbols symbols; 
     symbol_table
+
+let combine_table_pair table_take table_give = 
+  Hashtbl.iter (fun key value -> Hashtbl.replace table_take key value) table_give;
+
+let combine_table_list tables = 
+  let table = Hashtbl.create 500 in
+  List.iter (fun t -> combine_table_pair table t) tables;
+  table
