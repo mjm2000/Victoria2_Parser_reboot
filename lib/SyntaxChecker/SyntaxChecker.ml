@@ -1,5 +1,6 @@
 open SymbolTable
 open TypeDef
+open Containers
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
