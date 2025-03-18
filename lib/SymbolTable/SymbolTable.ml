@@ -25,7 +25,7 @@ let append_table symbol_table symbols =
         | [] -> ()
     in
     add_symbols symbols; 
-    symbol_table
+    
 
 let combine_table_pair table_take table_give = 
   Hashtbl.iter (fun key value -> Hashtbl.replace table_take key value) table_give;;
@@ -36,6 +36,11 @@ let combine_table_list tables =
   table
 
 let lookup symbol_table symbol = 
-    match CCHashtbl.find_opt symbol_table symbol with
+    match Hashtbl.find_opt symbol_table symbol with
     | Some value -> value
     | None -> raise (Invalid_argument ("Symbol " ^ symbol ^ " not found"))
+
+let init_table = Hashtbl.create 1
+
+let member symbol_table symbol = 
+    Hashtbl.mem symbol_table symbol
