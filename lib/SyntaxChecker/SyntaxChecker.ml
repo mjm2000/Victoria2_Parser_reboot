@@ -34,8 +34,8 @@ let type_verify outer_symbol_table directory home_dir=
     | (PARAM_LIST(sub_table))->
         sub_table
 
-    | Inherit(appended_symbols,param_value) -> 
-        let symbol_tables = List.map (Hashtbl.find outer_symbol_table) appended_symbols in
+    | Inherit(appended_symbols,tables) -> 
+        let symbol_tables = List.map (Hashtbl.find outer_symbol_table) tables in
         combine_table_list symbol_tables
 
 
