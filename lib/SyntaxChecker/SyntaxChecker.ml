@@ -30,7 +30,7 @@ let split_list n ls =
 
 
 let type_verify outer_symbol_table directory home_dir=
-    let rec symbol_table_from_rhv rhv = match rhv with
+    let symbol_table_from_rhv rhv = match rhv with
     | (PARAM_LIST(sub_table))->
         sub_table
 
