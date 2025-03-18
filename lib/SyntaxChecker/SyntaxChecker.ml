@@ -30,12 +30,13 @@ let split_list n ls =
 
 
 let type_verify (outer_symbol_table:(string , rh_symbol_type) Hashtbl.t) directory home_dir=
-    let symbol_table_from_rhv rhv = match rhv with
+    let rec symbol_table_from_rhv rhv = match rhv with
     | (PARAM_LIST(sub_table))->
         sub_table
 
     | Inherit(appended_symbols,tables) -> 
-        let symbol_tables = List.map (lookup outer_symbol_table) tables in
+        let rhs = List.map (lookup outer_symbol_table) tables in
+        let symbol_tables = List.map symbol_table_from_rhv rhs in 
         let table = combine_table_list symbol_tables in
         append_table table appended_symbols;
         table
