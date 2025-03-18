@@ -1,3 +1,4 @@
+open Containers
 
 
 let symbol_table_init symbols =
