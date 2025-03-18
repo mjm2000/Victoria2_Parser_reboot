@@ -40,8 +40,8 @@ let type_verify outer_symbol_table directory home_dir=
         append_table table appended_symbols;
         table
 
-
-    | _ -> init_table
+    | _ -> 
+        raise (Failure "Invalid symbol type") 
     in
 let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
     match assignments with
