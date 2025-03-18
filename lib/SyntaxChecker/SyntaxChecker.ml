@@ -1,6 +1,7 @@
 open SymbolTable
 open TypeDef
 open Containers
+open Lexer
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
@@ -55,39 +56,37 @@ let rec type_verify_r symbol_table (assignments:assignment list) exceptions scop
                Hashtbl.find_opt symbol_table (TYPE_SYMBOL(any_type))
             |_-> None
         in
-        let rec assign_type_check (expected_rh_type:rh_symbol_type) ls exceptions =  
-            match expected_rh_type,ls with
-            |_,[] -> exceptions
-            |VALUE_LIST(list_erh_type),(LEXEM(rh_type,rh_value,cords)::rest)  -> 
-                let cur_type = rh_type in 
-                (match list_erh_type with
-                |PARAM_VALUE(erh_type) when erh_type = cur_type  -> 
-                    assign_type_check expected_rh_type rest exceptions
-                |PARAM_VALUE(erh_type) when erh_type !=  rh_type  ->
-                    let e = (TYPE_MISHMASH(lh_value, erh_type, rh_type)) in
-                    let new_exceptions=((RHS [PARAM_VALUE(erh_type)],e,cords)::exceptions) in
-                    assign_type_check expected_rh_type rest new_exceptions
-                |PARAM_OPTION(options) ->
-                    let rec shortest_exception_list_r options = match options with 
-                        |[] -> ((RHS options,UNEXPECTED_LEXEM(rh_value,rh_type),cords)::exceptions)
-                        |top::rest_types ->
-                            (match (assign_type_check top rest []) with
-                            |[] -> exceptions 
-                            |_-> shortest_exception_list_r rest_types 
-                            )
-                    in
-                    let exceptions = shortest_exception_list_r options in
-                    assign_type_check expected_rh_type rest exceptions
-                |_ ->
-                    let e = UNEXPECTED_LEXEM(rh_value,rh_type) in
-                    let expected = (RHS [expected_rh_type]) in
-                    ((expected,e,cords)::exceptions)
-                )
-            |_,_ -> 
-                let e = UNEXPECTED_EXPR_LIST(ls) in
-                let expected = (RHS [expected_rh_type]) in
-                let new_exceptions =((expected,e,assign_cords)::exceptions) in
-                assign_type_check expected_rh_type ls new_exceptions
+        let rec assign_type_check (expected_rh_type : rh_symbol_type) ls exceptions lh_value =
+        match expected_rh_type, ls with
+        | _, [] -> exceptions
+        | VALUE_LIST (list_erh_type), (LEXEM (rh_type, rh_value, cords) :: rest) ->
+      let cur_type : lexem_type = rh_type in
+      (match (list_erh_type : rh_symbol_type) with
+       | PARAM_VALUE (erh_type : lexem_type) when erh_type = cur_type ->
+           assign_type_check expected_rh_type rest exceptions lh_value
+       | PARAM_VALUE (erh_type : lexem_type) when erh_type != rh_type ->
+           let e = (TYPE_MISHMASH (lh_value, erh_type, rh_type)) in
+           let new_exceptions = ((RHS [PARAM_VALUE (erh_type)], e, cords) :: exceptions) in
+           assign_type_check expected_rh_type rest new_exceptions lh_value
+       | PARAM_OPTION (options) ->
+           let rec shortest_exception_list_r options = match options with
+             | [] -> ((RHS options, UNEXPECTED_LEXEM (rh_value, rh_type), cords) :: exceptions)
+             | top :: rest_types ->
+                 (match assign_type_check top rest [] lh_value with
+                  | [] -> exceptions
+                  | _ -> shortest_exception_list_r rest_types)
+           in
+           let exceptions = shortest_exception_list_r options in
+           assign_type_check expected_rh_type rest exceptions lh_value
+       | _ ->
+           let e = UNEXPECTED_LEXEM (rh_value, rh_type) in
+           let expected = (RHS [expected_rh_type]) in
+           ((expected, e, cords) :: exceptions)
+      )
+  | _, _ ->
+      let e = UNEXPECTED_EXPR_LIST (ls) in
+      let expected = (RHS [expected_rh_type]) in
+      ((expected, e, assign_cords) :: exceptions)
 
         in
         (match expected_rh_type with
