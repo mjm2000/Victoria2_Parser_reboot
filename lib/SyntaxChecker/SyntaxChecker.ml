@@ -1,7 +1,6 @@
 open SymbolTable
 open TypeDef
 open Containers
-open Lexer
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
