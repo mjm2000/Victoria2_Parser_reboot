@@ -34,3 +34,8 @@ let combine_table_list tables =
   let table = Hashtbl.create 500 in
   List.iter (fun t -> combine_table_pair table t) tables;
   table
+
+let lookup symbol_table symbol = 
+    match Hashtbl.find_opt symbol_table symbol with
+    | Some value -> value
+    | None -> raise (Invalid_argument ("Symbol " ^ symbol ^ " not found"))
