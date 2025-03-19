@@ -30,6 +30,7 @@ and lh_symbol_type =
     |TYPE_SYMBOL of lexem_type
     |DefinedTypeLeft of string
     |CatalogLeft of string * lh_symbol_type
+    |Definition of string
 (*add label*)
 and symbol_amount =
     |Required of int
