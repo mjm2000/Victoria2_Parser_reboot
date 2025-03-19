@@ -1,4 +1,4 @@
-
+open TypeDef
 
 let symbol_table_init symbols =
     let symbol_list_size = List.length symbols in
@@ -34,7 +34,7 @@ let combine_table_list tables =
   List.iter (fun t -> combine_table_pair table t) tables;
   table
 
-let lookup symbol_table symbol = 
+let lookup symbol_table symbol:lh_value = 
     match Hashtbl.find_opt symbol_table symbol with
     | Some value -> value
     | None -> raise (Invalid_argument ("Symbol  not found"))
