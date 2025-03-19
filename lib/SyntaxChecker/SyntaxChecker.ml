@@ -44,7 +44,7 @@ let type_verify (outer_symbol_table:(string , rh_symbol_type) Hashtbl.t) directo
     | _ -> 
         raise (Failure "Invalid symbol type") 
     in
-let rec type_verify_r symbol_table (assignments:assignment list) exceptions scope = 
+let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type = 
