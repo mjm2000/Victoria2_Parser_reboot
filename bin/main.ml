@@ -1,5 +1,3 @@
-open ParadoxModErrorChecker 
-open Cmdliner
 open SyntaxChecker
 
 
@@ -14,6 +12,8 @@ let () =
     let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
 
+open ParadoxModErrorChecker 
+open Cmdliner
     
     let match_game game  = match game with
     |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
