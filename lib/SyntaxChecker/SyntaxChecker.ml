@@ -50,7 +50,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
-               Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)) )
+               Some (lookup symbol_table (KEYWORD_SYMBOL(lh_value)))
             |any_type when member symbol_table (TYPE_SYMBOL(any_type)) ->  
                Some (lookup symbol_table (TYPE_SYMBOL(any_type)))
             |_-> None
