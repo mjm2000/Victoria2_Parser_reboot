@@ -34,10 +34,10 @@ let combine_table_list tables =
   List.iter (fun t -> combine_table_pair table t) tables;
   table
 
-let lookup symbol_table (symbol:lh_symbol_type) = 
-    match Hashtbl.find_opt symbol_table symbol with
-    | Some value -> value
-    | None -> raise (Invalid_argument ("Symbol  not found"))
+
+
+
+
 
 
 let member symbol_table symbol = 

@@ -1,8 +1,13 @@
 open SymbolTable
 open TypeDef
+
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
 
+let lookup symbol_table (symbol:lh_symbol_type) = 
+    match Hashtbl.find_opt symbol_table symbol with
+    | Some value -> value
+    | None -> raise (Invalid_argument ("Symbol" ^ (Parser.string_lh_symbol symbol) ^"not found"))
 let shortest_list lists =
   let rec find_shortest (shortest, shortest_len) = function
     | [] -> shortest
