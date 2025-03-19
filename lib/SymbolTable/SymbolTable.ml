@@ -37,7 +37,7 @@ let combine_table_list tables =
 let lookup symbol_table symbol = 
     match Hashtbl.find_opt symbol_table symbol with
     | Some value -> value
-    | None -> raise (Invalid_argument ("Symbol" ^symbol^ "not found"))
+    | None -> raise (Invalid_argument ("Symbol  not found"))
 
 
 let member symbol_table symbol = 
