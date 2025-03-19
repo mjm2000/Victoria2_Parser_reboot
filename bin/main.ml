@@ -20,7 +20,7 @@ open Cmdliner
     |_ -> None
     in
     *)
-    let exceptions:(TypeDef.exception_value list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths 
+    let exceptions:(TypeDef.exception_value list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths "/mnt/c/Users/computer/Desktop/victoria_2_parser/HFM/"
     in
     List.iter (fun x -> x
     |> Parser.exceptions_string  
