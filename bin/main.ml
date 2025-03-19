@@ -1,10 +1,10 @@
 open SyntaxChecker
 
+open Cmdliner
 
 let () = 
      
 
-    (* 
     let make_arg title shorter doc  = 
         Arg.(value & opt (some string) None & info [title;shorter] ~doc) 
     in
@@ -12,16 +12,29 @@ let () =
     let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
 
-open ParadoxModErrorChecker 
-open Cmdliner
     
+(*
     let match_game game  = match game with
     |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
-    *)
+*)
+    let doc = "Paradox Mod Checker" in
+    let info = Cmd.info "" ~doc in
     let exceptions:(TypeDef.exception_value list list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths "/mnt/c/Users/computer/Desktop/victoria_2_parser/HFM/"
     in
+    let term = Term.(const (fun x y z -> 
+        match x,y,z with
+        |Some game, Some mod_home, Some game_home -> Printf.printf "Game:%s\nMod:%s\nGame:%s\n" game mod_home game_home
+        |_,_,_ -> Printf.printf "No Game\n"
+        )
+    $ game $ mod_home $ game_home) 
+    in
+    let cmd = Cmd.v info term 
+    in
+    Cmd.eval cmd |> Printf.printf "%i\n";
+
+
     List.iter (fun x -> x
     |> Parser.exceptions_string  
     |> Printf.fprintf stdout "%s\n";)
