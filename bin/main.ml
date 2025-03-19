@@ -20,9 +20,12 @@ open Cmdliner
     |_ -> None
     in
     *)
-    type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths 
+    let exceptions = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths 
+    in
+    List.iter (fun x -> x
     |> Parser.exceptions_string  
     |> Printf.fprintf stdout "%s\n";
+    ) exceptions;
     () 
     
     
