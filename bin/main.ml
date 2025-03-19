@@ -22,9 +22,11 @@ open Cmdliner
     *)
     let exceptions:(TypeDef.exception_value list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths "/mnt/c/Users/computer/Desktop/victoria_2_parser/HFM/"
     in
-    List.iter (fun x -> x
-    |> Parser.exceptions_string  
-    |> Printf.fprintf stdout "%s\n";
+    List.iter (fun y ->
+        List.iter (fun x -> x
+        |> Parser.exceptions_string  
+        |> Printf.fprintf stdout "%s\n";
+        ) y;
     ) exceptions;
     () 
     
