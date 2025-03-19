@@ -20,8 +20,9 @@ open Cmdliner
     |_ -> None
     in
     *)
-    let output = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths in
-    
+    type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths 
+    |> Parser.exceptions_string  
+    |> output_to_file event_file type_errors;
     () 
     
     
