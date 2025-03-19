@@ -22,7 +22,7 @@ open Cmdliner
     *)
     type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths 
     |> Parser.exceptions_string  
-    |> output_to_file event_file type_errors;
+    |> Printf.fprintf stdout "%s\n";
     () 
     
     
