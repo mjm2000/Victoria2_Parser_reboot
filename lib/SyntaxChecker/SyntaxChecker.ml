@@ -29,7 +29,7 @@ let split_list n ls =
 
 
 
-let type_verify (outer_symbol_table:(string , rh_symbol_type) Hashtbl.t) directory home_dir=
+let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t) directory home_dir=
     let rec symbol_table_from_rhv rhv = match rhv with
     | (PARAM_LIST(sub_table))->
         sub_table
