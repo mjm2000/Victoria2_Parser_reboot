@@ -14,7 +14,7 @@ let () =
 
     
     let game_symbols game  = match game with
-    |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
+    |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
     let doc = "Paradox Mod Checker" in
