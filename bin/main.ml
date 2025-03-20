@@ -28,6 +28,8 @@ let () =
             |(Some (paths, symbol_table)) -> 
                 let new_paths =  List.map (fun (file,def) ->
                     let abs_mod_home = Filename.concat mod_home file in
+
+                    (print_endline abs_mod_home);
                     let abs_game_home = Filename.concat game_home file in
                     if (Sys.file_exists abs_mod_home)  then
                         abs_mod_home,def 
@@ -36,7 +38,6 @@ let () =
                     else
                         raise (File_not_found "corrupted game files")
 
-                    (print_endline abs_mod_home);
                 ) paths
                 in
                 let exceptions = type_verify symbol_table new_paths mod_home
