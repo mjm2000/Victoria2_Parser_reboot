@@ -29,15 +29,12 @@ let () =
                 let new_paths =  List.map (fun (file,def) ->
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
-                    (*
                     if (Sys.exists abs_mod_home)  then
                         abs_mod_home,def 
                     else if (Sys.exists abs_game_home) then
                         abs_game_home,def
                     else
                         raise (File_not_found "corrupted game files")
-                    *)
-                    abs_game_home ^ abs_mod_home ,def
 
                 ) paths
                 in
