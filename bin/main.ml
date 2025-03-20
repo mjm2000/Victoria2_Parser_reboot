@@ -25,7 +25,7 @@ let () =
         match (mh,gh) with
         |Some mod_home, Some game_home -> 
             let current_paths = match game_symbols game with
-            |Some (paths, symbol_table) -> 
+            |(Some (paths, symbol_table)) -> 
                 let new_paths =  List.map (fun (file,def)->
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
@@ -34,7 +34,10 @@ let () =
                         abs_mod_home,def 
                     else if Sys.exists abs_game_home then
                         abs_game_home,def
+                        raise (File_not_found "corrupted game files")
                         
+            |None ->
+                raise (File_not_found "corrupted game files")
 
 
 
