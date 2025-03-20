@@ -9,8 +9,8 @@ let () =
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
     in
     let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
-    let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
-    let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
+    let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
+    let game_home = make_arg "game-dir" "h" "Game Home Directory" in
 
     
     let game_symbols game  = match game with
