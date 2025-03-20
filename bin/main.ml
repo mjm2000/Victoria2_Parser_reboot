@@ -23,7 +23,7 @@ let () =
     in
     let term = Term.(const (fun game mh gh -> 
         match (mh,gh) with
-        |Some mod_home, Some game_home -> 
+        |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
                 let new_paths =  List.map (fun (file,def) ->
