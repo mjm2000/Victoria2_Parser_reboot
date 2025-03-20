@@ -26,18 +26,18 @@ let () =
         |Some mod_home, Some game_home -> 
             let current_paths = match game_symbols game with
             |(Some (paths, symbol_table)) -> 
-                let new_paths =  List.map (fun (file,def)->
+                let new_paths =  List.map (fun (file,def) ->
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
-
+                    (*
                     if (Sys.exists abs_mod_home)  then
                         abs_mod_home,def 
                     else if (Sys.exists abs_game_home) then
                         abs_game_home,def
                     else
                         raise (File_not_found "corrupted game files")
-                    
-
+                    *) 
+                    abs_game_home,def
 
                 ) paths
                 in
@@ -51,8 +51,7 @@ let () =
                 Printf.printf "No Game Provided for mod:%s\n" mod_home
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
         |_,_ -> Printf.printf "No Game\n"
-       ( )
-    $ game $ mod_home $ game_home) 
+        )$ game $ mod_home $ game_home) 
     in
     let cmd = Cmd.v info term 
     in
