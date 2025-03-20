@@ -26,7 +26,7 @@ let () =
         |Some mod_home, Some game_home -> 
             let current_paths = match game_symbols game with
             |Some (paths, symbol_table) -> 
-                List.map (fun (file,def)->
+                let new_paths =  List.map (fun (file,def)->
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
 
@@ -40,7 +40,8 @@ let () =
 
 
                 ) paths
-                let exceptions = type_verify symbol_table paths mod_home
+                in
+                let exceptions = type_verify symbol_table new_paths mod_home
                 in
                 List.iter (fun x -> x
                 |> Parser.exceptions_string  
