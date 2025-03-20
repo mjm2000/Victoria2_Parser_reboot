@@ -22,7 +22,7 @@ let () =
     let exceptions:(TypeDef.exception_value list list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths "/mnt/c/Users/computer/Desktop/victoria_2_parser/HFM/"
     in
     let term = Term.(const (fun game mh gh -> 
-        (match (mh,gh) with
+        match (mh,gh) with
         |Some mod_home, Some game_home -> 
             let current_paths = match game_symbols game with
             |(Some (paths, symbol_table)) -> 
