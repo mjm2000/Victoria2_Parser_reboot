@@ -24,7 +24,7 @@ let () =
     let term = Term.(const (fun game mh gh -> 
         match (mh,gh) with
         |Some mod_home, Some game_home -> 
-            let current_paths = match game_symbols game with
+            ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
                 let new_paths =  List.map (fun (file,def) ->
                     let abs_mod_home = Filename.concat mod_home file in
@@ -47,10 +47,12 @@ let () =
                 |> Parser.exceptions_string  
                 |> Printf.fprintf stdout "%s\n";)
                 exceptions)
+        )
         |((Some mod_home), None) -> 
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
-        |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home;
-        |(None,None) -> Printf.printf "No Game\n";) $ game $ mod_home $ game_home) 
+        |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
+
+        |(None,None) -> Printf.printf "No Game\n")   $ game $ mod_home $ game_home) 
     in
     let cmd = Cmd.v info term 
     in
