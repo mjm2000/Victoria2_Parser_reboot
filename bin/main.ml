@@ -8,7 +8,7 @@ let () =
     let make_arg title shorter doc  = 
         Arg.(value & opt (some string) None & info [title;shorter] ~doc) 
     in
-    let game = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
+    let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
     let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
 
@@ -52,7 +52,7 @@ let () =
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
 
-        |(None,None) -> Printf.printf "No Game\n")   $ game $ mod_home $ game_home) 
+        |(None,None) -> Printf.printf "No Game\n")   $ game_value $ mod_home $ game_home) 
     in
     let cmd = Cmd.v info term 
     in
