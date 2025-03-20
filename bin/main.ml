@@ -43,14 +43,14 @@ let () =
                 in
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
-                List.iter (fun x -> x
+                (List.iter (fun x -> x
                 |> Parser.exceptions_string  
                 |> Printf.fprintf stdout "%s\n";)
-                exceptions
+                exceptions)
         |((Some mod_home), None) -> 
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home;
-        |_,_ -> Printf.printf "No Game\n";
+        |(None,None) -> Printf.printf "No Game\n";
         ) $ game $ mod_home $ game_home) 
     in
     let cmd = Cmd.v info term 
