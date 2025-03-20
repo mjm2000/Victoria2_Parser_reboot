@@ -6,7 +6,7 @@ let () =
      
 
     let make_arg title shorter doc  = 
-        Arg.(value & opt (some string) None & info [title;shorter] ~doc) 
+        Arg.(required &  opt (some string) None & info [title;shorter] ~doc) 
     in
     let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
     let mod_home = make_arg "mod-dir" "md" "Mod Home Directory" in
