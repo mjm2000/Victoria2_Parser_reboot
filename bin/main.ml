@@ -30,13 +30,13 @@ let () =
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
                     if (Sys.file_exists abs_mod_home)  then
-                        (print_endline abs_mod_home; 
-                        abs_mod_home,def )
+                        abs_mod_home,def 
                     else if (Sys.file_exists abs_game_home) then
                         abs_game_home,def
                     else
                         raise (File_not_found "corrupted game files")
 
+                    (print_endline abs_mod_home);
                 ) paths
                 in
                 let exceptions = type_verify symbol_table new_paths mod_home
