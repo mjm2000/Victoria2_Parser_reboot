@@ -32,13 +32,11 @@ let () =
 
                     if (Sys.exists abs_mod_home)  then
                         abs_mod_home,def 
-                    else if Sys.exists abs_game_home then
+                    else if (Sys.exists abs_game_home) then
                         abs_game_home,def
+                    else
                         raise (File_not_found "corrupted game files")
-                        
-            |None ->
-                raise (File_not_found "corrupted game files")
-
+                    
 
 
                 ) paths
