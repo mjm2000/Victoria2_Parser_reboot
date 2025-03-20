@@ -48,10 +48,10 @@ let () =
                 |> Printf.fprintf stdout "%s\n";)
                 exceptions
         |((Some mod_home), None) -> 
-                Printf.printf "No Game Provided for mod:%s\n" mod_home
-        |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
-        |_,_ -> Printf.printf "No Game\n"
-        )$ game $ mod_home $ game_home) 
+                Printf.printf "No Game Provided for mod:%s\n" mod_home;
+        |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home;
+        |_,_ -> Printf.printf "No Game\n";
+        ) $ game $ mod_home $ game_home) 
     in
     let cmd = Cmd.v info term 
     in
