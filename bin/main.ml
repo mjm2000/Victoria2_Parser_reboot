@@ -30,8 +30,7 @@ let () =
                     let abs_mod_home = Filename.concat mod_home file in
                     let abs_game_home = Filename.concat game_home file in
                     if (Sys.file_exists abs_mod_home)  then
-                        print_endline abs_mod_home;
-                        abs_mod_home,def 
+                        print_endline abs_mod_home; abs_mod_home,def 
                     else if (Sys.file_exists abs_game_home) then
                         abs_game_home,def
                     else
