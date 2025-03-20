@@ -1,7 +1,7 @@
 open SyntaxChecker
 
 open Cmdliner
-
+exception File_not_found of string
 let () = 
      
 
@@ -13,20 +13,45 @@ let () =
     let game_home = make_arg "game-dir" "gd" "Game Home Directory" in
 
     
-(*
-    let match_game game  = match game with
+    let game_symbols game  = match game with
     |"Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
-*)
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
     let exceptions:(TypeDef.exception_value list list) = type_verify Victoria2.victoria2_symbol_table Victoria2.victoria2_paths "/mnt/c/Users/computer/Desktop/victoria_2_parser/HFM/"
     in
-    let term = Term.(const (fun x y z -> 
-        match x,y,z with
-        |Some game, Some mod_home, Some game_home -> Printf.printf "Game:%s\nMod:%s\nGame:%s\n" game mod_home game_home
-        |_,_,_ -> Printf.printf "No Game\n"
+    let term = Term.(const (fun game mh gh -> 
+        match mh,gh with
+        |Some mod_home, Some game_home -> 
+            let current_paths = match game_symbols game with
+            |Some (paths, symbol_table) -> 
+                List.map (fun (file,def)->
+                    let abs_mod_home = Filename.concat mod_home file in
+                    let abs_game_home = Filename.concat game_home file in
+
+                    if Sys.exists abs_mod_home  then
+                        abs_mod_home,def 
+                    else if Sys.exists abs_game_home then
+                        abs_game_home,def
+                    else
+                        raise File_not_found "corrupted game files"
+                        
+
+
+                ) paths
+                let exceptions = type_verify symbol_table paths mod_home
+                in
+                List.iter (fun x -> x
+                |> Parser.exceptions_string  
+                |> Printf.fprintf stdout "%s\n";)
+                exceptions;
+                ()
+                
+            
+        |Some mod_home, None -> Printf.printf "No Game Provided for mod:%s\n" mod_home
+        |None, Some game_home -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
+        |_,_ -> Printf.printf "No Game\n"
         )
     $ game $ mod_home $ game_home) 
     in
