@@ -35,7 +35,7 @@ let () =
                     else if (Sys.file_exists abs_game_home) then
                         abs_game_home,def
                     else
-                        raise (File_not_found "corrupted game files")
+                        raise (File_not_found ("corrupted game files" ^abs_game_home  ) )
 
                 ) paths
                 in
