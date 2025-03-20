@@ -47,9 +47,6 @@ let () =
                 |> Parser.exceptions_string  
                 |> Printf.fprintf stdout "%s\n";)
                 exceptions;
-                ()
-                
-            
         |Some mod_home, None -> Printf.printf "No Game Provided for mod:%s\n" mod_home
         |None, Some game_home -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
         |_,_ -> Printf.printf "No Game\n"
