@@ -164,7 +164,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
     )
     |ASSIGNMENT((lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
 
-        Printf.printf "ASSIGNMENT %s\n" lh_value;
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -227,7 +226,8 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
         )
-    |(ASSIGNMENT ((_, _, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
+    |(ASSIGNMENT ((_, lh_type, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
+        Printf.printf "ASSIGNMENT %s\n" lh_value;
         let e = (UNEXPECTED_ASSIGNMENT (assign)) in
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     |ASSIGN_EXCEPTION((expected,exception_val,cords))::rest -> 
