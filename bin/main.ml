@@ -25,19 +25,19 @@ let () =
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
-                let new_paths =  List.map (fun (file,def) ->
-                    let abs_mod_home = Filename.concat mod_home file in
+                let new_paths =  List.fold_left (fun acc (file,def) ->
+                    let abs_mod_file = Filename.concat mod_home file in
 
-                    (print_endline abs_mod_home);
-                    let abs_game_home = Filename.concat game_home file in
-                    if (Sys.file_exists abs_mod_home)  then
-                        abs_mod_home,def 
-                    else if (Sys.file_exists abs_game_home) then
-                        abs_game_home,def
+                    (print_endline abs_mod_file);
+                    let abs_game_file = Filename.concat game_home file in
+                    if (Sys.file_exists abs_mod_file)  then
+                        (abs_mod_file,def)::acc
+                    else if (Sys.file_exists abs_game_file) then
+                        (abs_game_file,def)::acc
                     else
-                        raise (File_not_found ("corrupted game files" ^abs_game_home  ) )
+                        raise (File_not_found ("corrupted game files" ^abs_game_file  ) )
 
-                ) paths
+                ) [] paths
                 in
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
