@@ -26,20 +26,39 @@ let () =
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
-                let new_paths =  List.fold_left (fun acc (file,def) ->
-                    let abs_mod_file = Filename.concat mod_home file in
+                let rec new_paths_r acc path_lists = 
+                    (match path_lists with
+                    |(file,def)::rest_of_paths when String.contains file '*'  ->
+                        let abs_mod_file = (Filename.concat mod_home file) in
 
-                    (print_endline abs_mod_file);
-                    let abs_game_file = Filename.concat game_home file in
-                    if (Sys.file_exists abs_mod_file)  then
-                        (abs_mod_file,def)::acc
-                    else if (Sys.file_exists abs_game_file) then
-                        (abs_game_file,def)::acc
-                    else
-                        raise (File_not_found ("corrupted game files" ^abs_game_file  ) )
+                        let abs_game_file = (Filename.concat game_home file) in
+                        let mod_files = glob abs_mod_file |> Re.compile in
+                        let game_files = glob abs_game_file |> Re.compile in
 
-                ) [] paths
+                        let new_paths = List.map (fun x -> (x,def)) (mod_files@game_files) in
+                        new_paths_r (new_paths@acc) rest_of_paths
+
+
+
+
+                    |(file,def)::rest_of_paths ->
+                        let abs_mod_file = Filename.concat mod_home file in
+                        (print_endline abs_mod_file);
+                        let abs_game_file = Filename.concat game_home file in
+                        if (Sys.file_exists abs_mod_file) then
+                            new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                        else if (Sys.file_exists abs_game_file) then
+                            new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                        else
+                            raise (File_not_found ("corrupted game files" ^abs_game_file) )
+                
+                    |[] -> acc
+                    )
+
+                 
                 in
+                let new_paths = new_paths_r [] paths in
+
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
                 (List.iter (fun x -> x
