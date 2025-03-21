@@ -52,7 +52,6 @@ let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t)
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope = 
     match assignments with
     |ASSIGNMENT((lh_type,lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
-            Printf.printf "ASSIGNMENT %s\n" lh_value;
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
@@ -164,6 +163,8 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     )
     |ASSIGNMENT((lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
+
+        Printf.printf "ASSIGNMENT %s\n" lh_value;
         let expected_rh_type = 
             match lh_type with
             |KEYWORD when (member symbol_table (KEYWORD_SYMBOL(lh_value)) )  -> 
