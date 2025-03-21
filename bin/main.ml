@@ -44,6 +44,8 @@ let () =
                         let game_files = (list_files game_home file) in
 
                         let new_paths = List.map (fun x -> (x,def)) (mod_files@game_files) in
+
+                        (print_endline file);
                         new_paths_r (new_paths@acc) rest_of_paths
 
 
@@ -51,7 +53,6 @@ let () =
 
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
-                        (print_endline abs_mod_file);
                         let abs_game_file = Filename.concat game_home file in
                         if (Sys.file_exists abs_mod_file) then
                             new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
