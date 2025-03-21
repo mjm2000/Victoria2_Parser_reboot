@@ -1,7 +1,7 @@
 open SyntaxChecker
 
 open Cmdliner
-open Re2.Glob 
+open Re.Glob 
 exception File_not_found of string
 let () = 
      
