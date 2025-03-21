@@ -226,7 +226,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
         )
-    |(ASSIGNMENT ((_, lh_type, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
+    |(ASSIGNMENT ((_, lh_value, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
         Printf.printf "ASSIGNMENT %s\n" lh_value;
         let e = (UNEXPECTED_ASSIGNMENT (assign)) in
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
