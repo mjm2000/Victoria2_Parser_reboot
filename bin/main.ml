@@ -20,6 +20,17 @@ let () =
     in
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
+   let matches_glob pattern str =
+        let re = glob pattern |> Re.compile in
+        Re.execp re str
+
+   in
+(* List files in a directory and filter by glob pattern *)
+    let list_files dir pattern =
+        let files = Sys.readdir dir in
+        Array.to_list files
+        |> List.filter (fun file -> matches_glob pattern file)
+    in
 
     let term = Term.(const (fun game mh gh -> 
         match (mh,gh) with
@@ -29,11 +40,8 @@ let () =
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
                     |(file,def)::rest_of_paths when String.contains file '*'  ->
-                        let abs_mod_file = (Filename.concat mod_home file) in
-
-                        let abs_game_file = (Filename.concat game_home file) in
-                        let mod_files = glob abs_mod_file |> Re.compile in
-                        let game_files = glob abs_game_file |> Re.compile in
+                        let mod_files = (list_files mod_home file) in
+                        let game_files = (list_files game_home file) in
 
                         let new_paths = List.map (fun x -> (x,def)) (mod_files@game_files) in
                         new_paths_r (new_paths@acc) rest_of_paths
