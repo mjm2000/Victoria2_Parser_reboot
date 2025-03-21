@@ -211,6 +211,9 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let rhs = lookup outer_symbol_table (Definition type_name) in
             let sub_table = symbol_table_from_rhv rhs in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
+        |PARAM_VALUE(inner_table) as new_scope ->
+            type_verify_r inner_table ls exceptions (RHS([new_scope]))
+
 
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
@@ -226,8 +229,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
             type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
         )
-    |(ASSIGNMENT ((_, lh_value, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
-        Printf.printf "ASSIGNMENT %s\n" lh_value;
+    |(ASSIGNMENT ((_, _, cords), EXPR_EXCEPTION _) as assign) ::rest -> 
         let e = (UNEXPECTED_ASSIGNMENT (assign)) in
         type_verify_r symbol_table rest ((scope,e,cords)::exceptions) scope
     |ASSIGN_EXCEPTION((expected,exception_val,cords))::rest -> 
