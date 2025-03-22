@@ -219,8 +219,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
         |PARAM_LIST(inner_table) as new_scope ->
             Printf.printf "PARAM_LIST\n ";
-            track_memory(fun () ->let _ = type_verify_r inner_table ls [] (RHS([new_scope])) in 
-            ());
+            let _ = type_verify_r inner_table ls [] (RHS([new_scope])) in 
             
             [] 
             
