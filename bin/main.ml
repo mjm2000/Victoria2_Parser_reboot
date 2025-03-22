@@ -30,7 +30,6 @@ let () =
         |> List.filter (fun file ->  matches_glob pattern file)
     in
 
-    print_endline "BothMod and Game Provided";
     let term = Term.(const (fun game mh gh -> 
 
         match (mh,gh) with
@@ -40,6 +39,8 @@ let () =
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
                     |(file,def)::rest_of_paths when String.contains file '*'  ->
+
+                        print_endline "BothMod and Game Provided";
                         let mod_files = (list_files mod_home file) in
                         let game_files = (list_files game_home file) in
 
