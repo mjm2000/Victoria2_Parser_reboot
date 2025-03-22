@@ -27,7 +27,7 @@ let () =
     let list_files dir pattern =
         let files = Sys.readdir dir in
         Array.to_list files
-        |> List.filter (fun file ->  matches_glob pattern file)
+        |> List.filter (fun file -> print_endline "print file" ^ file ; matches_glob pattern file)
     in
 
     let term = Term.(const (fun game mh gh -> 
@@ -40,7 +40,6 @@ let () =
                     (match path_lists with
                     |(file,def)::rest_of_paths when String.contains file '*'  ->
 
-                        print_endline "BothMod and Game Provided";
                         let mod_files = (list_files mod_home file) in
                         let game_files = (list_files game_home file) in
 
