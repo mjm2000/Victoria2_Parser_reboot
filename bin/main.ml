@@ -5,7 +5,7 @@ open Re.Glob
 exception File_not_found of string
 let () = 
      
-
+    Memtrace.trace_if_requested ~context:"my_program" ()
     let make_arg title shorter doc  = 
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
     in
