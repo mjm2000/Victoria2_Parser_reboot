@@ -218,10 +218,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let sub_table = symbol_table_from_rhv rhs in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
         |PARAM_LIST(inner_table) as new_scope ->
-            Printf.printf "PARAM_LIST\n ";
-            let _ = type_verify_r inner_table ls [] (RHS([new_scope]))  
-            in
-            []
+             type_verify_r inner_table ls [] (RHS([new_scope]))  
             
             
          | (x) -> 
@@ -252,5 +249,6 @@ List.map (function
         let lexems = Lexer.lexer (Filename.concat home_dir filepath) in
         let assigns:(assignment list) = Parser.assignments lexems in
         type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)])) 
+        Gc.compact ()
 ) directory 
   
