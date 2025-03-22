@@ -244,11 +244,12 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 in
 List.map (function  
     |filepath, (symbol_table_key:string) ->
+
+        Gc.compact ();
         let current_context:rh_symbol_type = lookup outer_symbol_table (Definition symbol_table_key) in
         let table = symbol_table_from_rhv current_context in
         let lexems = Lexer.lexer (Filename.concat home_dir filepath) in
         let assigns:(assignment list) = Parser.assignments lexems in
-        type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)])) 
-        Gc.compact ()
+        type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)]))  
 ) directory 
   
