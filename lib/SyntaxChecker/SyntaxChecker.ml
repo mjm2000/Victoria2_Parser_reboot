@@ -217,12 +217,10 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let rhs = lookup outer_symbol_table (Definition type_name) in
             let sub_table = symbol_table_from_rhv rhs in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
-        (*
         |PARAM_LIST(inner_table) as new_scope ->
             Printf.printf "PARAM_LIST\n ";
-            let _ = type_verify_r inner_table ls [] (RHS([new_scope])) in 
+            type_verify_r inner_table ls [] (RHS([new_scope]))  
             
-            []*) 
             
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
