@@ -4,10 +4,13 @@ open Cmdliner
 open Re.Glob 
 exception File_not_found of string
 let () = 
-    let trace_file = "runtime_trace.json" in
-   let writer = Tracing.create trace_file in
-   let config = Tracing.Config.create () in
-  Tracing.start config writer;
+    let cursor = Runtime_events.create_cursor None in
+  let user_event = Runtime_events.User.register "my_program" Runtime_events.Type.unit in
+  let callbacks = Callbacks.create ()
+    |> Callbacks.add (Runtime_events.runtime_begin Runtime_events.Major) callback
+    |> Callbacks.add (Runtime_events.runtime_begin Runtime_events.Minor) callback
+  in
+  Runtime_events.start cursor callbacks;
     let make_arg title shorter doc  = 
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
     in
@@ -90,7 +93,7 @@ let () =
 
 
        
-    Tracing.finish writer
+    Runtime_events.stop cursor
     
     
     
