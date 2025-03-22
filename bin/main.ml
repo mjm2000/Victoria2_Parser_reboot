@@ -5,8 +5,8 @@ open Re.Glob
 exception File_not_found of string
 let () = 
     let trace_file = "runtime_trace.json" in
-  let writer = Tracing.create trace_file in
-  let config = Tracing.Config.create () in
+   let writer = Tracing.create trace_file in
+   let config = Tracing.Config.create () in
   Tracing.start config writer;
     let make_arg title shorter doc  = 
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
