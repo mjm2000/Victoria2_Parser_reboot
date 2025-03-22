@@ -27,7 +27,7 @@ let () =
     let list_files dir pattern =
         let files = Sys.readdir dir in
         Array.to_list files
-        |> List.filter (fun file -> print_endline "print file" ^ file ; matches_glob pattern file)
+        |> List.filter (fun file -> print_endline ("print file" ^ file) ; matches_glob pattern file)
     in
 
     let term = Term.(const (fun game mh gh -> 
