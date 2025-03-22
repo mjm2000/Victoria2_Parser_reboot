@@ -213,7 +213,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
         |PARAM_LIST(inner_table) as new_scope ->
             Printf.printf "PARAM_LIST\n ";
-            type_verify_r inner_table ls exceptions (RHS([new_scope]))
+            type_verify_r inner_table ls [] (RHS([new_scope]));
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
             ((RHS[x],e,cords)::exceptions)
@@ -221,7 +221,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         (match expected_rh_type with
         |Some rh -> 
             let exceptions = assignlist_type_check rh ls exceptions in
-
             type_verify_r symbol_table rest exceptions scope
         |None -> 
             let e = UNKNOWN_IDENTIFIER(lh_value) in
