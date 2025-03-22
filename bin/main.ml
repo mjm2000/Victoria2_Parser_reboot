@@ -27,12 +27,13 @@ let () =
     let list_files dir pattern =
         let files = Sys.readdir dir in
         Array.to_list files
-        |> List.filter (fun file -> print_endline file; matches_glob pattern file)
+        |> List.filter (fun file ->  matches_glob pattern file)
     in
 
     let term = Term.(const (fun game mh gh -> 
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
+                print_endline "Both Mod and Game Provided";
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
                 let rec new_paths_r acc path_lists = 
