@@ -89,8 +89,8 @@ let () =
     Cmd.eval cmd |> Printf.printf "%i\n";
 
 
-    
-    
+       
+    Tracing.finish writer
     
     
     
