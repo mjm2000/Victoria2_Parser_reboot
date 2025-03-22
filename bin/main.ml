@@ -30,9 +30,9 @@ let () =
         |> List.filter (fun file ->  matches_glob pattern file)
     in
 
+    print_endline "BothMod and Game Provided";
     let term = Term.(const (fun game mh gh -> 
 
-        print_endline "BothMod and Game Provided";
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
