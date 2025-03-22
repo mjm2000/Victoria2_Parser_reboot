@@ -27,7 +27,7 @@ let () =
     let list_files dir pattern =
         let files = Sys.readdir dir in
         Array.to_list files
-        |> List.filter (fun file -> matches_glob pattern file)
+        |> List.filter (fun file -> print_endline file; matches_glob pattern file)
     in
 
     let term = Term.(const (fun game mh gh -> 
@@ -43,7 +43,6 @@ let () =
 
                         let new_paths = List.map (fun x -> (x,def)) (mod_files@game_files) in
 
-                        (print_endline file);
                         new_paths_r (new_paths@acc) rest_of_paths
 
 
@@ -65,7 +64,7 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-
+                
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
                 (List.iter (fun x -> x
