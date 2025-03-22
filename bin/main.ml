@@ -31,9 +31,10 @@ let () =
     in
 
     let term = Term.(const (fun game mh gh -> 
+
+        print_endline "BothMod and Game Provided";
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
-                print_endline "Both Mod and Game Provided";
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
                 let rec new_paths_r acc path_lists = 
