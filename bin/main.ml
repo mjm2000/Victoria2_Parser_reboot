@@ -1,5 +1,4 @@
 open SyntaxChecker
-open Runtime_events
 open Cmdliner
 open Re.Glob 
 exception File_not_found of string
