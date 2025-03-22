@@ -4,14 +4,7 @@ open Cmdliner
 open Re.Glob 
 exception File_not_found of string
 let () = 
-    let cursor = Runtime_events.create_cursor None in
-let tag = Runtime_events.Type.unit in
-  let user_event = Runtime_events.User.register "allocation" tag in
-  let callbacks = Callbacks.create ()
-    |> Callbacks.add (Runtime_events.runtime_begin Runtime_events.Major) callback
-    |> Callbacks.add (Runtime_events.runtime_begin Runtime_events.Minor) callback
-  in
-  Runtime_events.start cursor callbacks;
+
     let make_arg title shorter doc  = 
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
     in
@@ -94,7 +87,6 @@ let tag = Runtime_events.Type.unit in
 
 
        
-    Runtime_events.stop cursor
     
     
     

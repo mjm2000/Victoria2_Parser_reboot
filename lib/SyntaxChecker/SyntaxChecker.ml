@@ -3,7 +3,12 @@ open TypeDef
 
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
-
+let track_memory f =
+  let before = (Gc.quick_stat ()).Gc.heap_words in
+  let result = f () in
+  let after = (Gc.quick_stat ()).Gc.heap_words in
+  Printf.printf "Memory change: %d words (%f MB)\n" (after - before) (float_of_int (after - before) /. 1_000_000.);
+  result
 let lookup symbol_table (symbol:lh_symbol_type) = 
     match Hashtbl.find_opt symbol_table symbol with
     | Some value -> value
@@ -211,12 +216,12 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let rhs = lookup outer_symbol_table (Definition type_name) in
             let sub_table = symbol_table_from_rhv rhs in
             type_verify_r sub_table ls exceptions (RHS([new_scope])) 
-        (*
         |PARAM_LIST(inner_table) as new_scope ->
             Printf.printf "PARAM_LIST\n ";
-            let _ = type_verify_r inner_table ls [] (RHS([new_scope])) in
-            exceptions
-        *)
+            trck_memory(fun () ->let _ = type_verify_r inner_table ls [] (RHS([new_scope])) in 
+            ());
+            
+            [] 
             
          | (x) -> 
             let e = UNEXPECTED_ASSIGN_LIST(ls) in
