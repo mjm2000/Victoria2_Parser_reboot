@@ -7,7 +7,8 @@ let track_memory f =
   let before = (Gc.quick_stat ()).Gc.heap_words in
   let result = f () in
   let after = (Gc.quick_stat ()).Gc.heap_words in
-  Printf.printf "Memory change: %d words (%f MB)\n" (after - before) (float_of_int (after - before) /. 1_000_000.);
+  let file = open_out "memory.txt" in
+  Printf.fprintf file "Memory change: %d words (%f MB)\n" (after - before) (float_of_int (after - before) /. 1_000_000.);
   result
 let lookup symbol_table (symbol:lh_symbol_type) = 
     match Hashtbl.find_opt symbol_table symbol with
