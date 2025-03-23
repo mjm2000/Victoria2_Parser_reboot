@@ -18,17 +18,7 @@ let () =
     in
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
-   let matches_glob pattern str =
-        let re = glob pattern |> Re.compile in
-        Re.execp re str
-
-   in
 (* List files in a directory and filter by glob pattern *)
-    let list_files dir pattern =
-        let files = Sys.readdir dir in
-        Array.to_list files
-        |> List.filter (fun file -> print_endline ("print file" ^ file) ; matches_glob pattern file)
-    in
 
     let term = Term.(const (fun game mh gh -> 
 
@@ -38,27 +28,22 @@ let () =
             |(Some (paths, symbol_table)) -> 
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
-                    |(file,def)::rest_of_paths when String.contains file '*'  ->
-
-                        let mod_files = (list_files mod_home file) in
-                        let game_files = (list_files game_home file) in
-
-                        let new_paths = List.map (fun x -> (x,def)) (mod_files@game_files) in
-
-                        new_paths_r (new_paths@acc) rest_of_paths
-
-
-
 
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
                         let abs_game_file = Filename.concat game_home file in
-                        if (Sys.file_exists abs_mod_file) then
-                            new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
-                        else if (Sys.file_exists abs_game_file) then
-                            new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                        if (Sys.is_directory abs_mod_file) then
+
+                            new_paths_r acc file ((Sys.readdir dir)@rest_of_paths)
+                        else if (Sys.is_directory abs_game_file) then
+                            new_paths_r acc ((Sys.readdir dir)@rest_of_paths)
                         else
-                            raise (File_not_found ("corrupted game files" ^abs_game_file) )
+                            if (Sys.file_exists abs_mod_file) then
+                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                            else if (Sys.file_exists abs_game_file) then
+                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                            else
+                                raise (File_not_found ("corrupted game files" ^abs_game_file) )
                 
                     |[] -> acc
                     )
