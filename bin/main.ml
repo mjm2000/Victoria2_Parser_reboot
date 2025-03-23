@@ -38,9 +38,11 @@ let () =
                             ) [] (Sys.readdir abs_mod_file) in
                             new_paths_r acc  (new_paths @rest_of_paths)
                         else if (Sys.is_directory abs_game_file) then
-                            let new_paths:string list = Array.to_list(Sys.readdir abs_game_file) in
+                            let new_paths = Array.fold_left (fun  rest f ->
+                               (f,def)::rest 
+                            ) [] (Sys.readdir abs_mod_file) in
+                            new_paths_r acc  (new_paths @rest_of_paths)
 
-                            new_paths_r acc (new_paths @rest_of_paths)
                         else
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
