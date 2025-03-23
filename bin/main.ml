@@ -39,7 +39,7 @@ let () =
                         else if (Sys.is_directory abs_game_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
                                (f,def)::rest 
-                            ) [] (Sys.readdir abs_mod_file) in
+                            ) [] (Sys.readdir abs_game_file) in
                             new_paths_r acc  (new_paths @rest_of_paths)
 
                         else
