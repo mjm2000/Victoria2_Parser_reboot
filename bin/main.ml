@@ -33,9 +33,9 @@ let () =
                         let abs_mod_file = Filename.concat mod_home file in
                         let abs_game_file = Filename.concat game_home file in
                         if (Sys.is_directory abs_mod_file) then
-                            new_paths_r acc  ((Sys.readdir abs_mod_file)@rest_of_paths)
+                            new_paths_r acc  (Array.to_list (Sys.readdir abs_mod_file)@rest_of_paths)
                         else if (Sys.is_directory abs_game_file) then
-                            new_paths_r acc ((Sys.readdir abs_game_file)@rest_of_paths)
+                            new_paths_r acc (Array.to_list(Sys.readdir abs_game_file)@rest_of_paths)
                         else
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
