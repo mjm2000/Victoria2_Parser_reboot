@@ -34,7 +34,7 @@ let () =
                         let abs_game_file = Filename.concat game_home file in
                         if (Sys.is_directory abs_mod_file) then
 
-                            new_paths_r acc file ((Sys.readdir dir)@rest_of_paths)
+                            new_paths_r acc  ((Sys.readdir dir)@rest_of_paths)
                         else if (Sys.is_directory abs_game_file) then
                             new_paths_r acc ((Sys.readdir dir)@rest_of_paths)
                         else
