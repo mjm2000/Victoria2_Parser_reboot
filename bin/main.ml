@@ -36,13 +36,10 @@ let () =
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
 
-                        Printf.eprintf "before %s concat set \n"  file;
                         let abs_game_file = Filename.concat game_home file in
-                        Printf.eprintf "after %s concat set \n"  abs_game_file; 
                         if (is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
 
-                                Printf.eprintf "%s\n" (Filename.concat file f);
                                ((Filename.concat file f),def)::rest 
 
                             ) [] (Sys.readdir abs_mod_file) in
@@ -54,21 +51,19 @@ let () =
                             new_paths_r acc  (new_paths @rest_of_paths)
 
                         else
-                            (Printf.eprintf  "%s:check if file exists \n" (abs_game_file);
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
                             else if (Sys.file_exists abs_game_file) then
                                 new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
                             else
                                 raise (File_not_found ("corrupted game files" ^abs_game_file) )
-                            ) 
                     |[] -> acc
                     )
 
                  
                 in
                 let new_paths = new_paths_r [] paths in
-                
+                Printf.eprintf "Checking Files\n"; 
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
                 (List.iter (fun x -> x
