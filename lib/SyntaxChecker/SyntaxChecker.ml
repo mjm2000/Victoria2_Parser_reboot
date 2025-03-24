@@ -195,14 +195,12 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                         |None -> 
                                 exceptions
                     )
-              | (Some top_table)::xs -> 
+              | (top_table)::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |exceptions->
-                    get_exceptions xs (Some exceptions) 
+                    get_exceptions xs (exceptions) 
                  )
-              | None::xs ->
-                   get_exceptions xs 
             in
             get_exceptions symbol_tables None
         |DefinedTypeRight(type_name) as new_scope ->
