@@ -199,7 +199,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |exceptions->
-                    get_exceptions xs (exceptions) 
+                    get_exceptions xs (Some exceptions) 
                  )
             in
             get_exceptions symbol_tables None
