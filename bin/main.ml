@@ -31,7 +31,7 @@ let () =
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
 
-                        Printf.eprintf "before %s concat set \n" (Filename.concat file );
+                        Printf.eprintf "before %s concat set \n"  file;
                         let abs_game_file = Filename.concat game_home file in
                         Printf.eprintf "after %s concat set \n"  abs_game_file; 
                         if (Sys.is_directory abs_mod_file) then
