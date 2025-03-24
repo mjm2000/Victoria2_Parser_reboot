@@ -197,8 +197,8 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                     |[] -> None 
                     |v -> Some(RHS v)
                     )
-              |(Inherit(_,_) as v) ::rest
-              |(DefinedTypeRight(_) as v )::rest  
+              |((Inherit(_,_)) as v) ::rest
+              |((DefinedTypeRight(_)) as v )::rest  
               |((PARAM_LIST (_)) as v) ::rest -> 
               let e =type_verify_r (symbol_table_from_rhv v) ls [] (RHS([v])) in
                     (match e with
