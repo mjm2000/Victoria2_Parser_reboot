@@ -183,7 +183,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
      let assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          | (Inherit(_) as new_scope)  ->
             let symbol_table = symbol_table_from_rhv new_scope in
-            type_verify_r st ls exceptions (RHS([new_scope]))             
+            type_verify_r symbol_table ls exceptions (RHS([new_scope]))             
 
          | (PARAM_OPTION(values) as new_scope) ->
             let symbol_tables = List.map symbol_table_from_rhv values in
