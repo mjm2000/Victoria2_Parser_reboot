@@ -190,7 +190,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
          | (PARAM_OPTION(values) as new_scope) ->
             let symbol_tables = List.map symbol_table_from_rhv values in
-            let rec get_exceptions lst lowest_exception=
+            let rec get_exceptions lst (lowest_exception:rh_symbol_type list) =
               match lst with
               | [] -> 
                     (match lowest_exception with
