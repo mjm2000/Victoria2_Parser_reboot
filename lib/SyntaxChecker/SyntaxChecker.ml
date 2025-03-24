@@ -40,7 +40,7 @@ let split_list n ls =
 
 
 
-let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t) directory home_dir=
+let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t) directory =
     let rec symbol_table_from_rhv rhv = match rhv with
     | (PARAM_LIST(sub_table))->
         sub_table
@@ -248,7 +248,7 @@ List.map (function
         Gc.compact ();
         let current_context:rh_symbol_type = lookup outer_symbol_table (Definition symbol_table_key) in
         let table = symbol_table_from_rhv current_context in
-        let lexems = Lexer.lexer (Filename.concat home_dir filepath) in
+        let lexems = Lexer.lexer filepath in
         let assigns:(assignment list) = Parser.assignments lexems in
         type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)]))  
 ) directory 
