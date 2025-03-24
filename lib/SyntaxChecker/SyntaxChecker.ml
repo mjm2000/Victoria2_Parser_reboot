@@ -202,7 +202,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               |(PARAM_LIST (_) as v) ::rest -> 
               let e =type_verify_r (symbol_table_from_rhv v) ls [] (RHS([v])) in
                     (match e with
-                    |[] -> []
+                    |[] -> None 
                     |v-> get_exceptions rest (v::lowest_exception)
                     )
               |v::rest -> 
