@@ -35,10 +35,11 @@ let () =
                             let new_paths = Array.fold_left (fun  rest f ->
                                ((Filename.concat file f),def)::rest 
                             ) [] (Sys.readdir abs_mod_file) in
+
+                            print_endline (  f);
                             new_paths_r acc  (new_paths @rest_of_paths)
                         else if (Sys.is_directory abs_game_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
-                                print_endline (  f);
                                ((Filename.concat file f),def)::rest 
                             ) [] (Sys.readdir abs_game_file) in
                             new_paths_r acc  (new_paths @rest_of_paths)
