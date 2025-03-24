@@ -206,7 +206,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                     |_-> get_exceptions rest (v::lowest_exception)
                     )
               |v::rest -> 
-                get_exceptions rest (v::exceptions)
+                get_exceptions rest (v::lowest_exception)
               
 
             in
