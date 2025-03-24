@@ -1,6 +1,11 @@
 open SyntaxChecker
 open Cmdliner
 exception File_not_found of string
+
+let is_directory x = 
+    Sys.file_exists x && Sys.is_directory x
+
+
 let () = 
 
     let make_arg title shorter doc  = 
@@ -34,7 +39,7 @@ let () =
                         Printf.eprintf "before %s concat set \n"  file;
                         let abs_game_file = Filename.concat game_home file in
                         Printf.eprintf "after %s concat set \n"  abs_game_file; 
-                        if (Sys.is_directory abs_mod_file) then
+                        if (is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
 
                                 Printf.eprintf "%s\n" (Filename.concat file f);
@@ -42,7 +47,7 @@ let () =
 
                             ) [] (Sys.readdir abs_mod_file) in
                             new_paths_r acc  (new_paths @rest_of_paths)
-                        else if (Sys.is_directory abs_game_file) then
+                        else if (is_directory abs_game_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
                                ((Filename.concat file f),def)::rest 
                             ) [] (Sys.readdir abs_game_file) in
