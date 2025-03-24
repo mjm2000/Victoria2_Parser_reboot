@@ -31,7 +31,7 @@ let () =
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
 
-                        Printf.eprintf  "%s:file\n" (abs_mod_file);
+                        Printf.eprintf  "%s:file\n" (abs_game_file);
                         let abs_game_file = Filename.concat game_home file in
                         if (Sys.is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
