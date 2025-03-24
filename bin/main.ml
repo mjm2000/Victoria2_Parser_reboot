@@ -39,7 +39,7 @@ let () =
                         let abs_game_file = Filename.concat game_home file in
                         if (is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
-
+                                print_endline (Filename.concat file f);
                                ((Filename.concat file f),def)::rest 
 
                             ) [] (Sys.readdir abs_mod_file) in
