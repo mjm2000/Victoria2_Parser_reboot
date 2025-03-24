@@ -188,7 +188,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let symbol_table = symbol_table_from_rhv new_scope in
             type_verify_r symbol_table ls exceptions (RHS([new_scope]))             
 
-         | (PARAM_OPTION(values) as new_scope) ->
+         | (PARAM_OPTION(values)  ) ->
             let rec get_exceptions lst (lowest_exception:rh_symbol_type list) =
               match lst with
               | [] -> 
