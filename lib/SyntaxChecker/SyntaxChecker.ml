@@ -52,8 +52,9 @@ let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t)
         append_table table appended_symbols;
         table
 
-    | t -> 
-        raise (Failure ("Invalid symbol type:" ^ (Parser.string_rh_symbol t))) 
+    | _ -> 
+        raise (Invalid_argument "Invalid rhv type")
+
     in
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope = 
     match assignments with
@@ -180,20 +181,9 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         in
 
      let assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
-         | (APPEND_SYMBOLS(_) as new_scope)  ->
-            let symbol_tables = symbol_table_from_rhv new_scope in
-            let rec get_exceptions lst lowest_exception=
-              match lst with
-              | [] -> lowest_exception
-              | top_table::xs -> 
-                 (match (type_verify_r top_table ls exceptions (RHS([new_scope]))) with
-                 |[] ->  
-                         []
-                 |exceptions->
-                    get_exceptions xs  (exceptions@lowest_exception) 
-                 )
-            in
-            get_exceptions [symbol_tables] []
+         | (Inherit(_) as new_scope)  ->
+            let symbol_table = symbol_table_from_rhv new_scope in
+            type_verify_r st ls exceptions (RHS([new_scope]))             
 
          | (PARAM_OPTION(values) as new_scope) ->
             let symbol_tables = List.map symbol_table_from_rhv values in
@@ -205,12 +195,14 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                         |None -> 
                                 exceptions
                     )
-              | top_table::xs -> 
+              | (Some top_table)::xs -> 
                  (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
                  |[] -> []
                  |exceptions->
                     get_exceptions xs (Some exceptions) 
                  )
+              | None::xs ->
+                   get_exceptions xs 
             in
             get_exceptions symbol_tables None
         |DefinedTypeRight(type_name) as new_scope ->
