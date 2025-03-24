@@ -30,8 +30,10 @@ let () =
 
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
-                        let abs_game_file = Filename.concat game_home file in
 
+                        Printf.eprintf "before %s concat set \n" (Filename.concat file );
+                        let abs_game_file = Filename.concat game_home file in
+                        Printf.eprintf "after %s concat set \n"  abs_game_file; 
                         if (Sys.is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
 
@@ -47,7 +49,7 @@ let () =
                             new_paths_r acc  (new_paths @rest_of_paths)
 
                         else
-                            (Printf.eprintf  "%s:file\n" (abs_game_file);
+                            (Printf.eprintf  "%s:check if file exists \n" (abs_game_file);
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
                             else if (Sys.file_exists abs_game_file) then
