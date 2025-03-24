@@ -195,7 +195,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               | [] -> 
                     (match lowest_exception with
                     |[] -> None 
-                    |v -> RHS v
+                    |v -> Some(RHS v)
                     )
               |(Inherit(_,_) as v) ::rest
               |(DefinedTypeRight(_) as v )::rest  
@@ -209,7 +209,10 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               
 
             in
-            get_exceptions symbol_tables None
+            match (get_exceptions symbol_tables [] ) with
+            |Some v -> ((v,UNEXPECTED_ASSIGN_LIST(ls),cords)::exceptions)
+            |None -> exceptions
+
         |DefinedTypeRight(type_name) as new_scope ->
             let rhs = lookup outer_symbol_table (Definition type_name) in
             let sub_table = symbol_table_from_rhv rhs in
