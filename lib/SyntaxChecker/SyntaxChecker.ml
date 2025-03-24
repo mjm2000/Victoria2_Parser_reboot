@@ -200,11 +200,10 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               |((Inherit(_,_)) as v) ::rest
               |((DefinedTypeRight(_)) as v )::rest  
               |((PARAM_LIST (_)) as v) ::rest -> 
-              let v:rh_symbol_type = v in
-              let e =type_verify_r (symbol_table_from_rhv v) ls [] (RHS([v])) in
+              let e = type_verify_r (symbol_table_from_rhv v) ls [] (RHS([v])) in
                     (match e with
                     |[] -> None 
-                    |v-> get_exceptions rest (v::lowest_exception)
+                    |_-> get_exceptions rest (v::lowest_exception)
                     )
               |v::rest -> 
                 get_exceptions rest (v::exceptions)
