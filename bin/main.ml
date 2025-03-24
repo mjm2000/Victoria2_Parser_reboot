@@ -46,7 +46,7 @@ let () =
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
                             else if (Sys.file_exists abs_game_file) then
-                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                                new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
                             else
                                 raise (File_not_found ("corrupted game files" ^abs_game_file) )
                 
