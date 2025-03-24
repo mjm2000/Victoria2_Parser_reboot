@@ -63,9 +63,10 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-                Printf.eprintf "Checking Files\n"; 
                 let exceptions = type_verify symbol_table new_paths mod_home
                 in
+
+                Printf.eprintf "Checking Files\n"; 
                 (List.iter (fun x -> x
                 |> Parser.exceptions_string  
                 |> Printf.fprintf stdout "%s\n";)
