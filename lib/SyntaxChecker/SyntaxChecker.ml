@@ -53,7 +53,7 @@ let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t)
         table
 
     | t -> 
-        raise (Failure "Invalid symbol type:" ^ (Parser.string_rh_symbol t)) 
+        raise (Failure ("Invalid symbol type:" ^ (Parser.string_rh_symbol t))) 
     in
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope = 
     match assignments with
