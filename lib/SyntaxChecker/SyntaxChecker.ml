@@ -51,6 +51,9 @@ let type_verify (outer_symbol_table:(lh_symbol_type , rh_symbol_type) Hashtbl.t)
         let table = combine_table_list symbol_tables in
         append_table table appended_symbols;
         table
+    | DefinedTypeRight(type_name) ->
+        let rhs = lookup outer_symbol_table (Definition type_name) in
+        symbol_table_from_rhv rhs
 
     | _ -> 
         raise (Invalid_argument "Invalid rhv type")
@@ -191,16 +194,20 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               match lst with
               | [] -> 
                     (match lowest_exception with
-                        |Some e -> e@exceptions
-                        |None -> 
-                                exceptions
+                    |[] -> None 
+                    |v -> RHS v
                     )
-              | (top_table)::xs -> 
-                 (match (type_verify_r top_table ls [] (RHS([new_scope]))) with
-                 |[] -> []
-                 |exceptions->
-                    get_exceptions xs (Some exceptions) 
-                 )
+              |(Inherit(_,_) as v) ::rest
+              |(DefinedTypeRight as v )::rest  
+              |PARAM_LIST (_) as v ::rest -> 
+              let e =type_verify_r (symbol_table_from_rhv v) ls [] (RHS([v])) in
+                    match e with
+                    |[] -> []
+                    |v-> get_exceptions rest (v::lowest_exception)
+              |v::rest -> 
+                get_exceptions rest (v::exceptions)
+              
+
             in
             get_exceptions symbol_tables None
         |DefinedTypeRight(type_name) as new_scope ->
