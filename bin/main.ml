@@ -63,7 +63,7 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-                let exceptions = type_verify symbol_table new_paths mod_home
+                let exceptions = type_verify symbol_table new_paths
                 in
 
                 Printf.eprintf "Checking Files\n"; 
