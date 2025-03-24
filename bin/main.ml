@@ -45,6 +45,7 @@ let () =
                             new_paths_r acc  (new_paths @rest_of_paths)
 
                         else
+                            Printf.eprintf  "%s:file\n" (abs_game_file);
                             if (Sys.file_exists abs_mod_file) then
                                 new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
                             else if (Sys.file_exists abs_game_file) then
