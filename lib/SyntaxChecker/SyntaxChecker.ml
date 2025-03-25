@@ -251,6 +251,6 @@ List.map (function
         let table = symbol_table_from_rhv current_context in
         let lexems = Lexer.lexer filepath in
         let assigns:(assignment list) = Parser.assignments lexems in
-        type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)]))  
+        filepath,(type_verify_r table assigns [] (RHS([DefinedTypeRight(symbol_table_key)])))
 ) directory 
   
