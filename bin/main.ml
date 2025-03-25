@@ -69,7 +69,7 @@ let () =
                 Printf.eprintf "Checking Files\n"; 
                 (List.iter (fun x -> x
                 |> Parser.exceptions_string  
-                |> Printf.fprintf stdout "%s\n";)
+                |> Printf.fprintf stdout "%s:\n %s\n" x;)
                 exceptions)
             |None -> Printf.printf "Game not recognized\n"
         )
