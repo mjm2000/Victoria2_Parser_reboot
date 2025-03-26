@@ -1,1 +1,0 @@
-cd ../../bin && sh run.sh > ../lib/file.txt && cat ../lib/file.txt

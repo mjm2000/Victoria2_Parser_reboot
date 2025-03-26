@@ -1,4 +1,0 @@
-(library
- (name Parser)
- (libraries TypeDef Lexer re2)
- );;
