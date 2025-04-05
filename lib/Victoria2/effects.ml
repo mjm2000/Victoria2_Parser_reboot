@@ -10,7 +10,6 @@ let country_effects = symbol_table_init [
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
 ]);
-]);
 (KeywordLiteral("change_tag"),PARAM_OPTION([
     PARAM_VALUE(KEYWORD);
 ]);
