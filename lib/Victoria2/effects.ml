@@ -9,10 +9,10 @@ let country_effects = symbol_table_init [
 (KeywordLiteral("value"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
-]);
+]));
 (KeywordLiteral("change_tag"),PARAM_OPTION([
     PARAM_VALUE(KEYWORD);
-]);
+]));
 (KeywordLiteral("is_slave"),PARAM_VALUE(BOOL));
 (KeywordLiteral("scaled_consciousness"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
@@ -21,15 +21,14 @@ let country_effects = symbol_table_init [
     (KeywordLiteral("factor"),PARAM_OPTION([
         PARAM_VALUE(INT);
         PARAM_VALUE(FLOAT);
+    ]));
     ]);
-    ]);
-]);
+]));
 (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("factor"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
-]);
-]);
+]));
 (KeywordLiteral("scaled_militancy"),PARAM_OPTION([
     PARAM_VALUE(FLOAT);
     PARAM_LIST(symbol_table_init [
@@ -37,23 +36,22 @@ let country_effects = symbol_table_init [
     (KeywordLiteral("factor"),PARAM_OPTION([
         PARAM_VALUE(INT);
         PARAM_VALUE(FLOAT);
+    ]));
     ]);
-    ]);
-]);
+]));
 (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("factor"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
-]);
-]);
+]));
 (KeywordLiteral("world_wars_enabled"),PARAM_VALUE(BOOL));
 (KeywordLiteral("dominant_issue"),PARAM_LIST(symbol_table_init [
 (KeywordLiteral("value"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("factor"),PARAM_OPTION([
     PARAM_VALUE(INT);
     PARAM_VALUE(FLOAT);
-]);
-]);
+]));
+]));
 (KeywordLiteral("random_pop"),DefinedTypeRight "pop_effects_def");
 (KeywordLiteral("random_owned"),DefinedTypeRight "province_effects_def");
 (KeywordLiteral("any_country"),DefinedTypeRight "country_effects_def");
@@ -73,12 +71,12 @@ let country_effects = symbol_table_init [
     PARAM_LIST(symbol_table_init [
     (KeywordLiteral("id"),PARAM_VALUE(INT));
     (KeywordLiteral("days"),PARAM_VALUE(INT));
-    ]);
+    ]));
 ));
 (KeywordLiteral("change_variable"),PARAM_LIST(symbol_table_init [
 (KeywordLiteral("which"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("value"),PARAM_VALUE(INT));
-]);
+]));
 (KeywordLiteral("set_global_flag"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("clr_global_flag"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("activate_technology"),PARAM_VALUE(KEYWORD));
@@ -87,192 +85,27 @@ let country_effects = symbol_table_init [
 (KeywordLiteral("add_country_modifier"),PARAM_LIST(symbol_table_init [
 (KeywordLiteral("name"),PARAM_OPTION([
     PARAM_VALUE(KEYWORD);
-]);
+    PARAM_VALUE(STRING)
+]));
 (KeywordLiteral("duration"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("add_country_modifier"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("name"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-]);
-(KeywordLiteral("duration"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("define_general"),PARAM_LIST( symbol_table_init [
-(KeywordLiteral("name"),PARAM_VALUE(STRING));
-(KeywordLiteral("personality"),PARAM_VALUE(KEYWORD););
-(KeywordLiteral("background"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("define_admiral"),PARAM_LIST( symbol_table_init [
-(KeywordLiteral("name"),PARAM_VALUE(STRING));
-(KeywordLiteral("personality"),PARAM_VALUE(KEYWORD););
-(KeywordLiteral("background"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("kill_leader"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("remove_country_modifier"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("add_crisis_interest"),PARAM_VALUE(BOOL));
-(KeywordLiteral("add_crisis_temperature"),PARAM_VALUE(INT));
-(KeywordLiteral("badboy"),PARAM_OPTION([
-    PARAM_VALUE(INT);
-    PARAM_VALUE(FLOAT);
-]);
-(KeywordLiteral("build_factory_in_capital_state"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_LIST(symbol_table_init [
-    (KeywordLiteral("in_whole_capital_state"),PARAM_VALUE(BOOL));
-    (KeywordLiteral("limit_to_world_greatest_level"),PARAM_VALUE(BOOL););
-    ]);
-]);
-(KeywordLiteral("build_factory_in_capital"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_LIST(symbol_table_init [
-    (KeywordLiteral("in_whole_capital_state"),PARAM_VALUE(BOOL));
-    (KeywordLiteral("limit_to_world_greatest_level"),PARAM_VALUE(BOOL););
-    ]);
-]);
-(KeywordLiteral("build_railway_in_capital"),PARAM_OPTION([
-    PARAM_VALUE(INT);
-    PARAM_LIST(symbol_table_init [
-    (KeywordLiteral("in_whole_capital_state"),PARAM_VALUE(BOOL));
-    (KeywordLiteral("limit_to_world_greatest_level"),PARAM_VALUE(BOOL););
-    ]);
-]);
-(KeywordLiteral("capital"),PARAM_VALUE(INT));
-(KeywordLiteral("civilized"),PARAM_VALUE(BOOL));
-(KeywordLiteral("nationalvalue"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("plurality"),PARAM_VALUE(INT));
-(KeywordLiteral("prestige"),PARAM_OPTION([
-    PARAM_VALUE(INT);
-    PARAM_VALUE(FLOAT);
-]);
-(KeywordLiteral("prestige_factor"),PARAM_VALUE(FLOAT));
-(KeywordLiteral("primary_culture"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_LIST(symbol_table_init [
-    (KeywordLiteral("value"),PARAM_VALUE(KEYWORD));
-    (KeywordLiteral("factor"),PARAM_OPTION([
-        PARAM_VALUE(INT);
-        PARAM_VALUE(FLOAT);
-    ]);
-    ]);
-]);
-(KeywordLiteral("religion"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("slaves"),DefinedTypeRight "pop_effects_def");
-(KeywordLiteral("research_points"),PARAM_VALUE(INT));
-(KeywordLiteral("war_exhaustion"),PARAM_VALUE(INT));
-(KeywordLiteral("years_of_research"),PARAM_OPTION([
-    PARAM_VALUE(INT);
-]);
-(KeywordLiteral("nationalize"),PARAM_VALUE(BOOL));
-(KeywordLiteral("economic_reform"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("election"),PARAM_VALUE(BOOL));
-(KeywordLiteral("government"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("military_reform"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("political_reform"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("ruling_party_ideology"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("social_reform"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("upper_house"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("ideology"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("value"),PARAM_OPTION([
-    PARAM_VALUE(INT);
-    PARAM_VALUE(FLOAT);
-]);
-]);
-(KeywordLiteral("add_casus_belli"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("target"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-]);
-(KeywordLiteral("type"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("months"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("annex_to"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
 ]));
-(KeywordLiteral("casus_belli"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("target"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-]);
-(KeywordLiteral("type"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("months"),PARAM_VALUE(INT));
-(KeywordLiteral("state_province_id"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("create_alliance"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("create_vassal"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("diplomatic_influence"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("who"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]);
-(KeywordLiteral("value"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("end_military_access"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("end_war"),PARAM_OPTION(
-    PARAM_LIST(symbol_table_init [
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("inherit"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("leave_alliance"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("military_access"),PARAM_OPTION([
-PARAM_VALUE(KEYWORD);
-PARAM_VALUE(SCOPE);
-]));
-(KeywordLiteral("neutrality"),PARAM_VALUE(BOOL));
 (KeywordLiteral("relation"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("who"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
-]);
-(KeywordLiteral("value"),PARAM_VALUE(INT));
-]);
-(KeywordLiteral("release"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("release_vassal"),PARAM_OPTION([
-    PARAM_VALUE(KEYWORD);
-    PARAM_VALUE(SCOPE);
+    (KeywordLiteral("who"),PARAM_OPTION([
+        PARAM_VALUE(KEYWORD);
+        PARAM_VALUE(SCOPE)
+    ]));
+    (KeywordLiteral("value"),PARAM_VALUE(INT));
 ]));
-(KeywordLiteral("war"),PARAM_OPTION([
-    PARAM_OPTION([
-        PARAM_VALUE(KEYWORD);
-        PARAM_VALUE(SCOPE);
-    ]);
-    PARAM_LIST(symbol_table_init [
-    (KeywordLiteral("target"),PARAM_OPTION([
-        PARAM_VALUE(KEYWORD);
-        PARAM_VALUE(SCOPE);
-    ]));
-    (KeywordLiteral("attacker_goal"),PARAM_LIST(symbol_table_init [
-        (KeywordLiteral("casus_belli"),PARAM_VALUE(KEYWORD));
-        (KeywordLiteral("country"),PARAM_OPTION([
-            PARAM_VALUE(KEYWORD);
-            PARAM_VALUE(SCOPE);
-        ]));
-        (KeywordLiteral("state_province_id"),PARAM_VALUE(INT));
-    ]));
-    (KeywordLiteral("defender_goal"),PARAM_LIST(symbol_table_init [
-        (KeywordLiteral("casus_belli"),PARAM_VALUE(KEYWORD));
-        (KeywordLiteral("country"),PARAM_OPTION([
-            PARAM_VALUE(KEYWORD);
-            PARAM_VALUE(SCOPE);
-        ]));
-        (KeywordLiteral("state_province_id"),PARAM_VALUE(INT));
-    ]));
-    (KeywordLiteral("call_ally"),PARAM_VALUE(BOOL));
-    ]));
-]);
+(KeywordLiteral("any_country"),DefinedTypeRight "country_effects_def");
+(KeywordLiteral("set_global_flag"),PARAM_VALUE(KEYWORD));
+(KeywordLiteral("random_country"),DefinedTypeRight "country_effects_def");
+(KeywordLiteral("random_state"),DefinedTypeRight "state_effects_def");
+(KeywordLiteral("random_pop"),DefinedTypeRight "pop_effects_def");
+(KeywordLiteral("clr_country_flag"),PARAM_VALUE(KEYWORD));
+(KeywordLiteral("set_country_flag"),PARAM_VALUE(KEYWORD));
+(KeywordLiteral("state_scope"),DefinedTypeRight "state_effects_def");
 (KeywordLiteral("province_event"),PARAM_LIST(symbol_table_init [
-(KeywordLiteral("id"),PARAM_VALUE(INT));
+    (KeywordLiteral("id"),PARAM_VALUE(INT));
 ]));
 (KeywordLiteral("add_tax_relative_income"),PARAM_OPTION([
     PARAM_VALUE(INT);
@@ -280,8 +113,6 @@ PARAM_VALUE(SCOPE);
 ]));
 (KeywordLiteral("treasury"),PARAM_VALUE(INT));
 (KeywordLiteral("change_tag_no_core_switch"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("clr_country_flag"),PARAM_VALUE(KEYWORD));
-(KeywordLiteral("set_country_flag"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("great_wars_enabled"),PARAM_VALUE(BOOL));
 (KeywordLiteral("tag"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("any_pop"),DefinedTypeRight "pop_effects_def");
@@ -332,8 +163,7 @@ let province_effects = symbol_table_init [
     (KeywordLiteral("name"),PARAM_OPTION([
         PARAM_VALUE(KEYWORD);
         PARAM_VALUE(STRING)
-    ]);
-    );
+    ]));
     (KeywordLiteral("duration"),PARAM_VALUE(INT));
 ]));
 (KeywordLiteral("relation"),PARAM_LIST(symbol_table_init [
@@ -384,8 +214,7 @@ let province_effects = symbol_table_init [
     (KeywordLiteral("name"),PARAM_OPTION([
         PARAM_VALUE(KEYWORD);
         PARAM_VALUE(STRING)
-    ]);
-    );
+    ]));
     (KeywordLiteral("duration"),PARAM_VALUE(INT));
 ]));
 (KeywordLiteral("duration"),PARAM_VALUE(KEYWORD));
@@ -438,9 +267,9 @@ let state_effects = symbol_table_init [
 (KeywordLiteral("infrastructure"),PARAM_VALUE(INT));
 (KeywordLiteral("fort"),PARAM_VALUE(INT));
 (KeywordLiteral("remove_core"),PARAM_OPTION([
-		PARAM_VALUE(KEYWORD);
-		PARAM_VALUE(SCOPE)
-	]));
+    PARAM_VALUE(KEYWORD);
+    PARAM_VALUE(SCOPE)
+]));
 (KeywordLiteral("remove_province_modifier"),PARAM_VALUE(KEYWORD));
 (KeywordLiteral("any_pop"),DefinedTypeRight "pop_effects_def");
 (KeywordLiteral("change_region_name"),PARAM_OPTION([
@@ -448,8 +277,8 @@ let state_effects = symbol_table_init [
     PARAM_VALUE(STRING)
 ]));
 (KeywordLiteral("add_core"),PARAM_OPTION([
-        PARAM_VALUE(KEYWORD);
-        PARAM_VALUE(SCOPE)
+    PARAM_VALUE(KEYWORD);
+    PARAM_VALUE(SCOPE)
 ]));
 (KeywordLiteral("flashpoint_tension"),PARAM_VALUE(INT));
 (KeywordLiteral("is_slave"),PARAM_VALUE(BOOL));
@@ -463,22 +292,20 @@ let state_effects = symbol_table_init [
     (KeywordLiteral("name"),PARAM_OPTION([
         PARAM_VALUE(KEYWORD);
         PARAM_VALUE(STRING)
-    ]);
-    );
+    ]));
     (KeywordLiteral("duration"),PARAM_VALUE(INT));
 ]));
 (TYPE_SYMBOL(KEYWORD),PARAM_OPTION([
-        DefinedTypeRight "pop_effects_def";
-        DefinedTypeRight "province_effects_def";
-    ]));
-
+    DefinedTypeRight "pop_effects_def";
+    DefinedTypeRight "province_effects_def";
+]));
 (KeywordLiteral("scaled_consciousness"),PARAM_OPTION([
     PARAM_LIST(symbol_table_init [
     (KeywordLiteral("ideology"),PARAM_VALUE(KEYWORD));
     (KeywordLiteral("factor"),PARAM_OPTION([
-		PARAM_VALUE(FLOAT);
-		PARAM_VALUE(INT);
-	]));
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+    ]));
     ]);
     PARAM_LIST(symbol_table_init [
         (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
@@ -492,9 +319,9 @@ let state_effects = symbol_table_init [
     PARAM_LIST(symbol_table_init [
     (KeywordLiteral("ideology"),PARAM_VALUE(KEYWORD));
     (KeywordLiteral("factor"),PARAM_OPTION([
-		PARAM_VALUE(FLOAT);
-		PARAM_VALUE(INT);
-	]));
+        PARAM_VALUE(FLOAT);
+        PARAM_VALUE(INT);
+    ]));
     ]);
     PARAM_LIST(symbol_table_init [
         (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
@@ -505,15 +332,13 @@ let state_effects = symbol_table_init [
     ]);
 ]));
 (KeywordLiteral("random"),APPEND_SYMBOLS([(KeywordLiteral("chance"),PARAM_VALUE(INT))],DefinedTypeRight "country_effects_def"));
-
-]
+];
 
 let pop_effects = symbol_table_init [
     (KeywordLiteral("location"),DefinedTypeRight "province_effects_def");
     (KeywordLiteral("random_list"),PARAM_LIST(symbol_table_init [
         (TYPE_SYMBOL(INT),DefinedTypeRight "pop_effects_def")
     ]));
-
     (KeywordLiteral("any_pop"),DefinedTypeRight "pop_effects_def");
     (KeywordLiteral("random"),APPEND_SYMBOLS([(KeywordLiteral("chance"),PARAM_VALUE(INT))],DefinedTypeRight "country_effects_def"));
     (KeywordLiteral("assimilate"),PARAM_VALUE(KEYWORD));
@@ -528,18 +353,17 @@ let pop_effects = symbol_table_init [
     (KeywordLiteral("dominant_issue"),PARAM_LIST(symbol_table_init [
         (KeywordLiteral("value"),PARAM_VALUE(KEYWORD));
         (KeywordLiteral("factor"),PARAM_OPTION([
-			PARAM_VALUE(FLOAT);
-			PARAM_VALUE(INT);
-		]));
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
     ]));
     (KeywordLiteral("ideology"),PARAM_LIST(symbol_table_init [
         (KeywordLiteral("value"),PARAM_VALUE(KEYWORD));
         (KeywordLiteral("factor"),PARAM_OPTION([
-			PARAM_VALUE(FLOAT);
-			PARAM_VALUE(INT);
-		]));
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
     ]));
-
     (KeywordLiteral("literacy"),PARAM_VALUE(FLOAT));
     (KeywordLiteral("money"),PARAM_OPTION([
         PARAM_VALUE(INT);
@@ -563,9 +387,9 @@ let pop_effects = symbol_table_init [
         PARAM_LIST(symbol_table_init [
         (KeywordLiteral("ideology"),PARAM_VALUE(KEYWORD));
         (KeywordLiteral("factor"),PARAM_OPTION([
-			PARAM_VALUE(FLOAT);
-			PARAM_VALUE(INT);
-		]));
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
         ]);
         PARAM_LIST(symbol_table_init [
             (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
@@ -579,9 +403,9 @@ let pop_effects = symbol_table_init [
         PARAM_LIST(symbol_table_init [
         (KeywordLiteral("ideology"),PARAM_VALUE(KEYWORD));
         (KeywordLiteral("factor"),PARAM_OPTION([
-			PARAM_VALUE(FLOAT);
-			PARAM_VALUE(INT);
-		]));
+            PARAM_VALUE(FLOAT);
+            PARAM_VALUE(INT);
+        ]));
         ]);
         PARAM_LIST(symbol_table_init [
             (KeywordLiteral("issue"),PARAM_VALUE(KEYWORD));
@@ -594,5 +418,4 @@ let pop_effects = symbol_table_init [
     (KeywordLiteral("limit"),DefinedTypeRight "pop_conditions_def");
     (KeywordLiteral("pop_type"),PARAM_VALUE(KEYWORD));
     (KeywordLiteral("country"),DefinedTypeRight "country_effects_def");
-
-]
+];
