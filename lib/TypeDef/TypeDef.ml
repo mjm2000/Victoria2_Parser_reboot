@@ -26,7 +26,7 @@ and exception_type =
     |UNEXPECTED_LEFT_BRACKET
     |MULTIPLE_CHOICE of exception_value list list
 and lh_symbol_type = 
-    |KEYWORD_SYMBOL of string 
+    |KeywordLiteral of string 
     |TYPE_SYMBOL of lexem_type
     |DefinedTypeLeft of string
     |CatalogLeft of string * lh_symbol_type
