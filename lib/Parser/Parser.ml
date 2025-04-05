@@ -200,7 +200,7 @@ and string_rh_symbol pv = match pv with
 
 
 and string_lh_symbol lh = match lh with
-    | KEYWORD_SYMBOL str -> Printf.sprintf "KEYWORD_SYMBOL(%s)" str
+    | KeywordLiteral str -> Printf.sprintf "KeywordLiteral(%s)" str
     | TYPE_SYMBOL lexem -> Printf.sprintf "TYPE_SYMBOL(%s)" (lexem_to_str lexem)
     | DefinedTypeLeft symbol_table -> Printf.sprintf "DefinedTypeRight:%s" symbol_table
     | CatalogLeft (v,t) -> Printf.sprintf "Catalog_Right:%s:%s" v (string_lh_symbol t)
