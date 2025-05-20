@@ -1,0 +1,1004 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/c/Users/computer/Desktop/victoria_2_parser/bin/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+()	../_build/default/bin/main.ml	/^let () = $/;"	f
+()	../bin/main.ml	/^let () = $/;"	f
+.5Bideology.5D	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]"><\/span><span class="mw-headline" id=".5Bideology.5D">[ideology]<\/spa/;"	I
+.5Bideology.5D_2	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]_2"><\/span><span class="mw-headline" id=".5Bideology.5D_2">[ideology]<\//;"	I
+.5Bparty_issue.5D	../web_scraping/List_of_conditions.html	/^<h3><span id="[party_issue]"><\/span><span class="mw-headline" id=".5Bparty_issue.5D">[party_iss/;"	I
+.5Bpoptype.5D	../web_scraping/List_of_conditions.html	/^<h3><span id="[poptype]"><\/span><span class="mw-headline" id=".5Bpoptype.5D">[poptype]<\/span></;"	I
+.5Btechnology.5D	../web_scraping/List_of_conditions.html	/^<h3><span id="[technology]"><\/span><span class="mw-headline" id=".5Btechnology.5D">[technology]/;"	I
+AND	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="AND">AND<\/span><\/h3>$/;"	I
+AND	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="AND">AND<\/span><\/h3>$/;"	j
+APPEND_SYMBOLS	../_build/default/lib/Type_def.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type $/;"	C	type:rh_symbol_type
+APPEND_SYMBOLS	../lib/Type_def.ml	/^    |APPEND_SYMBOLS of (lh_symbol_type * rh_symbol_type) list * rh_symbol_type $/;"	C	type:rh_symbol_type
+ASSIGNMENT	../_build/default/lib/Type_def.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
+ASSIGNMENT	../lib/Type_def.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
+ASSIGNMENT_LIST	../_build/default/lib/Type_def.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
+ASSIGNMENT_LIST	../lib/Type_def.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"	C	type:expr
+ASSIGN_EXCEPTION	../_build/default/lib/Type_def.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
+ASSIGN_EXCEPTION	../lib/Type_def.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
+Bool	../_build/default/lib/Lexer.ml	/^|Bool  $/;"	C	type:lexem_type
+Bool	../lib/Lexer.ml	/^|Bool  $/;"	C	type:lexem_type
+Boolean Operators	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Boolean_Operators">Boolean Operators<\/span><\/h2>$/;"	i
+Boolean_Operators	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Boolean_Operators">Boolean Operators<\/span><\/h2>$/;"	I
+Broad Commands	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Broad_Commands">Broad Commands<\/span><\/h2>$/;"	i
+Broad_Commands	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Broad_Commands">Broad Commands<\/span><\/h2>$/;"	I
+CHOICE_VALUE	../_build/default/lib/Type_def.ml	/^    |CHOICE_VALUE of String list $/;"	C	type:rh_symbol_type
+CHOICE_VALUE	../lib/Type_def.ml	/^    |CHOICE_VALUE of String list $/;"	C	type:rh_symbol_type
+CONDITION	../_build/default/lib/Lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
+CONDITION	../lib/Lexer.ml	/^|CONDITION$/;"	C	type:lexem_type
+COUNTRY_CONDITIONS	../_build/default/lib/Type_def.ml	/^    |COUNTRY_CONDITIONS$/;"	C	type:rh_symbol_type
+COUNTRY_CONDITIONS	../lib/Type_def.ml	/^    |COUNTRY_CONDITIONS$/;"	C	type:rh_symbol_type
+COUNTRY_EFFECTS	../_build/default/lib/Type_def.ml	/^    |COUNTRY_EFFECTS$/;"	C	type:rh_symbol_type
+COUNTRY_EFFECTS	../lib/Type_def.ml	/^    |COUNTRY_EFFECTS$/;"	C	type:rh_symbol_type
+COUNTRY_MTTH	../_build/default/lib/Type_def.ml	/^    |COUNTRY_MTTH$/;"	C	type:rh_symbol_type
+COUNTRY_MTTH	../lib/Type_def.ml	/^    |COUNTRY_MTTH$/;"	C	type:rh_symbol_type
+Conditions	../_build/default/lib/conditions.ml	/^open Lexer$/;"	M
+Conditions	../lib/conditions.ml	/^open Lexer$/;"	M
+Contents	../web_scraping/List_of_conditions.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	i
+Contents	../web_scraping/List_of_effects.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	i
+Country	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Country">Country<\/span><\/h3>$/;"	I
+Country	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Country">Country<\/span><\/h3>$/;"	j
+Country Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Country_Scope">Country Scope<\/span><\/h2>$/;"	i
+Country_Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Country_Scope">Country Scope<\/span><\/h2>$/;"	I
+Diplomatic Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Diplomatic_Effects">Diplomatic Effects<\/span><\/h2>$/;"	i
+Diplomatic_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Diplomatic_Effects">Diplomatic Effects<\/span><\/h2>$/;"	I
+END_OF_FILE	../_build/default/lib/Type_def.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
+END_OF_FILE	../lib/Type_def.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
+EQ	../_build/default/lib/Lexer.ml	/^|EQ$/;"	C	type:lexem_type
+EQ	../lib/Lexer.ml	/^|EQ$/;"	C	type:lexem_type
+EXPR_EXCEPTION	../_build/default/lib/Type_def.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
+EXPR_EXCEPTION	../lib/Type_def.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
+Economic Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Economic_Effects">Economic Effects<\/span><\/h2>$/;"	i
+Economic_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Economic_Effects">Economic Effects<\/span><\/h2>$/;"	I
+Effects	../_build/default/lib/effects.ml	/^open Symbol_table$/;"	M
+Effects	../lib/effects.ml	/^open Symbol_table$/;"	M
+Float	../_build/default/lib/Lexer.ml	/^|Float $/;"	C	type:lexem_type
+Float	../lib/Lexer.ml	/^|Float $/;"	C	type:lexem_type
+Function Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Function_Effects">Function Effects<\/span><\/h2>$/;"	i
+Function_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Function_Effects">Function Effects<\/span><\/h2>$/;"	I
+INT	../_build/default/lib/Lexer.ml	/^|INT $/;"	C	type:lexem_type
+INT	../lib/Lexer.ml	/^|INT $/;"	C	type:lexem_type
+Keyword	../_build/default/lib/Lexer.ml	/^|Keyword $/;"	C	type:lexem_type
+Keyword	../lib/Lexer.ml	/^|Keyword $/;"	C	type:lexem_type
+Keyword_SYMBOL	../_build/default/lib/Type_def.ml	/^    |Keyword_SYMBOL of String $/;"	C	type:lh_symbol_type
+Keyword_SYMBOL	../lib/Type_def.ml	/^    |Keyword_SYMBOL of String $/;"	C	type:lh_symbol_type
+LB	../_build/default/lib/Lexer.ml	/^|LB$/;"	C	type:lexem_type
+LB	../lib/Lexer.ml	/^|LB$/;"	C	type:lexem_type
+LEXEM	../_build/default/lib/Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
+LEXEM	../lib/Type_def.ml	/^    |LEXEM of lexem$/;"	C	type:expr
+LEX_ERROR	../_build/default/lib/Lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
+LEX_ERROR	../lib/Lexer.ml	/^|LEX_ERROR$/;"	C	type:lexem_type
+LHS	../_build/default/lib/Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
+LHS	../lib/Type_def.ml	/^    |LHS of lh_symbol_type list $/;"	C	type:expected_value
+Lexer	../_build/default/lib/Lexer.ml	/^type lexem_type =$/;"	M
+Lexer	../lib/Lexer.ml	/^type lexem_type =$/;"	M
+List of conditions	../web_scraping/List_of_conditions.html	/^                    <h1 id="firstHeading" class="firstHeading" lang="en">List of conditions<\/h1/;"	h
+List of effects	../web_scraping/List_of_effects.html	/^                    <h1 id="firstHeading" class="firstHeading" lang="en">List of effects<\/h1>$/;"	h
+MULTIPLE_CHOICE	../_build/default/lib/Type_def.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
+MULTIPLE_CHOICE	../lib/Type_def.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
+Main	../_build/default/bin/main.ml	/^open Vic2parser_reboot$/;"	M
+Main	../bin/main.ml	/^open Vic2parser_reboot$/;"	M
+More	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+More	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Mtth	../_build/default/lib/mtth.ml	/^open Symbol_table$/;"	M
+Mtth	../lib/mtth.ml	/^open Symbol_table$/;"	M
+NONE	../_build/default/lib/Type_def.ml	/^    | NONE $/;"	C	type:expected_value
+NONE	../lib/Type_def.ml	/^    | NONE $/;"	C	type:expected_value
+NOT	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="NOT">NOT<\/span><\/h3>$/;"	I
+NOT	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="NOT">NOT<\/span><\/h3>$/;"	j
+Namespaces	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Namespaces	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+National Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="National_Effects">National Effects<\/span><\/h2>$/;"	i
+National_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="National_Effects">National Effects<\/span><\/h2>$/;"	I
+Navigation	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Navigation	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Navigation menu	../web_scraping/List_of_conditions.html	/^            <h2>Navigation menu<\/h2>$/;"	i
+Navigation menu	../web_scraping/List_of_effects.html	/^            <h2>Navigation menu<\/h2>$/;"	i
+OR	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="OR">OR<\/span><\/h3>$/;"	I
+OR	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="OR">OR<\/span><\/h3>$/;"	j
+P.CallCountryAI	../victoria2/script/utils.lua	/^function P.CallCountryAI(tag, funName, ...)$/;"	f
+P.CallScoredCountryAI	../victoria2/script/utils.lua	/^function P.CallScoredCountryAI(tag, funName, currentScore, ...)$/;"	f
+P.HasCountryAIFunction	../victoria2/script/utils.lua	/^function P.HasCountryAIFunction(tag, funName)$/;"	f
+P.LUA_DEBUGOUT	../victoria2/script/utils.lua	/^function P.LUA_DEBUGOUT(s)$/;"	f
+P.ScanDir	../victoria2/script/utils.lua	/^function P.ScanDir(dirname, pattern )$/;"	f
+PARAM_LIST	../_build/default/lib/Type_def.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
+PARAM_LIST	../lib/Type_def.ml	/^    |PARAM_LIST of (lh_symbol_type,rh_symbol_type) Hashtbl.t$/;"	C	type:rh_symbol_type
+PARAM_OPTION	../_build/default/lib/Type_def.ml	/^    |PARAM_OPTION of rh_symbol_type list$/;"	C	type:rh_symbol_type
+PARAM_OPTION	../lib/Type_def.ml	/^    |PARAM_OPTION of rh_symbol_type list$/;"	C	type:rh_symbol_type
+PARAM_VALUE	../_build/default/lib/Type_def.ml	/^    |PARAM_VALUE of lexem_type $/;"	C	type:rh_symbol_type
+PARAM_VALUE	../lib/Type_def.ml	/^    |PARAM_VALUE of lexem_type $/;"	C	type:rh_symbol_type
+POP_CONDITIONS	../_build/default/lib/Type_def.ml	/^    |POP_CONDITIONS$/;"	C	type:rh_symbol_type
+POP_CONDITIONS	../lib/Type_def.ml	/^    |POP_CONDITIONS$/;"	C	type:rh_symbol_type
+POP_EFFECTS	../_build/default/lib/Type_def.ml	/^    |POP_EFFECTS$/;"	C	type:rh_symbol_type
+POP_EFFECTS	../lib/Type_def.ml	/^    |POP_EFFECTS$/;"	C	type:rh_symbol_type
+PROVINCE_CONDITIONS	../_build/default/lib/Type_def.ml	/^    |PROVINCE_CONDITIONS$/;"	C	type:rh_symbol_type
+PROVINCE_CONDITIONS	../lib/Type_def.ml	/^    |PROVINCE_CONDITIONS$/;"	C	type:rh_symbol_type
+PROVINCE_EFFECTS	../_build/default/lib/Type_def.ml	/^    |PROVINCE_EFFECTS$/;"	C	type:rh_symbol_type
+PROVINCE_EFFECTS	../lib/Type_def.ml	/^    |PROVINCE_EFFECTS$/;"	C	type:rh_symbol_type
+PROVINCE_MTTH	../_build/default/lib/Type_def.ml	/^    |PROVINCE_MTTH$/;"	C	type:rh_symbol_type
+PROVINCE_MTTH	../lib/Type_def.ml	/^    |PROVINCE_MTTH$/;"	C	type:rh_symbol_type
+Paradox links	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Paradox links	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Personal tools	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Personal tools	../web_scraping/List_of_conditions.html	/^                    <h3 id="p-personal-label">Personal tools<\/h3>$/;"	j
+Personal tools	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Personal tools	../web_scraping/List_of_effects.html	/^                    <h3 id="p-personal-label">Personal tools<\/h3>$/;"	j
+Political Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Political_Effects">Political Effects<\/span><\/h2>$/;"	i
+Political_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Political_Effects">Political Effects<\/span><\/h2>$/;"	I
+Pop Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Pop_Scope">Pop Scope<\/span><\/h2>$/;"	i
+Pop_Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Pop_Scope">Pop Scope<\/span><\/h2>$/;"	I
+Pops	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Pops">Pops<\/span><\/h3>$/;"	I
+Pops	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Pops">Pops<\/span><\/h3>$/;"	j
+Population Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Population_Effects">Population Effects<\/span><\/h2>$/;"	i
+Population_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Population_Effects">Population Effects<\/span><\/h2>$/;"	I
+Pre_parser	../_build/default/lib/pre_parser.ml	/^open Lexer$/;"	M
+Pre_parser	../lib/pre_parser.ml	/^open Lexer$/;"	M
+Province	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Province">Province<\/span><\/h3>$/;"	I
+Province	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="Province">Province<\/span><\/h3>$/;"	j
+Province Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Province_Scope">Province Scope<\/span><\/h2>$/;"	i
+Province_Scope	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="Province_Scope">Province Scope<\/span><\/h2>$/;"	I
+Provincial Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Provincial_Effects">Provincial Effects<\/span><\/h2>$/;"	i
+Provincial_Effects	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Provincial_Effects">Provincial Effects<\/span><\/h2>$/;"	I
+RB	../_build/default/lib/Lexer.ml	/^|RB$/;"	C	type:lexem_type
+RB	../lib/Lexer.ml	/^|RB$/;"	C	type:lexem_type
+RHS	../_build/default/lib/Type_def.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
+RHS	../lib/Type_def.ml	/^    |RHS of rh_symbol_type list $/;"	C	type:expected_value
+SCOPE	../_build/default/lib/Lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
+SCOPE	../lib/Lexer.ml	/^|SCOPE$/;"	C	type:lexem_type
+STATE_CONDITIONS	../_build/default/lib/Type_def.ml	/^    |STATE_CONDITIONS$/;"	C	type:rh_symbol_type
+STATE_CONDITIONS	../lib/Type_def.ml	/^    |STATE_CONDITIONS$/;"	C	type:rh_symbol_type
+STATE_EFFECTS	../_build/default/lib/Type_def.ml	/^    |STATE_EFFECTS$/;"	C	type:rh_symbol_type
+STATE_EFFECTS	../lib/Type_def.ml	/^    |STATE_EFFECTS$/;"	C	type:rh_symbol_type
+String	../_build/default/lib/Lexer.ml	/^|String$/;"	C	type:lexem_type
+String	../lib/Lexer.ml	/^|String$/;"	C	type:lexem_type
+Search	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Search	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+See also	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="See_also">See also<\/span><\/h2>$/;"	i
+See also	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="See_also">See also<\/span><\/h2>$/;"	i
+See_also	../web_scraping/List_of_conditions.html	/^<h2><span class="mw-headline" id="See_also">See also<\/span><\/h2>$/;"	I
+See_also	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="See_also">See also<\/span><\/h2>$/;"	I
+State	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="State">State<\/span><\/h3>$/;"	I
+State	../web_scraping/List_of_effects.html	/^<h3><span class="mw-headline" id="State">State<\/span><\/h3>$/;"	j
+Structures	../_build/default/lib/structures.ml	/^open Symbol_table$/;"	M
+Structures	../lib/structures.ml	/^open Symbol_table$/;"	M
+Symbol_table	../_build/default/lib/symbol_table.ml	/^let symbol_table_init symbols =$/;"	M
+Symbol_table	../lib/symbol_table.ml	/^let symbol_table_init symbols =$/;"	M
+Syntax and terminology	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Syntax_and_terminology">Syntax and terminology<\/span><\/h2>$/;"	i
+Syntax_and_terminology	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Syntax_and_terminology">Syntax and terminology<\/span><\/h2>$/;"	I
+TAG	../_build/default/lib/Lexer.ml	/^|TAG  $/;"	C	type:lexem_type
+TAG	../lib/Lexer.ml	/^|TAG  $/;"	C	type:lexem_type
+TYPE_MISHMASH	../_build/default/lib/Type_def.ml	/^    |TYPE_MISHMASH of String  * lexem_type * lexem_type $/;"	C	type:exception_type
+TYPE_MISHMASH	../lib/Type_def.ml	/^    |TYPE_MISHMASH of String  * lexem_type * lexem_type $/;"	C	type:exception_type
+TYPE_SYMBOL	../_build/default/lib/Type_def.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
+TYPE_SYMBOL	../lib/Type_def.ml	/^    |TYPE_SYMBOL of lexem_type$/;"	C	type:lh_symbol_type
+Targets	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Targets">Targets<\/span><\/h2>$/;"	I
+Targets	../web_scraping/List_of_effects.html	/^<h2><span class="mw-headline" id="Targets">Targets<\/span><\/h2>$/;"	i
+Tools	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Tools	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Type_def	../_build/default/lib/Type_def.ml	/^open Lexer$/;"	M
+Type_def	../lib/Type_def.ml	/^open Lexer$/;"	M
+Type_verify	../_build/default/lib/type_verify.ml	/^open Symbol_table$/;"	M
+Type_verify	../lib/type_verify.ml	/^open Symbol_table$/;"	M
+UNEXPECTED_ASSIGNMENT	../_build/default/lib/Type_def.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
+UNEXPECTED_ASSIGNMENT	../lib/Type_def.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
+UNEXPECTED_ASSIGN_LIST	../_build/default/lib/Type_def.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
+UNEXPECTED_ASSIGN_LIST	../lib/Type_def.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
+UNEXPECTED_LEFT_BRACKET	../_build/default/lib/Type_def.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_LEFT_BRACKET	../lib/Type_def.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_LEXEM	../_build/default/lib/Type_def.ml	/^    |UNEXPECTED_LEXEM of String * lexem_type $/;"	C	type:exception_type
+UNEXPECTED_LEXEM	../lib/Type_def.ml	/^    |UNEXPECTED_LEXEM of String * lexem_type $/;"	C	type:exception_type
+UNEXPECTED_RIGHT_BRACKET	../_build/default/lib/Type_def.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
+UNEXPECTED_RIGHT_BRACKET	../lib/Type_def.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
+UNKNOWN_IDENTIFIER	../_build/default/lib/Type_def.ml	/^    |UNKNOWN_IDENTIFIER of String $/;"	C	type:exception_type
+UNKNOWN_IDENTIFIER	../lib/Type_def.ml	/^    |UNKNOWN_IDENTIFIER of String $/;"	C	type:exception_type
+Variants	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Variants	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+Views	../web_scraping/List_of_conditions.html	/^	<\/h3>$/;"	j
+Views	../web_scraping/List_of_effects.html	/^	<\/h3>$/;"	j
+[ideology]	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]"><\/span><span class="mw-headline" id=".5Bideology.5D">[ideology]<\/spa/;"	I
+[ideology]	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]"><\/span><span class="mw-headline" id=".5Bideology.5D">[ideology]<\/spa/;"	j
+[ideology]	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]_2"><\/span><span class="mw-headline" id=".5Bideology.5D_2">[ideology]<\//;"	j
+[ideology]_2	../web_scraping/List_of_conditions.html	/^<h3><span id="[ideology]_2"><\/span><span class="mw-headline" id=".5Bideology.5D_2">[ideology]<\//;"	I
+[party_issue]	../web_scraping/List_of_conditions.html	/^<h3><span id="[party_issue]"><\/span><span class="mw-headline" id=".5Bparty_issue.5D">[party_iss/;"	I
+[party_issue]	../web_scraping/List_of_conditions.html	/^<h3><span id="[party_issue]"><\/span><span class="mw-headline" id=".5Bparty_issue.5D">[party_iss/;"	j
+[poptype]	../web_scraping/List_of_conditions.html	/^<h3><span id="[poptype]"><\/span><span class="mw-headline" id=".5Bpoptype.5D">[poptype]<\/span></;"	I
+[poptype]	../web_scraping/List_of_conditions.html	/^<h3><span id="[poptype]"><\/span><span class="mw-headline" id=".5Bpoptype.5D">[poptype]<\/span></;"	j
+[technology]	../web_scraping/List_of_conditions.html	/^<h3><span id="[technology]"><\/span><span class="mw-headline" id=".5Btechnology.5D">[technology]/;"	I
+[technology]	../web_scraping/List_of_conditions.html	/^<h3><span id="[technology]"><\/span><span class="mw-headline" id=".5Btechnology.5D">[technology]/;"	j
+accepted_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="accepted_culture">accepted_culture<\/span><\/h3>$/;"	I
+accepted_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="accepted_culture">accepted_culture<\/span><\/h3>$/;"	j
+administration_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="administration_spending">administration_spending<\/span><\/h3>$/;"	I
+administration_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="administration_spending">administration_spending<\/span><\/h3>$/;"	j
+agree_with_ruling_party	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="agree_with_ruling_party">agree_with_ruling_party<\/span><\/h3>$/;"	I
+agree_with_ruling_party	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="agree_with_ruling_party">agree_with_ruling_party<\/span><\/h3>$/;"	j
+ai	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ai">ai<\/span><\/h3>$/;"	I
+ai	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ai">ai<\/span><\/h3>$/;"	j
+alliance_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="alliance_with">alliance_with<\/span><\/h3>$/;"	I
+alliance_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="alliance_with">alliance_with<\/span><\/h3>$/;"	j
+allow_multiple_instances	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="allow_multiple_instances">allow_multiple_instances<\/span><\/h/;"	I
+allow_multiple_instances	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="allow_multiple_instances">allow_multiple_instances<\/span><\/h/;"	j
+append_table	../_build/default/lib/symbol_table.ml	/^let append_table symbol_table symbols = $/;"	f
+append_table	../lib/symbol_table.ml	/^let append_table symbol_table symbols = $/;"	f
+assignment	../_build/default/lib/Type_def.ml	/^and assignment = $/;"	t
+assignment	../_build/default/lib/pre_parser.ml	/^and assignment lex = match lex with$/;"	f
+assignment	../lib/Type_def.ml	/^and assignment = $/;"	t
+assignment	../lib/pre_parser.ml	/^and assignment lex = match lex with$/;"	f
+assignment_list	../_build/default/lib/pre_parser.ml	/^and assignment_list lexems = $/;"	f
+assignment_list	../lib/pre_parser.ml	/^and assignment_list lexems = $/;"	f
+assignments	../_build/default/lib/pre_parser.ml	/^let rec assignments ls = $/;"	f
+assignments	../lib/pre_parser.ml	/^let rec assignments ls = $/;"	f
+average_consciousness	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_consciousness">average_consciousness<\/span><\/h3>$/;"	I
+average_consciousness	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_consciousness">average_consciousness<\/span><\/h3>$/;"	j
+average_consciousness	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_consciousness_2">average_consciousness<\/span><\/h3>$/;"	j
+average_consciousness_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_consciousness_2">average_consciousness<\/span><\/h3>$/;"	I
+average_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_militancy">average_militancy<\/span><\/h3>$/;"	I
+average_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_militancy">average_militancy<\/span><\/h3>$/;"	j
+average_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_militancy_2">average_militancy<\/span><\/h3>$/;"	j
+average_militancy_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="average_militancy_2">average_militancy<\/span><\/h3>$/;"	I
+badboy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="badboy">badboy<\/span><\/h3>$/;"	I
+badboy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="badboy">badboy<\/span><\/h3>$/;"	j
+big_producer (needs clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="big_producer_(needs_clarification)"><\/span><span class="mw-headline" id="big_prod/;"	j
+big_producer_(needs_clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="big_producer_(needs_clarification)"><\/span><span class="mw-headline" id="big_prod/;"	I
+big_producer_.28needs_clarification.29	../web_scraping/List_of_conditions.html	/^<h3><span id="big_producer_(needs_clarification)"><\/span><span class="mw-headline" id="big_prod/;"	I
+blockade	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="blockade">blockade<\/span><\/h3>$/;"	I
+blockade	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="blockade">blockade<\/span><\/h3>$/;"	j
+bodyContent	../web_scraping/List_of_conditions.html	/^                    <div id="bodyContent" class="mw-body-content">$/;"	I
+bodyContent	../web_scraping/List_of_effects.html	/^                    <div id="bodyContent" class="mw-body-content">$/;"	I
+brigades_compare	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="brigades_compare">brigades_compare<\/span><\/h3>$/;"	I
+brigades_compare	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="brigades_compare">brigades_compare<\/span><\/h3>$/;"	j
+ca-history	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+ca-history	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+ca-nstab-main	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="\//;"	I
+ca-nstab-main	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="\//;"	I
+ca-talk	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="\//;"	I
+ca-talk	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-nstab-main" class="selected"><a href="\//;"	I
+ca-view	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+ca-view	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+ca-viewsource	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+ca-viewsource	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="ca-view" class="collapsible selected"><a h/;"	I
+can_build_factory	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_build_factory">can_build_factory<\/span><\/h3>$/;"	I
+can_build_factory	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_build_factory">can_build_factory<\/span><\/h3>$/;"	j
+can_build_factory_in_capital_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_build_factory_in_capital_state">can_build_factory_in_capit/;"	I
+can_build_factory_in_capital_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_build_factory_in_capital_state">can_build_factory_in_capit/;"	j
+can_create_vassals	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_create_vassals">can_create_vassals<\/span><\/h3>$/;"	I
+can_create_vassals	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_create_vassals">can_create_vassals<\/span><\/h3>$/;"	j
+can_nationalize	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_nationalize">can_nationalize<\/span><\/h3>$/;"	I
+can_nationalize	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="can_nationalize">can_nationalize<\/span><\/h3>$/;"	j
+capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="capital">capital<\/span><\/h3>$/;"	I
+capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="capital">capital<\/span><\/h3>$/;"	j
+cash_reserves	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="cash_reserves">cash_reserves<\/span><\/h3>$/;"	I
+cash_reserves	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="cash_reserves">cash_reserves<\/span><\/h3>$/;"	j
+casus_belli	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="casus_belli">casus_belli<\/span><\/h3>$/;"	I
+casus_belli	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="casus_belli">casus_belli<\/span><\/h3>$/;"	j
+catlinks	../web_scraping/List_of_conditions.html	/^                        <div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-norm/;"	I
+catlinks	../web_scraping/List_of_effects.html	/^                        <div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-norm/;"	I
+chars_to_lexem	../_build/default/lib/Lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
+chars_to_lexem	../lib/Lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
+check_variable	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="check_variable">check_variable<\/span><\/h3>$/;"	I
+check_variable	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="check_variable">check_variable<\/span><\/h3>$/;"	j
+citizenship_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="citizenship_policy">citizenship_policy<\/span><\/h3>$/;"	I
+citizenship_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="citizenship_policy">citizenship_policy<\/span><\/h3>$/;"	j
+civilization_progress	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="civilization_progress">civilization_progress<\/span><\/h3>$/;"	I
+civilization_progress	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="civilization_progress">civilization_progress<\/span><\/h3>$/;"	j
+civilized	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="civilized">civilized<\/span><\/h3>$/;"	I
+civilized	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="civilized">civilized<\/span><\/h3>$/;"	j
+colonial_nation	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="colonial_nation">colonial_nation<\/span><\/h3>$/;"	I
+colonial_nation	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="colonial_nation">colonial_nation<\/span><\/h3>$/;"	j
+consciousness	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="consciousness">consciousness<\/span><\/h3>$/;"	I
+consciousness	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="consciousness">consciousness<\/span><\/h3>$/;"	j
+constructing_cb_progress	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="constructing_cb_progress">constructing_cb_progress<\/span><\/h/;"	I
+constructing_cb_progress	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="constructing_cb_progress">constructing_cb_progress<\/span><\/h/;"	j
+constructing_cb_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="constructing_cb_type">constructing_cb_type<\/span><\/h3>$/;"	I
+constructing_cb_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="constructing_cb_type">constructing_cb_type<\/span><\/h3>$/;"	j
+content	../web_scraping/List_of_conditions.html	/^                <main id="content" class="mw-body" role="main">$/;"	I
+content	../web_scraping/List_of_effects.html	/^                <main id="content" class="mw-body" role="main">$/;"	I
+contentSub	../web_scraping/List_of_conditions.html	/^                        <div id="contentSub"><\/div>$/;"	I
+contentSub	../web_scraping/List_of_effects.html	/^                        <div id="contentSub"><\/div>$/;"	I
+contentSub2	../web_scraping/List_of_conditions.html	/^                        <div id="contentSub2"><\/div>$/;"	I
+contentSub2	../web_scraping/List_of_effects.html	/^                        <div id="contentSub2"><\/div>$/;"	I
+continent	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="continent">continent<\/span><\/h3>$/;"	I
+continent	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="continent">continent<\/span><\/h3>$/;"	j
+controlled_by	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controlled_by">controlled_by<\/span><\/h3>$/;"	I
+controlled_by	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controlled_by">controlled_by<\/span><\/h3>$/;"	j
+controlled_by_rebels	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controlled_by_rebels">controlled_by_rebels<\/span><\/h3>$/;"	I
+controlled_by_rebels	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controlled_by_rebels">controlled_by_rebels<\/span><\/h3>$/;"	j
+controls	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controls">controls<\/span><\/h3>$/;"	I
+controls	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="controls">controls<\/span><\/h3>$/;"	j
+conv	../web_scraping/read_files.py	/^            conv = ""$/;"	v
+conv	../web_scraping/read_files.py	/^            conv = "{}_of_String".format(type)$/;"	v
+country_conditions	../_build/default/lib/conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
+country_conditions	../lib/conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
+country_effects	../_build/default/lib/effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
+country_effects	../lib/effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
+country_mtth	../_build/default/lib/mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
+country_mtth	../lib/mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
+country_units_in_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="country_units_in_province">country_units_in_province<\/span><\//;"	I
+country_units_in_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="country_units_in_province">country_units_in_province<\/span><\//;"	j
+country_units_in_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="country_units_in_state">country_units_in_state<\/span><\/h3>$/;"	I
+country_units_in_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="country_units_in_state">country_units_in_state<\/span><\/h3>$/;"	j
+crime_fighting	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_fighting">crime_fighting<\/span><\/h3>$/;"	I
+crime_fighting	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_fighting">crime_fighting<\/span><\/h3>$/;"	j
+crime_fighting	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_fighting_2">crime_fighting<\/span><\/h3>$/;"	j
+crime_fighting_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_fighting_2">crime_fighting<\/span><\/h3>$/;"	I
+crime_higher_than_education	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_higher_than_education">crime_higher_than_education<\/spa/;"	I
+crime_higher_than_education	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="crime_higher_than_education">crime_higher_than_education<\/spa/;"	j
+crisis_exist *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="crisis_exist_*HOD_ONLY*"><\/span><span class="mw-headline" id="crisis_exist_.2AHOD/;"	j
+crisis_exist_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="crisis_exist_*HOD_ONLY*"><\/span><span class="mw-headline" id="crisis_exist_.2AHOD/;"	I
+crisis_exist_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="crisis_exist_*HOD_ONLY*"><\/span><span class="mw-headline" id="crisis_exist_.2AHOD/;"	I
+culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="culture">culture<\/span><\/h3>$/;"	I
+culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="culture">culture<\/span><\/h3>$/;"	j
+culture_has_union_tag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="culture_has_union_tag">culture_has_union_tag<\/span><\/h3>$/;"	I
+culture_has_union_tag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="culture_has_union_tag">culture_has_union_tag<\/span><\/h3>$/;"	j
+current_length	../_build/default/lib/type_verify.ml	/^        let current_length = List.length hd in$/;"	v
+current_length	../lib/type_verify.ml	/^        let current_length = List.length hd in$/;"	v
+diplomatic_influence	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="diplomatic_influence">diplomatic_influence<\/span><\/h3>$/;"	I
+diplomatic_influence	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="diplomatic_influence">diplomatic_influence<\/span><\/h3>$/;"	j
+economic_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="economic_policy">economic_policy<\/span><\/h3>$/;"	I
+economic_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="economic_policy">economic_policy<\/span><\/h3>$/;"	j
+economic_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="economic_reform">economic_reform<\/span><\/h3>$/;"	I
+economic_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="economic_reform">economic_reform<\/span><\/h3>$/;"	j
+education_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="education_spending">education_spending<\/span><\/h3>$/;"	I
+education_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="education_spending">education_spending<\/span><\/h3>$/;"	j
+education_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="education_spending_2">education_spending<\/span><\/h3>$/;"	j
+education_spending_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="education_spending_2">education_spending<\/span><\/h3>$/;"	I
+effects	../web_scraping/read_effects.py	/^effects = get_effects()$/;"	v
+election	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="election">election<\/span><\/h3>$/;"	I
+election	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="election">election<\/span><\/h3>$/;"	j
+empty	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="empty">empty<\/span><\/h3>$/;"	I
+empty	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="empty">empty<\/span><\/h3>$/;"	j
+everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="everyday_needs">everyday_needs<\/span><\/h3>$/;"	I
+everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="everyday_needs">everyday_needs<\/span><\/h3>$/;"	j
+exception_iden_String	../_build/default/lib/pre_parser.ml	/^and exception_iden_String exp = match exp with$/;"	f
+exception_iden_String	../lib/pre_parser.ml	/^and exception_iden_String exp = match exp with$/;"	f
+exception_String	../_build/default/lib/pre_parser.ml	/^and exception_String (exp : exception_value) : String = $/;"	f
+exception_String	../lib/pre_parser.ml	/^and exception_String (exp : exception_value) : String = $/;"	f
+exception_type	../_build/default/lib/Type_def.ml	/^and exception_type = $/;"	t
+exception_type	../lib/Type_def.ml	/^and exception_type = $/;"	t
+exception_value	../_build/default/lib/Type_def.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exception_value	../lib/Type_def.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exceptions_String	../_build/default/lib/pre_parser.ml	/^let exceptions_String = List.fold_left (fun buffer e -> $/;"	v
+exceptions_String	../lib/pre_parser.ml	/^let exceptions_String = List.fold_left (fun buffer e -> $/;"	v
+exists	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="exists">exists<\/span><\/h3>$/;"	I
+exists	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="exists">exists<\/span><\/h3>$/;"	j
+expected_value	../_build/default/lib/Type_def.ml	/^and expected_value =$/;"	t
+expected_value	../lib/Type_def.ml	/^and expected_value =$/;"	t
+expr	../_build/default/lib/Type_def.ml	/^type expr = $/;"	t
+expr	../lib/Type_def.ml	/^type expr = $/;"	t
+expression	../_build/default/lib/pre_parser.ml	/^and expression lexems = $/;"	f
+expression	../lib/pre_parser.ml	/^and expression lexems = $/;"	f
+fire_only_once	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="fire_only_once">fire_only_once<\/span><\/h3>$/;"	I
+fire_only_once	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="fire_only_once">fire_only_once<\/span><\/h3>$/;"	j
+firstHeading	../web_scraping/List_of_conditions.html	/^                    <h1 id="firstHeading" class="firstHeading" lang="en">List of conditions<\/h1/;"	I
+firstHeading	../web_scraping/List_of_effects.html	/^                    <h1 id="firstHeading" class="firstHeading" lang="en">List of effects<\/h1>$/;"	I
+flashpoint_tension *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="flashpoint_tension_*HOD_ONLY*"><\/span><span class="mw-headline" id="flashpoint_te/;"	j
+flashpoint_tension_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="flashpoint_tension_*HOD_ONLY*"><\/span><span class="mw-headline" id="flashpoint_te/;"	I
+flashpoint_tension_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="flashpoint_tension_*HOD_ONLY*"><\/span><span class="mw-headline" id="flashpoint_te/;"	I
+footer	../web_scraping/List_of_conditions.html	/^<footer id="footer" class="mw-footer" role="contentinfo" >$/;"	I
+footer	../web_scraping/List_of_effects.html	/^<footer id="footer" class="mw-footer" role="contentinfo" >$/;"	I
+footer-copyrightico	../web_scraping/List_of_conditions.html	/^                <li id="footer-copyrightico"><a href="https:\/\/creativecommons.org\/licenses\/b/;"	I
+footer-copyrightico	../web_scraping/List_of_effects.html	/^                <li id="footer-copyrightico"><a href="https:\/\/creativecommons.org\/licenses\/b/;"	I
+footer-icons	../web_scraping/List_of_conditions.html	/^        <ul id="footer-icons" class="noprint">$/;"	I
+footer-icons	../web_scraping/List_of_effects.html	/^        <ul id="footer-icons" class="noprint">$/;"	I
+footer-info	../web_scraping/List_of_conditions.html	/^        <ul id="footer-info" >$/;"	I
+footer-info	../web_scraping/List_of_effects.html	/^        <ul id="footer-info" >$/;"	I
+footer-info-copyright	../web_scraping/List_of_conditions.html	/^                <li id="footer-info-copyright">Content is available under <a href="https:\/\/cen/;"	I
+footer-info-copyright	../web_scraping/List_of_effects.html	/^                <li id="footer-info-copyright">Content is available under <a href="https:\/\/cen/;"	I
+footer-info-lastmod	../web_scraping/List_of_conditions.html	/^                <li id="footer-info-lastmod"> This page was last edited on 11 September 2022, at/;"	I
+footer-info-lastmod	../web_scraping/List_of_effects.html	/^                <li id="footer-info-lastmod"> This page was last edited on 14 May 2023, at 01:27/;"	I
+footer-places	../web_scraping/List_of_conditions.html	/^        <ul id="footer-places" >$/;"	I
+footer-places	../web_scraping/List_of_effects.html	/^        <ul id="footer-places" >$/;"	I
+footer-places-about	../web_scraping/List_of_conditions.html	/^                <li id="footer-places-about"><a href="https:\/\/central.paradoxwikis.com\/Centra/;"	I
+footer-places-about	../web_scraping/List_of_effects.html	/^                <li id="footer-places-about"><a href="https:\/\/central.paradoxwikis.com\/Centra/;"	I
+footer-places-legal_pp	../web_scraping/List_of_conditions.html	/^                <li id="footer-places-legal_pp"><a href="https:\/\/legal.paradoxplaza.com\/priva/;"	I
+footer-places-legal_pp	../web_scraping/List_of_effects.html	/^                <li id="footer-places-legal_pp"><a href="https:\/\/legal.paradoxplaza.com\/priva/;"	I
+footer-places-mainpage	../web_scraping/List_of_conditions.html	/^                <li id="footer-places-mainpage"><a href="\/Victoria_2_Wiki" title="Victoria 2 Wi/;"	I
+footer-places-mainpage	../web_scraping/List_of_effects.html	/^                <li id="footer-places-mainpage"><a href="\/Victoria_2_Wiki" title="Victoria 2 Wi/;"	I
+footer-places-mobileview	../web_scraping/List_of_conditions.html	/^                <li id="footer-places-mobileview"><a href="https:\/\/vic2.paradoxwikis.com\/inde/;"	I
+footer-places-mobileview	../web_scraping/List_of_effects.html	/^                <li id="footer-places-mobileview"><a href="https:\/\/vic2.paradoxwikis.com\/inde/;"	I
+footer-places-paradoxwiki	../web_scraping/List_of_conditions.html	/^                <li id="footer-places-paradoxwiki"><a href="https:\/\/paradoxwikis.com\/" class=/;"	I
+footer-places-paradoxwiki	../web_scraping/List_of_effects.html	/^                <li id="footer-places-paradoxwiki"><a href="https:\/\/paradoxwikis.com\/" class=/;"	I
+footer-poweredbyico	../web_scraping/List_of_conditions.html	/^                <li id="footer-poweredbyico"><a href="https:\/\/www.mediawiki.org\/"><img src="\//;"	I
+footer-poweredbyico	../web_scraping/List_of_effects.html	/^                <li id="footer-poweredbyico"><a href="https:\/\/www.mediawiki.org\/"><img src="\//;"	I
+get_effects	../web_scraping/read_effects.py	/^def get_effects():$/;"	f
+get_errors	../_build/default/lib/pre_parser.ml	/^let get_errors assignments = $/;"	f
+get_errors	../lib/pre_parser.ml	/^let get_errors assignments = $/;"	f
+government	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="government">government<\/span><\/h3>$/;"	I
+government	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="government">government<\/span><\/h3>$/;"	j
+great_wars_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="great_wars_enabled">great_wars_enabled<\/span><\/h3>$/;"	I
+great_wars_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="great_wars_enabled">great_wars_enabled<\/span><\/h3>$/;"	j
+has_building	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_building">has_building<\/span><\/h3>$/;"	I
+has_building	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_building">has_building<\/span><\/h3>$/;"	j
+has_country_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_country_flag">has_country_flag<\/span><\/h3>$/;"	I
+has_country_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_country_flag">has_country_flag<\/span><\/h3>$/;"	j
+has_country_modifier	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_country_modifier">has_country_modifier<\/span><\/h3>$/;"	I
+has_country_modifier	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_country_modifier">has_country_modifier<\/span><\/h3>$/;"	j
+has_crime	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_crime">has_crime<\/span><\/h3>$/;"	I
+has_crime	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_crime">has_crime<\/span><\/h3>$/;"	j
+has_cultural_sphere *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="has_cultural_sphere_*HOD_ONLY*"><\/span><span class="mw-headline" id="has_cultural/;"	j
+has_cultural_sphere_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="has_cultural_sphere_*HOD_ONLY*"><\/span><span class="mw-headline" id="has_cultural/;"	I
+has_cultural_sphere_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="has_cultural_sphere_*HOD_ONLY*"><\/span><span class="mw-headline" id="has_cultural/;"	I
+has_culture_core (needs clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="has_culture_core_(needs_clarification)"><\/span><span class="mw-headline" id="has_/;"	j
+has_culture_core_(needs_clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="has_culture_core_(needs_clarification)"><\/span><span class="mw-headline" id="has_/;"	I
+has_culture_core_.28needs_clarification.29	../web_scraping/List_of_conditions.html	/^<h3><span id="has_culture_core_(needs_clarification)"><\/span><span class="mw-headline" id="has_/;"	I
+has_empty_adjacent_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_empty_adjacent_province">has_empty_adjacent_province<\/spa/;"	I
+has_empty_adjacent_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_empty_adjacent_province">has_empty_adjacent_province<\/spa/;"	j
+has_empty_adjacent_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_empty_adjacent_state">has_empty_adjacent_state<\/span><\/h/;"	I
+has_empty_adjacent_state	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_empty_adjacent_state">has_empty_adjacent_state<\/span><\/h/;"	j
+has_factories	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_factories">has_factories<\/span><\/h3>$/;"	I
+has_factories	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_factories">has_factories<\/span><\/h3>$/;"	j
+has_flashpoint	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_flashpoint">has_flashpoint<\/span><\/h3>$/;"	I
+has_flashpoint	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_flashpoint">has_flashpoint<\/span><\/h3>$/;"	j
+has_global_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_global_flag">has_global_flag<\/span><\/h3>$/;"	I
+has_global_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_global_flag">has_global_flag<\/span><\/h3>$/;"	j
+has_leader	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_leader">has_leader<\/span><\/h3>$/;"	I
+has_leader	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_leader">has_leader<\/span><\/h3>$/;"	j
+has_national_minority	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_national_minority">has_national_minority<\/span><\/h3>$/;"	I
+has_national_minority	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_national_minority">has_national_minority<\/span><\/h3>$/;"	j
+has_pop_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_culture">has_pop_culture<\/span><\/h3>$/;"	I
+has_pop_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_culture">has_pop_culture<\/span><\/h3>$/;"	j
+has_pop_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_religion">has_pop_religion<\/span><\/h3>$/;"	I
+has_pop_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_religion">has_pop_religion<\/span><\/h3>$/;"	j
+has_pop_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_type">has_pop_type<\/span><\/h3>$/;"	I
+has_pop_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_pop_type">has_pop_type<\/span><\/h3>$/;"	j
+has_province_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_province_flag">has_province_flag<\/span><\/h3>$/;"	I
+has_province_flag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_province_flag">has_province_flag<\/span><\/h3>$/;"	j
+has_province_modifier	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_province_modifier">has_province_modifier<\/span><\/h3>$/;"	I
+has_province_modifier	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_province_modifier">has_province_modifier<\/span><\/h3>$/;"	j
+has_recent_imigration	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_recent_imigration">has_recent_imigration<\/span><\/h3>$/;"	I
+has_recent_imigration	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_recent_imigration">has_recent_imigration<\/span><\/h3>$/;"	j
+has_recently_lost_war	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_recently_lost_war">has_recently_lost_war<\/span><\/h3>$/;"	I
+has_recently_lost_war	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_recently_lost_war">has_recently_lost_war<\/span><\/h3>$/;"	j
+has_unclaimed_cores	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_unclaimed_cores">has_unclaimed_cores<\/span><\/h3>$/;"	I
+has_unclaimed_cores	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="has_unclaimed_cores">has_unclaimed_cores<\/span><\/h3>$/;"	j
+have_core_in	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="have_core_in">have_core_in<\/span><\/h3>$/;"	I
+have_core_in	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="have_core_in">have_core_in<\/span><\/h3>$/;"	j
+header-menu	../web_scraping/List_of_conditions.html	/^                            <div 0="class" 1="navigation-menu nav-active" id="header-menu">$/;"	I
+header-menu	../web_scraping/List_of_effects.html	/^                            <div 0="class" 1="navigation-menu nav-active" id="header-menu">$/;"	I
+ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ideology">ideology<\/span><\/h3>$/;"	I
+ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ideology">ideology<\/span><\/h3>$/;"	j
+immediate	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="immediate">immediate<\/span><\/h3>$/;"	I
+immediate	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="immediate">immediate<\/span><\/h3>$/;"	j
+in_default	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="in_default">in_default<\/span><\/h3>$/;"	I
+in_default	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="in_default">in_default<\/span><\/h3>$/;"	j
+in_sphere	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="in_sphere">in_sphere<\/span><\/h3>$/;"	I
+in_sphere	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="in_sphere">in_sphere<\/span><\/h3>$/;"	j
+industrial_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="industrial_score">industrial_score<\/span><\/h3>$/;"	I
+industrial_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="industrial_score">industrial_score<\/span><\/h3>$/;"	j
+invention	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="invention">invention<\/span><\/h3>$/;"	I
+invention	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="invention">invention<\/span><\/h3>$/;"	j
+involved_in_crisis *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="involved_in_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="involved_in_c/;"	j
+involved_in_crisis_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="involved_in_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="involved_in_c/;"	I
+involved_in_crisis_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="involved_in_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="involved_in_c/;"	I
+is_accepted_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_accepted_culture">is_accepted_culture<\/span><\/h3>$/;"	I
+is_accepted_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_accepted_culture">is_accepted_culture<\/span><\/h3>$/;"	j
+is_accepted_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_accepted_culture_2">is_accepted_culture<\/span><\/h3>$/;"	j
+is_accepted_culture_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_accepted_culture_2">is_accepted_culture<\/span><\/h3>$/;"	I
+is_blockaded	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_blockaded">is_blockaded<\/span><\/h3>$/;"	I
+is_blockaded	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_blockaded">is_blockaded<\/span><\/h3>$/;"	j
+is_canal_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_canal_enabled">is_canal_enabled<\/span><\/h3>$/;"	I
+is_canal_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_canal_enabled">is_canal_enabled<\/span><\/h3>$/;"	j
+is_capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_capital">is_capital<\/span><\/h3>$/;"	I
+is_capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_capital">is_capital<\/span><\/h3>$/;"	j
+is_claim_crisis *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="is_claim_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_claim_crisis_/;"	j
+is_claim_crisis_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="is_claim_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_claim_crisis_/;"	I
+is_claim_crisis_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="is_claim_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_claim_crisis_/;"	I
+is_coastal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_coastal">is_coastal<\/span><\/h3>$/;"	I
+is_coastal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_coastal">is_coastal<\/span><\/h3>$/;"	j
+is_colonial	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_colonial">is_colonial<\/span><\/h3>$/;"	I
+is_colonial	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_colonial">is_colonial<\/span><\/h3>$/;"	j
+is_colonial_crisis	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_colonial_crisis">is_colonial_crisis<\/span><\/h3>$/;"	I
+is_colonial_crisis	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_colonial_crisis">is_colonial_crisis<\/span><\/h3>$/;"	j
+is_core	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_core">is_core<\/span><\/h3>$/;"	I
+is_core	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_core">is_core<\/span><\/h3>$/;"	j
+is_core	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_core_2">is_core<\/span><\/h3>$/;"	j
+is_core_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_core_2">is_core<\/span><\/h3>$/;"	I
+is_cultural_union	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_cultural_union">is_cultural_union<\/span><\/h3>$/;"	I
+is_cultural_union	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_cultural_union">is_cultural_union<\/span><\/h3>$/;"	j
+is_culture_group	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_culture_group">is_culture_group<\/span><\/h3>$/;"	I
+is_culture_group	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_culture_group">is_culture_group<\/span><\/h3>$/;"	j
+is_culture_group	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_culture_group_2">is_culture_group<\/span><\/h3>$/;"	j
+is_culture_group_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_culture_group_2">is_culture_group<\/span><\/h3>$/;"	I
+is_disarmed	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_disarmed">is_disarmed<\/span><\/h3>$/;"	I
+is_disarmed	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_disarmed">is_disarmed<\/span><\/h3>$/;"	j
+is_greater_power	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_greater_power">is_greater_power<\/span><\/h3>$/;"	I
+is_greater_power	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_greater_power">is_greater_power<\/span><\/h3>$/;"	j
+is_ideology_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_ideology_enabled">is_ideology_enabled<\/span><\/h3>$/;"	I
+is_ideology_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_ideology_enabled">is_ideology_enabled<\/span><\/h3>$/;"	j
+is_ideology_enabled	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_ideology_enabled_2">is_ideology_enabled<\/span><\/h3>$/;"	j
+is_ideology_enabled_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_ideology_enabled_2">is_ideology_enabled<\/span><\/h3>$/;"	I
+is_independant	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_independant">is_independant<\/span><\/h3>$/;"	I
+is_independant	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_independant">is_independant<\/span><\/h3>$/;"	j
+is_liberation_crisis *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="is_liberation_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_liberati/;"	j
+is_liberation_crisis_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="is_liberation_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_liberati/;"	I
+is_liberation_crisis_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="is_liberation_crisis_*HOD_ONLY*"><\/span><span class="mw-headline" id="is_liberati/;"	I
+is_mobilised	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_mobilised">is_mobilised<\/span><\/h3>$/;"	I
+is_mobilised	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_mobilised">is_mobilised<\/span><\/h3>$/;"	j
+is_next_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_next_reform">is_next_reform<\/span><\/h3>$/;"	I
+is_next_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_next_reform">is_next_reform<\/span><\/h3>$/;"	j
+is_our_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_our_vassal">is_our_vassal<\/span><\/h3>$/;"	I
+is_our_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_our_vassal">is_our_vassal<\/span><\/h3>$/;"	j
+is_overseas	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_overseas">is_overseas<\/span><\/h3>$/;"	I
+is_overseas	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_overseas">is_overseas<\/span><\/h3>$/;"	j
+is_possible_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_possible_vassal">is_possible_vassal<\/span><\/h3>$/;"	I
+is_possible_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_possible_vassal">is_possible_vassal<\/span><\/h3>$/;"	j
+is_primary_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_primary_culture">is_primary_culture<\/span><\/h3>$/;"	I
+is_primary_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_primary_culture">is_primary_culture<\/span><\/h3>$/;"	j
+is_primary_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_primary_culture_2">is_primary_culture<\/span><\/h3>$/;"	j
+is_primary_culture_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_primary_culture_2">is_primary_culture<\/span><\/h3>$/;"	I
+is_secondary_power	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_secondary_power">is_secondary_power<\/span><\/h3>$/;"	I
+is_secondary_power	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_secondary_power">is_secondary_power<\/span><\/h3>$/;"	j
+is_sphere_leader_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_sphere_leader_of">is_sphere_leader_of<\/span><\/h3>$/;"	I
+is_sphere_leader_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_sphere_leader_of">is_sphere_leader_of<\/span><\/h3>$/;"	j
+is_state_capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_state_capital">is_state_capital<\/span><\/h3>$/;"	I
+is_state_capital	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_state_capital">is_state_capital<\/span><\/h3>$/;"	j
+is_state_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_state_religion">is_state_religion<\/span><\/h3>$/;"	I
+is_state_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_state_religion">is_state_religion<\/span><\/h3>$/;"	j
+is_state_religion (needs clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="is_state_religion_(needs_clarification)"><\/span><span class="mw-headline" id="is_/;"	j
+is_state_religion_(needs_clarification)	../web_scraping/List_of_conditions.html	/^<h3><span id="is_state_religion_(needs_clarification)"><\/span><span class="mw-headline" id="is_/;"	I
+is_state_religion_.28needs_clarification.29	../web_scraping/List_of_conditions.html	/^<h3><span id="is_state_religion_(needs_clarification)"><\/span><span class="mw-headline" id="is_/;"	I
+is_substate	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_substate">is_substate<\/span><\/h3>$/;"	I
+is_substate	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_substate">is_substate<\/span><\/h3>$/;"	j
+is_triggered_only	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_triggered_only">is_triggered_only<\/span><\/h3>$/;"	I
+is_triggered_only	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_triggered_only">is_triggered_only<\/span><\/h3>$/;"	j
+is_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_vassal">is_vassal<\/span><\/h3>$/;"	I
+is_vassal	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="is_vassal">is_vassal<\/span><\/h3>$/;"	j
+jump-to-nav	../web_scraping/List_of_conditions.html	/^                        <div id="jump-to-nav"><\/div>$/;"	I
+jump-to-nav	../web_scraping/List_of_effects.html	/^                        <div id="jump-to-nav"><\/div>$/;"	I
+left-navigation	../web_scraping/List_of_conditions.html	/^                    <div id="left-navigation">$/;"	I
+left-navigation	../web_scraping/List_of_effects.html	/^                    <div id="left-navigation">$/;"	I
+lexem	../_build/default/lib/Lexer.ml	/^type lexem = lexem_type * String * (int * int)$/;"	t
+lexem	../lib/Lexer.ml	/^type lexem = lexem_type * String * (int * int)$/;"	t
+lexem_to_str	../_build/default/lib/Lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
+lexem_to_str	../lib/Lexer.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
+lexem_type	../_build/default/lib/Lexer.ml	/^type lexem_type =$/;"	t
+lexem_type	../lib/Lexer.ml	/^type lexem_type =$/;"	t
+lexer	../_build/default/lib/Lexer.ml	/^let lexer f = $/;"	f
+lexer	../lib/Lexer.ml	/^let lexer f = $/;"	f
+lh_symbol_type	../_build/default/lib/Type_def.ml	/^and lh_symbol_type = $/;"	t
+lh_symbol_type	../lib/Type_def.ml	/^and lh_symbol_type = $/;"	t
+life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="life_needs">life_needs<\/span><\/h3>$/;"	I
+life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="life_needs">life_needs<\/span><\/h3>$/;"	j
+life_rating	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="life_rating">life_rating<\/span><\/h3>$/;"	I
+life_rating	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="life_rating">life_rating<\/span><\/h3>$/;"	j
+literacy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy">literacy<\/span><\/h3>$/;"	I
+literacy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy">literacy<\/span><\/h3>$/;"	j
+literacy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy_2">literacy<\/span><\/h3>$/;"	j
+literacy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy_3">literacy<\/span><\/h3>$/;"	j
+literacy_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy_2">literacy<\/span><\/h3>$/;"	I
+literacy_3	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="literacy_3">literacy<\/span><\/h3>$/;"	I
+loading-error	../effects.html	/^    <div id="loading-error">$/;"	I
+lost_national	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="lost_national">lost_national<\/span><\/h3>$/;"	I
+lost_national	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="lost_national">lost_national<\/span><\/h3>$/;"	j
+ls_to_str	../_build/default/lib/Lexer.ml	/^let ls_to_str ls = $/;"	f
+ls_to_str	../lib/Lexer.ml	/^let ls_to_str ls = $/;"	f
+luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="luxury_needs">luxury_needs<\/span><\/h3>$/;"	I
+luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="luxury_needs">luxury_needs<\/span><\/h3>$/;"	j
+major	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="major">major<\/span><\/h3>$/;"	I
+major	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="major">major<\/span><\/h3>$/;"	j
+match_reg	../_build/default/lib/Lexer.ml	/^let match_reg reg str= Str.String_match (Str.regexp reg)  str 0  $/;"	f
+match_reg	../lib/Lexer.ml	/^let match_reg reg str= Str.String_match (Str.regexp reg)  str 0  $/;"	f
+middle_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_everyday_needs">middle_strata_everyday_needs<\/s/;"	I
+middle_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_everyday_needs">middle_strata_everyday_needs<\/s/;"	j
+middle_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_life_needs">middle_strata_life_needs<\/span><\/h/;"	I
+middle_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_life_needs">middle_strata_life_needs<\/span><\/h/;"	j
+middle_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_luxury_needs">middle_strata_luxury_needs<\/span>/;"	I
+middle_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_strata_luxury_needs">middle_strata_luxury_needs<\/span>/;"	j
+middle_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_tax">middle_tax<\/span><\/h3>$/;"	I
+middle_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="middle_tax">middle_tax<\/span><\/h3>$/;"	j
+militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="militancy">militancy<\/span><\/h3>$/;"	I
+militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="militancy">militancy<\/span><\/h3>$/;"	j
+military_access	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_access">military_access<\/span><\/h3>$/;"	I
+military_access	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_access">military_access<\/span><\/h3>$/;"	j
+military_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_reform">military_reform<\/span><\/h3>$/;"	I
+military_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_reform">military_reform<\/span><\/h3>$/;"	j
+military_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_score">military_score<\/span><\/h3>$/;"	I
+military_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_score">military_score<\/span><\/h3>$/;"	j
+military_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_spending">military_spending<\/span><\/h3>$/;"	I
+military_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_spending">military_spending<\/span><\/h3>$/;"	j
+military_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_spending_2">military_spending<\/span><\/h3>$/;"	j
+military_spending_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="military_spending_2">military_spending<\/span><\/h3>$/;"	I
+minorities	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="minorities">minorities<\/span><\/h3>$/;"	I
+minorities	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="minorities">minorities<\/span><\/h3>$/;"	j
+money	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="money">money<\/span><\/h3>$/;"	I
+money	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="money">money<\/span><\/h3>$/;"	j
+money	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="money_2">money<\/span><\/h3>$/;"	j
+money_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="money_2">money<\/span><\/h3>$/;"	I
+month	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="month">month<\/span><\/h3>$/;"	I
+month	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="month">month<\/span><\/h3>$/;"	j
+mw-content-text	../web_scraping/List_of_conditions.html	/^                        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><li/;"	I
+mw-content-text	../web_scraping/List_of_effects.html	/^                        <div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">$/;"	I
+mw-head	../web_scraping/List_of_conditions.html	/^            <div id="mw-head">$/;"	I
+mw-head	../web_scraping/List_of_effects.html	/^            <div id="mw-head">$/;"	I
+mw-header	../web_scraping/List_of_conditions.html	/^            <div class="ts-inner" id="mw-header">$/;"	I
+mw-header	../web_scraping/List_of_effects.html	/^            <div class="ts-inner" id="mw-header">$/;"	I
+mw-header-container	../web_scraping/List_of_conditions.html	/^        <div class="pdx_mainNavBar ts-container" id="mw-header-container">$/;"	I
+mw-header-container	../web_scraping/List_of_effects.html	/^        <div class="pdx_mainNavBar ts-container" id="mw-header-container">$/;"	I
+mw-navigation	../web_scraping/List_of_conditions.html	/^                    <div id="mw-navigation">$/;"	I
+mw-navigation	../web_scraping/List_of_conditions.html	/^        <div id="mw-navigation">$/;"	I
+mw-navigation	../web_scraping/List_of_effects.html	/^                    <div id="mw-navigation">$/;"	I
+mw-navigation	../web_scraping/List_of_effects.html	/^        <div id="mw-navigation">$/;"	I
+mw-normal-catlinks	../web_scraping/List_of_conditions.html	/^                        <div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-norm/;"	I
+mw-normal-catlinks	../web_scraping/List_of_effects.html	/^                        <div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-norm/;"	I
+mw-page-base	../web_scraping/List_of_conditions.html	/^        <div id="mw-page-base" class="mw-header-placeholder noprint"><\/div>$/;"	I
+mw-page-base	../web_scraping/List_of_effects.html	/^        <div id="mw-page-base" class="mw-header-placeholder noprint"><\/div>$/;"	I
+mw-panel	../web_scraping/List_of_conditions.html	/^<div id="mw-panel" class="mw-sidebar">$/;"	I
+mw-panel	../web_scraping/List_of_effects.html	/^<div id="mw-panel" class="mw-sidebar">$/;"	I
+mw-searchButton	../web_scraping/List_of_conditions.html	/^			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id/;"	I
+mw-searchButton	../web_scraping/List_of_effects.html	/^			<input type="submit" name="fulltext" value="Search" title="Search the pages for this text" id/;"	I
+mw-sidebar-button	../web_scraping/List_of_conditions.html	/^                    id="mw-sidebar-button"$/;"	I
+mw-sidebar-button	../web_scraping/List_of_effects.html	/^                    id="mw-sidebar-button"$/;"	I
+mw-sidebar-checkbox	../web_scraping/List_of_conditions.html	/^                id="mw-sidebar-checkbox"$/;"	I
+mw-sidebar-checkbox	../web_scraping/List_of_effects.html	/^                id="mw-sidebar-checkbox"$/;"	I
+mw-toc-heading	../web_scraping/List_of_conditions.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+mw-toc-heading	../web_scraping/List_of_effects.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+n---Forums	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Forums	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Mods	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Mods	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Store	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Store	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Twitch	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Twitch	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Wikis	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n---Wikis	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n---Wikis"><a href="https:\/\/paradoxwikis/;"	I
+n-Style-guidelines	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-Style-guidelines	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-Wiki-support	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-Wiki-support	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-mainpage-description	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-mainpage-description	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-randompage	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-randompage	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-recentchanges	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+n-recentchanges	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="n-mainpage-description"><a href="\/Victori/;"	I
+national_provinces_occupied	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="national_provinces_occupied">national_provinces_occupied<\/spa/;"	I
+national_provinces_occupied	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="national_provinces_occupied">national_provinces_occupied<\/spa/;"	j
+nationalvalue	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="nationalvalue">nationalvalue<\/span><\/h3>$/;"	I
+nationalvalue	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="nationalvalue">nationalvalue<\/span><\/h3>$/;"	j
+neighbour	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="neighbour">neighbour<\/span><\/h3>$/;"	I
+neighbour	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="neighbour">neighbour<\/span><\/h3>$/;"	j
+num_of_allies	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_allies">num_of_allies<\/span><\/h3>$/;"	I
+num_of_allies	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_allies">num_of_allies<\/span><\/h3>$/;"	j
+num_of_cities	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_cities">num_of_cities<\/span><\/h3>$/;"	I
+num_of_cities	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_cities">num_of_cities<\/span><\/h3>$/;"	j
+num_of_ports	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_ports">num_of_ports<\/span><\/h3>$/;"	I
+num_of_ports	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_ports">num_of_ports<\/span><\/h3>$/;"	j
+num_of_revolts	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_revolts">num_of_revolts<\/span><\/h3>$/;"	I
+num_of_revolts	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_revolts">num_of_revolts<\/span><\/h3>$/;"	j
+num_of_substates	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_substates">num_of_substates<\/span><\/h3>$/;"	I
+num_of_substates	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_substates">num_of_substates<\/span><\/h3>$/;"	j
+num_of_vassals	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_vassals">num_of_vassals<\/span><\/h3>$/;"	I
+num_of_vassals	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_vassals">num_of_vassals<\/span><\/h3>$/;"	j
+num_of_vassals_no_substates	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_vassals_no_substates">num_of_vassals_no_substates<\/spa/;"	I
+num_of_vassals_no_substates	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="num_of_vassals_no_substates">num_of_vassals_no_substates<\/spa/;"	j
+number_of_states	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="number_of_states">number_of_states<\/span><\/h3>$/;"	I
+number_of_states	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="number_of_states">number_of_states<\/span><\/h3>$/;"	j
+owned_by	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="owned_by">owned_by<\/span><\/h3>$/;"	I
+owned_by	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="owned_by">owned_by<\/span><\/h3>$/;"	j
+owns	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="owns">owns<\/span><\/h3>$/;"	I
+owns	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="owns">owns<\/span><\/h3>$/;"	j
+p-	../web_scraping/List_of_conditions.html	/^<nav id="p-" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-labelledby="p--lab/;"	I
+p-	../web_scraping/List_of_effects.html	/^<nav id="p-" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-labelledby="p--lab/;"	I
+p--label	../web_scraping/List_of_conditions.html	/^	<h3 id="p--label">$/;"	I
+p--label	../web_scraping/List_of_effects.html	/^	<h3 id="p--label">$/;"	I
+p-Paradox links	../web_scraping/List_of_conditions.html	/^<nav id="p-Paradox links" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-label/;"	I
+p-Paradox links	../web_scraping/List_of_effects.html	/^<nav id="p-Paradox links" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-label/;"	I
+p-Paradox links-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-Paradox links-label">$/;"	I
+p-Paradox links-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-Paradox links-label">$/;"	I
+p-cactions	../web_scraping/List_of_conditions.html	/^<nav id="p-cactions" class="vectorparadox-menu-empty emptyPortlet vectorparadox-menu vectorparad/;"	I
+p-cactions	../web_scraping/List_of_effects.html	/^<nav id="p-cactions" class="vectorparadox-menu-empty emptyPortlet vectorparadox-menu vectorparad/;"	I
+p-cactions-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-cactions-label">$/;"	I
+p-cactions-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-cactions-label">$/;"	I
+p-namespaces	../web_scraping/List_of_conditions.html	/^<nav id="p-namespaces" class="vectorparadox-menu vectorparadox-menu-tabs vectorparadoxTabs" aria/;"	I
+p-namespaces	../web_scraping/List_of_effects.html	/^<nav id="p-namespaces" class="vectorparadox-menu vectorparadox-menu-tabs vectorparadoxTabs" aria/;"	I
+p-namespaces-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-namespaces-label">$/;"	I
+p-namespaces-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-namespaces-label">$/;"	I
+p-navigation	../web_scraping/List_of_conditions.html	/^<nav id="p-navigation" class="vectorparadox-menu vectorparadox-menu-portal portal portal-first" /;"	I
+p-navigation	../web_scraping/List_of_effects.html	/^<nav id="p-navigation" class="vectorparadox-menu vectorparadox-menu-portal portal portal-first" /;"	I
+p-navigation-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-navigation-label">$/;"	I
+p-navigation-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-navigation-label">$/;"	I
+p-personal	../web_scraping/List_of_conditions.html	/^                <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-labe/;"	I
+p-personal	../web_scraping/List_of_conditions.html	/^<nav id="p-personal" class="vectorparadox-menu" aria-labelledby="p-personal-label" role="navigat/;"	I
+p-personal	../web_scraping/List_of_effects.html	/^                <div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-labe/;"	I
+p-personal	../web_scraping/List_of_effects.html	/^<nav id="p-personal" class="vectorparadox-menu" aria-labelledby="p-personal-label" role="navigat/;"	I
+p-personal-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-personal-label">$/;"	I
+p-personal-label	../web_scraping/List_of_conditions.html	/^                    <h3 id="p-personal-label">Personal tools<\/h3>$/;"	I
+p-personal-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-personal-label">$/;"	I
+p-personal-label	../web_scraping/List_of_effects.html	/^                    <h3 id="p-personal-label">Personal tools<\/h3>$/;"	I
+p-search	../web_scraping/List_of_conditions.html	/^                    <div id="p-search" role="search">$/;"	I
+p-search	../web_scraping/List_of_effects.html	/^                    <div id="p-search" role="search">$/;"	I
+p-tb	../web_scraping/List_of_conditions.html	/^<nav id="p-tb" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-labelledby="p-tb/;"	I
+p-tb	../web_scraping/List_of_effects.html	/^<nav id="p-tb" class="vectorparadox-menu vectorparadox-menu-portal portal" aria-labelledby="p-tb/;"	I
+p-tb-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-tb-label">$/;"	I
+p-tb-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-tb-label">$/;"	I
+p-variants	../web_scraping/List_of_conditions.html	/^<nav id="p-variants" class="vectorparadox-menu-empty emptyPortlet vectorparadox-menu vectorparad/;"	I
+p-variants	../web_scraping/List_of_effects.html	/^<nav id="p-variants" class="vectorparadox-menu-empty emptyPortlet vectorparadox-menu vectorparad/;"	I
+p-variants-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-variants-label">$/;"	I
+p-variants-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-variants-label">$/;"	I
+p-views	../web_scraping/List_of_conditions.html	/^<nav id="p-views" class="vectorparadox-menu vectorparadox-menu-tabs vectorparadoxTabs" aria-labe/;"	I
+p-views	../web_scraping/List_of_effects.html	/^<nav id="p-views" class="vectorparadox-menu vectorparadox-menu-tabs vectorparadoxTabs" aria-labe/;"	I
+p-views-label	../web_scraping/List_of_conditions.html	/^	<h3 id="p-views-label">$/;"	I
+p-views-label	../web_scraping/List_of_effects.html	/^	<h3 id="p-views-label">$/;"	I
+part_of_sphere	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="part_of_sphere">part_of_sphere<\/span><\/h3>$/;"	I
+part_of_sphere	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="part_of_sphere">part_of_sphere<\/span><\/h3>$/;"	j
+political_movement	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_movement">political_movement<\/span><\/h3>$/;"	I
+political_movement	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_movement">political_movement<\/span><\/h3>$/;"	j
+political_movement_strength	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_movement_strength">political_movement_strength<\/spa/;"	I
+political_movement_strength	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_movement_strength">political_movement_strength<\/spa/;"	j
+political_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform">political_reform<\/span><\/h3>$/;"	I
+political_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform">political_reform<\/span><\/h3>$/;"	j
+political_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform_want">political_reform_want<\/span><\/h3>$/;"	I
+political_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform_want">political_reform_want<\/span><\/h3>$/;"	j
+political_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform_want_2">political_reform_want<\/span><\/h3>$/;"	j
+political_reform_want_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="political_reform_want_2">political_reform_want<\/span><\/h3>$/;"	I
+poor_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_everyday_needs">poor_strata_everyday_needs<\/span>/;"	I
+poor_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_everyday_needs">poor_strata_everyday_needs<\/span>/;"	j
+poor_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_life_needs">poor_strata_life_needs<\/span><\/h3>$/;"	I
+poor_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_life_needs">poor_strata_life_needs<\/span><\/h3>$/;"	j
+poor_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_luxury_needs">poor_strata_luxury_needs<\/span><\/h/;"	I
+poor_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_strata_luxury_needs">poor_strata_luxury_needs<\/span><\/h/;"	j
+poor_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_tax">poor_tax<\/span><\/h3>$/;"	I
+poor_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="poor_tax">poor_tax<\/span><\/h3>$/;"	j
+pop_conditions	../_build/default/lib/conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
+pop_conditions	../lib/conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
+pop_effects	../_build/default/lib/effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
+pop_effects	../lib/effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
+pop_majority_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_culture">pop_majority_culture<\/span><\/h3>$/;"	I
+pop_majority_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_culture">pop_majority_culture<\/span><\/h3>$/;"	j
+pop_majority_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_culture_2">pop_majority_culture<\/span><\/h3>$/;"	j
+pop_majority_culture_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_culture_2">pop_majority_culture<\/span><\/h3>$/;"	I
+pop_majority_ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_ideology">pop_majority_ideology<\/span><\/h3>$/;"	I
+pop_majority_ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_ideology">pop_majority_ideology<\/span><\/h3>$/;"	j
+pop_majority_ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_ideology_2">pop_majority_ideology<\/span><\/h3>$/;"	j
+pop_majority_ideology_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_ideology_2">pop_majority_ideology<\/span><\/h3>$/;"	I
+pop_majority_issue	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_issue">pop_majority_issue<\/span><\/h3>$/;"	I
+pop_majority_issue	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_issue">pop_majority_issue<\/span><\/h3>$/;"	j
+pop_majority_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_religion">pop_majority_religion<\/span><\/h3>$/;"	I
+pop_majority_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_religion">pop_majority_religion<\/span><\/h3>$/;"	j
+pop_majority_religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_religion_2">pop_majority_religion<\/span><\/h3>$/;"	j
+pop_majority_religion_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_majority_religion_2">pop_majority_religion<\/span><\/h3>$/;"	I
+pop_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_militancy">pop_militancy<\/span><\/h3>$/;"	I
+pop_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_militancy">pop_militancy<\/span><\/h3>$/;"	j
+pop_militancy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_militancy_2">pop_militancy<\/span><\/h3>$/;"	j
+pop_militancy_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="pop_militancy_2">pop_militancy<\/span><\/h3>$/;"	I
+port	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="port">port<\/span><\/h3>$/;"	I
+port	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="port">port<\/span><\/h3>$/;"	j
+prestige	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="prestige">prestige<\/span><\/h3>$/;"	I
+prestige	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="prestige">prestige<\/span><\/h3>$/;"	j
+primary_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="primary_culture">primary_culture<\/span><\/h3>$/;"	I
+primary_culture	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="primary_culture">primary_culture<\/span><\/h3>$/;"	j
+print_lexem	../_build/default/lib/Lexer.ml	/^let print_lexem lexem = $/;"	f
+print_lexem	../lib/Lexer.ml	/^let print_lexem lexem = $/;"	f
+print_lexems	../_build/default/lib/Lexer.ml	/^let print_lexems lexems = $/;"	f
+print_lexems	../lib/Lexer.ml	/^let print_lexems lexems = $/;"	f
+print_token	../web_scraping/read_effects.py	/^            def print_token(ls):$/;"	f	function:write_functions	file:
+produces	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="produces">produces<\/span><\/h3>$/;"	I
+produces	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="produces">produces<\/span><\/h3>$/;"	j
+province_conditions	../_build/default/lib/conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
+province_conditions	../lib/conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
+province_control_days	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="province_control_days">province_control_days<\/span><\/h3>$/;"	I
+province_control_days	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="province_control_days">province_control_days<\/span><\/h3>$/;"	j
+province_effects	../_build/default/lib/effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
+province_effects	../lib/effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
+province_id	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="province_id">province_id<\/span><\/h3>$/;"	I
+province_id	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="province_id">province_id<\/span><\/h3>$/;"	j
+province_mtth	../_build/default/lib/mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
+province_mtth	../lib/mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
+pt-login	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="pt-uls" class="active"><a href="#" class="/;"	I
+pt-login	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="pt-uls" class="active"><a href="#" class="/;"	I
+pt-uls	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="pt-uls" class="active"><a href="#" class="/;"	I
+pt-uls	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="pt-uls" class="active"><a href="#" class="/;"	I
+rank	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rank">rank<\/span><\/h3>$/;"	I
+rank	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rank">rank<\/span><\/h3>$/;"	j
+rebel_power_fraction	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rebel_power_fraction">rebel_power_fraction<\/span><\/h3>$/;"	I
+rebel_power_fraction	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rebel_power_fraction">rebel_power_fraction<\/span><\/h3>$/;"	j
+recruited_percentage	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="recruited_percentage">recruited_percentage<\/span><\/h3>$/;"	I
+recruited_percentage	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="recruited_percentage">recruited_percentage<\/span><\/h3>$/;"	j
+region	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="region">region<\/span><\/h3>$/;"	I
+region	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="region">region<\/span><\/h3>$/;"	j
+relation	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="relation">relation<\/span><\/h3>$/;"	I
+relation	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="relation">relation<\/span><\/h3>$/;"	j
+religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="religion">religion<\/span><\/h3>$/;"	I
+religion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="religion">religion<\/span><\/h3>$/;"	j
+religious_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="religious_policy">religious_policy<\/span><\/h3>$/;"	I
+religious_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="religious_policy">religious_policy<\/span><\/h3>$/;"	j
+response	../get_html_values.py	/^response = requests.get(url)$/;"	v
+revolt_percentage	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="revolt_percentage">revolt_percentage<\/span><\/h3>$/;"	I
+revolt_percentage	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="revolt_percentage">revolt_percentage<\/span><\/h3>$/;"	j
+rh_symbol_type	../_build/default/lib/Type_def.ml	/^and rh_symbol_type = $/;"	t
+rh_symbol_type	../lib/Type_def.ml	/^and rh_symbol_type = $/;"	t
+rich_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_everyday_needs">rich_strata_everyday_needs<\/span>/;"	I
+rich_strata_everyday_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_everyday_needs">rich_strata_everyday_needs<\/span>/;"	j
+rich_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_life_needs">rich_strata_life_needs<\/span><\/h3>$/;"	I
+rich_strata_life_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_life_needs">rich_strata_life_needs<\/span><\/h3>$/;"	j
+rich_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_luxury_needs">rich_strata_luxury_needs<\/span><\/h/;"	I
+rich_strata_luxury_needs	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_strata_luxury_needs">rich_strata_luxury_needs<\/span><\/h/;"	j
+rich_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_tax">rich_tax<\/span><\/h3>$/;"	I
+rich_tax	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="rich_tax">rich_tax<\/span><\/h3>$/;"	j
+right-navigation	../web_scraping/List_of_conditions.html	/^                    <div id="right-navigation">$/;"	I
+right-navigation	../web_scraping/List_of_effects.html	/^                    <div id="right-navigation">$/;"	I
+ruling_party	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ruling_party">ruling_party<\/span><\/h3>$/;"	I
+ruling_party	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ruling_party">ruling_party<\/span><\/h3>$/;"	j
+ruling_party_ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ruling_party_ideology">ruling_party_ideology<\/span><\/h3>$/;"	I
+ruling_party_ideology	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="ruling_party_ideology">ruling_party_ideology<\/span><\/h3>$/;"	j
+searchButton	../web_scraping/List_of_conditions.html	/^			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exis/;"	I
+searchButton	../web_scraping/List_of_effects.html	/^			<input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exis/;"	I
+searchInput	../web_scraping/List_of_conditions.html	/^			<input type="search" name="search" placeholder="Search Victoria 2 Wiki" title="Search Victori/;"	I
+searchInput	../web_scraping/List_of_effects.html	/^			<input type="search" name="search" placeholder="Search Victoria 2 Wiki" title="Search Victori/;"	I
+searchform	../web_scraping/List_of_conditions.html	/^	<form action="\/index.php" id="searchform">$/;"	I
+searchform	../web_scraping/List_of_effects.html	/^	<form action="\/index.php" id="searchform">$/;"	I
+shortest_list	../_build/default/lib/type_verify.ml	/^let shortest_list lists =$/;"	f
+shortest_list	../lib/type_verify.ml	/^let shortest_list lists =$/;"	f
+simpleSearch	../web_scraping/List_of_conditions.html	/^		<div id="simpleSearch">$/;"	I
+simpleSearch	../web_scraping/List_of_effects.html	/^		<div id="simpleSearch">$/;"	I
+siteNotice	../web_scraping/List_of_conditions.html	/^                    <div id="siteNotice" class="mw-body-content"><\/div>$/;"	I
+siteNotice	../web_scraping/List_of_effects.html	/^                    <div id="siteNotice" class="mw-body-content"><\/div>$/;"	I
+siteSub	../web_scraping/List_of_conditions.html	/^                            <div id="siteSub" class="noprint">From Victoria 2 Wiki<\/div>$/;"	I
+siteSub	../web_scraping/List_of_effects.html	/^                            <div id="siteSub" class="noprint">From Victoria 2 Wiki<\/div>$/;"	I
+slavery	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="slavery">slavery<\/span><\/h3>$/;"	I
+slavery	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="slavery">slavery<\/span><\/h3>$/;"	j
+social_movement	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_movement">social_movement<\/span><\/h3>$/;"	I
+social_movement	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_movement">social_movement<\/span><\/h3>$/;"	j
+social_movement_strength	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_movement_strength">social_movement_strength<\/span><\/h/;"	I
+social_movement_strength	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_movement_strength">social_movement_strength<\/span><\/h/;"	j
+social_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform">social_reform<\/span><\/h3>$/;"	I
+social_reform	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform">social_reform<\/span><\/h3>$/;"	j
+social_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform_want">social_reform_want<\/span><\/h3>$/;"	I
+social_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform_want">social_reform_want<\/span><\/h3>$/;"	j
+social_reform_want	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform_want_2">social_reform_want<\/span><\/h3>$/;"	j
+social_reform_want_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_reform_want_2">social_reform_want<\/span><\/h3>$/;"	I
+social_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_spending">social_spending<\/span><\/h3>$/;"	I
+social_spending	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="social_spending">social_spending<\/span><\/h3>$/;"	j
+soup	../get_html_values.py	/^    soup = BeautifulSoup(response.text, 'html.parser')$/;"	v
+soup	../web_scraping/read_effects.py	/^soup = BeautifulSoup(open(".\/List_of_effects"),"html.parser")$/;"	v
+soup	../web_scraping/read_files.py	/^soup = BeautifulSoup(open(".\/List_of_conditions"),"html.parser")$/;"	v
+split_list	../_build/default/lib/type_verify.ml	/^let split_list n ls =$/;"	f
+split_list	../lib/type_verify.ml	/^let split_list n ls =$/;"	f
+state_conditions	../_build/default/lib/conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
+state_conditions	../lib/conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
+state_effects	../_build/default/lib/effects.ml	/^let state_effects = symbol_table_init [$/;"	v
+state_effects	../lib/effects.ml	/^let state_effects = symbol_table_init [$/;"	v
+state_id	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="state_id">state_id<\/span><\/h3>$/;"	I
+state_id	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="state_id">state_id<\/span><\/h3>$/;"	j
+str_to_ls	../_build/default/lib/Lexer.ml	/^let str_to_ls str = $/;"	f
+str_to_ls	../lib/Lexer.ml	/^let str_to_ls str = $/;"	f
+strata	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="strata">strata<\/span><\/h3>$/;"	I
+strata	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="strata">strata<\/span><\/h3>$/;"	j
+String_assignment	../_build/default/lib/pre_parser.ml	/^and String_assignment assignment = match assignment with  $/;"	f
+String_assignment	../lib/pre_parser.ml	/^and String_assignment assignment = match assignment with  $/;"	f
+String_assignment_list	../_build/default/lib/pre_parser.ml	/^and String_assignment_list al =$/;"	f
+String_assignment_list	../lib/pre_parser.ml	/^and String_assignment_list al =$/;"	f
+String_expected_value	../_build/default/lib/pre_parser.ml	/^and String_expected_value v = match v with$/;"	f
+String_expected_value	../lib/pre_parser.ml	/^and String_expected_value v = match v with$/;"	f
+String_expr	../_build/default/lib/pre_parser.ml	/^and String_expr expr = match expr with$/;"	f
+String_expr	../lib/pre_parser.ml	/^and String_expr expr = match expr with$/;"	f
+String_lexem	../_build/default/lib/Lexer.ml	/^let String_lexem lex_value = $/;"	f
+String_lexem	../lib/Lexer.ml	/^let String_lexem lex_value = $/;"	f
+String_lexems	../_build/default/lib/Lexer.ml	/^let String_lexems lexems = $/;"	f
+String_lexems	../lib/Lexer.ml	/^let String_lexems lexems = $/;"	f
+String_lh_symbol	../_build/default/lib/pre_parser.ml	/^and String_lh_symbol lh = match lh with$/;"	f
+String_lh_symbol	../lib/pre_parser.ml	/^and String_lh_symbol lh = match lh with$/;"	f
+String_of_symbol_table	../_build/default/lib/Type_def.ml	/^let rec String_of_symbol_table symbol_table =$/;"	f
+String_of_symbol_table	../lib/Type_def.ml	/^let rec String_of_symbol_table symbol_table =$/;"	f
+String_rh_symbol	../_build/default/lib/pre_parser.ml	/^and String_rh_symbol pv = match pv with$/;"	f
+String_rh_symbol	../lib/pre_parser.ml	/^and String_rh_symbol pv = match pv with$/;"	f
+String_symbol_table	../_build/default/lib/pre_parser.ml	/^and String_symbol_table symbol_table =$/;"	f
+String_symbol_table	../lib/pre_parser.ml	/^and String_symbol_table symbol_table =$/;"	f
+stronger_army_than	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="stronger_army_than">stronger_army_than<\/span><\/h3>$/;"	I
+stronger_army_than	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="stronger_army_than">stronger_army_than<\/span><\/h3>$/;"	j
+structures	../_build/default/lib/structures.ml	/^let structures = symbol_table_init [$/;"	v
+structures	../lib/structures.ml	/^let structures = symbol_table_init [$/;"	v
+substate_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="substate_of">substate_of<\/span><\/h3>$/;"	I
+substate_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="substate_of">substate_of<\/span><\/h3>$/;"	j
+symbol_table_from_rhv	../_build/default/lib/type_verify.ml	/^let rec symbol_table_from_rhv rhv = match rhv with$/;"	f
+symbol_table_from_rhv	../lib/type_verify.ml	/^let rec symbol_table_from_rhv rhv = match rhv with$/;"	f
+symbol_table_init	../_build/default/lib/symbol_table.ml	/^let symbol_table_init symbols =$/;"	f
+symbol_table_init	../lib/symbol_table.ml	/^let symbol_table_init symbols =$/;"	f
+t-info	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-info	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-permalink	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-permalink	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-print	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-print	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-recentchangeslinked	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-recentchangeslinked	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-specialpages	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-specialpages	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-whatlinkshere	../web_scraping/List_of_conditions.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+t-whatlinkshere	../web_scraping/List_of_effects.html	/^		<ul class="vectorparadox-menu-content-list"><li id="t-whatlinkshere"><a href="\/Special:WhatLi/;"	I
+table	../get_html_values.py	/^    table = soup.find('table')$/;"	v
+tag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="tag">tag<\/span><\/h3>$/;"	I
+tag	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="tag">tag<\/span><\/h3>$/;"	j
+terrain	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="terrain">terrain<\/span><\/h3>$/;"	I
+terrain	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="terrain">terrain<\/span><\/h3>$/;"	j
+this_culture_union *HOD ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="this_culture_union_*HOD_ONLY*"><\/span><span class="mw-headline" id="this_culture_/;"	j
+this_culture_union_*HOD_ONLY*	../web_scraping/List_of_conditions.html	/^<h3><span id="this_culture_union_*HOD_ONLY*"><\/span><span class="mw-headline" id="this_culture_/;"	I
+this_culture_union_.2AHOD_ONLY.2A	../web_scraping/List_of_conditions.html	/^<h3><span id="this_culture_union_*HOD_ONLY*"><\/span><span class="mw-headline" id="this_culture_/;"	I
+toc	../web_scraping/List_of_conditions.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+toc	../web_scraping/List_of_effects.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+toctogglecheckbox	../web_scraping/List_of_conditions.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+toctogglecheckbox	../web_scraping/List_of_effects.html	/^<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkb/;"	I
+tokens	../web_scraping/read_files.py	/^    tokens = x.text.replace(' ','').split('=')$/;"	v
+top	../web_scraping/List_of_conditions.html	/^                    <a id="top"><\/a>$/;"	I
+top	../web_scraping/List_of_effects.html	/^                    <a id="top"><\/a>$/;"	I
+total_amount_of_divisions	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_amount_of_divisions">total_amount_of_divisions<\/span><\//;"	I
+total_amount_of_divisions	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_amount_of_divisions">total_amount_of_divisions<\/span><\//;"	j
+total_amount_of_ships	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_amount_of_ships">total_amount_of_ships<\/span><\/h3>$/;"	I
+total_amount_of_ships	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_amount_of_ships">total_amount_of_ships<\/span><\/h3>$/;"	j
+total_defensives	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_defensives">total_defensives<\/span><\/h3>$/;"	I
+total_defensives	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_defensives">total_defensives<\/span><\/h3>$/;"	j
+total_num_of_ports	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_num_of_ports">total_num_of_ports<\/span><\/h3>$/;"	I
+total_num_of_ports	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_num_of_ports">total_num_of_ports<\/span><\/h3>$/;"	j
+total_of_ours_sunk	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_of_ours_sunk">total_of_ours_sunk<\/span><\/h3>$/;"	I
+total_of_ours_sunk	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_of_ours_sunk">total_of_ours_sunk<\/span><\/h3>$/;"	j
+total_offensives	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_offensives">total_offensives<\/span><\/h3>$/;"	I
+total_offensives	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_offensives">total_offensives<\/span><\/h3>$/;"	j
+total_pops	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_pops">total_pops<\/span><\/h3>$/;"	I
+total_pops	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_pops">total_pops<\/span><\/h3>$/;"	j
+total_pops	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_pops_2">total_pops<\/span><\/h3>$/;"	j
+total_pops_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_pops_2">total_pops<\/span><\/h3>$/;"	I
+total_sea_battles	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_sea_battles">total_sea_battles<\/span><\/h3>$/;"	I
+total_sea_battles	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_sea_battles">total_sea_battles<\/span><\/h3>$/;"	j
+total_sunk_by_us	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_sunk_by_us">total_sunk_by_us<\/span><\/h3>$/;"	I
+total_sunk_by_us	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="total_sunk_by_us">total_sunk_by_us<\/span><\/h3>$/;"	j
+trade_goods	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="trade_goods">trade_goods<\/span><\/h3>$/;"	I
+trade_goods	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="trade_goods">trade_goods<\/span><\/h3>$/;"	j
+trade_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="trade_policy">trade_policy<\/span><\/h3>$/;"	I
+trade_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="trade_policy">trade_policy<\/span><\/h3>$/;"	j
+truce_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="truce_with">truce_with<\/span><\/h3>$/;"	I
+truce_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="truce_with">truce_with<\/span><\/h3>$/;"	j
+type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="type">type<\/span><\/h3>$/;"	I
+type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="type">type<\/span><\/h3>$/;"	j
+type	../web_scraping/read_files.py	/^            type = ""$/;"	v
+type	../web_scraping/read_files.py	/^            type = 'LB'$/;"	v
+type	../web_scraping/read_files.py	/^            type = 'Bool'$/;"	v
+type	../web_scraping/read_files.py	/^            type = 'Float' $/;"	v
+type	../web_scraping/read_files.py	/^            type = 'int' $/;"	v
+type	../web_scraping/read_files.py	/^    type = "Keyword"$/;"	v
+type_verify	../_build/default/lib/type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f
+type_verify	../lib/type_verify.ml	/^let type_verify symbol_table assignments =$/;"	f
+unemployment	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment">unemployment<\/span><\/h3>$/;"	I
+unemployment	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment">unemployment<\/span><\/h3>$/;"	j
+unemployment	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_2">unemployment<\/span><\/h3>$/;"	j
+unemployment	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_3">unemployment<\/span><\/h3>$/;"	j
+unemployment_2	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_2">unemployment<\/span><\/h3>$/;"	I
+unemployment_3	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_3">unemployment<\/span><\/h3>$/;"	I
+unemployment_by_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_by_type">unemployment_by_type<\/span><\/h3>$/;"	I
+unemployment_by_type	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unemployment_by_type">unemployment_by_type<\/span><\/h3>$/;"	j
+unit_has_leader	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unit_has_leader">unit_has_leader<\/span><\/h3>$/;"	I
+unit_has_leader	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unit_has_leader">unit_has_leader<\/span><\/h3>$/;"	j
+unit_in_battle	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unit_in_battle">unit_in_battle<\/span><\/h3>$/;"	I
+unit_in_battle	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="unit_in_battle">unit_in_battle<\/span><\/h3>$/;"	j
+units_in_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="units_in_province">units_in_province<\/span><\/h3>$/;"	I
+units_in_province	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="units_in_province">units_in_province<\/span><\/h3>$/;"	j
+upper_house	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="upper_house">upper_house<\/span><\/h3>$/;"	I
+upper_house	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="upper_house">upper_house<\/span><\/h3>$/;"	j
+url	../get_html_values.py	/^url = "https:\/\/vic2.paradoxwikis.com\/List_of_effects"$/;"	v
+vassal_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="vassal_of">vassal_of<\/span><\/h3>$/;"	I
+vassal_of	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="vassal_of">vassal_of<\/span><\/h3>$/;"	j
+war	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war">war<\/span><\/h3>$/;"	I
+war	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war">war<\/span><\/h3>$/;"	j
+war_exhaustion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_exhaustion">war_exhaustion<\/span><\/h3>$/;"	I
+war_exhaustion	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_exhaustion">war_exhaustion<\/span><\/h3>$/;"	j
+war_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_policy">war_policy<\/span><\/h3>$/;"	I
+war_policy	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_policy">war_policy<\/span><\/h3>$/;"	j
+war_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_score">war_score<\/span><\/h3>$/;"	I
+war_score	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_score">war_score<\/span><\/h3>$/;"	j
+war_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_with">war_with<\/span><\/h3>$/;"	I
+war_with	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="war_with">war_with<\/span><\/h3>$/;"	j
+work_available	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="work_available">work_available<\/span><\/h3>$/;"	I
+work_available	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="work_available">work_available<\/span><\/h3>$/;"	j
+write_functions	../web_scraping/read_effects.py	/^def write_functions(effects):$/;"	f
+write_type_effects	../web_scraping/read_effects.py	/^def write_type_effects(effects):$/;"	f
+year	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="year">year<\/span><\/h3>$/;"	I
+year	../web_scraping/List_of_conditions.html	/^<h3><span class="mw-headline" id="year">year<\/span><\/h3>$/;"	j

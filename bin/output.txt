@@ -1,0 +1,196 @@
+../victoria2/map/continent.txt:
+ 
+../victoria2/decisions/BEL.txt:
+ 
+../victoria2/decisions/SAF.txt:
+ 
+	 At (11,37): Unknown Identifier: mass_culture_n_the_avant_garde, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/DEN.txt:
+ 
+	 At (14,25): Unexpected Token: Text=3 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (12,25): Unknown Identifier: state_n_government, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/USCA.txt:
+ 
+	 At (30,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/GreatPowers.txt:
+ 
+	 At (124,16): Unexpected Token: Text=CNG Type=Literal Tag, expected:RHS()
+../victoria2/decisions/SouthAmerica.txt:
+ 
+	 At (29,21): Unknown Identifier: social_science, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/ACW.txt:
+ 
+	 At (828,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (826,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/MostlyHarmless.txt:
+ 
+	 At (66,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/France.txt:
+ 
+	 At (298,21): Unknown Identifier: business_banks, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (297,20): Unknown Identifier: iron_railroad, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (296,20): Unknown Identifier: impressionism, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (291,22): Unknown Identifier: early_railroad, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (290,15): Unknown Identifier: realism, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/GRE.txt:
+ 
+	 At (130,12): Unexpected Assignments:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(131,9),lhvalue:limit=rhvalue:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(132,16),lhvalue:is_colonial=rhvalue:LEXEM(type(Literal Bool):value(no),location(132,21)))
+	ASSIGNMENT(type:Literal Conditional,location:(133,7),lhvalue:OR=rhvalue:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(134,13),lhvalue:culture=rhvalue:LEXEM(type(Literal Keyword):value(greek),location(134,21)))
+	ASSIGNMENT(type:Literal Keyword,location:(135,13),lhvalue:culture=rhvalue:LEXEM(type(Literal Keyword):value(turkish),location(135,23)))))))
+	ASSIGNMENT(type:Literal Keyword,location:(138,12),lhvalue:add_core=rhvalue:LEXEM(type(Literal Tag):value(BYZ),location(138,18)))), expected:RHS(
+	TypeRight:state_effects_def
+	TypeRight:province_effects_def
+	TypeRight:pop_effects_def
+	LexemValue:Keyword
+	Integer
+	Decimal)
+	 At (125,19): Unexpected Token: Text=BYZ Type=Literal Tag, expected:RHS()
+../victoria2/decisions/Germany.txt:
+ 
+	 At (410,23): Unexpected Assignments:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(411,8),lhvalue:name=rhvalue:LEXEM(type(Literal Keyword):value(ruhr_boom),location(411,20)))
+	ASSIGNMENT(type:Literal Keyword,location:(412,12),lhvalue:duration=rhvalue:LEXEM(type(Literal PositiveInt):value(3650),location(412,19)))), expected:RHS(
+	TypeRight:state_effects_def
+	TypeRight:province_effects_def
+	TypeRight:pop_effects_def
+	LexemValue:Keyword
+	Integer
+	Decimal)
+	 At (406,21): Unknown Identifier: early_railroad, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (405,26): Unknown Identifier: organized_factories, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (404,23): Unknown Identifier: market_structure, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/arabian formation.txt:
+ 
+	 At (64,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/LIB.txt:
+ 
+	 At (81,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/NationalUnification.txt:
+ 
+	 At (740,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/Canals.txt:
+ 
+	 At (99,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (97,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/SWE.txt:
+ 
+	 At (156,17): Unknown Identifier: jingoism, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (155,21): Unknown Identifier: pro_military, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (142,35): Unknown Identifier: vote_franschise, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (141,44): Unknown Identifier: vote_franschise, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/BoerWar.txt:
+ 
+	 At (145,11): Unexpected Assignments:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(146,7),lhvalue:who=rhvalue:LEXEM(type(Literal Tag):value(ENG),location(146,13)))
+	ASSIGNMENT(type:Literal Keyword,location:(147,9),lhvalue:value=rhvalue:LEXEM(type(Literal PositiveInt):value(25),location(147,14)))), expected:RHS(
+	TypeRight:state_effects_def
+	TypeRight:province_effects_def
+	TypeRight:pop_effects_def
+	LexemValue:Keyword
+	Integer
+	Decimal)
+	 At (139,25): Unknown Identifier: state_n_government, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/NET.txt:
+ 
+	 At (85,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (81,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (75,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (73,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/Political.txt:
+ 
+	 At (299,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/Italy.txt:
+ 
+../victoria2/decisions/MEX.txt:
+ 
+	 At (21,10): Unexpected Assignments:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(22,20),lhvalue:scaled_militancy=rhvalue:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(23,13),lhvalue:ideology=rhvalue:LEXEM(type(Literal Keyword):value(liberal),location(23,23)))
+	ASSIGNMENT(type:Literal Keyword,location:(24,11),lhvalue:factor=rhvalue:LEXEM(type(Literal PositiveInt):value(8),location(24,15)))))), expected:RHS(
+	TypeRight:state_effects_def
+	TypeRight:province_effects_def
+	TypeRight:pop_effects_def
+	LexemValue:Keyword
+	Integer
+	Decimal)
+	 At (17,24): Unexpected Token: Text=4 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (16,20): Unknown Identifier: conservative, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (6,15): Unknown Identifier: liberal, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/RUS.txt:
+ 
+	 At (259,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/SWI.txt:
+ 
+../victoria2/decisions/Tech_School_Changes.txt:
+ 
+	 At (175,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/TUR.txt:
+ 
+	 At (129,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
+	Number)
+	 At (127,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
+	Number)
+../victoria2/decisions/UncivFlavor.txt:
+ 
+	 At (242,19): Unexpected Token: Text=BAB Type=Literal Tag, expected:RHS()
+	 At (230,28): Unknown Identifier: the_historical_theory, expected:RHS(
+	TypeRight:country_conditions_def)
+	 At (229,26): Unknown Identifier: advanced_metallurgy, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/SPA.txt:
+ 
+	 At (47,11): Unexpected Assignments:ASSIGN_LIST(
+	ASSIGNMENT(type:Literal Keyword,location:(48,7),lhvalue:who=rhvalue:LEXEM(type(Literal Tag):value(PAP),location(48,13)))
+	ASSIGNMENT(type:Literal Keyword,location:(49,9),lhvalue:value=rhvalue:LEXEM(type(Literal NegativeInt):value(-50),location(49,15)))), expected:RHS(
+	TypeRight:state_effects_def
+	TypeRight:province_effects_def
+	TypeRight:pop_effects_def
+	LexemValue:Keyword
+	Integer
+	Decimal)
+	 At (41,26): Unknown Identifier: ideological_thought, expected:RHS(
+	TypeRight:country_conditions_def)
+../victoria2/decisions/ENG.txt:
+ 
+	 At (186,45): Unexpected Token: Text="Southern Rhodesia" Type=Literal String, expected:RHS()
+../victoria2/decisions/AUS.txt:
+ 
