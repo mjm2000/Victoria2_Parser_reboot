@@ -1,0 +1,4 @@
+On branch linux_dev
+Your branch is up to date with 'Victoria2_Parser_reboot/linux_dev'.
+
+nothing to commit, working tree clean
