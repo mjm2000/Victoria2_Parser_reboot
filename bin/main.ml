@@ -76,7 +76,7 @@ let () =
                 |> List.rev
                 |> Output.exceptions_string 
                 |> Printf.fprintf output "%s:\n %s\n" file;)
-                 exceptions )
+                (List.rev exceptions) )
             |None -> Printf.printf "Game not recognized\n"
         )
         |((Some mod_home), None) -> 
