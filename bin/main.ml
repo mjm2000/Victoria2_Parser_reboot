@@ -73,6 +73,7 @@ let () =
                 in
                 Printf.eprintf "Checking Files\n"; 
                 (List.iter (fun (file,x) -> x
+                |> List.rev
                 |> Output.exceptions_string 
                 |> Printf.fprintf output "%s:\n %s\n" file;)
                 (List.rev exceptions) )
