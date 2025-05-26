@@ -73,9 +73,10 @@ let () =
                 in
                 Printf.eprintf "Checking Files\n"; 
                 (List.iter (fun (file,x) -> x
+                |> List.rev
                 |> Output.exceptions_string 
                 |> Printf.fprintf output "%s:\n %s\n" file;)
-                exceptions)
+                 exceptions )
             |None -> Printf.printf "Game not recognized\n"
         )
         |((Some mod_home), None) -> 
