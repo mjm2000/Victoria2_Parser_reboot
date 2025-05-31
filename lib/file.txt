@@ -1,4 +1,46 @@
-On branch linux_dev
-Your branch is up to date with 'Victoria2_Parser_reboot/linux_dev'.
-
-nothing to commit, working tree clean
+lex list army_tech
+Catalog type found for army_doctrine tech_area
+Catalog type found for light_armament tech_area
+Catalog type found for heavy_armament tech_area
+Catalog type found for military_science tech_area
+Catalog type found for army_leadership tech_area
+lex list navy_tech
+Catalog type found for naval_doctrine tech_area
+Catalog type found for ship_construction tech_area
+Catalog type found for naval_engineering tech_area
+Catalog type found for naval_science tech_area
+Catalog type found for naval_leadership tech_area
+lex list commerce_tech
+Catalog type found for financial_institutions tech_area
+Catalog type found for monetary_system tech_area
+Catalog type found for economic_thought_and_critique tech_area
+Catalog type found for market_functionality tech_area
+Catalog type found for tech_organization tech_area
+lex list culture_tech
+Catalog type found for aesthetics tech_area
+Catalog type found for philosophy tech_area
+Catalog type found for social_thought tech_area
+Catalog type found for political_thought tech_area
+Catalog type found for psychology tech_area
+lex list industry_tech
+Catalog type found for tech_power tech_area
+Catalog type found for mechanization tech_area
+Catalog type found for metallurgy tech_area
+Catalog type found for tech_infrastructure tech_area
+Catalog type found for chemistry_and_electricity tech_area
+Type lookup tech_area
+Type lookup building_def
+Type lookup tech_school
+Type lookup tech_area
+Type lookup tech_school
+Type lookup tech_area
+Type lookup tech_school
+Type lookup tech_area
+Type lookup tech_school
+Type lookup tech_area
+Type lookup tech_school
+Type lookup tech_area
+Type lookup tech_school
+Type lookup tech_area
+Type lookup unit_def
+125
