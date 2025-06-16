@@ -64,7 +64,8 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-                let new_paths = ("mod_home_def",)::new_paths in
+                let new_paths = ("mod_home_def",mod_home)::new_paths in
+                let new_paths = ("game_home_def",game_home)::new_paths in
 
                 let exceptions = type_verify symbol_table new_paths
                 in
