@@ -31,6 +31,9 @@ let () =
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
+
+                Hashtbl.add symbol_table (Definition "mod_home_def") (Home mod_home);
+                Hashtbl.add symbol_table (Definition "game_home_def") (Home game_home);
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
 
@@ -64,10 +67,7 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-                let new_paths = (mod_home,"mod_home_def")::new_paths in
-                let new_paths = (game_home,"game_home_def")::new_paths in
             
-
                 let exceptions = type_verify symbol_table new_paths
                 in
                 let output = 
