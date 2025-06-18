@@ -32,8 +32,8 @@ let () =
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
 
-                Hashtbl.add symbol_table (Definition "mod_home_def") (Home mod_home);
-                Hashtbl.add symbol_table (Definition "game_home_def") (Home game_home);
+                Hashtbl.add symbol_table (Definition "mod_home_def") (Dir mod_home);
+                Hashtbl.add symbol_table (Definition "game_home_def") (Dir game_home);
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
 
