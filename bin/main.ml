@@ -1,5 +1,6 @@
 open SyntaxChecker
 open Cmdliner
+open TypeDef
 exception File_not_found of string
 
 let is_directory x = 
