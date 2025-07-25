@@ -16,6 +16,8 @@ let () =
     let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "h" "Game Home Directory" in
     let output_file = make_arg "output" "o" "Output File" in
+    let lexoutput = make_arg "lex-output" "lo" "File to output lexems" in
+    let astoutput = make_arg "ast-output" "ao" "File to output ast" in
     
     let game_symbols game  = match game with
     |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
@@ -25,7 +27,7 @@ let () =
     let info = Cmd.info "" ~doc in
 (* List files in a directory and filter by glob pattern *)
 
-    let term = Term.(const (fun game mh gh out -> 
+    let term = Term.(const (fun game mh gh out lexoutput astoutput -> 
 
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
@@ -68,7 +70,7 @@ let () =
                 in
                 let new_paths = new_paths_r [] paths in
             
-                let exceptions = type_verify symbol_table new_paths
+                let exceptions = type_verify symbol_table new_paths lexoutput astoutput 
                 in
                 let output = 
                     match out with
