@@ -81,7 +81,7 @@ let () =
                 (List.iter (fun (file,x) -> x
                 |> List.rev
                 |> Output.exceptions_string 
-                |> Printf.fprintf output "%s:\n %s\n" file;)
+                |> Printf.fprintf output "%s:\n%s\n" file;)
                 (List.rev exceptions) )
             |None -> Printf.printf "Game not recognized\n"
         )
