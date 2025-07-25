@@ -16,8 +16,8 @@ let () =
     let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "h" "Game Home Directory" in
     let output_file = make_arg "output" "o" "Output File" in
-    let lexoutput = make_arg "lex-output" "lo" "File to output lexems" in
-    let astoutput = make_arg "ast-output" "ao" "File to output ast" in
+    let lexoutput = make_arg "lex-output" "l" "File to output lexems" in
+    let astoutput = make_arg "ast-output" "a" "File to output ast" in
     
     let game_symbols game  = match game with
     |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
