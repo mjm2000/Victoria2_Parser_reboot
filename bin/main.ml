@@ -89,7 +89,7 @@ let () =
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
 
-        |(None,None) -> Printf.printf "No Game\n")  $ game_value $ mod_home $ game_home $ output_file) 
+        |(None,None) -> Printf.printf "No Game\n")  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput )
     in
     let cmd = Cmd.v info term 
     in
