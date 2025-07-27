@@ -191,6 +191,8 @@ let country_modifiers = symbol_table_init [
     (Literal "naval_unit_start_experience", Number);
     (Literal "non_accepted_pop_consciousness_modifier", Number);
     (Literal "non_accepted_pop_militancy_modifier", Number);
+    (Literal "pop_militancy_modifier", Number);
+
     (Literal "org_regain", Number);
     (Literal "political_reform_desire", Number);
     (Literal "prestige", Number);
