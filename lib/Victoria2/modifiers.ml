@@ -259,6 +259,7 @@ let country_modifiers = symbol_table_init [
     (Literal "immigrant_attract", Number);
     (Literal "literacy_con_impact", Number);
     (Literal "unit_recruitment_time", Number);
+    (Literal "pension_level", Number);
     (Literal "rgo_size",  SubTable (symbol_table_init [
         (Type "good", Number);
     ]));
@@ -358,6 +359,7 @@ let country_modifiers = symbol_table_init [
 ] 
 *)
 let province_modifiers = symbol_table_init [
+    (Literal "movement_cost", Number);
     (Literal "assimilation_rate", Number);
     (Literal "immigrant_attract", Number);
     (Literal "immigrant_push", Number);
