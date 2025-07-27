@@ -236,6 +236,7 @@ let country_modifiers = symbol_table_init [
     (Literal "diplomatic_points", Number);
     (Literal "seperatism", Number);
     (Literal "life_rating", Number);
+    (Literal "attrition", Number);
     (Literal "land_attrition", Number);
     (Literal "naval_attrition", Number);
     (Literal "colonial_migration", Number);
@@ -390,4 +391,6 @@ let province_modifiers = symbol_table_init [
     (Literal "poor_life_needs", Number);
     (Literal "middle_life_needs", Number);
     (Literal "rich_life_needs", Number);
+    (Literal "land_attack_modifier", Number);
+    (Literal "poor_savings_modifier", Number);
 ];
