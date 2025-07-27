@@ -1,0 +1,5 @@
+(library
+ (name Output)
+ (libraries TypeDef re2)
+ (flags (:standard -g))
+ );;

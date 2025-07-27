@@ -1,0 +1,4 @@
+(library
+ (name SyntaxChecker)
+ (libraries SymbolTable Output re2 Lexer)
+ )

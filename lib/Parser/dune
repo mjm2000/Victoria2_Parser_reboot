@@ -1,0 +1,5 @@
+(library
+ (name Parser)
+ (libraries TypeDef Output re2)
+ (flags (:standard -g))
+ );;

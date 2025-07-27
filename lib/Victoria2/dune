@@ -1,0 +1,4 @@
+(library
+ (name Victoria2)
+ (libraries SymbolTable Parser re2)
+ )
