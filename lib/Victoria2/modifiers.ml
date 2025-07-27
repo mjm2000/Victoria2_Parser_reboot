@@ -213,6 +213,8 @@ let country_modifiers = symbol_table_init [
     (Literal "leadership", Number);
     (Literal "unit_start_experience", Number);
     (Literal "war_exhaustion", Number);
+    (Literal "unciv_military_modifier", Number);
+
     (Literal "self_unciv_military_modifier", Number);
     (Literal "max_war_exhaustion", Number);
     (Literal "supply_limit", Number);
@@ -366,6 +368,7 @@ let province_modifiers = symbol_table_init [
     (Literal "life_rating", Number);
     (Literal "local_artisan_output", Number);
     (Literal "local_artisan_input", Number);
+    (Literal "local_artisan_throughput", Number);
     (Literal "local_factory_input", Number);
     (Literal "local_factory_output", Number);
     (Literal "local_factory_throughput", Number);
@@ -383,7 +386,7 @@ let province_modifiers = symbol_table_init [
     (Literal "poor_income_modifier", Number);
     (Literal "middle_income_modifier", Number);
     (Literal "rich_income_modifier", Number);
-
+    (Literal "unciv_economic_modifier", Number);
     (Literal "poor_life_needs", Number);
     (Literal "middle_life_needs", Number);
     (Literal "rich_life_needs", Number);
