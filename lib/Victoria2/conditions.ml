@@ -383,7 +383,13 @@ let province_conditions = symbol_table_init [
 (Literal ("literacy"),Number);
 (Literal ("military_spending"),Integer);
 (Literal ("minorities"),Value(Bool));
-(Literal ("owned_by"),Number);
+(Literal ("owned_by"),TypeOption([
+    Value(Tag);
+    Value(Scope);
+    Literal "owner";
+    Literal "sphere_owner";
+    Literal "any_country"
+]));
 (Literal ("pop_militancy"),Integer);
 (Literal ("port"),Value(Bool));
 (Literal ("province_control_days"),Integer);
