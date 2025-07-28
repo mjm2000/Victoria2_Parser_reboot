@@ -16,8 +16,9 @@ and assignment lex file= match lex with
         Output.print_memory_stats (Output.string_lexem lh); 
         (*add type *)
         let expr, rest = expression rest file in
-        Output.print_memory_stats (Output.string_expr expr);
+
         Printf.printf "Rest:%i\n" (List.length rest);
+        Output.print_memory_stats (Output.string_expr expr);
         (*add type *)
         let v = ASSIGNMENT (lh, expr) in
         v, rest 
