@@ -111,7 +111,7 @@ let country_conditions = symbol_table_init [
 (Literal ("administration_spending"),Number);
 (Literal ("ai"),Value(Bool));
 (Literal ("AI"),Value(Bool));
-(Literal ("alliance_with"),Number);
+(Literal ("alliance_with"),Target);
 (Literal ("average_consciousness"),Number);
 (Literal ("average_militancy"),Number);
 (Literal ("badboy"),Number);
@@ -196,7 +196,7 @@ let country_conditions = symbol_table_init [
 ]));
 (Literal ("is_possible_vassal"),Value(Tag));
 (Literal ("is_secondary_power"),Value(Bool));
-(Literal ("is_sphere_leader_of"),Number);
+(Literal ("is_sphere_leader_of"),Target);
 (Literal ("is_vassal"),Value(Bool));
 (Literal ("is_substate"),Value(Bool));
 (Literal ("literacy"),Number);

@@ -11,3 +11,6 @@ let continents = symbol_table_init [
     );
 
 ]
+let regions = symbol_table_init [
+    (Identifier, LEXEM_LIST (Catalog ("land_provid", WholeNumber)) ); 
+]
