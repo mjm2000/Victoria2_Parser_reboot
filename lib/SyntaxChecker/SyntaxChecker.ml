@@ -778,6 +778,7 @@ List.map (function
             );
             
             let assigns:(assignment list) = List.rev (Parser.assignments lexems filepath) in
+            Printf.printf "Assignments for %s:\n" filepath;
             (match astout with
             |Some astfile -> 
                 let oc = open_out astfile in
