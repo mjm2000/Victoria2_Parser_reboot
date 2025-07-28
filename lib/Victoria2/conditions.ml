@@ -57,6 +57,7 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Type "region", Type "state_conditions_def");
 (Literal ("poor_strata"),Type "pop_conditions_def");
 (Literal ("middle_strata"),Type "pop_conditions_def");
 (Literal ("rich_strata"),Type "pop_conditions_def");
