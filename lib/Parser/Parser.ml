@@ -4,14 +4,15 @@ open TypeDef
 let rec assignments ls file= 
     let rec assignments_r out rest = match rest with 
         | [] -> 
-            print_endline "Assignments exception";
+            print_endline "No more assignments";
             (*add type *)
             (*add type *) 
-            (List.rev out)
+            ( out)
         | lexems -> 
             let v, rest = assignment lexems file in
-            
-            Printf.printf "%s\n" (Output.string_assignment_list (List.rev out));
+            print_endline ("Assignment: " ^ (Output.string_assignment v));  
+            print_endline ("Rest: " ^ (Output.string_lexems rest));
+            print_endline "----------------------";
             assignments_r (v :: out) rest
     in
     assignments_r [] ls
