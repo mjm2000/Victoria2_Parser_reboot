@@ -2,6 +2,9 @@ open SymbolTable
 open TypeDef
 
 let country_effects =  symbol_table_init [
+(Literal("poor_strata"),Type "pop_effects_def");
+(Literal("middle_strata"),Type "pop_effects_def");
+(Literal("rich_strata"),Type "pop_effects_def");
 (Literal("enable_ideology"), Type "ideology");
 (Type "good",Number);
 (Literal "money",Number);
