@@ -56,7 +56,6 @@ let victoria2_paths =
         "common/bookmarks.txt","bookmarks_def";
     
 
-        "map/continent.txt","continents_def";
 
         "common/technology.txt","technology_group_def";
 
@@ -64,6 +63,7 @@ let victoria2_paths =
 
         "events","event_def";
 
+        "map/continent.txt","continents_def";
         "poptypes","pop_file_def";
         "common/ideologies.txt","ideologies_def";
         (*
