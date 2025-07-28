@@ -65,7 +65,7 @@ let victoria2_paths =
         "events","event_def";
 
         "map/continent.txt","continents_def";
-        "map/regions.txt","regions_def";
+        "map/region.txt","regions_def";
         "poptypes","pop_file_def";
         "common/ideologies.txt","ideologies_def";
         (*
