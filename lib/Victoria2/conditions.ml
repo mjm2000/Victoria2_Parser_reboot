@@ -57,6 +57,10 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Literal ("poor_strata"),Type "pop_conditions_def");
+(Literal ("middle_strata"),Type "pop_conditions_def");
+(Literal ("rich_strata"),Type "pop_conditions_def");
+
 (Literal ("plurality"),Number);
 (Literal "total_pops",Integer);
 (Literal ("any_greater_power"),Type "country_conditions_def");
@@ -322,6 +326,9 @@ let country_conditions = symbol_table_init [
 ]
 
 let province_conditions = symbol_table_init [
+(Literal ("poor_strata"),Type "pop_conditions_def");
+(Literal ("middle_strata"),Type "pop_conditions_def");
+(Literal ("rich_strata"),Type "pop_conditions_def");
 (Value(Scope),Type "country_conditions_def");
 (Type "land_provid",Type "province_conditions_def");
 (Value(Tag),Type "country_conditions_def");
