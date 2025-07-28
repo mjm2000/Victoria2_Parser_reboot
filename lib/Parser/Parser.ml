@@ -93,6 +93,7 @@ and expression lexems file =
                 ASSIGNMENT_LIST v, rest
         |_ -> 
             let v, rest = lexem_list rest file in
+            Printf.printf "Expression lexem list: %s\n" (Output.string_expr (LEXEM_LIST(v)));
             LEXEM_LIST(v), rest
         )
     | (RB, _, cords) :: rest -> 
