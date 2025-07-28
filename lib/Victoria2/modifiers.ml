@@ -286,6 +286,7 @@ let country_modifiers = symbol_table_init [
         (Literal "value", Number);
     ]));
     (Literal "global_pop_growth", Number);
+    (Type "pop_type",Number);
 ]
 
 
