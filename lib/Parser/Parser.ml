@@ -13,6 +13,7 @@ let rec assignments ls file=
             print_endline ("Assignment: " ^ (Output.string_assignment v));  
             print_endline ("Rest: " ^ (Output.string_lexems rest));
             print_endline "----------------------";
+            Printf.fprintf (open_out "file.txt") "Assignment: %s\n"  (Output.string_assignment_list out);
             assignments_r (v :: out) rest
     in
     assignments_r [] ls

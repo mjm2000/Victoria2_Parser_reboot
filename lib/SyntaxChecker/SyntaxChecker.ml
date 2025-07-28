@@ -777,11 +777,12 @@ List.map (function
             |None -> ()
             );
             
-            let assigns:(assignment list) = List.rev (Parser.assignments lexems filepath) in
-            Printf.printf "Assignments for %s:\n" filepath;
+            let assigns:(assignment list) =  (Parser.assignments lexems filepath) in
             (match astout with
             |Some astfile -> 
                 let oc = open_out astfile in
+
+            Printf.printf "Assignments for %s:\n" filepath;
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
                 close_out oc
