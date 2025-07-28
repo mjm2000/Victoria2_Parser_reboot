@@ -16,6 +16,7 @@ and assignment lex file= match lex with
         Output.print_memory_stats (Output.string_lexem lh); 
         (*add type *)
         let expr, rest = expression rest file in
+        Output.print_memory_stats (Output.string_expr expr);
         let v = ASSIGNMENT (lh, expr) in
         v, rest 
     |(_,_,cords):: [] -> 
@@ -25,6 +26,8 @@ and assignment lex file= match lex with
 
     | [] -> ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, (2, 2),file)), []
     |rest ->
+        print_endline "Assignment exception";
+        (*add type *)
         let rec expr  out lexems = match lexems with
         | ((LexemValue _, _, _) as v) :: rest -> 
             let out = ((LEXEM v)::out) in
