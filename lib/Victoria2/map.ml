@@ -12,5 +12,5 @@ let continents = symbol_table_init [
 
 ]
 let regions = symbol_table_init [
-    (Catalog("region",Identifier), WholeNumber ); 
+    (Catalog("region",Value Keyword), WholeNumber ); 
 ]
