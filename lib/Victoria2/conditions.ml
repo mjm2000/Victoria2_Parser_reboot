@@ -85,7 +85,7 @@ let country_conditions = symbol_table_init [
 (Literal ("fire_only_once"),Value(Bool));
 (Literal ("is_triggered_only"),Value(Bool));
 (Literal ("major"),Value(Keyword));
-(Literal ("exists"),Target);
+(Literal ("exists"),TypeOption[Target;Value(Bool)]);
 (Literal ("immediate"),Value(Keyword));
 (Literal ("check_variable"),SubTable(symbol_table_init [
     (Literal ("which"),Value(Keyword));
