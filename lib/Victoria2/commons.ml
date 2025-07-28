@@ -615,7 +615,7 @@ let commons = [
         SubTable (symbol_table_init [
             (Catalog("trigger_modifiers", Value Keyword), Inherit ([
                 (Literal "trigger", Type "country_conditions_def");
-                (Literal "icon", Type "country_modifiers_def");
+                (Literal "icon", Integer);
             ], [ "country_modifiers_def"])
             );
         ])
