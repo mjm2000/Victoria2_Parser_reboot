@@ -30,9 +30,7 @@ let victoria2_symbol_table =  symbol_table_init ([
     Definition("technology_def"),SubTable(technology);
     Definition("unit_def"),SubTable(unit_def);
     Definition("pop_file_def"),CatalogFile("pop_type", ".*/([^/]+?)\\.[^/.]+$",SubTable(pop_file));
-    (*
     Definition("regions_def"),SubTable(regions);
-    *)
 ] @ commons)
 
 let victoria2_paths =
@@ -67,9 +65,7 @@ let victoria2_paths =
         "events","event_def";
 
         "map/continent.txt","continents_def";
-        (*
         "map/region.txt","regions_def";
-        *)
         "poptypes","pop_file_def";
         "common/ideologies.txt","ideologies_def";
         (*
