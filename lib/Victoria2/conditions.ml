@@ -3,7 +3,10 @@ open TypeDef
 
 let pop_conditions = symbol_table_init [
 (Literal ("is_canal_enabled"),Integer);
-(Literal ("agree_with_ruling_party"),Decimal);
+(Literal ("agree_with_ruling_party"),TypeOption([
+    Decimal;
+    Value Bool;
+]));
 (Literal ("cash_reserves"),Integer);
 (Literal ("consciousness"),Number);
 (Literal ("culture"),Value(Keyword));
@@ -54,6 +57,7 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Literal ("plurality"),Number);
 (Literal "total_pops",Integer);
 (Literal ("any_greater_power"),Type "country_conditions_def");
 (Literal ("cultural_union"),Type "country_conditions_def");
