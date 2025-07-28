@@ -306,7 +306,7 @@ let country_conditions = symbol_table_init [
 (Literal ("war_exhaustion"),Number);
 (Literal ("war_policy"),Value(Keyword));
 (Literal ("war_score"),Integer);
-(Literal ("war_with"),Number);
+(Literal ("war_with"),Target);
 (Value(Tag), Type "country_conditions_def");
 (Value(Condition),Type "country_conditions_def");
 (Integer,Type "province_conditions_def");
