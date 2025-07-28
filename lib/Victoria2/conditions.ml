@@ -323,7 +323,7 @@ let country_conditions = symbol_table_init [
 
 let province_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
-(Type "province_id",Type "province_conditions_def");
+(Type "land_provid",Type "province_conditions_def");
 (Value(Tag),Type "country_conditions_def");
 (Literal ("can_build_in_province"),SubTable(symbol_table_init [
     (Literal ("building"),Value(Keyword));
