@@ -152,7 +152,7 @@ let country_conditions = symbol_table_init [
     Value(Tag);
     Value(Scope)
 ]));
-(Literal ("in_sphere"),Number);
+(Literal ("in_sphere"),Target);
 (Literal ("in_default"),TypeOption([
         Value(Tag);
         Value(Scope);
