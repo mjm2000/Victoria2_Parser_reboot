@@ -21,6 +21,7 @@ and assignment lex file= match lex with
         Output.print_memory_stats (Output.string_expr expr);
         (*add type *)
         let v = ASSIGNMENT (lh, expr) in
+        Output.print_memory_stats (Output.string_assignment v);
         v, rest 
     |(_,_,cords):: [] -> 
         (*add type *)
