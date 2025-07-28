@@ -22,6 +22,7 @@ and assignment lex file= match lex with
         (*add type *)
         let v = ASSIGNMENT (lh, expr) in
         Output.print_memory_stats (Output.string_assignment v);
+        Printf.printf "Rest after assignment:%i\n" (Output.string_lexems rest);
         v, rest 
     |(_,_,cords):: [] -> 
         (*add type *)
