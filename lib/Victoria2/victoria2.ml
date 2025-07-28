@@ -65,7 +65,6 @@ let victoria2_paths =
         "events","event_def";
 
         "map/continent.txt","continents_def";
-        "map/region.txt","regions_def";
         "poptypes","pop_file_def";
         "common/ideologies.txt","ideologies_def";
         (*
@@ -82,5 +81,7 @@ let victoria2_paths =
         "units","unit_def";
 
         "common/goods.txt","goods_def";
+
+        "map/region.txt","regions_def";
     ]
 

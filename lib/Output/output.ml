@@ -12,6 +12,7 @@ let lexem_type_string lexem = match lexem with
 | Condition ->"Conditional"
 | Bool ->     "Bool"      
 | Date ->     "Date"
+
 let print_memory_stats label =
   let stat = Gc.stat () in
   Printf.printf "[%s] Heap size: %.2f MB | Live words: %d | Free words: %d | Major collections: %d\n%!"
