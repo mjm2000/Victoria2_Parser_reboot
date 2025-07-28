@@ -3,9 +3,15 @@ open TypeDef
 (*open Output*)
 let rec assignments ls file= 
     let rec assignments_r out rest = match rest with 
-        | [] -> (List.rev out)
+        | [] -> 
+            print_endline "Assignments exception";
+            (*add type *)
+            (*add type *) 
+            (List.rev out)
         | lexems -> 
             let v, rest = assignment lexems file in
+            
+            Printf.printf "%s\n" (Output.string_assignment_list (List.rev out));
             assignments_r (v :: out) rest
     in
     assignments_r [] ls
@@ -13,16 +19,12 @@ let rec assignments ls file=
 and assignment lex file= match lex with
     | lh :: (EQ, _, _) :: rest -> 
 
-        Output.print_memory_stats (Output.string_lexem lh); 
         (*add type *)
+
         let expr, rest = expression rest file in
 
-        Printf.printf "Rest:%i\n" (List.length rest);
-        Output.print_memory_stats (Output.string_expr expr);
         (*add type *)
         let v = ASSIGNMENT (lh, expr) in
-        Output.print_memory_stats (Output.string_assignment v);
-        Printf.printf "Rest after assignment:%i\n" (Output.string_lexems rest);
         v, rest 
     |(_,_,cords):: [] -> 
         (*add type *)
