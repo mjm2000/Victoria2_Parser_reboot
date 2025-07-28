@@ -3,15 +3,7 @@ open TypeDef
 
 (*This function takes a list of exceptions and returns the shortest list of exceptions*)
 (*The rh is a list*)
-let print_memory_stats label =
-  let stat = Gc.stat () in
-  Printf.printf "[%s] Heap size: %.2f MB | Live words: %d | Free words: %d | Major collections: %d\n%!"
-    label
-    ((float_of_int stat.Gc.heap_words *. float_of_int (Sys.word_size / 8)) /. 1024.0 /. 1024.0)
-    stat.Gc.live_words
-    stat.Gc.free_words
-    stat.Gc.major_collections
-;;
+
 
 let lookup symbol_table (symbol:symbol_type) = 
     match Hashtbl.find_opt symbol_table symbol with

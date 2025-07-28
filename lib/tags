@@ -27,7 +27,7 @@
 !_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
-!_TAG_OUTPUT_VERSION	0.0	/current.age/
+!_TAG_OUTPUT_VERSION	1.1	/current.age/
 !_TAG_PARSER_VERSION!OCaml	0.0	/current.age/
 !_TAG_PARSER_VERSION!Sh	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
@@ -35,7 +35,7 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	6.1.0	/v6.1.0/
+!_TAG_PROGRAM_VERSION	6.2.0	/v6.2.0/
 !_TAG_ROLE_DESCRIPTION!Sh!heredoc	endmarker	/end marker/
 !_TAG_ROLE_DESCRIPTION!Sh!script	loaded	/loaded/
 ASSIGNMENT	TypeDef/TypeDef.ml	/^    |ASSIGNMENT of lexem * expr $/;"	C	type:assignment
@@ -43,6 +43,7 @@ ASSIGNMENT_LIST	TypeDef/TypeDef.ml	/^    |ASSIGNMENT_LIST of assignment list$/;"
 ASSIGN_EXCEPTION	TypeDef/TypeDef.ml	/^    |ASSIGN_EXCEPTION of exception_value$/;"	C	type:assignment
 Bool	TypeDef/TypeDef.ml	/^|Bool  $/;"	C	type:value_type
 Catalog	TypeDef/TypeDef.ml	/^    |Catalog of string * symbol_type$/;"	C	type:symbol_type
+CatalogFile	TypeDef/TypeDef.ml	/^    |CatalogFile of string  * string * symbol_type $/;"	C	type:symbol_type
 Commons	Victoria2/commons.ml	/^open TypeDef$/;"	M
 Condition	TypeDef/TypeDef.ml	/^|Condition$/;"	C	type:value_type
 Conditions	Victoria2/conditions.ml	/^open SymbolTable$/;"	M
@@ -50,15 +51,19 @@ Date	TypeDef/TypeDef.ml	/^|Date$/;"	C	type:value_type
 Decimal	TypeDef/TypeDef.ml	/^    |Decimal$/;"	C	type:symbol_type
 Decisions	Victoria2/decisions.ml	/^open TypeDef$/;"	M
 Definition	TypeDef/TypeDef.ml	/^    |Definition of string$/;"	C	type:symbol_type
+Dir	TypeDef/TypeDef.ml	/^    |Dir of string$/;"	C	type:symbol_type
 END_OF_FILE	TypeDef/TypeDef.ml	/^    |END_OF_FILE $/;"	C	type:exception_type
 EQ	TypeDef/TypeDef.ml	/^|EQ$/;"	C	type:lexem_type
+EXPR	TypeDef/TypeDef.ml	/^    |EXPR of expr$/;"	C	type:assignment
 EXPR_EXCEPTION	TypeDef/TypeDef.ml	/^    |EXPR_EXCEPTION of exception_value  $/;"	C	type:expr
 Effects	Victoria2/effects.ml	/^open SymbolTable$/;"	M
 Events	Victoria2/events.ml	/^open SymbolTable$/;"	M
 ExpEqual	TypeDef/TypeDef.ml	/^    |ExpEqual $/;"	C	type:expected_value
 ExpLeftBracket	TypeDef/TypeDef.ml	/^    |ExpLeftBracket$/;"	C	type:expected_value
 ExpRightBracket	TypeDef/TypeDef.ml	/^    |ExpRightBracket$/;"	C	type:expected_value
+Identifier	TypeDef/TypeDef.ml	/^    |Identifier$/;"	C	type:symbol_type
 Inherit	TypeDef/TypeDef.ml	/^    |Inherit of (symbol_type * symbol_type) list * string list$/;"	C	type:symbol_type
+InnerCatalog	TypeDef/TypeDef.ml	/^    |InnerCatalog of string * symbol_type$/;"	C	type:symbol_type
 Integer	TypeDef/TypeDef.ml	/^    |Integer$/;"	C	type:symbol_type
 Keyword	TypeDef/TypeDef.ml	/^|Keyword $/;"	C	type:value_type
 LB	TypeDef/TypeDef.ml	/^|LB$/;"	C	type:lexem_type
@@ -71,87 +76,113 @@ Lexer	Lexer/Lexer.ml	/^open TypeDef$/;"	M
 Link	TypeDef/TypeDef.ml	/^    |Link$/;"	C	type:symbol_type
 Literal	TypeDef/TypeDef.ml	/^    |Literal of string$/;"	C	type:symbol_type
 MULTIPLE_CHOICE	TypeDef/TypeDef.ml	/^    |MULTIPLE_CHOICE of exception_value list list$/;"	C	type:exception_type
+Map	Victoria2/map.ml	/^open SymbolTable$/;"	M
 Modifiers	Victoria2/modifiers.ml	/^open SymbolTable$/;"	M
 Mtth	Victoria2/mtth.ml	/^open SymbolTable$/;"	M
 NONE	TypeDef/TypeDef.ml	/^    |NONE $/;"	C	type:expected_value
 NegativeFloat	TypeDef/TypeDef.ml	/^|NegativeFloat $/;"	C	type:value_type
 NegativeInt	TypeDef/TypeDef.ml	/^|NegativeInt$/;"	C	type:value_type
+NegativeNumber	TypeDef/TypeDef.ml	/^    |NegativeNumber$/;"	C	type:symbol_type
+Nothing	TypeDef/TypeDef.ml	/^    |Nothing$/;"	C	type:symbol_type
 Number	TypeDef/TypeDef.ml	/^    |Number$/;"	C	type:symbol_type
 Optional	TypeDef/TypeDef.ml	/^    |Optional $/;"	C	type:symbol_amount
 Output	Output/output.ml	/^open TypeDef$/;"	M
 Parser	Parser/Parser.ml	/^ $/;"	M
+Pops	Victoria2/pops.ml	/^open SymbolTable$/;"	M
 PositiveFloat	TypeDef/TypeDef.ml	/^|PositiveFloat$/;"	C	type:value_type
 PositiveInt	TypeDef/TypeDef.ml	/^|PositiveInt$/;"	C	type:value_type
+PositiveNumber	TypeDef/TypeDef.ml	/^    |PositiveNumber$/;"	C	type:symbol_type
 RB	TypeDef/TypeDef.ml	/^|RB$/;"	C	type:lexem_type
 RHS	TypeDef/TypeDef.ml	/^    |RHS of symbol_type list $/;"	C	type:expected_value
 Required	TypeDef/TypeDef.ml	/^    |Required of int$/;"	C	type:symbol_amount
 Scope	TypeDef/TypeDef.ml	/^|Scope$/;"	C	type:value_type
 String	TypeDef/TypeDef.ml	/^|String$/;"	C	type:value_type
+SubCatalog	TypeDef/TypeDef.ml	/^    |SubCatalog of string * string * symbol_type$/;"	C	type:symbol_type
+SubDefinition	TypeDef/TypeDef.ml	/^    |SubDefinition of string * string $/;"	C	type:symbol_type
 SubTable	TypeDef/TypeDef.ml	/^    |SubTable of (symbol_type,symbol_type) Hashtbl.t$/;"	C	type:symbol_type
+SubType	TypeDef/TypeDef.ml	/^    |SubType of string * string $/;"	C	type:symbol_type
+SupCatalog	TypeDef/TypeDef.ml	/^    |SupCatalog of string * symbol_type$/;"	C	type:symbol_type
+SupType	TypeDef/TypeDef.ml	/^    |SupType of string $/;"	C	type:symbol_type
+Switch	TypeDef/TypeDef.ml	/^    |Switch of (string * symbol_type) list $/;"	C	type:symbol_type
 SymbolTable	SymbolTable/SymbolTable.ml	/^$/;"	M
 SyntaxChecker	SyntaxChecker/SyntaxChecker.ml	/^open SymbolTable$/;"	M
-TYPE_MISHMASH	TypeDef/TypeDef.ml	/^    |TYPE_MISHMASH of string  * lexem_type * lexem_type $/;"	C	type:exception_type
+TYPE_MISHMASH	TypeDef/TypeDef.ml	/^    |TYPE_MISHMASH of string  * value_type * value_type $/;"	C	type:exception_type
 Tag	TypeDef/TypeDef.ml	/^|Tag  $/;"	C	type:value_type
+Target	TypeDef/TypeDef.ml	/^    |Target$/;"	C	type:symbol_type
+Technology	Victoria2/technology.ml	/^open TypeDef$/;"	M
 Type	TypeDef/TypeDef.ml	/^    |Type of string$/;"	C	type:symbol_type
 TypeDef	TypeDef/TypeDef.ml	/^type value_type =$/;"	M
 TypeOption	TypeDef/TypeDef.ml	/^    |TypeOption of symbol_type list$/;"	C	type:symbol_type
 UNEXPECTED_ASSIGNMENT	TypeDef/TypeDef.ml	/^    |UNEXPECTED_ASSIGNMENT of assignment $/;"	C	type:exception_type
 UNEXPECTED_ASSIGN_LIST	TypeDef/TypeDef.ml	/^    |UNEXPECTED_ASSIGN_LIST of assignment list $/;"	C	type:exception_type
+UNEXPECTED_EQUAL	TypeDef/TypeDef.ml	/^    |UNEXPECTED_EQUAL$/;"	C	type:exception_type
 UNEXPECTED_EXPR	TypeDef/TypeDef.ml	/^    |UNEXPECTED_EXPR of expr$/;"	C	type:exception_type
 UNEXPECTED_EXPR_LIST	TypeDef/TypeDef.ml	/^    |UNEXPECTED_EXPR_LIST of expr list$/;"	C	type:exception_type
 UNEXPECTED_LEFT_BRACKET	TypeDef/TypeDef.ml	/^    |UNEXPECTED_LEFT_BRACKET$/;"	C	type:exception_type
-UNEXPECTED_LEXEM	TypeDef/TypeDef.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type $/;"	C	type:exception_type
+UNEXPECTED_LEXEM	TypeDef/TypeDef.ml	/^    |UNEXPECTED_LEXEM of string * lexem_type    $/;"	C	type:exception_type
 UNEXPECTED_RIGHT_BRACKET	TypeDef/TypeDef.ml	/^    |UNEXPECTED_RIGHT_BRACKET$/;"	C	type:exception_type
 UNKNOWN_IDENTIFIER	TypeDef/TypeDef.ml	/^    |UNKNOWN_IDENTIFIER of string $/;"	C	type:exception_type
+Units	Victoria2/units.ml	/^open TypeDef $/;"	M
 Value	TypeDef/TypeDef.ml	/^    |Value of value_type $/;"	C	type:symbol_type
 ValueList	TypeDef/TypeDef.ml	/^    |ValueList of symbol_type $/;"	C	type:symbol_type
 Victoria2	Victoria2/victoria2.ml	/^open SymbolTable$/;"	M
 WholeNumber	TypeDef/TypeDef.ml	/^    |WholeNumber$/;"	C	type:symbol_type
+Year	TypeDef/TypeDef.ml	/^    |Year$/;"	C	type:symbol_type
 append_table	SymbolTable/SymbolTable.ml	/^let append_table symbol_table symbols = $/;"	f
-assignment	Parser/Parser.ml	/^and assignment lex = match lex with$/;"	f
+assignment	Parser/Parser.ml	/^and assignment lex file= match lex with$/;"	f
 assignment	TypeDef/TypeDef.ml	/^and assignment = $/;"	t
-assignment_list	Parser/Parser.ml	/^and assignment_list lexems = $/;"	f
-assignments	Parser/Parser.ml	/^let rec assignments ls = $/;"	f
+assignment_list	Parser/Parser.ml	/^and assignment_list lexems file= $/;"	f
+assignments	Parser/Parser.ml	/^let rec assignments ls file= $/;"	f
+catalog_type	SyntaxChecker/SyntaxChecker.ml	/^let catalog_type type_label value symbol_table = $/;"	f
 chars_to_lexem	Lexer/Lexer.ml	/^let chars_to_lexem cl= match (cl) with $/;"	f
 combine_table_list	SymbolTable/SymbolTable.ml	/^let combine_table_list tables = $/;"	f
 combine_table_pair	SymbolTable/SymbolTable.ml	/^let combine_table_pair table_take table_give = $/;"	f
 commons	Victoria2/commons.ml	/^let commons = [$/;"	v
+continents	Victoria2/map.ml	/^let continents = symbol_table_init [$/;"	v
 country_conditions	Victoria2/conditions.ml	/^let country_conditions = symbol_table_init [$/;"	v
 country_effects	Victoria2/effects.ml	/^let country_effects =  symbol_table_init [$/;"	v
 country_modifiers	Victoria2/modifiers.ml	/^let country_modifiers = symbol_table_init [$/;"	v
 country_mtth	Victoria2/mtth.ml	/^let country_mtth = symbol_table_init [$/;"	v
-current_length	SyntaxChecker/SyntaxChecker.ml	/^        let current_length = List.length hd in$/;"	v
 decisions	Victoria2/decisions.ml	/^let decisions = symbol_table_init [$/;"	v
 events	Victoria2/events.ml	/^let events = symbol_table_init [$/;"	v
-exception_iden_string	Output/output.ml	/^let exception_iden_string exp = match exp with$/;"	f
+exception_iden_string	Output/output.ml	/^let rec exception_iden_string exp = match exp with$/;"	f
 exception_lists_string	Output/output.ml	/^and exception_lists_string ls = $/;"	f
 exception_string	Output/output.ml	/^and exception_string (exp : exception_value) : string = $/;"	f
 exception_type	TypeDef/TypeDef.ml	/^and exception_type = $/;"	t
-exception_value	TypeDef/TypeDef.ml	/^and exception_value = expected_value * exception_type * (int * int)$/;"	t
+exception_value	TypeDef/TypeDef.ml	/^and exception_value = expected_value * exception_type * (int * int) * string$/;"	t
 exceptions_string	Output/output.ml	/^and exceptions_string ls = $/;"	f
 expected_value	TypeDef/TypeDef.ml	/^and expected_value =$/;"	t
 expr	TypeDef/TypeDef.ml	/^type expr = $/;"	t
-expression	Parser/Parser.ml	/^and expression lexems = $/;"	f
+expression	Parser/Parser.ml	/^and expression lexems file = $/;"	f
+find_catalog_left	SyntaxChecker/SyntaxChecker.ml	/^let find_catalog_left lex_type lex_text symbol_table outer_symbol_table = $/;"	f
 get_errors	Output/output.ml	/^let get_errors assignments = $/;"	f
+get_umbtypes	SyntaxChecker/SyntaxChecker.ml	/^let get_umbtypes t v = match t with$/;"	f
+left_lex_lookup	SyntaxChecker/SyntaxChecker.ml	/^let  left_lex_lookup lex_value lex_type symbol_table outer_symbol_table = $/;"	f
+lex_symbol_eq	SyntaxChecker/SyntaxChecker.ml	/^let lex_symbol_eq lex_type lex_value symbol =$/;"	f
 lexem	TypeDef/TypeDef.ml	/^type lexem = lexem_type * string * (int * int)$/;"	t
-lexem_list	Parser/Parser.ml	/^and lexem_list lexems = $/;"	f
+lexem_list	Parser/Parser.ml	/^and lexem_list lexems file = $/;"	f
 lexem_to_str	Output/output.ml	/^let lexem_to_str lexem =match lexem with $/;"	f
 lexem_type	TypeDef/TypeDef.ml	/^type lexem_type =$/;"	t
+lexem_type_string	Output/output.ml	/^let lexem_type_string lexem = match lexem with$/;"	f
 lexer	Lexer/Lexer.ml	/^let lexer f = $/;"	f
-literal_to_str	Output/output.ml	/^let literal_to_str lexem = match lexem with$/;"	f
 lookup	SyntaxChecker/SyntaxChecker.ml	/^let lookup symbol_table (symbol:symbol_type) = $/;"	f
 ls_to_str	Lexer/Lexer.ml	/^let ls_to_str ls = $/;"	f
 match_reg	Lexer/Lexer.ml	/^let match_reg reg str = $/;"	f
 member	SymbolTable/SymbolTable.ml	/^let member symbol_table symbol = $/;"	f
+oc	SyntaxChecker/SyntaxChecker.ml	/^                let oc = open_out astfile in$/;"	v
 pop_conditions	Victoria2/conditions.ml	/^let pop_conditions = symbol_table_init [$/;"	v
 pop_effects	Victoria2/effects.ml	/^let pop_effects = symbol_table_init [$/;"	v
+pop_file	Victoria2/pops.ml	/^let pop_file = symbol_table_init [$/;"	v
 print_lexem	Output/output.ml	/^let print_lexem lexem = $/;"	f
 print_lexems	Output/output.ml	/^let print_lexems lexems = $/;"	f
+print_memory_stats	Output/output.ml	/^let print_memory_stats label =$/;"	f
 province_conditions	Victoria2/conditions.ml	/^let province_conditions = symbol_table_init [$/;"	v
 province_effects	Victoria2/effects.ml	/^let province_effects = symbol_table_init [ $/;"	v
 province_modifiers	Victoria2/modifiers.ml	/^let province_modifiers = symbol_table_init [$/;"	v
 province_mtth	Victoria2/mtth.ml	/^let province_mtth = symbol_table_init [$/;"	v
-shortest_list	SyntaxChecker/SyntaxChecker.ml	/^let shortest_list lists =$/;"	f
+regions	Victoria2/map.ml	/^let regions = symbol_table_init [$/;"	v
+remove_extension	SyntaxChecker/SyntaxChecker.ml	/^let remove_extension path =$/;"	f
+remove_quotes	SyntaxChecker/SyntaxChecker.ml	/^let remove_quotes s =$/;"	f
 split_list	SyntaxChecker/SyntaxChecker.ml	/^let split_list n ls =$/;"	f
 state_conditions	Victoria2/conditions.ml	/^let state_conditions = symbol_table_init [$/;"	v
 state_effects	Victoria2/effects.ml	/^let state_effects = symbol_table_init [$/;"	v
@@ -164,11 +195,14 @@ string_lexems	Output/output.ml	/^let string_lexems lexems = $/;"	f
 string_symbol	Output/output.ml	/^and string_symbol pv = match pv with$/;"	f
 string_symbol_table	Output/output.ml	/^and string_symbol_table symbol_table =$/;"	f
 string_value_type	Output/output.ml	/^and  string_value_type value_type = match value_type with$/;"	f
+sub_catalog_type	SyntaxChecker/SyntaxChecker.ml	/^let sub_catalog_type super_type sub_type (value:symbol_type) symbol_table = $/;"	f
 symbol_amount	TypeDef/TypeDef.ml	/^and symbol_amount =$/;"	t
 symbol_table_init	SymbolTable/SymbolTable.ml	/^let symbol_table_init symbols =$/;"	f
 symbol_type	TypeDef/TypeDef.ml	/^and symbol_type = $/;"	t
-type_verify	SyntaxChecker/SyntaxChecker.ml	/^let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory =$/;"	f
+technology	Victoria2/technology.ml	/^let technology = symbol_table_init [$/;"	v
+unit_def	Victoria2/units.ml	/^let unit_def = symbol_table_init [$/;"	v
 value_type	TypeDef/TypeDef.ml	/^type value_type =$/;"	t
 victoria2_paths	Victoria2/victoria2.ml	/^let victoria2_paths =$/;"	v
 victoria2_symbol_table	Victoria2/victoria2.ml	/^let victoria2_symbol_table =  symbol_table_init ([$/;"	v
+x	Output/output.ml	/^        let x = List.fold_left (fun acc (key,value) -> $/;"	v
 x	Output/output.ml	/^        let x = List.fold_left (fun acc (lh, rh) -> $/;"	v

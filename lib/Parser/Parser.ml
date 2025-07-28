@@ -5,6 +5,7 @@ let rec assignments ls file=
     let rec assignments_r out rest = match rest with 
         | [] -> (List.rev out)
         | lexems -> 
+                Output.print_memory_stats "parser";
             let v, rest = assignment lexems file in
             assignments_r (v :: out) rest
     in
