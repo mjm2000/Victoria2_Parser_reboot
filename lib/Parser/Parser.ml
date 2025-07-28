@@ -4,16 +4,11 @@ open TypeDef
 let rec assignments ls file= 
     let rec assignments_r out rest = match rest with 
         | [] -> 
-            print_endline "No more assignments";
             (*add type *)
             (*add type *) 
             ( out)
         | lexems -> 
             let v, rest = assignment lexems file in
-            print_endline ("Assignment: " ^ (Output.string_assignment v));  
-            print_endline ("Rest: " ^ (Output.string_lexems rest));
-            print_endline "----------------------";
-            Printf.fprintf (open_out "file.txt") "Assignment: %s\n"  (Output.string_assignment_list out);
             assignments_r (v :: out) rest
     in
     assignments_r [] ls
@@ -35,7 +30,6 @@ and assignment lex file= match lex with
 
     | [] -> ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, (2, 2),file)), []
     |rest ->
-        print_endline "Assignment exception";
         (*add type *)
         let rec expr  out lexems = match lexems with
         | ((LexemValue _, _, _) as v) :: rest -> 
@@ -72,7 +66,6 @@ and assignment_list lexems file=
     let rec assignment_list_r lexems out = match lexems with
         | (RB, _, _) :: rest -> (List.rev out), rest
         | (_, _, cords) :: [] -> 
-            print_endline "Assignment list exception";
                 (List.rev (ASSIGN_EXCEPTION (RHS [], END_OF_FILE, cords,file) :: out), [])
 
         | [] -> 

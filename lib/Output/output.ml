@@ -28,7 +28,7 @@ let lexem_to_str lexem =match lexem with
 | LB  ->      "Left Brace"
 | RB  ->      "Right Brace"
 | EQ ->       "Equal"
-| LexemValue l -> Printf.sprintf "Literal %s" (lexem_type_string l)
+| LexemValue l -> Printf.sprintf "LexemValue %s" (lexem_type_string l)
 | LexError ->"Lex Error"
 
 let string_lexem lex_value = 
@@ -154,7 +154,7 @@ and string_symbol pv = match pv with
             Printf.sprintf "%s\n\t%s:%s" acc  key (string_symbol value)
         ) "" ls in
         Printf.sprintf "Switch(%s)" x
-    | WholeNumber -> "NUMBER"
+    | WholeNumber -> "WholeNumber"
     |Link  -> "LINK"
     |Inherit (symbols, table_names) ->
         let x = List.fold_left (fun acc (lh, rh) -> 

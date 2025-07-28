@@ -316,6 +316,7 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
 
 
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope file= 
+
     match assignments with
     |ASSIGNMENT(((LexemValue lh_type),lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type =  left_lex_lookup lh_value lh_type symbol_table outer_symbol_table 
@@ -323,13 +324,16 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         in
 
         let rec assign_type_check (expected_rh_type:symbol_type) ls exceptions =  
+
             match expected_rh_type,ls with
             |ValueList(SubTable inner_table),((ASSIGNMENT_LIST(ls)) ::rest) -> 
+
                 let new_scope = SubTable inner_table in
                 let table_exceptions= type_verify_r inner_table ls exceptions (RHS([new_scope])) file
                 in
                 assign_type_check expected_rh_type rest table_exceptions
             |ValueList(list_erh_type),(LEXEM(LexemValue rh_type,rh_value,cords)::rest)  -> 
+
                 (match list_erh_type with
                 |Value(erh_type) when erh_type = rh_type  -> 
                     assign_type_check expected_rh_type rest exceptions
@@ -370,8 +374,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             |_,_ -> 
                 let e = UNEXPECTED_EXPR_LIST(ls) in
                 let expected = (RHS [expected_rh_type]) in
-                let new_exceptions =((expected,e,assign_cords,file)::exceptions) in
-                assign_type_check expected_rh_type ls new_exceptions
+                ((expected,e,assign_cords,file)::exceptions) 
 
         in
         (match expected_rh_type with
@@ -411,7 +414,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 assign_type_check rhs exceptions
             |None ->
                 let cords_string = Printf.sprintf " at %s:%s" file (Output.string_lexem rh_token) in
-                Printf.eprintf "Type %s not found in table with %s\n" v (Output.string_symbol_table outer_symbol_table) ; 
                 raise (Invalid_argument ("Type " ^ v ^ " not found in outer symbol table" ^ cords_string ))
             )
 
@@ -754,7 +756,6 @@ List.map (function
         |Some (CatalogFile (catalog,regex, symbol) ) ->
             (match filename_extract filepath regex with
             |Some name -> 
-                Printf.printf "Found catalog %s in %s\n" name filepath;
                 catalog_type catalog (Literal name) outer_symbol_table;
                 symbol
             |None -> raise (Invalid_argument ("reject not found " ^ filepath))
@@ -782,9 +783,9 @@ List.map (function
             |Some astfile -> 
                 let oc = open_out astfile in
 
-            Printf.printf "Assignments for %s:\n" filepath;
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
+
                 close_out oc
             |None -> ()
             );
