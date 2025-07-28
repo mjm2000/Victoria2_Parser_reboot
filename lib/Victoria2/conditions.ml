@@ -54,6 +54,9 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Literal ("any_greater_power"),Type "country_conditions_def");
+(Literal ("cultural_union"),Type "country_conditions_def");
+(Type "pop_type",Number);
 (Literal ("money"),Number);
 (Type "good",Integer);
 (Literal ("has_pop_type"),Value(Keyword));
