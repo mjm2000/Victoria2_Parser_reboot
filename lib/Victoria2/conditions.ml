@@ -83,6 +83,8 @@ let country_conditions = symbol_table_init [
 (Literal ("capital_scope"),Type "province_conditions_def");
 (Literal ("always"),Value(Bool));
 (Literal ("overlord"),Type "country_conditions_def");
+(Literal ("sphere_owner"),Type "country_conditions_def");
+
 (Literal "tech_school",Type "tech_school");
 (Literal ("produces"),Value(Keyword));
 (Literal ("world_wars_enabled"),Value(Bool));

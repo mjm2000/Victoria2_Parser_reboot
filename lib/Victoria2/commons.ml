@@ -279,7 +279,7 @@ let commons = [
         ])
     );
     (Definition "reform_action",SubTable (symbol_table_init [
-             (Literal "base", TypeOption ([Decimal; Value PositiveInt]));
+             (Literal "base", Number);
              (Literal "group", SubTable (symbol_table_init [
                  (Literal "modifier", Inherit ([
                      (Literal "factor", TypeOption ([Decimal; Integer]));
