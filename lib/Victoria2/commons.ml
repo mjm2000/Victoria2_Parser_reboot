@@ -150,6 +150,7 @@ let commons = [
       Definition "countries_def",
         SubTable (symbol_table_init [
             (*Catalog later*)
+            (Literal "dynamic_tags",Literal "yes");
             (Value Tag, Link);
         ])
     );

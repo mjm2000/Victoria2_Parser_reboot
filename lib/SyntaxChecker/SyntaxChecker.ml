@@ -437,6 +437,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             catalog_type catalog_lable (Literal rh_value) outer_symbol_table;
             exceptions
         |Link ->
+            Printf.printf "Link here:%s\n" lh_value;
             let mod_home = lookup outer_symbol_table (Definition "mod_home_def") in
             let game_home = lookup outer_symbol_table (Definition "game_home_def") in 
             let pwd = lookup symbol_table (Definition "pwd") in
