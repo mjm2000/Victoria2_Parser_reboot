@@ -362,8 +362,8 @@ let province_conditions = symbol_table_init [
         ]
 	));
 (Literal ("controlled_by_rebels"),Value(Bool));
-(Literal ("country_units_in_province"),Number);
-(Literal ("country_units_in_state"),Number);
+(Literal ("country_units_in_province"),Target);
+(Literal ("country_units_in_state"),Target);
 (Literal ("crime_fighting"),Number);
 (Literal ("education_spending"), Number);
 (Literal ("empty"),Value(Bool));
