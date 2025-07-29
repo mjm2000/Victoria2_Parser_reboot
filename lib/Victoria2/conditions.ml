@@ -474,6 +474,9 @@ let state_conditions = symbol_table_init [
     (Literal ("average_militancy"),Integer);
     (Literal ("average_consciousness"),Integer);
     (Literal ("remove_province_modifier"),Value(Keyword));
+    (Literal "owned_by",TypeOption([
+        Target;
+    ]));
     (Literal ("any_pop"),Type "pop_conditions_def");
 
     (Literal ("has_pop_type"),Value(Keyword));
