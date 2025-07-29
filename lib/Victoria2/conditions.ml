@@ -389,7 +389,7 @@ let province_conditions = symbol_table_init [
 (Literal ("is_capital"),Value(Bool));
 (Literal ("is_coastal"),Value(Bool));
 (Literal ("is_colonial"),Value(Bool));
-(Literal ("is_core"),Value Tag);
+(Literal ("is_core"),Target);
 (Literal ("is_ideology_enabled"),Value(Keyword));
 (Literal ("is_overseas"),Value(Bool));
 (Literal ("is_primary_culture"),TypeOption([
