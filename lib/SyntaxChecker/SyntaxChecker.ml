@@ -437,7 +437,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             catalog_type catalog_lable (Literal rh_value) outer_symbol_table;
             exceptions
         |Link ->
-            Printf.printf "Link here:%s\n" lh_value;
             let mod_home = lookup outer_symbol_table (Definition "mod_home_def") in
             let game_home = lookup outer_symbol_table (Definition "game_home_def") in 
             let pwd = lookup symbol_table (Definition "pwd") in
@@ -445,9 +444,9 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             let rh_value = remove_quotes rh_value in
             
             (match mod_home,game_home,pwd with
-            |Dir mh, Dir gh, Dir cur_dir ->
-                let in_mod_file =  Printf.sprintf "%s/%s/%s" mh cur_dir  rh_value in
-                let in_game_file = Printf.sprintf "%s/%s/%s" gh cur_dir  rh_value in
+            |Dir _, Dir _, Dir cur_dir ->
+                let in_mod_file =  Printf.sprintf "%s/%s"  cur_dir  rh_value in
+                let in_game_file = Printf.sprintf "%s/%s"  cur_dir  rh_value in
 
             if Sys.file_exists in_mod_file then
                 let lexems = Lexer.lexer in_mod_file in
@@ -474,10 +473,12 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
             else
                 let e = UNEXPECTED_LEXEM(rh_value,LexemValue rh_type) in
+                Printf.printf "Link1 not found: %s in %s or %s\n" rh_value in_mod_file in_game_file;
                 let expected = (RHS [Link]) in
                 ((expected,e,cords,file)::exceptions)
 
             |_ ->
+                Printf.printf "Link2 not found: %s \n" rh_value;
                 let e = UNEXPECTED_LEXEM(rh_value,LexemValue rh_type) in
 
 
