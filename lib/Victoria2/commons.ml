@@ -270,6 +270,10 @@ let commons = [
                     (Literal "add_political_reform", Type "reform_action");
                     (Literal "add_social_reform",  Type "reform_action");
                     (Literal "remove_social_reform", Type "reform_action"); 
+                    (Literal "add_military_reform", Type "reform_action");
+                    (Literal "remove_military_reform", Type "reform_action");
+                    (Literal "add_economic_reform", Type "reform_action");
+                    (Literal "remove_economic_reform", Type "reform_action");
                 ]));
             ]));
         ])
