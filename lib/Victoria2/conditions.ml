@@ -57,6 +57,7 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Literal "militancy",Number);
 (Type "region", Type "state_conditions_def");
 (Literal ("poor_strata"),Type "pop_conditions_def");
 (Literal ("middle_strata"),Type "pop_conditions_def");
@@ -75,7 +76,7 @@ let country_conditions = symbol_table_init [
 (Type "ideology",Value PositiveInt);
 (Literal ("any_neighbor_country"),Type "country_conditions_def");
 (Literal ("any_owned_country"),Type "country_conditions_def");
-(Type "technology",Literal "1");
+(Type "technology",WholeNumber);
 (Type "policy_type",(SubType ("policy_type","reform")) );
 (Literal ("capital_scope"),Type "province_conditions_def");
 (Literal ("always"),Value(Bool));
