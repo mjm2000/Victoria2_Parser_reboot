@@ -46,8 +46,8 @@ let remove_quotes s =
 let get_umbtypes t v = match t with
     |PositiveFloat -> [Decimal;Number;PositiveNumber]
     |NegativeFloat -> [Decimal;Number;NegativeNumber]
-    |PositiveInt when String.length v = 4 -> [WholeNumber;Integer;Year;PositiveNumber]
-    |PositiveInt when v == "0" -> [Integer;PositiveNumber]
+    |PositiveInt when String.length v = 4 -> [WholeNumber;Integer;Year;PositiveNumber;Number]
+    |PositiveInt when v == "0" -> [Integer;PositiveNumber;WholeNumber;Number]
     |PositiveInt -> [Integer;Number;WholeNumber;PositiveNumber]
     |NegativeInt -> [Integer;Number;NegativeNumber]
     |Keyword -> [Identifier]
