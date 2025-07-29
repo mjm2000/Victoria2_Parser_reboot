@@ -217,7 +217,7 @@ let country_conditions = symbol_table_init [
 (Literal ("money"),Integer);
 (Literal ("nationalvalue"),Value(Keyword));
 (Literal ("national_provinces_occupied"),Number);
-(Literal ("neighbour"),Number);
+(Literal ("neighbour"),Target);
 (Literal ("num_of_allies"),Integer);
 (Literal ("num_of_cities"),Integer);
 (Literal ("num_of_ports"),Integer);
@@ -298,7 +298,7 @@ let country_conditions = symbol_table_init [
 (Literal ("total_sea_battles"),Integer);
 (Literal ("total_sunk_by_us"),Integer);
 (Literal ("trade_policy"),Value(Keyword));
-(Literal ("truce_with"),Number);
+(Literal ("truce_with"),Target);
 (Literal ("unemployment"),Number);
 (Literal ("unit_has_leader"),Value(Bool));
 (Literal ("unit_in_battle"),Value(Bool));
