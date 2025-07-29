@@ -419,7 +419,7 @@ let province_effects = symbol_table_init [
         Type "province_effects_def";
 ]));
 *)
-(Literal("random"),Inherit([(Literal("chance"),Integer)],[ "country_effects_def"]));
+(Literal("random"),Inherit([(Literal("chance"),Integer)],[ "province_effects_def"]));
 ]
 
 let state_effects = symbol_table_init [
