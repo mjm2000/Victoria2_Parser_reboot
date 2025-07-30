@@ -137,6 +137,7 @@ Optional = { Left = "tax_eff" Right = Double }
 
    *)
 let country_modifiers = symbol_table_init [
+    (Literal "local_factory_owner_cost", Number);
     (Literal "poor_life_needs", Number);
     (Literal "middle_life_needs", Number);
     (Literal "rich_life_needs", Number);
@@ -365,11 +366,21 @@ let country_modifiers = symbol_table_init [
 ] 
 *)
 let province_modifiers = symbol_table_init [
+    (Literal "local_factory_owner_cost", Number);
     (Literal "movement_cost", Number);
     (Literal "assimilation_rate", Number);
     (Literal "immigrant_attract", Number);
     (Literal "immigrant_push", Number);
     (Literal "life_rating", Number);
+    (Literal "artisan_output", Number);
+    (Literal "artisan_input", Number);
+    (Literal "artisan_throughput", Number);
+    (Literal "factory_input", Number);
+    (Literal "factory_output", Number);
+    (Literal "factory_throughput", Number);
+     Literal "rgo_input",Number   ;  
+     Literal "rgo_output",Number ; 
+     Literal "rgo_throughput", Number;
     (Literal "local_artisan_output", Number);
     (Literal "local_artisan_input", Number);
     (Literal "local_artisan_throughput", Number);
@@ -396,4 +407,18 @@ let province_modifiers = symbol_table_init [
     (Literal "rich_life_needs", Number);
     (Literal "land_attack_modifier", Number);
     (Literal "poor_savings_modifier", Number);
+	 Literal "military_theory_tech_research_bonus",Number;   
+	 Literal "diplomacy_tech_research_bonus",Number;         
+	 Literal "population_tech_research_bonus",Number;        
+	 Literal "flavor_tech_research_bonus",Number;            
+	 Literal "aristocrat_reinvestment",Number;        
+	 Literal "capitalist_reinvestment",Number;        
+	 Literal "middle_class_reinvestment",Number;      
+	 Literal "farmers_reinvestment",Number;           
+	 Literal "aristocrat_savings",Number;             
+	 Literal "capitalist_savings",Number;             
+	 Literal "middle_class_savings",Number;           
+	 Literal "farmers_savings",Number;              
+	 Literal "disallow_naval_trade",Number;           
+	 Literal "disallow_land_trade",Number;            
 ];
