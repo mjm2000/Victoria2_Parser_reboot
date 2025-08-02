@@ -249,7 +249,7 @@ let commons = [
                     (Literal "cost", PositiveNumber);
                     (Literal "color", ValueList (Value PositiveInt));
                     (Literal "available_from_start", Value Bool);
-                    (Literal "oversees_penalty", Value Bool);
+                    (Literal "overseas_penalty", Value Bool);
                     (Literal "tradeable", Value Bool);
                     (Literal "money", Value Bool);
                 ]));
