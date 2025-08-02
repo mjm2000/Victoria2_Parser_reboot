@@ -308,6 +308,10 @@ Value(Scope)
 (Integer,Type "province_effects_def");
 ]
 let province_effects = symbol_table_init [ 
+(Literal "party_loyalty",SubTable(symbol_table_init [
+    (Literal("party"),Type "ideology");
+    (Literal("value"),Number);
+]));
 (Integer,Type "province_effects_def");
 (Value(Tag),Type "country_effects_def");
 (Value(Scope),Type "country_effects_def");
