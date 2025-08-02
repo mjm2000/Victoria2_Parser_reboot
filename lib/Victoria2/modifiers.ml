@@ -137,6 +137,7 @@ Optional = { Left = "tax_eff" Right = Double }
 
    *)
 let country_modifiers = symbol_table_init [
+    (Literal "goods_demand", Number);
     (Literal "local_factory_owner_cost", Number);
     (Literal "poor_life_needs", Number);
     (Literal "middle_life_needs", Number);
@@ -366,7 +367,7 @@ let country_modifiers = symbol_table_init [
 ] 
 *)
 let province_modifiers = symbol_table_init [
-    (Literal "low_income_modifier", Number);
+        (Literal "low_income_modifier", Number);
     (Literal "number_of_voters", Number);
     (Literal "local_factory_owner_cost", Number);
     (Literal "movement_cost", Number);
