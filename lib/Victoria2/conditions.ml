@@ -225,6 +225,7 @@ let country_conditions = symbol_table_init [
 (Literal ("neighbour"),Target);
 (Literal ("num_of_allies"),Integer);
 (Literal ("num_of_cities"),Integer);
+(Literal ("number_of_cities"),Integer);
 (Literal ("num_of_ports"),Integer);
 (Literal ("num_of_revolts"),Integer);
 (Literal ("number_of_states"),Integer);

@@ -17,7 +17,8 @@ let country_effects =  symbol_table_init [
     (Literal("from"),Value(Keyword));
     (Literal("value"),Number);
 ]));
-
+(Literal "militancy",Number);
+(Literal "consciousness",Number);
 (Type "land_provid",Type "province_effects_def");
 (Literal("change_tag"),TypeOption([
         Value(Tag);
