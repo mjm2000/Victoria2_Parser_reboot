@@ -366,6 +366,8 @@ let country_modifiers = symbol_table_init [
 ] 
 *)
 let province_modifiers = symbol_table_init [
+    (Literal "low_income_modifier", Number);
+    (Literal "number_of_voters", Number);
     (Literal "local_factory_owner_cost", Number);
     (Literal "movement_cost", Number);
     (Literal "assimilation_rate", Number);
