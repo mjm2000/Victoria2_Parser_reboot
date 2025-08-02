@@ -416,6 +416,10 @@ let province_modifiers = symbol_table_init [
     (Literal "rich_life_needs", Number);
     (Literal "land_attack_modifier", Number);
     (Literal "poor_savings_modifier", Number);
+    (Literal "middle_savings_modifier", Number);
+    (Literal "rich_savings_modifier", Number);
+
+
 	 Literal "military_theory_tech_research_bonus",Number;   
 	 Literal "diplomacy_tech_research_bonus",Number;         
 	 Literal "population_tech_research_bonus",Number;        
