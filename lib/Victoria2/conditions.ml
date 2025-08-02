@@ -272,7 +272,7 @@ let country_conditions = symbol_table_init [
 (Literal ("rich_strata_everyday_needs"),Decimal);
 (Literal ("rich_strata_life_needs"),Decimal);
 (Literal ("rich_strata_luxury_needs"),Decimal);
-(Literal ("rich_tax"),Integer);
+(Literal ("rich_tax"),PositiveNumber);
 (Literal ("ruling_party"),Value(Keyword));
 (Literal ("ruling_party_ideology"),Value(Keyword));
 (Literal ("slavery"),TypeOption(

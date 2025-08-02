@@ -155,7 +155,7 @@ let country_effects =  symbol_table_init [
 (Literal("religion"),Value(Keyword));
 (Literal("slaves"),Type "pop_effects_def");
 (Literal("research_points"),Integer);
-(Literal("war_exhaustion"),Integer);
+(Literal("war_exhaustion"),Number);
 (Literal("years_of_research"),Number);
 (Literal("nationalize"),Value(Bool));
 (Literal("economic_reform"),Value(Keyword));
