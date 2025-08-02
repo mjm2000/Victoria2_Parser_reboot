@@ -2,6 +2,7 @@ open SymbolTable
 open TypeDef
 
 let country_effects =  symbol_table_init [
+    (Literal "tech_school",Type "tech_school");
 (Type "region",Type "state_effects_def");
 (Literal("poor_strata"),Type "pop_effects_def");
 (Literal("middle_strata"),Type "pop_effects_def");
