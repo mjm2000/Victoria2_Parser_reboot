@@ -148,6 +148,9 @@ let country_modifiers = symbol_table_init [
     (Literal "poor_luxury_needs", Number);
     (Literal "middle_luxury_needs", Number);
     (Literal "rich_luxury_needs", Number);
+    (Literal "poor_income_modifier", Number);
+    (Literal "middle_income_modifier", Number);
+    (Literal "rich_income_modifier", Number);
     (Literal "war_exhaustion_effect", Number);
     (Literal "administrative_efficiency_modifier", Number);
     (Literal "badboy", Number);
