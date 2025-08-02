@@ -246,7 +246,7 @@ let commons = [
         SubTable (symbol_table_init [
             (Value Keyword, SubTable (symbol_table_init [
                 (Catalog("good", Value Keyword), SubTable (symbol_table_init [
-                    (Literal "cost", Decimal);
+                    (Literal "cost", PositiveNumber);
                     (Literal "color", ValueList (Value PositiveInt));
                     (Literal "available_from_start", Value Bool);
                     (Literal "oversees_penalty", Value Bool);
