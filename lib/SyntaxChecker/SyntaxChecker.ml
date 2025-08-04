@@ -788,7 +788,7 @@ List.map (function
             Hashtbl.add table (Definition "pwd") (Dir (Filename.dirname filepath));
             let lexems = Lexer.lexer filepath in
             (match loc with
-            |Some os -> 
+            |Some oc -> 
                 Printf.fprintf oc "Lexems for %s:\n" filepath;
                 List.iter (fun lexem -> Printf.fprintf oc "%s\n" (Output.string_lexem lexem)) lexems;
                 close_out oc
@@ -797,7 +797,7 @@ List.map (function
             
             let assigns:(assignment list) =  (Parser.assignments lexems filepath) in
             (match aoc with
-            |Some os -> 
+            |Some oc -> 
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
 
