@@ -288,6 +288,10 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
         | None -> None
        )
     in
+    let loc = match lexout with
+        |Some file -> Some (open_out file)
+        |None -> None 
+    in
 
     let rec symbol_table_from_rhv rhv = match rhv with
     | (SubTable(sub_table))->
@@ -783,9 +787,8 @@ List.map (function
         |Some table ->
             Hashtbl.add table (Definition "pwd") (Dir (Filename.dirname filepath));
             let lexems = Lexer.lexer filepath in
-            (match lexout with
-            |Some lexfile -> 
-                let oc = open_out lexfile in
+            (match loc with
+            |Some os -> 
                 Printf.fprintf oc "Lexems for %s:\n" filepath;
                 List.iter (fun lexem -> Printf.fprintf oc "%s\n" (Output.string_lexem lexem)) lexems;
                 close_out oc
@@ -795,7 +798,6 @@ List.map (function
             let assigns:(assignment list) =  (Parser.assignments lexems filepath) in
             (match aoc with
             |Some os -> 
-
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
 
