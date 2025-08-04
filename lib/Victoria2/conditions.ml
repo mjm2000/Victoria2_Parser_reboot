@@ -57,6 +57,8 @@ let pop_conditions = symbol_table_init [
 (Value(Scope),Type "country_conditions_def");
 ]
 let country_conditions = symbol_table_init [
+(Literal ("has_pop_culture"),Type "culture");
+
 (Literal ("country"),Type "country_conditions_def");
 (Literal "revanchism",Number);
 (Literal "war_countries",Type "country_conditions_def");
@@ -452,6 +454,7 @@ let province_conditions = symbol_table_init [
 (Literal ("has_country_flag"),Value(Keyword));
 (Literal ("has_country_modifier"),Value(Keyword));
 (Literal ("has_pop_culture"),Value(Keyword));
+
 (Literal ("pop_majority_culture"),Value(Keyword));
 (Literal ("relation"),SubTable(symbol_table_init [
     (Literal ("who"),TypeOption([

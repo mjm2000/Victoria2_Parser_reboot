@@ -137,9 +137,10 @@ Optional = { Left = "tax_eff" Right = Double }
 
    *)
 let country_modifiers = symbol_table_init [
+    (Literal "morale", Number);
     (Literal "army_organisation", Number);
     (Literal "army_organization", Number);
-
+    (Literal "global_liberal_agitation", Number);
     (Literal "land_organisation", Number);
     (Literal "goods_demand", Number);
     (Literal "local_factory_owner_cost", Number);
