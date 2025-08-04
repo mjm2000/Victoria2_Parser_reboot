@@ -2,7 +2,7 @@ open SymbolTable
 open TypeDef
 
 let country_effects =  symbol_table_init [
-(Literal "enable_canal",Value(Keyword));
+    (Literal "enable_canal",Number);
 (Literal "add_core",Type "land_provid");
 (Literal "tech_school",Type "tech_school");
 (Type "region",Type "state_effects_def");
