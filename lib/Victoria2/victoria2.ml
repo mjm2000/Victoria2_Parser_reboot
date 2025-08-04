@@ -40,7 +40,6 @@ let victoria2_paths =
         "common/buildings.txt","buildings";
 
 
-        "common/countries.txt","countries_def";
         "common/cb_types.txt","cb_types_def"; 
         "common/event_modifiers.txt","event_modifiers_def";
 
@@ -63,6 +62,7 @@ let victoria2_paths =
 
         "events","event_def";
 
+        "common/countries.txt","countries_def";
         "map/continent.txt","continents_def";
         "poptypes","pop_file_def";
         "common/ideologies.txt","ideologies_def";
