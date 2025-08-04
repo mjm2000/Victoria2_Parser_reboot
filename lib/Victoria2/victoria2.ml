@@ -36,7 +36,6 @@ let victoria2_symbol_table =  symbol_table_init ([
 let victoria2_paths =
     [
 
-        "common/cultures.txt","culture_groups_def"; 
         "common/static_modifiers.txt","static_modifiers_def";
         "common/buildings.txt","buildings";
 
@@ -74,6 +73,7 @@ let victoria2_paths =
 
         "common/graphicalculturetype.txt","graphical_culture_type_def";
 
+        "common/cultures.txt","culture_groups_def"; 
         "technologies","technology_def";
 
         "common/technology.txt","technology_group_def";
