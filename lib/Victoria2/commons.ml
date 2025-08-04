@@ -151,7 +151,7 @@ let commons = [
         SubTable (symbol_table_init [
             (*Catalog later*)
             (Literal "dynamic_tags",Literal "yes");
-            (Value Tag, Link);
+            (Catalog("country_tag",TypeOption [Value Tag;Value Keyword] ), Link);
         ])
     );
 

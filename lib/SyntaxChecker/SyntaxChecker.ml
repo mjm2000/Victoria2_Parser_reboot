@@ -79,10 +79,14 @@ let sub_catalog_type super_type sub_type (value:symbol_type) symbol_table =
 
 
 
-let lex_symbol_eq lex_type lex_value symbol =
+let rec lex_symbol_eq lex_type lex_value symbol =
     match lex_type,symbol with
     |lv,Value v -> 
        lv = v
+    |lv,TypeOption options -> 
+        (match List.find_opt (fun v -> lex_symbol_eq lv lex_value v ) options with
+        |Some _ -> true
+        |None -> false)
     |lv,v when List.mem v (get_umbtypes lv lex_value) -> 
         true
     |_-> 
@@ -277,6 +281,14 @@ let  left_lex_lookup lex_value lex_type symbol_table outer_symbol_table =
 
 
 let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory lexout astout =
+    let aoc = 
+       ( match astout with    
+        |Some file -> 
+            Some (open_out file) 
+        | None -> None
+       )
+    in
+
     let rec symbol_table_from_rhv rhv = match rhv with
     | (SubTable(sub_table))->
         Some sub_table
@@ -781,9 +793,8 @@ List.map (function
             );
             
             let assigns:(assignment list) =  (Parser.assignments lexems filepath) in
-            (match astout with
-            |Some astfile -> 
-                let oc = open_out astfile in
+            (match aoc with
+            |Some os -> 
 
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
