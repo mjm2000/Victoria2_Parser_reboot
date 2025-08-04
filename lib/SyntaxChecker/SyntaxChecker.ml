@@ -791,7 +791,6 @@ List.map (function
             |Some oc -> 
                 Printf.fprintf oc "Lexems for %s:\n" filepath;
                 List.iter (fun lexem -> Printf.fprintf oc "%s\n" (Output.string_lexem lexem)) lexems;
-                close_out oc
             |None -> ()
             );
             
@@ -800,8 +799,6 @@ List.map (function
             |Some oc -> 
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
-
-                close_out oc
             |None -> ()
             );
 
