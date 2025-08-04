@@ -305,7 +305,7 @@ Value(Scope)
     (Literal("value"),Integer)
 ]));
 
-(Value(Tag),Type "country_effects_def");
+(Type "country_tag",Type "country_effects_def");
 (Value(Scope),Type "country_effects_def");
 (Integer,Type "province_effects_def");
 ]
@@ -315,7 +315,7 @@ let province_effects = symbol_table_init [
     (Literal("loyalty_value"),Number);
 ]));
 (Integer,Type "province_effects_def");
-(Value(Tag),Type "country_effects_def");
+(Type "country_tag",Type "country_effects_def");
 (Value(Scope),Type "country_effects_def");
 (Literal("country"),Type "country_effects_def");
 (Literal("add_crime"),Value(Keyword));

@@ -327,7 +327,7 @@ let country_conditions = symbol_table_init [
 (Literal ("war_policy"),Value(Keyword));
 (Literal ("war_score"),Integer);
 (Literal ("war_with"),Target);
-(Value(Tag), Type "country_conditions_def");
+(Type "country_tag", Type "country_conditions_def");
 (Value(Condition),Type "country_conditions_def");
 (Integer,Type "province_conditions_def");
 (Literal ("is_primary_culture"),TypeOption([
@@ -343,7 +343,7 @@ let province_conditions = symbol_table_init [
 (Literal ("rich_strata"),Type "pop_conditions_def");
 (Value(Scope),Type "country_conditions_def");
 (Type "land_provid",Type "province_conditions_def");
-(Value(Tag),Type "country_conditions_def");
+(Type "country_tag",Type "country_conditions_def");
 (Literal ("can_build_in_province"),SubTable(symbol_table_init [
     (Literal ("building"),Value(Keyword));
     (Literal ("limit_to_world_greatest_level"),Value(Bool));
@@ -436,7 +436,7 @@ let province_conditions = symbol_table_init [
     (Literal ("worker"),Value(Keyword));
 ]));
 (Literal ("exists"),Target);
-(Value(Tag),Type "country_conditions_def");
+(Type "country_tag",Type "country_conditions_def");
 (Value(Condition),  Type "province_conditions_def");
 (Value(Keyword),TypeOption([
     Number;
