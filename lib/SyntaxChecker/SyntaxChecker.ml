@@ -564,7 +564,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
     |ASSIGNMENT((LexemValue lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
 
         let expected_rh_type = left_lex_lookup lh_value lh_type symbol_table outer_symbol_table  in
-        if lh_value = "owner" then
+        if lh_value = "owner" && file = "../test_data/Napoleon/decisions/0_NL_FRA_MAXIMILIEN" then
             Printf.printf "Owner found in %s\n" (Output.string_symbol_table symbol_table)
         ;
         
