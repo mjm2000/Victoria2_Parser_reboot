@@ -1,4 +1,4 @@
 dune build
-dune exec ./main.exe -- -h "../victoria2" -m "../test_data/Napoleon/" -g Victoria2 -o output.txt -a "ast.txt" -l "lex.txt"
+dune exec ./main.exe -- -h "../victoria2" -m "../test_data/GFM/" -g Victoria2 -o output.txt -a "ast.txt" -l "lex.txt"
 git add run.sh main.ml dune ../lib
 git commit -m "update"
