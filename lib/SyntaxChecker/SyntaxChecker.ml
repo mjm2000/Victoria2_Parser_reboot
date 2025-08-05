@@ -564,6 +564,9 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
     |ASSIGNMENT((LexemValue lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
 
         let expected_rh_type = left_lex_lookup lh_value lh_type symbol_table outer_symbol_table  in
+        if lh_value = "owner" then
+            Printf.printf "Owner found in %s\n" (Output.string_symbol_table symbol_table)
+        ;
         
      let assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          | (Inherit(_) as new_scope)  ->
