@@ -431,6 +431,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(Literal "life_rating",Integer);
 (Literal "owner",Type "country_effects_def");
 (Type "land_provid",Type "province_conditions_def");
 (Literal("infrastructure"),Integer);
@@ -469,11 +470,6 @@ let state_effects = symbol_table_init [
     );
     (Literal("duration"),Integer);
 ]));
-(Value(Keyword),TypeOption([
-        Type "pop_effects_def";
-        Type "province_effects_def";
-    ]));
-
 (Literal("scaled_consciousness"),TypeOption([
     SubTable(symbol_table_init [
     (Literal("ideology"),Value(Keyword));
@@ -501,7 +497,7 @@ let state_effects = symbol_table_init [
 let pop_effects = symbol_table_init [
     (Literal("location"),Type "province_effects_def");
     (Literal("random_list"),SubTable(symbol_table_init [
-        (Integer,Type "pop_effects_def")
+        (Number,Type "pop_effects_def")
     ]));
 
     (Literal("any_pop"),Type "pop_effects_def");
