@@ -335,6 +335,7 @@ let country_conditions = symbol_table_init [
     Value(Scope);
     Value(Bool);
 ]));
+(Type "land_provid",Type "province_conditions_def");
 ]
 
 let province_conditions = symbol_table_init [
@@ -473,6 +474,8 @@ let province_conditions = symbol_table_init [
 ]
 
 let state_conditions = symbol_table_init [
+    (Literal "province_id",Type "land_provid");
+    (Type "land_provid",Type "province_conditions_def");
     (Literal "total_pops",Integer);
     (Literal ("continent"),Value(Keyword));
     (Literal "is_coastal",Value(Bool));
@@ -489,6 +492,7 @@ let state_conditions = symbol_table_init [
     (Literal "owned_by",TypeOption([
         Target;
     ]));
+
     (Literal ("any_pop"),Type "pop_conditions_def");
 
     (Literal ("has_pop_type"),Value(Keyword));

@@ -431,6 +431,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(Type "land_provid",Type "province_conditions_def");
 (Literal("infrastructure"),Integer);
 (Literal("fort"),Integer);
 (Literal("remove_core"),TypeOption([
