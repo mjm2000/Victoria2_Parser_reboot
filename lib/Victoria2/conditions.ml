@@ -474,6 +474,7 @@ let province_conditions = symbol_table_init [
 
 let state_conditions = symbol_table_init [
     (Literal ("continent"),Value(Keyword));
+    (Literal "is_coastal",Value(Bool));
     (Literal "empty",Value(Bool));
     (Literal ("is_canal_enabled"),Integer);
     (Literal ("infrastructure"),Value(Keyword)); 
