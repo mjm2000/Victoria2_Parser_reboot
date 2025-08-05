@@ -438,10 +438,6 @@ let province_conditions = symbol_table_init [
 (Literal ("exists"),Target);
 (Type "country_tag",Type "country_conditions_def");
 (Value(Condition),  Type "province_conditions_def");
-(Value(Keyword),TypeOption([
-    Number;
-    Value(Keyword);
-]));
 
 (Literal ("has_province_modifier"),Value(Keyword));
 (*maybe errors*)
