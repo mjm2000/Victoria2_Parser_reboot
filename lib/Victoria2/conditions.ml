@@ -338,6 +338,8 @@ let country_conditions = symbol_table_init [
 ]
 
 let province_conditions = symbol_table_init [
+(Literal ("controller"),Type "country_conditions_def");
+
 (Literal ("poor_strata"),Type "pop_conditions_def");
 (Literal ("middle_strata"),Type "pop_conditions_def");
 (Literal ("rich_strata"),Type "pop_conditions_def");
