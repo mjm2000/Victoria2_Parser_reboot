@@ -216,7 +216,7 @@ let country_conditions = symbol_table_init [
 (Literal ("middle_strata_life_needs"),Decimal);
 (Literal ("middle_strata_luxury_needs"),Decimal);
 (Literal ("middle_tax"),Integer);
-(Literal ("military_access"),Number);
+(Literal ("military_access"),Target);
 (Literal ("military_reform_name"),Value(Keyword));
 (Literal ("military_score"),TypeOption([
         Integer;
@@ -269,7 +269,7 @@ let country_conditions = symbol_table_init [
 		Value(Scope)
     ]
     ));
-    (Literal ("value"),Integer);
+    (Literal ("value"),Number);
 ]));
 (Literal ("religious_policy"),Value(Keyword));
 (Literal ("revolt_percentage"),Number);
@@ -460,7 +460,7 @@ let province_conditions = symbol_table_init [
 		Value(Scope)
     ]
     ));
-    (Literal ("value"),Integer);
+    (Literal ("value"),Number);
 ]));
 (*pop scope*)
 (Literal ("is_primary_culture"),TypeOption([
@@ -473,6 +473,7 @@ let province_conditions = symbol_table_init [
 ]
 
 let state_conditions = symbol_table_init [
+    (Literal "total_pops",Integer);
     (Literal ("continent"),Value(Keyword));
     (Literal "is_coastal",Value(Bool));
     (Literal "empty",Value(Bool));
