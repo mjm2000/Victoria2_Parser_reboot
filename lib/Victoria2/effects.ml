@@ -235,7 +235,7 @@ Value(Scope)
         Value(Tag);
         Value(Scope);
     ]));
-    (Literal("value"),Integer);
+    (Literal("value"),Number);
 ]));
 (Literal("release"),Value(Tag));
 (Literal("release_vassal"),TypeOption([
@@ -431,7 +431,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
-(literal "owner",Type "country_effects_def");
+(Literal "owner",Type "country_effects_def");
 (Type "land_provid",Type "province_conditions_def");
 (Literal("infrastructure"),Integer);
 (Literal("fort"),Integer);
