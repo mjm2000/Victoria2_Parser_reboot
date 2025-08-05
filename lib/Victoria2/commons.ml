@@ -284,11 +284,11 @@ let commons = [
              (Literal "group", SubTable (symbol_table_init [
                  (Literal "modifier", Inherit ([
                      (Literal "factor", TypeOption ([Decimal; Integer]));
-                 ],  [ "pop_conditions_def";  "country_conditions_def";  "province_conditions_def"]));
+                 ],  [   "country_conditions_def";  ]));
              ]));
             (Literal "modifier", Inherit ([
                 (Literal "factor", TypeOption ([Decimal; Integer]));
-            ],  [ "pop_conditions_def";  "country_conditions_def";  "province_conditions_def"]));
+            ],  [  "country_conditions_def"]));
 
 
 

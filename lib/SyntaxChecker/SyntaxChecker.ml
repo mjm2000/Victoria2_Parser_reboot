@@ -489,12 +489,10 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
             else
                 let e = UNEXPECTED_LEXEM(rh_value,LexemValue rh_type) in
-                Printf.printf "Link1 not found: %s in %s or %s\n" rh_value in_mod_file in_game_file;
                 let expected = (RHS [Link]) in
                 ((expected,e,cords,file)::exceptions)
 
             |_ ->
-                Printf.printf "Link2 not found: %s \n" rh_value;
                 let e = UNEXPECTED_LEXEM(rh_value,LexemValue rh_type) in
 
 
@@ -555,8 +553,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         let exceptions = assign_type_check rh exceptions in
         type_verify_r symbol_table rest exceptions scope file
     |None ->
-        if lh_value = "is_jingoism" then
-            Printf.printf "Jingoism found in %s\n" (Output.string_symbol_table symbol_table);
             
         let e = (UNKNOWN_IDENTIFIER(lh_value) ) in             
         type_verify_r symbol_table rest ((scope,e,cords,file)::exceptions) scope file
