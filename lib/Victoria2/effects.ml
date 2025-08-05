@@ -431,6 +431,7 @@ let province_effects = symbol_table_init [
 ]
 
 let state_effects = symbol_table_init [
+(literal "owner",Type "country_effects_def");
 (Type "land_provid",Type "province_conditions_def");
 (Literal("infrastructure"),Integer);
 (Literal("fort"),Integer);
@@ -448,6 +449,10 @@ let state_effects = symbol_table_init [
         Value(Tag);
         Value(Scope)
 ]));
+(Literal "secede_province",TypeOption([
+        Type "country_tag";
+        Value (Scope);
+    ]));
 (Literal("flashpoint_tension"),Integer);
 (Literal("is_slave"),Value(Bool));
 (Literal("is_colony"),Value(Bool));
