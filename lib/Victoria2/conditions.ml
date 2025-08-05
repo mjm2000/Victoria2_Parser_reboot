@@ -488,9 +488,9 @@ let state_conditions = symbol_table_init [
     (Literal ("any_pop"),Type "pop_conditions_def");
 
     (Literal ("has_pop_type"),Value(Keyword));
-    (Value(Keyword), Number);
     (Value(Condition), Type "state_conditions_def");
     (Literal ("any_owned_province"),Type "province_conditions_def");
+    (Literal ("owner"),Type "country_conditions_def");
     (*error maybe*)
     (Literal ("has_building"),Value(Keyword));
 ]
