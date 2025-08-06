@@ -69,7 +69,7 @@ let rec exception_iden_string exp = match exp with
             Printf.sprintf "Multiple Choice %s" (exception_lists_string (ls))
     | UNEXPECTED_EXPR_LIST (ls) ->
         List.fold_left (fun acc x -> Printf.sprintf "%s\n\t%s" acc (string_expr x)) "" ls
-    | UNEXPECTED_EXPR (e) -> Printf.sprintf "Unexpected:(%s)" (string_expr e)
+    | UNEXPECTED_EXPR (e) -> Printf.sprintf "Unexpected Expression:(%s)" (string_expr e)
     | UNEXPECTED_EQUAL -> "Unexpected Equal"
 
 and exception_string (exp : exception_value) : string = 

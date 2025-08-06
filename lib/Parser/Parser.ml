@@ -19,10 +19,14 @@ and assignment lex file= match lex with
         (*add type *)
 
         let expr, rest = expression rest file in
+        let v = match expr with
+        |EXPR_EXCEPTION(v) -> 
+             ASSIGN_EXCEPTION ( v) 
+        |v->
+            ASSIGNMENT (lh, v) 
+        in
+            v, rest
 
-        (*add type *)
-        let v = ASSIGNMENT (lh, expr) in
-        v, rest 
     |(EQ, _, cords) :: rest -> 
         (*add type *)
         let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_EQUAL, cords,file) in
