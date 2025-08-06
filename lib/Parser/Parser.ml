@@ -101,7 +101,7 @@ and lexem_list lexems file =
         | (_, _, cords) :: [] -> (List.rev (EXPR_EXCEPTION (ExpExprList, END_OF_FILE, cords,file) :: out), [])
 
         | [] -> 
-                (List.rev (EXPR_EXCEPTION (RHS [], END_OF_FILE, (1, 1),file) :: out), [])
+                (List.rev (EXPR_EXCEPTION (ExpExprList, END_OF_FILE, (1, 1),file) :: out), [])
         | rest -> 
             let e,rest =expression rest file in
             lexem_list_r rest (e :: out)
@@ -133,9 +133,10 @@ and expression lexems file =
 
     | ((LexemValue _, _, _) as lex) :: rest -> LEXEM lex, rest
 
-    | (lexem_type, str, cords) :: rest -> 
+    | (EQ,_, cords) :: rest -> 
         (*add type *)
-        EXPR_EXCEPTION (RHS [], UNEXPECTED_LEXEM (str, lexem_type), cords,file), rest
+        EXPR_EXCEPTION (ExpValue, UNEXPECTED_EQUAL, cords,file), rest
+
 
 
  

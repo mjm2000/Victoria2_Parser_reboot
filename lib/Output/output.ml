@@ -29,7 +29,6 @@ let lexem_to_str lexem =match lexem with
 | RB  ->      "Right Brace"
 | EQ ->       "Equal"
 | LexemValue l -> Printf.sprintf "LexemValue %s" (lexem_type_string l)
-| LexError ->"Lex Error"
 
 let string_lexem lex_value = 
   let (lex, str, (x, y)) = lex_value in

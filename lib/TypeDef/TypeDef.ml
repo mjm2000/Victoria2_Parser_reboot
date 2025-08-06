@@ -18,7 +18,6 @@ type lexem_type =
 |LB
 |RB
 |LexemValue of value_type
-|LexError
 
 
 
@@ -42,6 +41,9 @@ and expected_value =
     |ExpEqual 
     |ExpLeftBracket
     |ExpRightBracket
+    |ExpAssignment
+    |ExpValue
+    |ExpExprList
     |RHS of symbol_type list 
     |LHS of symbol_type list 
     |NONE 
