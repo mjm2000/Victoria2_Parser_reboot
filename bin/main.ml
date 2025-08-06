@@ -12,12 +12,16 @@ let () =
     let make_arg title shorter doc  = 
         Arg.(value &  opt (some string) None & info [title;shorter] ~doc) 
     in
+    let enable_arg title shorter doc  = 
+        Arg.(value & flag & info [title;shorter] ~doc)
+    in
     let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
     let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "h" "Game Home Directory" in
     let output_file = make_arg "output" "o" "Output File" in
     let lexoutput = make_arg "lex-output" "l" "File to output lexems" in
     let astoutput = make_arg "ast-output" "a" "File to output ast" in
+    let print_files = enable_arg "print-files" "f" "Print files to stdout" in
     
     let game_symbols game  = match game with
     |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
@@ -27,7 +31,7 @@ let () =
     let info = Cmd.info "" ~doc in
 (* List files in a directory and filter by glob pattern *)
 
-    let term = Term.(const (fun game mh gh out lexoutput astoutput -> 
+    let term = Term.(const (fun game mh gh out lexoutput astoutput print_file -> 
 
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
@@ -41,8 +45,9 @@ let () =
 
                     |(file,def)::rest_of_paths ->
                         let abs_mod_file = Filename.concat mod_home file in
+                        if print_file then 
+                            Printf.eprintf "Checking File: %s\n" abs_mod_file;
 
-                        Printf.eprintf "%s\n" abs_mod_file;
                         let abs_game_file = Filename.concat game_home file in
                         if (is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
@@ -78,10 +83,13 @@ let () =
                     |None -> stdout
                 in
                 Printf.eprintf "Checking Files\n"; 
-                (List.iter (fun (file,x) -> x
-                |> List.rev
-                |> Output.exceptions_string 
-                |> Printf.fprintf output "%s:\n%s\n" file;)
+                (List.iter (fun (file,x) -> 
+                let expr_string = x|> List.rev|> Output.exceptions_string in
+                if print_file then 
+                    Printf.fprintf output "%s:\n%s\n" file expr_string 
+                else 
+                    Printf.fprintf output "%s:\n" expr_string
+                )
                 (List.rev exceptions) )
             |None -> Printf.printf "Game not recognized\n"
         )
@@ -89,7 +97,7 @@ let () =
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
 
-        |(None,None) -> Printf.printf "No Game\n")  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput )
+        |(None,None) -> Printf.printf "No Game\n")  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput $ print_files)
     in
     let cmd = Cmd.v info term 
     in
