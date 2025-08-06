@@ -44,7 +44,7 @@ and assignment lex file= match lex with
 
     |(_,_,cords):: [] -> 
         (*add type *)
-        ASSIGN_EXCEPTION ((RHS [], END_OF_FILE, cords,file)), []
+        ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, cords,file)), []
 
 
     | [] -> ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, (2, 2),file)), []
