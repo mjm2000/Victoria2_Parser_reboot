@@ -68,9 +68,6 @@ and assignment lex file= match lex with
             let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_EQUAL, cords,file) in
             ( v ),rest
 
-        | (lexem_type, str, cords)::rest -> 
-            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_LEXEM (str, lexem_type), cords,file) in
-             v,rest
         |[] -> 
             (*add type *)
             ((LEXEM_LIST out)),[]
@@ -136,6 +133,8 @@ and expression lexems file =
     | (EQ,_, cords) :: rest -> 
         (*add type *)
         EXPR_EXCEPTION (ExpValue, UNEXPECTED_EQUAL, cords,file), rest
+    
+
 
 
 
