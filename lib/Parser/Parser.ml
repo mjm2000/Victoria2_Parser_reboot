@@ -56,20 +56,20 @@ and assignment lex file= match lex with
             expr out rest
         | (LB, _, _):: rest -> 
             (*add type *)
-            let v = EXPR_EXCEPTION (RHS [], UNEXPECTED_LEFT_BRACKET, (1, 1),file) in
+            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_LEFT_BRACKET, (1, 1),file) in
             ( v ),rest
 
         | (RB, _, cords)::rest -> 
             (*add type *)
-            let v = EXPR_EXCEPTION (RHS [], UNEXPECTED_RIGHT_BRACKET, cords,file) in
+            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_RIGHT_BRACKET, cords,file) in
             ( v ),rest
         | (EQ, _, cords)::rest -> 
             (*add type *)
-            let v = EXPR_EXCEPTION (RHS [], UNEXPECTED_EQUAL, cords,file) in
+            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_EQUAL, cords,file) in
             ( v ),rest
 
         | (lexem_type, str, cords)::rest -> 
-            let v = EXPR_EXCEPTION (RHS [], UNEXPECTED_LEXEM (str, lexem_type), cords,file) in
+            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_LEXEM (str, lexem_type), cords,file) in
              v,rest
         |[] -> 
             (*add type *)
