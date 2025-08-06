@@ -14,7 +14,7 @@ let rec assignments ls file=
     assignments_r [] ls
 
 and assignment lex file= match lex with
-    | lh :: (EQ, _, _) :: rest -> 
+    |((LexemValue _,_,_) as lh) :: (EQ, _, _) :: rest -> 
 
         (*add type *)
 
@@ -23,6 +23,23 @@ and assignment lex file= match lex with
         (*add type *)
         let v = ASSIGNMENT (lh, expr) in
         v, rest 
+    |(EQ, _, cords) :: rest -> 
+        (*add type *)
+        let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_EQUAL, cords,file) in
+        v, rest
+    | _ :: (RB, _, cords) :: rest -> 
+        (*add type *)
+        let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_RIGHT_BRACKET, cords,file) in
+        v, rest
+    | _ :: (LB, _, cords) :: rest -> 
+        let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_LEFT_BRACKET, cords,file) in
+        v, rest
+    |_ :: (lexem_type, str, cords) :: rest -> 
+        let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_LEXEM (str, lexem_type), cords,file) in
+        v, rest
+
+
+
     |(_,_,cords):: [] -> 
         (*add type *)
         ASSIGN_EXCEPTION ((RHS [], END_OF_FILE, cords,file)), []
