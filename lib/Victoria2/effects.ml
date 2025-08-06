@@ -490,7 +490,11 @@ let state_effects = symbol_table_init [
         (Literal("factor"),Number);
     ]);
 ]));
-(Literal("random"),Inherit([(Literal("chance"),Integer)],[ "country_effects_def"]));
+    (Literal("random"),Inherit([(Literal("chance"),Integer)],[ "country_effects_def"]));
+    (Literal("poor_strata"),Type "pop_effects_def");
+    (Literal("middle_strata"),Type "pop_effects_def");
+    (Literal("rich_strata"),Type "pop_effects_def");
+
 
 ]
 
@@ -550,5 +554,6 @@ let pop_effects = symbol_table_init [
     (Literal("limit"),Type "pop_conditions_def");
     (Literal("pop_type"),Value(Keyword));
     (Literal("country"),Type "country_effects_def");
+
 
 ]
