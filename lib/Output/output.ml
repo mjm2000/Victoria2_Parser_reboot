@@ -211,6 +211,9 @@ and string_expected_value v = match v with
     |ExpEqual -> "ExpEqual"
     |ExpLeftBracket -> "ExpLeftBracket"
     |ExpRightBracket -> "ExpRightBracket"
+    |ExpAssignment  -> "ExpAssignment"
+    |ExpValue  -> "ExpValue"
+    |ExpExprList -> "ExpExprList"
     | NONE -> "NONE"
 
 let get_errors assignments = 

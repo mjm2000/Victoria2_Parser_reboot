@@ -54,9 +54,9 @@ and assignment lex file= match lex with
         | ((LexemValue _, _, _) as v) :: rest -> 
             let out = ((LEXEM v)::out) in
             expr out rest
-        | (LB, _, _):: rest -> 
+        | (LB, _, cords):: rest -> 
             (*add type *)
-            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_LEFT_BRACKET, (1, 1),file) in
+            let v = EXPR_EXCEPTION (ExpEqual, UNEXPECTED_LEFT_BRACKET, cords,file) in
             ( v ),rest
 
         | (RB, _, cords)::rest -> 
@@ -85,10 +85,10 @@ and assignment_list lexems file=
     let rec assignment_list_r lexems out = match lexems with
         | (RB, _, _) :: rest -> (List.rev out), rest
         | (_, _, cords) :: [] -> 
-                (List.rev (ASSIGN_EXCEPTION (RHS [], END_OF_FILE, cords,file) :: out), [])
+                (List.rev (ASSIGN_EXCEPTION (ExpAssignment, END_OF_FILE, cords,file) :: out), [])
 
         | [] -> 
-                (List.rev (ASSIGN_EXCEPTION (RHS [], END_OF_FILE, (1, 1),file) :: out), [])
+                (List.rev (ASSIGN_EXCEPTION (ExpAssignment, END_OF_FILE, (1, 1),file) :: out), [])
         | rest -> 
             let v, rest = assignment rest file in
             assignment_list_r rest (v :: out)
@@ -98,7 +98,7 @@ and assignment_list lexems file=
 and lexem_list lexems file = 
     let rec lexem_list_r lexems out = match lexems with
         | (RB, _, _) :: rest -> (List.rev out), rest
-        | (_, _, cords) :: [] -> (List.rev (EXPR_EXCEPTION (RHS [], END_OF_FILE, cords,file) :: out), [])
+        | (_, _, cords) :: [] -> (List.rev (EXPR_EXCEPTION (ExpExprList, END_OF_FILE, cords,file) :: out), [])
 
         | [] -> 
                 (List.rev (EXPR_EXCEPTION (RHS [], END_OF_FILE, (1, 1),file) :: out), [])
