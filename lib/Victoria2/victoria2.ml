@@ -24,7 +24,7 @@ let victoria2_symbol_table =  symbol_table_init ([
     Definition("country_mtth"),SubTable(country_mtth);
     Definition("province_mtth"),SubTable(province_mtth);
     Definition("event_def"),SubTable(events);
-    Definition("state_effects_def"),SubTable(state_effects);
+    Definition("state_effects_def"),state_effects;
     Definition("state_conditions_def"),SubTable(state_conditions);
     Definition("continents_def"),SubTable(continents);
     Definition("technology_def"),SubTable(technology);
