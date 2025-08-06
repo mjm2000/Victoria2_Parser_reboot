@@ -430,7 +430,7 @@ let province_effects = symbol_table_init [
 (Literal("random"),Inherit([(Literal("chance"),Integer)],[ "province_effects_def"]));
 ]
 
-let state_effects = symbol_table_init [
+let state_effects = (Inherit ([
 (Literal "life_rating",Integer);
 (Literal "owner",Type "country_effects_def");
 (Type "land_provid",Type "province_conditions_def");
@@ -494,9 +494,8 @@ let state_effects = symbol_table_init [
     (Literal("poor_strata"),Type "pop_effects_def");
     (Literal("middle_strata"),Type "pop_effects_def");
     (Literal("rich_strata"),Type "pop_effects_def");
-
-
-]
+] ,["province_effects_def"])
+)
 
 let pop_effects = symbol_table_init [
     (Literal("location"),Type "province_effects_def");
