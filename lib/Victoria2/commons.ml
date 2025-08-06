@@ -29,7 +29,7 @@ let commons = [
     (
       Definition "building_def",SubTable (symbol_table_init [
             (Literal "goods_cost", SubTable (symbol_table_init [
-                (Type "good", Integer);
+                (Type "good", Number);
             ]));
             (Literal "time", Value PositiveInt);
             (Literal "visibility", Value Bool);

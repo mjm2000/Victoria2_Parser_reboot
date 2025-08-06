@@ -794,17 +794,40 @@ List.map (function
             );
             
             let assigns:(assignment list) =  (Parser.assignments lexems filepath) in
+            let parser_exceptions =
+                let rec parser_assign_exceptions_r assign out =  match assign with
+                |ASSIGN_EXCEPTION v :: rest -> 
+                        parser_assign_exceptions_r rest (v::out)
+                |ASSIGNMENT(_,v) :: rest ->
+                        let out = parser_expr_exceptions_r v out in
+                        parser_assign_exceptions_r rest out 
+                |EXPR expression :: rest ->
+                        let out = parser_expr_exceptions_r expression out in
+                        parser_assign_exceptions_r rest out
+                |[] -> out
+                and  parser_expr_exceptions_r expr out = match expr with
+                    |EXPR_EXCEPTION v -> v::out 
+                    |LEXEM_LIST ls -> 
+                        List.fold_left (fun acc lexem -> 
+                            parser_expr_exceptions_r lexem acc 
+                        ) out ls
+                    |ASSIGNMENT_LIST ls ->
+                        parser_assign_exceptions_r ls out
+                    |LEXEM _ -> out
+            in
+            parser_assign_exceptions_r assigns []
+            in
+
+
             (match aoc with
             |Some oc -> 
                 Printf.fprintf oc "AST for %s:\n" filepath;
                 List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
             |None -> ()
             );
+            
 
-
-
-
-            filepath,(type_verify_r table assigns [] (RHS([Type(symbol_table_key)])) filepath)
+            filepath,parser_exceptions@(type_verify_r table assigns [] (RHS([Type(symbol_table_key)])) filepath)
         |None -> 
             raise (Invalid_argument ("Symbol table for  path defined " ^ symbol_table_key ^ " not found in " ^ filepath) )
         )
