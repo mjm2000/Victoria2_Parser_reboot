@@ -75,7 +75,7 @@ let rec exception_iden_string exp = match exp with
 and exception_string (exp : exception_value) : string = 
     (*add expected value printer*)
     let ev, e, (x, y),file = exp in 
-    Printf.sprintf "%s:(%i,%i):\n\t%s, expected:%s\n" file x y (exception_iden_string e) (string_expected_value ev)
+    Printf.sprintf "%s:(%i,%i):\n\t%s, expected:%s" file x y (exception_iden_string e) (string_expected_value ev)
 and exceptions_string ls = 
     let rec exceptions__r ls out = match ls with
         | [] -> out
@@ -89,7 +89,7 @@ and exception_lists_string ls =
         | [] -> out
         | x :: rest -> 
             let x = exceptions_string x in
-            exception_lists__r rest (Printf.sprintf "%s\n\t%s" out x)
+            exception_lists__r rest (Printf.sprintf "%s\n%s" out x)
     in
     exception_lists__r ls ""
 
