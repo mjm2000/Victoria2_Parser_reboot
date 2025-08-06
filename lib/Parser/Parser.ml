@@ -34,10 +34,12 @@ and assignment lex file= match lex with
     | _ :: (LB, _, cords) :: rest -> 
         let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_LEFT_BRACKET, cords,file) in
         v, rest
+    (*
     |_ :: (lexem_type, str, cords) :: rest -> 
         let v = ASSIGN_EXCEPTION (ExpEqual, UNEXPECTED_LEXEM (str, lexem_type), cords,file) in
         v, rest
 
+    *)
 
 
     |(_,_,cords):: [] -> 
