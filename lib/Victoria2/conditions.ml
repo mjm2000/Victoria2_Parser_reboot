@@ -473,7 +473,7 @@ let province_conditions = symbol_table_init [
 (Literal ("is_canal_enabled"),Integer);
 ]
 
-let state_conditions = symbol_table_init [
+let state_conditions = Inherit([
     (Literal "province_id",Type "land_provid");
     (Type "land_provid",Type "province_conditions_def");
     (Literal "total_pops",Integer);
@@ -501,4 +501,4 @@ let state_conditions = symbol_table_init [
     (Literal ("owner"),Type "country_conditions_def");
     (*error maybe*)
     (Literal ("has_building"),Value(Keyword));
-]
+],["province_conditions_def"]);
