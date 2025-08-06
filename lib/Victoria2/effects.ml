@@ -298,7 +298,7 @@ Value(Scope)
 (Literal("random"),Inherit([(Literal("chance"),Integer)],[ "country_effects_def"]));
 (Literal("limit"),Type "country_conditions_def");
 (Literal("random_list"),SubTable(symbol_table_init [
-    (Integer,Type "country_effects_def")
+    (Number,Type "country_effects_def")
 ]));
 (Literal("set_variable"),SubTable(symbol_table_init [
     (Literal("which"),Value(Keyword)); 
