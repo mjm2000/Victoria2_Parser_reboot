@@ -822,7 +822,7 @@ List.map (function
             (match aoc with
             |Some oc -> 
                 Printf.fprintf oc "AST for %s:\n" filepath;
-                List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign)) assigns;
+                List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign))  (List.rev assigns);
             |None -> ()
             );
             
