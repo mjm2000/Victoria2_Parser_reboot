@@ -469,7 +469,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 let symbol_table = symbol_table_from_rhv (lookup outer_symbol_table (Definition "country_def")) in
                 match symbol_table with
                 |Some symbol_table ->
-                    let assigns:(assignment list) =  (Parser.assignments lexems in_mod_file) in
+                    let assigns:(assignment list) = List.rev (Parser.assignments lexems in_mod_file) in
                     let exceptions = (type_verify_r symbol_table assigns exceptions (RHS([Definition "country_def"]))) in_mod_file 
                     in
                     exceptions
@@ -822,7 +822,7 @@ List.map (function
             (match aoc with
             |Some oc -> 
                 Printf.fprintf oc "AST for %s:\n" filepath;
-                List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign))  (assigns);
+                List.iter (fun assign -> Printf.fprintf oc "%s\n" (Output.string_assignment assign))  (List.rev assigns);
             |None -> ()
             );
             
