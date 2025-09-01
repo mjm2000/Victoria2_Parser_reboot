@@ -22,7 +22,9 @@ let () =
     let lexoutput = make_arg "lex-output" "l" "File to output lexems" in
     let astoutput = make_arg "ast-output" "a" "File to output ast" in
     let print_files = enable_arg "print-files" "f" "Print files to stdout" in
-    
+    let save_parser = enable_arg "save-parser" "sp" "Use game saves to check mod files" in
+    let mod_parser = enable_arg "mod-mode" "mp" "Use mod files to check game files" in
+    let saves = make_arg "saves" "s" "find saves to use" in
     let game_symbols game  = match game with
     |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
@@ -30,9 +32,9 @@ let () =
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
 (* List files in a directory and filter by glob pattern *)
-
-    let term = Term.(const (fun game mh gh out lexoutput astoutput print_file -> 
-
+    
+    let term = Term.(const (fun game mh gh out lexoutput astoutput print_file save_parser mod_parser saves -> 
+        if mod_parser then (
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
@@ -99,11 +101,21 @@ let () =
                 Printf.printf "No Game Provided for mod:%s\n" mod_home;
         |(None, Some game_home) -> Printf.printf "No Mod Home Provided for game:%s\n" game_home
 
-        |(None,None) -> Printf.printf "No Game\n")  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput $ print_files)
+        |(None,None) -> Printf.printf "No Game\n")
+        else if save_parser then (
+            Printf.eprintf "Save Parser Mode\n";
+            match (mh,gh,saves) with
+            |(Some mod_home), (Some game_home), (Some saves) ->
+                    Printf.printf "Mod Home: %s Game Home: %s Saves: %s\n" mod_home game_home saves;
+            |_ -> Printf.printf "No Mod Home, Game Home or Saves Provided\n"
+
+        )
+        )  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput $ print_files $ save_parser $ mod_parser $ saves)
+        
     in
     let cmd = Cmd.v info term 
     in
     Cmd.eval cmd |> Printf.printf "%i\n";
-
+    
 
        
