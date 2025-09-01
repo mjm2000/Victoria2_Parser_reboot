@@ -94,7 +94,7 @@ let () =
                         Printf.fprintf output "%s\n" expr_string
                     )
                 )
-                (List.rev exceptions) )
+                (List.rev exceptions))
             |None -> Printf.printf "Game not recognized\n"
         )
         |((Some mod_home), None) -> 
