@@ -15,6 +15,7 @@ let () =
     let enable_arg title shorter doc  = 
         Arg.(value & flag & info [title;shorter] ~doc)
     in
+    Printf.eprintf "Starting Paradox Mod Checker\n";
     let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
     let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "h" "Game Home Directory" in
@@ -25,14 +26,17 @@ let () =
     let save_parser = enable_arg "save-parser" "sp" "Use game saves to check mod files" in
     let mod_parser = enable_arg "mod-mode" "mp" "Use mod files to check game files" in
     let saves = make_arg "saves" "s" "find saves to use" in
+    Printf.eprintf "Arguments Parsed\n";
     let game_symbols game  = match game with
-    |Some "Victoria2" -> Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
+    |Some "Victoria2" -> 
+            Printf.eprintf "Victoria2 Selected\n";
+            Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |_ -> None
     in
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
 (* List files in a directory and filter by glob pattern *)
-    
+    Printf.eprintf "Setting up command line\n";  
     let term = Term.(const (fun game mh gh out lexoutput astoutput print_file save_parser mod_parser saves -> 
         if mod_parser then (
         match (mh,gh) with
@@ -86,7 +90,7 @@ let () =
                 in
                 Printf.eprintf "Checking Files\n"; 
                 (List.iter (fun (file,x) -> 
-                let expr_string = x|> List.rev|> Output.exceptions_string in
+                let expr_string = x|>  Output.exceptions_string in
                 if print_file then 
                         Printf.fprintf output "%s:\n%s\n" file expr_string 
                 else 
@@ -94,7 +98,7 @@ let () =
                         Printf.fprintf output "%s\n" expr_string
                     )
                 )
-                (List.rev exceptions))
+                (exceptions))
             |None -> Printf.printf "Game not recognized\n"
         )
         |((Some mod_home), None) -> 

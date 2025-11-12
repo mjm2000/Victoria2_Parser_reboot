@@ -1,0 +1,2 @@
+#!/bin/zsh
+dune exec -- ocamldebug ../_build/default/bin/main.bc -h ~/projects/victoria_2_parser/victoria2 -m ~/projects/victoria_2_parser/HFM -g Victoria2 -o output.txt

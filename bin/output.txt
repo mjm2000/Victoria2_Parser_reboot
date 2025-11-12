@@ -1,196 +1,2667 @@
-../victoria2/map/continent.txt:
- 
-../victoria2/decisions/BEL.txt:
- 
-../victoria2/decisions/SAF.txt:
- 
-	 At (11,37): Unknown Identifier: mass_culture_n_the_avant_garde, expected:RHS(
+
+/**
+../test_data/HFM/common/countries.txt:(121,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(125,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(126,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(127,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(128,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(129,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(130,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(131,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(132,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(134,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(135,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(136,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(137,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(138,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(139,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(140,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(143,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(144,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(145,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(146,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(147,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(148,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(149,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(150,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(151,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(153,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(154,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(155,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(156,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(157,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(160,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(161,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(162,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(163,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(164,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(165,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(166,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(167,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(168,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(169,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(170,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(171,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(172,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(173,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(174,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(175,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(176,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(177,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(178,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(179,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(180,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(183,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(184,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(185,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(186,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(187,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(188,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(189,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(192,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(193,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(194,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(195,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(196,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(197,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(198,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(199,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(200,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(201,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(202,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(203,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(204,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(205,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(208,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(209,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(210,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(211,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(212,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(213,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(214,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(215,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(216,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(217,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(218,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(219,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(220,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(221,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(222,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(223,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(224,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(225,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(226,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(227,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(228,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(229,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(230,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(231,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(234,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(235,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(236,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(237,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(238,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(239,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(240,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(242,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(243,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(246,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(247,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(248,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(249,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(252,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(253,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(254,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(255,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(256,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(257,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(258,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(259,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(260,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(261,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(262,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(263,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(264,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(265,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(266,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(267,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(268,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(269,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(270,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(271,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(272,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(273,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(274,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(275,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(276,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(277,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(278,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(279,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(280,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(281,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(282,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(283,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(284,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(285,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(286,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(287,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(288,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(289,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(290,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(291,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(292,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(293,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(294,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(295,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(296,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(297,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(298,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(299,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(300,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(301,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(302,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(303,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(304,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(305,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(306,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(307,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(308,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(309,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(310,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(311,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(312,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(313,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(314,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(315,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(316,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(317,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(318,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(319,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(320,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(321,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(322,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(323,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(324,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(325,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(328,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(329,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(330,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(331,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(332,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(333,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(334,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(335,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(336,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(337,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(338,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(339,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(340,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(341,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(342,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(343,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(344,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(345,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(346,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(347,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(348,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(349,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(352,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(353,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(354,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(355,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(356,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(357,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(358,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(359,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(362,9):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(363,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(364,9):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(365,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(367,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(368,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(369,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(374,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(375,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(376,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(377,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(380,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(381,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(382,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(383,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(384,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(387,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(388,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(389,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(390,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(391,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(392,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(393,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(394,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(395,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(398,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(399,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(400,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(401,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(402,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(403,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(404,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(405,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(406,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(407,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(408,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(409,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(410,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(411,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(412,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(413,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(414,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(415,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(416,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(417,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(418,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(419,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(420,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(421,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(422,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(423,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(426,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(427,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(428,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(429,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(430,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(431,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(432,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(433,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(434,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(435,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(438,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(439,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(440,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(441,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(442,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(443,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(444,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(445,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(446,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(447,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(448,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(449,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(450,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(451,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(454,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(455,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(456,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(457,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(458,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(459,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(460,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(461,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(462,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(463,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(464,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(465,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(466,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(467,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(468,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(469,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(472,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(473,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(474,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(475,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(476,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(477,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(478,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(479,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(480,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(481,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(482,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(483,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(484,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(485,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(486,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(487,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(488,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(491,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(492,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(493,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(494,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(495,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(496,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(497,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(498,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(499,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(500,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(501,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(502,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(503,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(504,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(505,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(508,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(509,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(510,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(511,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(512,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(513,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(514,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(515,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(516,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(517,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(518,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(519,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(520,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(521,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(522,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(523,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(524,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(525,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(526,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(527,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(528,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(529,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(530,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(531,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(532,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(533,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(534,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(535,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(538,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(539,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(540,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(541,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(542,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(543,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(544,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(545,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(546,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(547,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(548,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(549,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(550,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(551,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(552,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(553,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(554,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(555,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(556,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(557,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(558,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(559,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(560,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(563,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(564,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(565,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(566,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(567,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(568,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(569,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(570,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(571,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(572,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(573,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(574,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(575,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(577,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(578,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(579,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(580,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(581,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(582,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(583,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(584,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(585,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(586,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(589,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(590,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(591,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(592,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(593,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(594,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(595,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(596,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(597,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(598,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(601,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(602,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(605,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(606,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(607,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(608,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(609,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(610,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(611,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(612,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(613,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(614,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(618,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(619,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(620,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(621,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(624,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(627,15):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(628,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(629,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(630,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(631,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(632,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(633,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(634,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(635,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(636,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(637,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(638,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(639,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(640,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(641,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(642,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(643,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(644,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(645,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(646,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(647,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(648,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(649,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(650,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(651,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(652,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(653,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(654,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(655,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(656,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(657,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(658,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(659,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(660,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(661,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(662,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(663,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(664,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(665,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(666,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(667,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(668,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(669,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(670,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(671,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(672,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(673,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(674,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(675,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(676,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(677,6):
+Unexpected Equal, expected:ExpEqual
+***\
+
+/**
+../test_data/HFM/common/countries.txt:(677,26):
+Unexpected EOF, expected:ExpEqual
+***\
+
+
+/**
+../test_data/HFM/events/FlavourMod_RUS.txt:(28,6):
+Unknown Identifier: FRA, expected:RHS(
+	TypeRight:province_effects_def)
+***\
+
+
+/**
+../test_data/HFM/events/Liberia.txt:(24,5):
+Unknown Identifier: LIB, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/Indochina.txt:(16,6):
+Unknown Identifier: FRA, expected:RHS(
 	TypeRight:country_conditions_def)
-../victoria2/decisions/DEN.txt:
- 
-	 At (14,25): Unexpected Token: Text=3 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (12,25): Unknown Identifier: state_n_government, expected:RHS(
+***\
+
+
+/**
+../test_data/HFM/events/New Colonies.txt:(38,6):
+Unknown Identifier: NGR, expected:RHS(
+	TypeRight:province_conditions_def)
+***\
+
+/**
+../test_data/HFM/events/New Colonies.txt:(36,7):
+Unknown Identifier: NGR, expected:RHS(
+	TypeRight:province_conditions_def)
+***\
+
+
+/**
+../test_data/HFM/events/China.txt:(173,5):
+Unknown Identifier: CHI, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+/**
+../test_data/HFM/events/China.txt:(172,5):
+Unknown Identifier: KMT, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/Turkestan.txt:(43,5):
+Unknown Identifier: TKM, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/ACW.txt:(124,5):
+Unknown Identifier: USA, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/EIC.txt:(31,5):
+Unknown Identifier: ENG, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+/**
+../test_data/HFM/events/EIC.txt:(17,6):
+Unknown Identifier: HND, expected:RHS(
 	TypeRight:country_conditions_def)
-../victoria2/decisions/USCA.txt:
- 
-	 At (30,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/GreatPowers.txt:
- 
-	 At (124,16): Unexpected Token: Text=CNG Type=Literal Tag, expected:RHS()
-../victoria2/decisions/SouthAmerica.txt:
- 
-	 At (29,21): Unknown Identifier: social_science, expected:RHS(
+***\
+
+/**
+../test_data/HFM/events/EIC.txt:(12,6):
+Unknown Identifier: BUR, expected:RHS(
 	TypeRight:country_conditions_def)
-../victoria2/decisions/ACW.txt:
- 
-	 At (828,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (826,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/MostlyHarmless.txt:
- 
-	 At (66,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/France.txt:
- 
-	 At (298,21): Unknown Identifier: business_banks, expected:RHS(
+***\
+
+
+/**
+../test_data/HFM/events/ItaloTurkishWar.txt:(80,8):
+Unknown Identifier: TUR, expected:RHS(
 	TypeRight:country_conditions_def)
-	 At (297,20): Unknown Identifier: iron_railroad, expected:RHS(
+***\
+
+
+/**
+../test_data/HFM/events/African Uncivs.txt:(17,5):
+Unknown Identifier: MAT, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/FlavourMod_ITA.txt:(59,5):
+Unknown Identifier: SAR, expected:RHS(
+	{Symbols(
+	Literal:name:TypeOption(
+	LexemValue:String
+	LexemValue:Keyword)
+	Literal:ai_chance:SubTable(
+	Literal:modifier:{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)}
+	Literal:factor:Number)):Inherits(
+	country_effects_def)})
+***\
+
+
+/**
+../test_data/HFM/events/Balkans.txt:(64,7):
+Unknown Identifier: TUR, expected:RHS(
+	{Symbols(
+	Literal:factor:Number):Inherits(
+	country_conditions_def)})
+***\
+
+
+/**
+../test_data/HFM/decisions/MostlyHarmless.txt:(44,6):
+Unknown Identifier: IRQ, expected:RHS(
+	TypeRight:country_effects_def)
+***\
+
+
+/**
+../test_data/HFM/decisions/SAF.txt:(1021,6):
+Unknown Identifier: SAF, expected:RHS(
+	TypeRight:country_effects_def)
+***\
+
+/**
+../test_data/HFM/decisions/SAF.txt:(998,6):
+Unknown Identifier: SAF, expected:RHS(
 	TypeRight:country_conditions_def)
-	 At (296,20): Unknown Identifier: impressionism, expected:RHS(
+***\
+
+
+/**
+../test_data/HFM/decisions/MEX.txt:(151,6):
+Unknown Identifier: USA, expected:RHS(
+	TypeRight:country_effects_def)
+***\
+
+/**
+../test_data/HFM/decisions/MEX.txt:(142,8):
+Unknown Identifier: USA, expected:RHS(
 	TypeRight:country_conditions_def)
-	 At (291,22): Unknown Identifier: early_railroad, expected:RHS(
+***\
+
+/**
+../test_data/HFM/decisions/MEX.txt:(125,6):
+Unknown Identifier: USA, expected:RHS(
 	TypeRight:country_conditions_def)
-	 At (290,15): Unknown Identifier: realism, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/GRE.txt:
- 
-	 At (130,12): Unexpected Assignments:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(131,9),lhvalue:limit=rhvalue:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(132,16),lhvalue:is_colonial=rhvalue:LEXEM(type(Literal Bool):value(no),location(132,21)))
-	ASSIGNMENT(type:Literal Conditional,location:(133,7),lhvalue:OR=rhvalue:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(134,13),lhvalue:culture=rhvalue:LEXEM(type(Literal Keyword):value(greek),location(134,21)))
-	ASSIGNMENT(type:Literal Keyword,location:(135,13),lhvalue:culture=rhvalue:LEXEM(type(Literal Keyword):value(turkish),location(135,23)))))))
-	ASSIGNMENT(type:Literal Keyword,location:(138,12),lhvalue:add_core=rhvalue:LEXEM(type(Literal Tag):value(BYZ),location(138,18)))), expected:RHS(
-	TypeRight:state_effects_def
-	TypeRight:province_effects_def
-	TypeRight:pop_effects_def
-	LexemValue:Keyword
-	Integer
-	Decimal)
-	 At (125,19): Unexpected Token: Text=BYZ Type=Literal Tag, expected:RHS()
-../victoria2/decisions/Germany.txt:
- 
-	 At (410,23): Unexpected Assignments:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(411,8),lhvalue:name=rhvalue:LEXEM(type(Literal Keyword):value(ruhr_boom),location(411,20)))
-	ASSIGNMENT(type:Literal Keyword,location:(412,12),lhvalue:duration=rhvalue:LEXEM(type(Literal PositiveInt):value(3650),location(412,19)))), expected:RHS(
-	TypeRight:state_effects_def
-	TypeRight:province_effects_def
-	TypeRight:pop_effects_def
-	LexemValue:Keyword
-	Integer
-	Decimal)
-	 At (406,21): Unknown Identifier: early_railroad, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (405,26): Unknown Identifier: organized_factories, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (404,23): Unknown Identifier: market_structure, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/arabian formation.txt:
- 
-	 At (64,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/LIB.txt:
- 
-	 At (81,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/NationalUnification.txt:
- 
-	 At (740,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/Canals.txt:
- 
-	 At (99,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (97,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/SWE.txt:
- 
-	 At (156,17): Unknown Identifier: jingoism, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (155,21): Unknown Identifier: pro_military, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (142,35): Unknown Identifier: vote_franschise, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (141,44): Unknown Identifier: vote_franschise, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/BoerWar.txt:
- 
-	 At (145,11): Unexpected Assignments:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(146,7),lhvalue:who=rhvalue:LEXEM(type(Literal Tag):value(ENG),location(146,13)))
-	ASSIGNMENT(type:Literal Keyword,location:(147,9),lhvalue:value=rhvalue:LEXEM(type(Literal PositiveInt):value(25),location(147,14)))), expected:RHS(
-	TypeRight:state_effects_def
-	TypeRight:province_effects_def
-	TypeRight:pop_effects_def
-	LexemValue:Keyword
-	Integer
-	Decimal)
-	 At (139,25): Unknown Identifier: state_n_government, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/NET.txt:
- 
-	 At (85,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (81,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (75,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (73,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/Political.txt:
- 
-	 At (299,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/Italy.txt:
- 
-../victoria2/decisions/MEX.txt:
- 
-	 At (21,10): Unexpected Assignments:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(22,20),lhvalue:scaled_militancy=rhvalue:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(23,13),lhvalue:ideology=rhvalue:LEXEM(type(Literal Keyword):value(liberal),location(23,23)))
-	ASSIGNMENT(type:Literal Keyword,location:(24,11),lhvalue:factor=rhvalue:LEXEM(type(Literal PositiveInt):value(8),location(24,15)))))), expected:RHS(
-	TypeRight:state_effects_def
-	TypeRight:province_effects_def
-	TypeRight:pop_effects_def
-	LexemValue:Keyword
-	Integer
-	Decimal)
-	 At (17,24): Unexpected Token: Text=4 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (16,20): Unknown Identifier: conservative, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (6,15): Unknown Identifier: liberal, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/RUS.txt:
- 
-	 At (259,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/SWI.txt:
- 
-../victoria2/decisions/Tech_School_Changes.txt:
- 
-	 At (175,13): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/TUR.txt:
- 
-	 At (129,14): Unexpected Token: Text=0 Type=Literal PositiveInt, expected:RHS(
-	Number)
-	 At (127,13): Unexpected Token: Text=1 Type=Literal PositiveInt, expected:RHS(
-	Number)
-../victoria2/decisions/UncivFlavor.txt:
- 
-	 At (242,19): Unexpected Token: Text=BAB Type=Literal Tag, expected:RHS()
-	 At (230,28): Unknown Identifier: the_historical_theory, expected:RHS(
-	TypeRight:country_conditions_def)
-	 At (229,26): Unknown Identifier: advanced_metallurgy, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/SPA.txt:
- 
-	 At (47,11): Unexpected Assignments:ASSIGN_LIST(
-	ASSIGNMENT(type:Literal Keyword,location:(48,7),lhvalue:who=rhvalue:LEXEM(type(Literal Tag):value(PAP),location(48,13)))
-	ASSIGNMENT(type:Literal Keyword,location:(49,9),lhvalue:value=rhvalue:LEXEM(type(Literal NegativeInt):value(-50),location(49,15)))), expected:RHS(
-	TypeRight:state_effects_def
-	TypeRight:province_effects_def
-	TypeRight:pop_effects_def
-	LexemValue:Keyword
-	Integer
-	Decimal)
-	 At (41,26): Unknown Identifier: ideological_thought, expected:RHS(
-	TypeRight:country_conditions_def)
-../victoria2/decisions/ENG.txt:
- 
-	 At (186,45): Unexpected Token: Text="Southern Rhodesia" Type=Literal String, expected:RHS()
-../victoria2/decisions/AUS.txt:
- 
+***\
+
