@@ -84,9 +84,9 @@ let country_effects =  symbol_table_init [
 
 (Literal("set_global_flag"),Value(Keyword));
 (Literal("clr_global_flag"),Value(Keyword));
-(Literal("activate_technology"),Value(Keyword));
-(Literal("add_accepted_culture"),Value(Keyword));
-(Literal("remove_accepted_culture"),Value(Keyword));
+(Literal("activate_technology"),Type "technology");
+(Literal("add_accepted_culture"),Type "culture");
+(Literal("remove_accepted_culture"),Type "culture");
 (Literal("add_country_modifier"),SubTable(symbol_table_init [
     (Literal("name"),TypeOption([
         Value(Keyword);

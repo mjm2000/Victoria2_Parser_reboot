@@ -44,6 +44,10 @@ let lexer f =
             (match input_char ic with
             |'\"' -> let str = ls_to_str ('\"'::List.rev buf) in                  
                 read_all [] ((LexemValue String,str,(y,x)) :: out)  (y,x+1)
+
+            |'\n' -> 
+                    let str = ls_to_str ('\"'::List.rev buf) in
+                    read_all [] ((LexemValue InvalidString,str,(y,x)) :: out)  (y+1,1)
             |chr-> 
                 read_all ('\"'::chr::rs) out  (y,x+1)
             |exception End_of_file -> close_in ic; out;

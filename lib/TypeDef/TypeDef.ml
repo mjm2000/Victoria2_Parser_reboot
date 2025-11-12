@@ -10,6 +10,7 @@ type value_type =
 |Scope
 |Condition
 |Date
+|InvalidString
 
 
 
@@ -101,6 +102,10 @@ and symbol_type =
     |SupType of string 
     |Dir of string
     |Nothing
+    |IsoSubType of string * string
+    |SameSubType of string * string
+    |Single of symbol_type
+    |Multiple of symbol_type
 
    
 

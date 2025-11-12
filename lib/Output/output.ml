@@ -12,6 +12,7 @@ let lexem_type_string lexem = match lexem with
 | Condition ->"Conditional"
 | Bool ->     "Bool"      
 | Date ->     "Date"
+| InvalidString ->    "InvalidString"
 
 let print_memory_stats label =
   let stat = Gc.stat () in
@@ -132,6 +133,7 @@ and  string_value_type value_type = match value_type with
 |Scope-> "Scope"
 |Condition-> "Condition"
 |Date-> "Date"
+|InvalidString-> "InvalidString"
 
 and string_symbol pv = match pv with
     | Year -> "Year"
@@ -184,6 +186,10 @@ and string_symbol pv = match pv with
     |Dir v -> Printf.sprintf "Dir:%s" v
     |CatalogFile (place,regex,rhv) -> Printf.sprintf "CatalogFile:(catagory:%s,regex:%s,rhs:%s)" place regex  (string_symbol rhv)
     |Nothing -> "Nothing"
+    |IsoSubType (t,v) -> Printf.sprintf "IsoSubType:(%s,%s)" t v
+    |SameSubType (t,v) -> Printf.sprintf "SameSubType:(%s,%s)" t v
+    |Single symbol -> Printf.sprintf "Single:%s" (string_symbol symbol)
+    |Multiple symbol -> Printf.sprintf "Multiple:%s" (string_symbol symbol)
 
 
 
