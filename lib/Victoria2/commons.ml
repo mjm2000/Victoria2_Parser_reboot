@@ -21,8 +21,8 @@ let commons = [
       Definition "buildings",
         SubTable (symbol_table_init [
             (Catalog("factory", Value Keyword), Type "factory_def");
-            (Catalog("building", Literal "naval_base"), Type "naval_base_def");
-            (Catalog("building", Literal "railroad"), Type "rail_def";)
+            ( Literal "naval_base", Type "naval_base_def");
+            ( Literal "railroad", Type "rail_def";)
         ])
     );
 
@@ -151,7 +151,8 @@ let commons = [
         SubTable (symbol_table_init [
             (*Catalog later*)
             (Literal "dynamic_tags",Literal "yes");
-            (Catalog("country_tag",TypeOption [Value Tag;Value Keyword] ), Link);
+            (Catalog("country_tag",Value Tag), Link);
+            (Catalog("country_tag",Value Keyword), Link);
         ])
     );
 

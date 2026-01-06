@@ -102,8 +102,7 @@ let find_catalog_left lex_type lex_text symbol_table outer_symbol_table =
     (* Check if the lex_type is a catalog in the symbol table *)
     (* Find the catalog in the symbol table that matches the lex_type *)
 
-    
-    
+     
     
     Hashtbl.to_seq symbol_table |> Seq.find_map (fun (key,value) ->  
             
@@ -174,24 +173,24 @@ let find_catalog_left lex_type lex_text symbol_table outer_symbol_table =
             
             
             None
-
-
     )   
 
 
 
 
 
-let find_type_left lex_type lex_value symbol_table outer_symbol_table = 
+let find_type_left (lex_type:value_type) (lex_value) (symbol_table:(symbol_type, symbol_type) Hashtbl.t) outer_symbol_table = 
     (* Check if the lex_type is a type in the symbol table *)
     (* If it is, then we can use the lookup function to get the value from the symbol table *)
     (* If it is not, then we can check if it is a value *)
     (* Check if the lex_type is a type in the symbol table *)
     (* Find the type in the symbol table that matches the lex_type *)
+
+
     Hashtbl.to_seq symbol_table |> Seq.find_map (fun (key,value) ->  match key with
         |Type v  -> 
              (match (Hashtbl.find_opt outer_symbol_table (Definition v)  ) with
-             |Some Value v when v = lex_type -> 
+            |Some (Value expr_value) when expr_value = lex_type -> 
                 Some value
             |Some s when List.mem s (get_umbtypes lex_type lex_value)  -> 
                 Some value 
@@ -244,43 +243,82 @@ let find_type_left lex_type lex_value symbol_table outer_symbol_table =
 
 
 
-let  left_lex_lookup lex_value lex_type symbol_table outer_symbol_table = 
+let  left_lex_lookup lex_value (lex_type:value_type) symbol_table outer_symbol_table = 
         (* Check if the lex_type is a literal in the symbol table *)
         (* If it is, then we can use the lookup function to get the value from the symbol table *)
         (* If it is not, then we can check if it is a type or a value *)
     
-    
-    match lex_type with 
-    |_ when (member symbol_table (Literal(lex_value)) ) ->
-        Hashtbl.find_opt symbol_table (Literal(lex_value))
-        
-    |lex_type when (member symbol_table (Value(lex_type)) )  -> 
-        Hashtbl.find_opt symbol_table (Value(lex_type))    
-
-    |lex_type ->
-
-        (* If the lex_type is a catalog, then we can use the catalog_type function to add the value to the catalog *)
-        (
-        match (find_catalog_left lex_type lex_value symbol_table) outer_symbol_table with
-        |Some v -> 
-
-            
-                Some v
-        |None ->
-
-
-            let v = List.find_opt (fun t-> member symbol_table ((t))) (get_umbtypes lex_type lex_value)
-            in
-            (match v with
-            |Some v -> (Hashtbl.find_opt symbol_table (v))
-            |None -> 
-                match (find_type_left lex_type lex_value symbol_table outer_symbol_table) with
-                |Some v -> Some v
-                |None ->None)
+    (* Optimized: Remove redundant member check - find_opt already handles None case *)
+    match Hashtbl.find_opt symbol_table (Literal(lex_value)) with
+    | Some v -> Some v
+    | None -> 
+        (match Hashtbl.find_opt symbol_table (Value(lex_type)) with
+        | Some (CatalogLeft (str,sym_typ))  ->
+            catalog_type str (Literal lex_value) outer_symbol_table;
+            Some sym_typ
+        | Some v -> Some v
+        | None -> 
+            (* If the lex_type is a catalog, then we can use the catalog_type function to add the value to the catalog *)
+            (match (find_catalog_left lex_type lex_value symbol_table) outer_symbol_table with
+            |Some v -> Some v
+            |None ->
+                (* Optimized: Find first matching type and return its value in one pass *)
+                let rec find_first_match types = match types with
+                    | t::rest -> (match Hashtbl.find_opt symbol_table t with
+                        | Some v -> Some v
+                        | None -> find_first_match rest)
+                    | [] -> None
+                in
+                (match find_first_match (get_umbtypes lex_type lex_value) with
+                | Some v -> Some v
+                | None -> 
+                    match (find_type_left lex_type lex_value symbol_table outer_symbol_table) with
+                    |Some v -> Some v
+                    |None -> None))
         )
+let is_directory x = 
+    Sys.file_exists x && Sys.is_directory x
 
 
-let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory lexout astout =
+let map_folder  abs_file def= Array.fold_left (fun  rest f ->
+                               ((Filename.concat abs_file f),def)::rest 
+
+                            ) [] (Sys.readdir abs_file) 
+
+exception File_not_found of string
+
+let currate_dirrectory replace_paths mod_home game_home og_directory =  
+    List.fold_left (fun acc (path,def) ->
+        let abs_mod_path = Filename.concat mod_home path in
+        let abs_game_path = Filename.concat game_home path in
+        if List.mem path replace_paths then
+            if is_directory abs_mod_path then
+                map_folder abs_mod_path def @ acc
+            else if Sys.file_exists abs_mod_path then
+                (abs_mod_path,def)::acc
+            else
+                raise (File_not_found ("corrupted game files" ^abs_game_path) )
+        else  
+            let mod_files = (if is_directory abs_mod_path then
+                map_folder abs_mod_path def @ acc
+            else if Sys.file_exists abs_mod_path then
+                (abs_mod_path,def)::acc
+            else
+                raise (File_not_found ("corrupted game files" ^abs_game_path) )
+            )in
+
+            if is_directory abs_game_path then
+                map_folder abs_game_path def @ mod_files @ acc
+            else if Sys.file_exists abs_game_path then
+                (abs_game_path,def)::acc
+            else
+                raise (File_not_found ("corrupted game files" ^abs_game_path) )
+
+
+    ) [] og_directory
+     
+
+let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory lexout astout mod_file game_home=
     let aoc = 
        ( match astout with    
         |Some file -> 
@@ -407,13 +445,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
     |ASSIGNMENT((LexemValue lh_type,lh_value,_), LEXEM((LexemValue rh_type,rh_value,cords) as rh_token))::rest  ->
      let expected_rh_type = left_lex_lookup lh_value lh_type symbol_table  outer_symbol_table in
-     
-     
-     (* This function checks the type of the left-hand side of the assignment against the expected type *)
-     (* If the left-hand side is a catalog, then we can use the catalog_type function to add the value to the catalog *)
-     (* If the left-hand side is a type, then we can use the symbol_table_from_rhv function to get the symbol table for that type *)
-     (* If the left-hand side is a value, then we can use the lookup function to get the value from the symbol table *)
-
      let rec assign_type_check expected_rh_type exceptions =  
         match expected_rh_type with
         |Value(erh_type) when erh_type = rh_type  -> 
@@ -640,7 +671,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         (match expected_rh_type with
         |(Some rh) -> 
             
-            let exceptions = assignlist_type_check rh ls exceptions in
+            let exceptions = (assignlist_type_check rh ls exceptions) in
 
             type_verify_r symbol_table rest exceptions scope file
         |None -> 
@@ -815,7 +846,7 @@ List.map (function
                         parser_assign_exceptions_r ls out
                     |LEXEM _ -> out
             in
-            parser_assign_exceptions_r assigns []
+            List.rev (parser_assign_exceptions_r assigns [])
             in
 
 
@@ -826,8 +857,12 @@ List.map (function
             |None -> ()
             );
             
-
-            filepath,parser_exceptions@(type_verify_r table assigns [] (RHS([Type(symbol_table_key)])) filepath)
+            (match parser_exceptions with
+            |[] -> 
+                filepath,parser_exceptions@(type_verify_r table assigns [] (RHS([Type(symbol_table_key)])) filepath)
+            |exp->
+                filepath,exp
+            )
         |None -> 
             raise (Invalid_argument ("Symbol table for  path defined " ^ symbol_table_key ^ " not found in " ^ filepath) )
         )

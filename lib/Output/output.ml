@@ -172,6 +172,7 @@ and string_symbol pv = match pv with
     |SupType t -> Printf.sprintf "SubType:%s" t
     |InnerCatalog (v,t) ->  Printf.sprintf "Inner Catalog:%s:%s" v (string_symbol t)
     |Catalog (v, t) -> Printf.sprintf "Catalog:%s:%s" v (string_symbol t)
+    |CatalogLeft (v, t) -> Printf.sprintf "CatalogLeft:%s:%s" v (string_symbol t)
     |SubCatalog(supv,subv, t) -> Printf.sprintf "SubCatalog:(%s,%s,%s)" supv subv (string_symbol t)
     |SupCatalog (v, t) -> Printf.sprintf "Sup_Catalog:%s:%s" v (string_symbol t)
 
@@ -190,6 +191,7 @@ and string_symbol pv = match pv with
     |SameSubType (t,v) -> Printf.sprintf "SameSubType:(%s,%s)" t v
     |Single symbol -> Printf.sprintf "Single:%s" (string_symbol symbol)
     |Multiple symbol -> Printf.sprintf "Multiple:%s" (string_symbol symbol)
+    |RhLookup symbol -> Printf.sprintf "RhLookup:%s" (string_symbol symbol)
 
 
 

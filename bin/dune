@@ -1,7 +1,7 @@
 (executable
  (public_name ParadoxModErrorChecker)
  (name main)
- (libraries  TypeDef cmdliner ParadoxModErrorChecker SyntaxChecker Victoria2)
+ (libraries  TypeDef cmdliner ParadoxModErrorChecker SyntaxChecker Victoria2 Eu4)
  (modes byte exe)
  (ocamlc_flags (:standard -g) )
  )

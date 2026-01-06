@@ -77,6 +77,7 @@ and symbol_type =
     |CatalogFile of string  * string * symbol_type 
     |Type of string
     |Catalog of string * symbol_type
+    |CatalogLeft of string * symbol_type
     |SubTable of (symbol_type,symbol_type) Hashtbl.t
     |Link
     |Inherit of (symbol_type * symbol_type) list * string list
@@ -106,6 +107,8 @@ and symbol_type =
     |SameSubType of string * string
     |Single of symbol_type
     |Multiple of symbol_type
+    |RhLookup of symbol_type
+
 
    
 

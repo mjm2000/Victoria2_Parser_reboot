@@ -1,0 +1,4 @@
+(library
+ (name Eu4)
+ (libraries SymbolTable Parser re2)
+ )

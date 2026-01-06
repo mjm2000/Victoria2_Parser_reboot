@@ -19,6 +19,7 @@ let () =
     let game_value = make_arg "game" "g" "Games Choice: Victoria2, Eu4, Hoi4, imperator, CK3" in
     let mod_home = make_arg "mod-dir" "m" "Mod Home Directory" in
     let game_home = make_arg "game-dir" "h" "Game Home Directory" in
+    let mod_file = make_arg "mod-file" "mf" "Mod File to check" in
     let output_file = make_arg "output" "o" "Output File" in
     let lexoutput = make_arg "lex-output" "l" "File to output lexems" in
     let astoutput = make_arg "ast-output" "a" "File to output ast" in
@@ -31,13 +32,16 @@ let () =
     |Some "Victoria2" -> 
             Printf.eprintf "Victoria2 Selected\n";
             Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
+    |Some "Eu4" ->
+            Printf.eprintf "Eu4 Selected\n";
+            Some (Eu4.eu4_paths, Eu4.eu4_symbol_table)
     |_ -> None
     in
     let doc = "Paradox Mod Checker" in
     let info = Cmd.info "" ~doc in
 (* List files in a directory and filter by glob pattern *)
     Printf.eprintf "Setting up command line\n";  
-    let term = Term.(const (fun game mh gh out lexoutput astoutput print_file save_parser mod_parser saves -> 
+    let term = Term.(const (fun game mh gh out lexoutput astoutput print_file save_parser mod_parser saves  mod_file-> 
         if mod_parser then (
         match (mh,gh) with
         |(Some mod_home), (Some game_home) -> 
@@ -55,6 +59,7 @@ let () =
                             Printf.eprintf "Checking File: %s\n" abs_mod_file;
 
                         let abs_game_file = Filename.concat game_home file in
+                    
                         if (is_directory abs_mod_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
                                ((Filename.concat file f),def)::rest 
@@ -73,7 +78,7 @@ let () =
                             else if (Sys.file_exists abs_game_file) then
                                 new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
                             else
-                                raise (File_not_found ("corrupted game files" ^abs_game_file) )
+                                raise (file_not_found ("corrupted game files" ^abs_game_file) )
                     |[] -> acc
                     )
 
@@ -114,7 +119,7 @@ let () =
             |_ -> Printf.printf "No Mod Home, Game Home or Saves Provided\n"
 
         )
-        )  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput $ print_files $ save_parser $ mod_parser $ saves)
+        )  $ game_value $ mod_home $ game_home $ output_file $ lexoutput $ astoutput $ print_files $ save_parser $ mod_parser $ saves$ mod_file)
         
     in
     let cmd = Cmd.v info term 

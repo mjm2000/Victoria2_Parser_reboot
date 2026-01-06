@@ -50,8 +50,8 @@ and assignment lex file= match lex with
         (*add type *)
         ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, cords,file)), []
 
-
     | [] -> ASSIGN_EXCEPTION ((ExpEqual, END_OF_FILE, (2, 2),file)), []
+
     |rest ->
         (*add type *)
         let rec expr  out lexems = match lexems with
@@ -99,6 +99,10 @@ and assignment_list lexems file=
 and lexem_list lexems file = 
     let rec lexem_list_r lexems out = match lexems with
         | (RB, _, _) :: rest -> (List.rev out), rest
+        (*| (EQ,_, cords) :: rest -> 
+            let v = EXPR_EXCEPTION (ExpExprList, UNEXPECTED_EQUAL, cords,file) in
+            ((v :: out), rest)
+        *)
         | (_, _, cords) :: [] -> (List.rev (EXPR_EXCEPTION (ExpExprList, END_OF_FILE, cords,file) :: out), [])
 
         | [] -> 
