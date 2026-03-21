@@ -366,7 +366,7 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
 
     | _ -> None
     in
-
+   
 
 
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope file= 
@@ -793,7 +793,29 @@ let filename_extract path regex =
   | _ -> None 
 
 in
-List.map (function  
+(*
+let mod_file_table = Hashtbl.find_opt outer_symbol_table (Definition "mod_file_def") in
+let mod_lexems = Lexer.lexer mod_file in
+
+let mod_assigns = Parser.assignments mod_lexems mod_file in
+
+let mod_exps =(match mod_file_table with
+ |Some (SubTable mod_file_table) -> 
+         let x = type_verify_r mod_file_table  mod_assigns [] (RHS([Definition "mod_name"])) mod_file  in 
+         x
+ |None -> 
+         raise (Invalid_argument ("mod_file_def not found in outer symbol table for mod file: " ^ mod_file) )
+ |_ ->
+         raise (Invalid_argument ("mod_file_def must be a SubTable in the outer symbol table for mod file: " ^ mod_file) )
+  )
+in
+Printf.printf "game home:%s \n" game_home;
+*)
+
+(*(mod_file,mod_exps) :: *)
+(*print game home*)
+Printf.printf "Game home: %s,%s\n" game_home mod_file;
+    List.map (function  
     |filepath, (symbol_table_key) ->
 
 

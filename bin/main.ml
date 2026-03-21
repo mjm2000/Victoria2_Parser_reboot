@@ -50,6 +50,7 @@ let () =
 
                 Hashtbl.add symbol_table (Definition "mod_home_def") (Dir mod_home);
                 Hashtbl.add symbol_table (Definition "game_home_def") (Dir game_home);
+                Printf.printf "mod_file: %s\n" (match mod_file with Some f -> f | None -> "None");
                 let rec new_paths_r acc path_lists = 
                     (match path_lists with
 
@@ -65,6 +66,7 @@ let () =
                                ((Filename.concat file f),def)::rest 
 
                             ) [] (Sys.readdir abs_mod_file) in
+                            Printf.eprintf "!!!!!Directory: %s\n" abs_mod_file;
                             new_paths_r acc  (new_paths @rest_of_paths)
                         else if (is_directory abs_game_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
@@ -78,7 +80,7 @@ let () =
                             else if (Sys.file_exists abs_game_file) then
                                 new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
                             else
-                                raise (file_not_found ("corrupted game files" ^abs_game_file) )
+                                raise (File_not_found  ("corrupted game files" ^abs_game_file) )
                     |[] -> acc
                     )
 
@@ -86,7 +88,7 @@ let () =
                 in
                 let new_paths = new_paths_r [] paths in
             
-                let exceptions = type_verify symbol_table new_paths lexoutput astoutput 
+                let exceptions = type_verify symbol_table new_paths lexoutput astoutput mod_home game_home 
                 in
                 let output = 
                     match out with

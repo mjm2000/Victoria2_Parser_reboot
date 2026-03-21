@@ -69,8 +69,10 @@ let lexer f =
             |'\n' -> read_all [] (updated_out) (y+1,1)
             |'\r' -> read_all [] (updated_out) (y,x)
             |' '|'\t' -> read_all [] updated_out (y,x+1)
-            |chr -> read_all (chr::buf_chrs) out (y,x+1)
             |exception End_of_file -> close_in ic; out;
+            |exception  Sys_error msg -> Printf.eprintf "Lexing error %s, file %s\n" msg f; close_in ic; out;
+            |chr -> read_all (chr::buf_chrs) out (y,x+1)
+
             )
         |exception End_of_file -> close_in ic; out;
     in 

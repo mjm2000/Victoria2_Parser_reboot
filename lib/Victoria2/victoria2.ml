@@ -13,10 +13,10 @@ open Units
 open Pops
 
 let victoria2_mod_file =  symbol_table_init ([
-    Literal "name",Value String;
-    Literal "path",Link;
-    Literal "dependency",ValueList (Value String);
-    Literal "replace_path",Link;
+    Literal "name",Catalog ("modname", Value String);
+    Literal "path",Catalog ("modpath",Link);
+    Literal "dependency",ValueList (Catalog ("dependency",Value String));
+    Literal "replace_path",Catalog ("replace_path", Link);
 ])
 
 let victoria2_symbol_table =  symbol_table_init ([
@@ -39,11 +39,12 @@ let victoria2_symbol_table =  symbol_table_init ([
     Definition("unit_def"),SubTable(unit_def);
     Definition("pop_file_def"),CatalogFile("pop_type", ".*/([^/]+?)\\.[^/.]+$",SubTable(pop_file));
     Definition("regions_def"),SubTable(regions);
+    Definition("mod_file_def"),SubTable(victoria2_mod_file);
 ] @ commons)
 
 
 let victoria2_paths =
-    [
+    List.rev [
         "map/region.txt","regions_def";
         "common/goods.txt","goods_def";
         "units","unit_def";
