@@ -3,8 +3,6 @@ open Cmdliner
 open TypeDef
 exception File_not_found of string
 
-let is_directory x = 
-    Sys.file_exists x && Sys.is_directory x
 
 
 let () = 
@@ -87,8 +85,11 @@ let () =
                  
                 in
                 let new_paths = new_paths_r [] paths in
-            
-                let exceptions = type_verify symbol_table new_paths lexoutput astoutput mod_home game_home 
+               let exceptions =  match mod_file with
+                |Some mod_file ->
+                    type_verify symbol_table new_paths lexoutput astoutput mod_file game_home 
+                |None -> 
+                    raise (File_not_found "No mod file provided")
                 in
                 let output = 
                     match out with

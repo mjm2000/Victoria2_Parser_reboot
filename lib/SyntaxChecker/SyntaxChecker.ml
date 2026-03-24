@@ -793,7 +793,6 @@ let filename_extract path regex =
   | _ -> None 
 
 in
-(*
 let mod_file_table = Hashtbl.find_opt outer_symbol_table (Definition "mod_file_def") in
 let mod_lexems = Lexer.lexer mod_file in
 
@@ -810,11 +809,48 @@ let mod_exps =(match mod_file_table with
   )
 in
 Printf.printf "game home:%s \n" game_home;
-*)
+let replace_paths = Hashtbl.find_opt outer_symbol_table (Definition "replace_path")
+in
+let path = Hashtbl.find_opt outer_symbol_table (Definition "path") in 
+let is_directory x = 
+    Sys.file_exists x && Sys.is_directory x
+in
+let rec new_paths_r (acc: string list) path_lists mod_home = 
+                    (match path_lists with
 
-(*(mod_file,mod_exps) :: *)
-(*print game home*)
-Printf.printf "Game home: %s,%s\n" game_home mod_file;
+                    |(file,def)::rest_of_paths ->
+                        let abs_mod_file = Filename.concat mod_home file in
+
+                        let abs_game_file = Filename.concat game_home file in
+                    
+                        if (is_directory abs_mod_file) then
+                            let new_paths = Array.fold_left (fun  rest f ->
+                               ((Filename.concat file f),def)::rest 
+
+                            ) [] (Sys.readdir abs_mod_file) in
+                            Printf.eprintf "!!!!!Directory: %s\n" abs_mod_file;
+                            new_paths_r acc  (new_paths @rest_of_paths)
+                        else if (is_directory abs_game_file) then
+                            let new_paths = Array.fold_left (fun  rest f ->
+                               ((Filename.concat file f),def)::rest 
+                            ) [] (Sys.readdir abs_game_file) in
+                            new_paths_r acc  (new_paths @rest_of_paths)
+
+                        else
+                            if (Sys.file_exists abs_mod_file) then
+                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                            else if (Sys.file_exists abs_game_file) then
+                                new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
+                            else
+                                raise (File_not_found  ("corrupted game files" ^abs_game_file) )
+                    |[] -> acc
+                    )
+in
+
+
+
+
+(mod_file,mod_exps) :: 
     List.map (function  
     |filepath, (symbol_table_key) ->
 
