@@ -3,6 +3,8 @@ open Cmdliner
 open TypeDef
 exception File_not_found of string
 
+let is_directory x = 
+    Sys.file_exists x && Sys.is_directory x
 
 
 let () = 
@@ -64,7 +66,6 @@ let () =
                                ((Filename.concat file f),def)::rest 
 
                             ) [] (Sys.readdir abs_mod_file) in
-                            Printf.eprintf "!!!!!Directory: %s\n" abs_mod_file;
                             new_paths_r acc  (new_paths @rest_of_paths)
                         else if (is_directory abs_game_file) then
                             let new_paths = Array.fold_left (fun  rest f ->
@@ -78,18 +79,15 @@ let () =
                             else if (Sys.file_exists abs_game_file) then
                                 new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
                             else
-                                raise (File_not_found  ("corrupted game files" ^abs_game_file) )
+                                raise (file_not_found ("corrupted game files" ^abs_game_file) )
                     |[] -> acc
                     )
 
                  
                 in
                 let new_paths = new_paths_r [] paths in
-               let exceptions =  match mod_file with
-                |Some mod_file ->
-                    type_verify symbol_table new_paths lexoutput astoutput mod_file game_home 
-                |None -> 
-                    raise (File_not_found "No mod file provided")
+            
+                let exceptions = type_verify symbol_table new_paths lexoutput astoutput mod_home game_home 
                 in
                 let output = 
                     match out with
@@ -106,7 +104,8 @@ let () =
                         Printf.fprintf output "%s\n" expr_string
                     )
                 )
-                (exceptions))
+                (exceptions)
+                )
             |None -> Printf.printf "Game not recognized\n"
         )
         |((Some mod_home), None) -> 
