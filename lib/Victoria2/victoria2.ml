@@ -16,7 +16,7 @@ let victoria2_mod_file =  symbol_table_init ([
     Literal "name",Catalog ("modname", Value String);
     Literal "path",Catalog ("modpath",Link);
     Literal "dependency",ValueList (Catalog ("dependency",Value String));
-    Literal "replace_path",Catalog ("replace_path", Link);
+    Literal "replace_path",Catalog ("replace_path", Value String);
 ])
 
 let victoria2_symbol_table =  symbol_table_init ([

@@ -21,7 +21,6 @@ let commons = [
       Definition "countries_def",
         SubTable (symbol_table_init [
             (Catalog("country_tag",Value Tag), Link);
-            (Catalog("country_tag",Value Keyword), Link);
         ])
     );
 
@@ -81,7 +80,7 @@ let commons = [
     (
       Definition "religions_def",
         SubTable (symbol_table_init [
-            (Value Keyword, SubTable  (symbol_table_init [
+            (Catalog("religion",Value Keyword), SubTable  (symbol_table_init [
                 Literal "defender_of_faith", Value Bool;
                 Literal "can_form_personal_unions", Value Bool;
                 Literal "center_of_religion", Value PositiveInt;
@@ -130,19 +129,21 @@ let commons = [
                 Literal "category", Value Keyword;
                 Literal "bonus", Type "country_modifiers_def";
                 Literal "trigger", Type "country_conditions_def";
-                Literal "ai_will_do", SubTable (symbol_table_init [
-                    Literal "factor", Number;
-                    Literal "modifier", SubTable (symbol_table_init [
-                        Literal "factor", Number;
-                        (Type "country_conditions_def", Nothing);
-                    ]);
-                ]);
+
+               (Literal ("ai_will_do"),SubTable(symbol_table_init [
+                (Literal("factor"),
+                    Number);
+                (Literal ("modifier"),Inherit([
+                    (Literal ("factor"),Number);
+                ],["country_conditions_def"]));
+                ]));
+
                 Literal "colonial", Value Bool;
-                (Catalog("idea",Value Keyword), SubTable (symbol_table_init [
-                    (Type "country_modifiers_def", Nothing);
+                (Catalog("idea",Value Keyword), Inherit ( [
                     Literal "effect", Type "country_effects_def";
                     Literal "removed_effect", Type "country_effects_def";
-                ]));
+                ],["country_modifiers_def"])
+                );
             ]))
         ])
     );
@@ -173,10 +174,9 @@ let commons = [
                 Literal "province", Type "province_modifiers_def";
                 Literal "chance", SubTable (symbol_table_init [
                     Literal "factor", Number;
-                    Literal "modifier", SubTable (symbol_table_init [
+                    Literal "modifier", Inherit ( [
                         Literal "factor", Number;
-                        (Type "province_conditions_def", Nothing);
-                    ]);
+                     ], ["country_conditions_def"]);
                 ]);
             ]))
         ])
@@ -198,13 +198,13 @@ let commons = [
                 Literal "on_construction_started", Type "province_effects_def";
                 Literal "on_construction_canceled", Type "province_effects_def";
                 Literal "on_obsolete", Type "province_effects_def";
-                Literal "ai_will_do", SubTable (symbol_table_init [
-                    Literal "factor", Number;
-                    Literal "modifier", SubTable (symbol_table_init [
-                        Literal "factor", Number;
-                        (Type "country_conditions_def", Nothing);
-                    ]);
-                ]);
+                (Literal ("ai_will_do"),SubTable(symbol_table_init [
+                (Literal("factor"),
+                    Number);
+                (Literal ("modifier"),Inherit([
+                    (Literal ("factor"),Number);
+                ],["country_conditions_def"]));
+            ]));
             ]))
         ])
     );
@@ -223,13 +223,13 @@ let commons = [
                     Literal "trigger", Type "country_conditions_def";
                     Literal "modifier", Type "country_modifiers_def";
                 ]);
-                Literal "ai_will_do", SubTable (symbol_table_init [
-                    Literal "factor", Number;
-                    Literal "modifier", SubTable (symbol_table_init [
-                        Literal "factor", Number;
-                        (Type "country_conditions_def", Nothing);
-                    ]);
-                ]);
+                (Literal ("ai_will_do"),SubTable(symbol_table_init [
+                    (Literal("factor"),
+                        Number);
+                    (Literal ("modifier"),Inherit([
+                        (Literal ("factor"),Number);
+                    ],["country_conditions_def"]));
+                ]));
             ]))
         ])
     );
@@ -254,13 +254,14 @@ let commons = [
                 Literal "benefits", Type "country_modifiers_def";
                 Literal "modifiers", Type "country_modifiers_def";
                 Literal "allow", Type "country_conditions_def";
-                Literal "ai_will_do", SubTable (symbol_table_init [
-                    Literal "factor", Number;
-                    Literal "modifier", SubTable (symbol_table_init [
-                        Literal "factor", Number;
-                        (Type "country_conditions_def", Nothing);
-                    ]);
-                ]);
+
+                (Literal ("ai_will_do"),SubTable(symbol_table_init [
+                    (Literal("factor"),
+                        Number);
+                    (Literal ("modifier"),Inherit([
+                        (Literal ("factor"),Number);
+                    ],["country_conditions_def"]));
+                ]));
             ]))
         ])
     );
@@ -275,6 +276,30 @@ let commons = [
                 Literal "can_emerge", Type "province_conditions_def";
                 Literal "effect", Type "country_effects_def";
             ]))
+        ])
+    );
+
+    (
+      Definition "graphical_culture_type_def", ValueList (Catalog ("graphic_culture", Value Keyword));
+    );
+
+    (
+      Definition "event_modifiers_def",
+        SubTable (symbol_table_init [
+            (Value Keyword, Inherit ([
+                (Literal "trigger", Type "country_conditions_def");
+                (Literal "icon", TypeOption [Value Keyword; Integer; Value PositiveInt]);
+            ], ["country_modifiers_def"; "province_modifiers_def"]));
+        ])
+    );
+
+    (
+      Definition "triggered_modifiers_def",
+        SubTable (symbol_table_init [
+            (Catalog ("triggered_modifier", Value Keyword), Inherit ([
+                (Literal "trigger", Type "country_conditions_def");
+                (Literal "icon", TypeOption [Value Keyword; Integer; Value PositiveInt]);
+            ], ["country_modifiers_def"]));
         ])
     );
 ]

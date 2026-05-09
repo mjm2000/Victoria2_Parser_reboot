@@ -1,19 +1,8 @@
+let requirements = Hashtbl.create 500
 
-let symbol_table_init symbols =
-    let symbol_list_size = List.length symbols in
-    (* Pre-size with 2x multiplier for better load factor (~50% load) *)
-    let symbol_table = Hashtbl.create (symbol_list_size * 2) in
-    let rec add_symbols symbols = match symbols with 
-        |(TypeDef.Catalog(catagory,symtype),rhs)::tail-> 
-            Hashtbl.add symbol_table symtype (TypeDef.CatalogLeft(catagory,rhs));
-            add_symbols tail
-        |(lh_value, rh_value)::tail ->
-            Hashtbl.add symbol_table lh_value rh_value;
-            add_symbols tail
-        | [] -> ()
-    in
-    add_symbols symbols; 
-    symbol_table
+let def : string option ref = ref None
+
+
 
 let append_table symbol_table symbols = 
     let rec add_symbols symbols = match symbols with 
@@ -24,7 +13,59 @@ let append_table symbol_table symbols =
             add_symbols tail
         | [] -> ()
     in
-    add_symbols symbols;; 
+    add_symbols symbols;;
+
+
+let append_requirements  dependent requirement =
+    (match (Hashtbl.find_opt requirements dependent) with 
+    | None -> 
+            Hashtbl.add requirements dependent [requirement];
+    | Some existing_streams ->
+        Hashtbl.replace requirements dependent (requirement :: existing_streams);
+    )
+      
+
+let ordered_requirements = Hashtbl.create (Hashtbl.length requirements)
+let order_requirements  =
+    Hashtbl.iter (fun k v  -> (
+        v 
+
+
+    ) ) requirements 
+
+
+let symbol_table_init symbols =
+    let symbol_list_size = List.length symbols in
+    (* Pre-size with 2x multiplier for better load factor (~50% load) *)
+    let symbol_table = Hashtbl.create (symbol_list_size * 4) in
+    let rec add_symbols symbols = match symbols with 
+        |((TypeDef.Definition str) as lh_value,rh_value)::tail -> 
+            Hashtbl.add symbol_table lh_value rh_value;
+            def:= (Some str);
+            add_symbols tail; 
+        |(TypeDef.Catalog(catagory,symtype),rhs)::tail-> 
+            Hashtbl.add symbol_table symtype (TypeDef.CatalogLeft(catagory,rhs));
+            (match !def with
+            | Some req ->
+                append_requirements req catagory;
+            | None -> ()
+            );
+
+
+            add_symbols tail 
+        |(lh_value, rh_value)::[] ->
+            Hashtbl.add symbol_table lh_value rh_value;
+            add_symbols []  
+
+        |(lh_value, rh_value)::tail ->
+            Hashtbl.add symbol_table lh_value rh_value;
+            add_symbols tail 
+        | [] -> ()
+    in
+    add_symbols symbols; 
+    symbol_table
+
+ 
     
 
 let combine_table_pair table_take table_give = 

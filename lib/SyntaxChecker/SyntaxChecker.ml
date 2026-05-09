@@ -57,12 +57,13 @@ let get_umbtypes t v = match t with
     |_ -> []
 
 let catalog_type type_label value symbol_table = 
-    
     match (Hashtbl.find_opt symbol_table (Definition(type_label))) with
     |Some TypeOption options->  
         Hashtbl.replace symbol_table (Definition(type_label)) (TypeOption (value::options));
         ()
-    |Some _ -> ()
+    |Some _ -> 
+            raise (Invalid_argument ("Catalog_Type " ^ type_label ^ " already exists in symbol table with non-TypeOption value: " ^ (Output.string_symbol (Hashtbl.find symbol_table (Definition(type_label)))))
+            )
     |None -> 
         Hashtbl.add symbol_table (Definition(type_label)) (TypeOption([value])) ;
 ;;
@@ -318,7 +319,7 @@ let currate_dirrectory replace_paths mod_home game_home og_directory =
     ) [] og_directory
      
 
-let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory lexout astout mod_file game_home=
+let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) directory lexout astout mod_file =
     let aoc = 
        ( match astout with    
         |Some file -> 
@@ -334,6 +335,10 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
     let rec symbol_table_from_rhv rhv = match rhv with
     | (SubTable(sub_table))->
         Some sub_table
+
+    | ValueList(_) as v -> 
+        Some (Hashtbl.create 1 |> fun t -> Hashtbl.add t Nothing v; t)
+
 
     | Inherit(appended_symbols,tables) -> 
         let rhs = List.filter_map (fun x -> Hashtbl.find_opt outer_symbol_table (Definition x) ) tables in
@@ -370,7 +375,12 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
 
 
 let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exception_value list) scope file= 
+    Printf.eprintf "File:%s\n" file;
 
+    if List.length assignments > 0 then
+        Printf.eprintf "First assignment in %s is %s\n" file (Output.string_assignment (List.hd assignments))
+    else
+        Printf.eprintf "No assignments in %s\n" file;
     match assignments with
     |ASSIGNMENT(((LexemValue lh_type),lh_value,assign_cords), LEXEM_LIST(ls))::rest ->
         let expected_rh_type =  left_lex_lookup lh_value lh_type symbol_table outer_symbol_table 
@@ -444,6 +454,9 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             )
 
     |ASSIGNMENT((LexemValue lh_type,lh_value,_), LEXEM((LexemValue rh_type,rh_value,cords) as rh_token))::rest  ->
+            if lh_value = "path" then
+                Printf.eprintf "Path assignment found in %s with value %s\n" file rh_value;
+
      let expected_rh_type = left_lex_lookup lh_value lh_type symbol_table  outer_symbol_table in
      let rec assign_type_check expected_rh_type exceptions =  
         match expected_rh_type with
@@ -471,7 +484,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 assign_type_check rhs exceptions
             |None ->
                 let x,y = cords in
-                let cords_string = Printf.sprintf " at %s:(%d:%d)" file x y in
+                let cords_string = Printf.sprintf " at %s:(%d:%d)" file y x in
                 raise (Invalid_argument ("SubType lookup| Left Hand:" ^ lh_value ^ 
                 "|cords: " ^ cords_string 
                 ^ "| with Subdef "  ^ Output.string_symbol (SubDefinition(lh_value,sub_type)) 
@@ -483,6 +496,23 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
         |Catalog(catalog_lable,Value ev) when ev = rh_type  ->
             catalog_type catalog_lable (Literal rh_value) outer_symbol_table;
             exceptions
+        |Catalog(catalog_lable, Link) when rh_type = String  ->
+            let gh =  match lookup outer_symbol_table (Definition "game_home_def") with
+            |Dir dir -> dir
+            |_-> raise (Invalid_argument ("game_home_def is not a directory in catalog link assignment for " ^ lh_value ^ " with value " ^ rh_value))
+            in
+            let absolute_path = (if Filename.is_relative (rh_value |> remove_quotes) then
+
+                  (Printf.eprintf "Catalog link found in with value %s\n"  rh_value;
+                  Filename.concat gh rh_value |> remove_quotes 
+                  )
+            else
+                 remove_quotes rh_value )
+            in
+            catalog_type catalog_lable (Literal absolute_path) outer_symbol_table;
+            exceptions
+
+
         |Link ->
             let mod_home = lookup outer_symbol_table (Definition "mod_home_def") in
             let game_home = lookup outer_symbol_table (Definition "game_home_def") in 
@@ -591,9 +621,6 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
     |ASSIGNMENT((LexemValue lh_type,lh_value,cords),ASSIGNMENT_LIST(ls))::rest -> 
 
         let expected_rh_type = left_lex_lookup lh_value lh_type symbol_table outer_symbol_table  in
-        if lh_value = "owner" && file = "../test_data/Napoleon/decisions/0_NL_FRA_MAXIMILIEN.txt" then
-            Printf.printf "Owner found in %s\n" (Output.string_symbol_table symbol_table)
-        ;
         
      let assignlist_type_check expected_rh_type ls exceptions= match expected_rh_type with
          | (Inherit(_) as new_scope)  ->
@@ -801,6 +828,10 @@ let mod_assigns = Parser.assignments mod_lexems mod_file in
 let mod_exps =(match mod_file_table with
  |Some (SubTable mod_file_table) -> 
          let x = type_verify_r mod_file_table  mod_assigns [] (RHS([Definition "mod_name"])) mod_file  in 
+         (*
+         let symbol_table_str=  Output.string_symbol_table outer_symbol_table in
+         Printf.printf "Symbol table for mod file %s:\n%s\n" mod_file symbol_table_str; 
+*)
          x
  |None -> 
          raise (Invalid_argument ("mod_file_def not found in outer symbol table for mod file: " ^ mod_file) )
@@ -808,53 +839,116 @@ let mod_exps =(match mod_file_table with
          raise (Invalid_argument ("mod_file_def must be a SubTable in the outer symbol table for mod file: " ^ mod_file) )
   )
 in
-Printf.printf "game home:%s \n" game_home;
-let replace_paths = Hashtbl.find_opt outer_symbol_table (Definition "replace_path")
+let replace_paths = match (Hashtbl.find_opt outer_symbol_table (Definition "replace_path") ) with
+|Some (TypeOption( paths)) -> paths
+|Some v -> raise (Invalid_argument ("replace_path must be a ValueList of ReplacePathList in outer symbol table, found " ^ (Output.string_symbol v) ) )
+|None -> [] 
 in
+(*
 let path = Hashtbl.find_opt outer_symbol_table (Definition "path") in 
+*)
+
+let mod_home = match (Hashtbl.find outer_symbol_table (Definition "mod_home_def")) with 
+    |Dir mod_home -> mod_home
+    |_ -> raise (Invalid_argument "mod_home_def must be a Dir in outer symbol")
+in
+let game_home = match (Hashtbl.find outer_symbol_table (Definition "game_home_def")) with 
+    |Dir game_home -> game_home
+    |_ -> raise (Invalid_argument "game_home_def must be a Dir in outer symbol")
+in
+
 let is_directory x = 
     Sys.file_exists x && Sys.is_directory x
 in
-let rec new_paths_r (acc: string list) path_lists mod_home = 
-                    (match path_lists with
 
-                    |(file,def)::rest_of_paths ->
-                        let abs_mod_file = Filename.concat mod_home file in
 
-                        let abs_game_file = Filename.concat game_home file in
-                    
-                        if (is_directory abs_mod_file) then
-                            let new_paths = Array.fold_left (fun  rest f ->
-                               ((Filename.concat file f),def)::rest 
 
-                            ) [] (Sys.readdir abs_mod_file) in
-                            Printf.eprintf "!!!!!Directory: %s\n" abs_mod_file;
-                            new_paths_r acc  (new_paths @rest_of_paths)
-                        else if (is_directory abs_game_file) then
-                            let new_paths = Array.fold_left (fun  rest f ->
-                               ((Filename.concat file f),def)::rest 
-                            ) [] (Sys.readdir abs_game_file) in
-                            new_paths_r acc  (new_paths @rest_of_paths)
-
-                        else
-                            if (Sys.file_exists abs_mod_file) then
-                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
-                            else if (Sys.file_exists abs_game_file) then
-                                new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
-                            else
-                                raise (File_not_found  ("corrupted game files" ^abs_game_file) )
-                    |[] -> acc
-                    )
+let has_file tuple_list value stem = List.exists (fun (v,_) -> (Filename.concat stem v) = value) tuple_list
 in
 
 
+let rec mod_paths_r acc path_list =
+    (match path_list with
+    |(file,def)::rest_of_paths ->
+        let abs_mod_file = Filename.concat mod_home file in
+             if (is_directory abs_mod_file) then 
+                 if not (has_file  path_list file mod_home) then
+                    mod_paths_r acc rest_of_paths 
+                 else
+                 (let new_paths = Array.fold_left (fun  rest f ->
+                     
+                    ((Filename.concat file f),def)::rest 
+
+                 ) [] (Sys.readdir abs_mod_file) in
+                 mod_paths_r acc  (new_paths @rest_of_paths) 
+                 )
+             else if (Sys.file_exists abs_mod_file) then
+                 (
+                 mod_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
+                 )
+             else
+                 mod_paths_r acc rest_of_paths
+    |[] -> acc
+    )
+in
+
+
+
+
+
+let rec game_paths_r (acc) path_lists  = 
+                    (match path_lists with
+
+                    |(file,def)::rest_of_paths ->
+                        let abs_game_file = Filename.concat game_home file in
+                        (if (false) then(
+                            game_paths_r acc rest_of_paths 
+                        )
+                        else
+                            if (is_directory abs_game_file) && not (List.mem (Literal file) replace_paths)   then
+                                let new_paths = Array.fold_left (fun  rest f ->
+                                    let new_path = (Filename.concat file f) in
+                                     if is_directory new_path then
+                                        rest 
+                                     else if Sys.file_exists (Filename.concat game_home new_path) then
+                                        (new_path,def)::rest 
+                                    else
+                                        raise (File_not_found  ("corrupted game files" ^ (Filename.concat game_home new_path) ) ) 
+                                    
+                                ) [] (Sys.readdir abs_game_file) in
+                                game_paths_r acc  (new_paths @rest_of_paths) 
+
+                            else if (Sys.file_exists abs_game_file) then
+                                    game_paths_r ((abs_game_file,def)::acc) rest_of_paths 
+                            else 
+                                raise (File_not_found  ("corrupted game files" ^abs_game_file) )
+                        )
+                    |[] -> 
+                            acc
+                    )
+in
+let updated_directory =  (game_paths_r [] directory) @ (mod_paths_r [] directory) in 
+
+let mod_file_path = match (Hashtbl.find_opt outer_symbol_table (Definition "modpath")) 
+    with
+    |Some (TypeOption [(Literal path)]) ->  path
+    |Some (TypeOption paths) -> raise (Invalid_argument ("Multiple paths found mod file, expected only one, found: " ^ (String.concat ", " (List.map Output.string_symbol paths)) ) )
+    |Some v -> raise (Invalid_argument ("Symbol Table Curruption, found " ^ (Output.string_symbol v) ) )
+    |None -> raise (Invalid_argument "Path not found in symbol table for mod file")
+in
+
+
+
+if  (Unix.realpath mod_file_path)  <> (Unix.realpath mod_home) then
+    raise (Invalid_argument ("Mod file path in symbol table does not match the provided mod file path: " ^ mod_file_path ^ " vs " ^ mod_home) )
+else
 
 
 (mod_file,mod_exps) :: 
     List.map (function  
     |filepath, (symbol_table_key) ->
 
-
+        
         (*
         print_memory_stats ("After compact: " ^ filepath);
         *)
@@ -924,5 +1018,5 @@ in
         |None -> 
             raise (Invalid_argument ("Symbol table for  path defined " ^ symbol_table_key ^ " not found in " ^ filepath) )
         )
-) directory 
+) updated_directory 
   

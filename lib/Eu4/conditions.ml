@@ -14,7 +14,7 @@ let country_conditions = symbol_table_init [
             Decimal;
         ]));
     ]));
-    
+    (Literal ("has_reform"), Value(Keyword)); 
     (Literal ("has_global_flag"), Value(Keyword));
     (Literal ("has_country_flag"), Value(Keyword));
     (Literal ("has_country_modifier"), Value(Keyword));
@@ -121,7 +121,10 @@ let country_conditions = symbol_table_init [
     (Literal ("owns_core_province"), Integer);
     (Literal ("prestige"), Number);
     (Literal ("primary_culture"), Value(Keyword));
-    (Literal ("religion"), Value(Keyword));
+    (Literal ("religion"), TypeOption([
+        Type "religion";
+        Type "scope";
+    ]));
     (Literal ("religious_unity"), Number);
     (Literal ("republican_tradition"), Number);
     (Literal ("ruler_age"), Integer);
