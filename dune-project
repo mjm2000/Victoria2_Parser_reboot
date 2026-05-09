@@ -19,7 +19,7 @@
  (name ParadoxModErrorChecker)
  (synopsis "A mod checker for Paradox games")
  (description "A mod checker for Paradox games that helps you find and fix errors in your mods.")
- (depends ocaml dune )
+ (depends ocaml dune base-unix)
  (tags
   (topics "to describe" your project)))
 

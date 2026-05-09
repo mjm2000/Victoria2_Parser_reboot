@@ -47,47 +47,11 @@ let () =
         |(Some mod_home), (Some game_home) -> 
             ( match game_symbols game with
             |(Some (paths, symbol_table)) -> 
-
                 Hashtbl.add symbol_table (Definition "mod_home_def") (Dir mod_home);
                 Hashtbl.add symbol_table (Definition "game_home_def") (Dir game_home);
                 Printf.printf "mod_file: %s\n" (match mod_file with Some f -> f | None -> "None");
-                let rec new_paths_r acc path_lists = 
-                    (match path_lists with
-
-                    |(file,def)::rest_of_paths ->
-                        let abs_mod_file = Filename.concat mod_home file in
-                        if print_file then 
-                            Printf.eprintf "Checking File: %s\n" abs_mod_file;
-
-                        let abs_game_file = Filename.concat game_home file in
-                    
-                        if (is_directory abs_mod_file) then
-                            let new_paths = Array.fold_left (fun  rest f ->
-                               ((Filename.concat file f),def)::rest 
-
-                            ) [] (Sys.readdir abs_mod_file) in
-                            new_paths_r acc  (new_paths @rest_of_paths)
-                        else if (is_directory abs_game_file) then
-                            let new_paths = Array.fold_left (fun  rest f ->
-                               ((Filename.concat file f),def)::rest 
-                            ) [] (Sys.readdir abs_game_file) in
-                            new_paths_r acc  (new_paths @rest_of_paths)
-
-                        else
-                            if (Sys.file_exists abs_mod_file) then
-                                new_paths_r ((abs_mod_file,def)::acc) rest_of_paths 
-                            else if (Sys.file_exists abs_game_file) then
-                                new_paths_r ((abs_game_file,def)::acc) rest_of_paths 
-                            else
-                                raise (file_not_found ("corrupted game files" ^abs_game_file) )
-                    |[] -> acc
-                    )
-
-                 
-                in
-                let new_paths = new_paths_r [] paths in
-            
-                let exceptions = type_verify symbol_table new_paths lexoutput astoutput mod_home game_home 
+                let mod_file = match mod_file with Some f -> f | None -> raise (File_not_found "No mod file provided") in 
+                let exceptions = type_verify symbol_table paths lexoutput astoutput  mod_file 
                 in
                 let output = 
                     match out with
