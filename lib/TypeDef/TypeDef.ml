@@ -78,7 +78,7 @@ and symbol_type =
     |Type of string
     |Catalog of string * symbol_type
     |CatalogLeft of string * symbol_type
-    |SubTable of (symbol_type,symbol_type) Hashtbl.t
+    |SubTable of  (symbol_type,symbol_type)  Hashtbl.t Lazy.t
     |Link
     |Inherit of (symbol_type * symbol_type) list * string list
     |Literal of string

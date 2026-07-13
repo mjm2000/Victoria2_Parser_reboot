@@ -53,9 +53,6 @@ let victoria2_paths =
         "common/cultures.txt","culture_groups_def"; 
         "common/graphicalculturetype.txt","graphical_culture_type_def";
         "common/issues.txt","issues_file_def";
-        (*
-        "common/on_actions.txt","on_actions_def"; 
-        *)
         "common/ideologies.txt","ideologies_def";
         "poptypes","pop_file_def";
         "map/continent.txt","continents_def";

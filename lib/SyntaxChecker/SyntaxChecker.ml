@@ -119,7 +119,7 @@ let find_catalog_left lex_type lex_text symbol_table outer_symbol_table =
             catalog_type catalog_lable (Literal lex_text) outer_symbol_table;
             (match  value with
             |SubTable inner_table ->
-                let v = ( Hashtbl.to_seq inner_table |> Seq.find_map (fun (key ,inner_value) -> match key with
+                let v = ( Hashtbl.to_seq (Lazy.force inner_table) |> Seq.find_map (fun (key ,inner_value) -> match key with
                 |InnerCatalog(catalog_lable,v)   when (lex_symbol_eq lex_type lex_text v) -> 
                     Some (catalog_lable,v,inner_value,inner_table)
                 |_ -> None 
@@ -127,9 +127,9 @@ let find_catalog_left lex_type lex_text symbol_table outer_symbol_table =
                 in
                 (match v with
                 |Some (cl,v,inner_value,inner_table) ->
-                    Hashtbl.reset inner_table; 
-                    Hashtbl.add inner_table (InnerCatalog(cl,v)) inner_value;
-                    Hashtbl.add inner_table (SubCatalog(lex_text,cl,v)) inner_value;
+                    Hashtbl.reset (Lazy.force inner_table); 
+                    Hashtbl.add (Lazy.force inner_table) (InnerCatalog(cl,v)) inner_value;
+                    Hashtbl.add (Lazy.force inner_table) (SubCatalog(lex_text,cl,v)) inner_value;
 
                     Some value
                 |None ->
@@ -337,7 +337,7 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
         Some sub_table
 
     | ValueList(_) as v -> 
-        Some (Hashtbl.create 1 |> fun t -> Hashtbl.add t Nothing v; t)
+        Some (lazy(Hashtbl.create 1) |> fun t -> Hashtbl.add (Lazy.force t) Nothing v; t)
 
 
     | Inherit(appended_symbols,tables) -> 
@@ -346,7 +346,7 @@ let type_verify (outer_symbol_table:(symbol_type , symbol_type) Hashtbl.t) direc
 
         let table = combine_table_list symbol_tables in
         append_table table appended_symbols; 
-        Some table
+        Some (lazy table)
     | Type(type_name) ->
         (match ( Hashtbl.find_opt outer_symbol_table (Definition type_name)) with
        |Some rhs ->
@@ -393,7 +393,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             |ValueList(SubTable inner_table),((ASSIGNMENT_LIST(ls)) ::rest) -> 
 
                 let new_scope = SubTable inner_table in
-                let table_exceptions= type_verify_r inner_table ls exceptions (RHS([new_scope])) file
+                let table_exceptions= type_verify_r (Lazy.force inner_table) ls exceptions (RHS([new_scope])) file
                 in
                 assign_type_check expected_rh_type rest table_exceptions
             |ValueList(list_erh_type),(LEXEM(LexemValue rh_type,rh_value,cords)::rest)  -> 
@@ -531,7 +531,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 match symbol_table with
                 |Some symbol_table ->
                     let assigns:(assignment list) = List.rev (Parser.assignments lexems in_mod_file) in
-                    let exceptions = (type_verify_r symbol_table assigns exceptions (RHS([Definition "country_def"]))) in_mod_file 
+                    let exceptions = (type_verify_r (Lazy.force symbol_table) assigns exceptions (RHS([Definition "country_def"]))) in_mod_file 
                     in
                     exceptions
                 |None ->
@@ -542,7 +542,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 let symbol_table = symbol_table_from_rhv (lookup outer_symbol_table (Definition "country_def")) in
                 let assigns:(assignment list) = List.rev (Parser.assignments lexems in_game_file) in
                 match symbol_table with
-                |Some symbol_table ->let exceptions = (type_verify_r symbol_table assigns exceptions (RHS([Definition "country_def"])) in_game_file)
+                |Some symbol_table ->let exceptions = (type_verify_r (Lazy.force symbol_table) assigns exceptions (RHS([Definition "country_def"])) in_game_file)
                 in
                 exceptions
                 |None ->
@@ -583,7 +583,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             in 
             (match handle_switch ls with
             |Some sub_table ->
-                Hashtbl.iter (fun k v -> Hashtbl.add symbol_table k v) sub_table;
+                Hashtbl.iter (fun k v -> Hashtbl.add symbol_table k v) (Lazy.force sub_table);
                 exceptions
             |None ->
                 let e = UNEXPECTED_LEXEM(rh_value,LexemValue rh_type) in
@@ -626,7 +626,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
          | (Inherit(_) as new_scope)  ->
             (match symbol_table_from_rhv new_scope with
             |Some symbol_table -> 
-                type_verify_r symbol_table ls exceptions (RHS([new_scope])) file
+                type_verify_r (Lazy.force symbol_table) ls exceptions (RHS([new_scope])) file
             |None ->
                 raise (Invalid_argument ("Symbol table for Inherit " ^ (Output.string_symbol new_scope) ^ " not found")))
 
@@ -648,7 +648,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
               (match symbol_table_from_rhv v with
               |Some symbol_table -> 
                     
-                    let e = type_verify_r symbol_table ls [] (RHS([v])) file in
+                    let e = type_verify_r (Lazy.force symbol_table) ls [] (RHS([v])) file in
                     (match e with
                     |[] -> None 
                     |_-> 
@@ -678,7 +678,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
             |Some rhs ->
         
             (match symbol_table_from_rhv rhs with 
-            |Some sub_table -> type_verify_r sub_table ls exceptions (RHS([new_scope])) file
+            |Some sub_table -> type_verify_r (Lazy.force sub_table) ls exceptions (RHS([new_scope])) file
             |None -> 
                 raise (Invalid_argument ("Symbol table for  Type" ^ (Output.string_symbol new_scope) ^ " not found")))
             |None ->
@@ -686,7 +686,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
                 )
             )
         |SubTable(inner_table) as new_scope ->
-             type_verify_r inner_table ls [] (RHS([new_scope]))  file
+             type_verify_r (Lazy.force inner_table) ls [] (RHS([new_scope]))  file
             
             
          | (x) -> 
@@ -719,7 +719,7 @@ let rec type_verify_r symbol_table (assignments:assignment list) (exceptions:exc
 
                 (* If the right-hand side is a subtable, then we can use the symbol_table_from_rhv function to get the symbol table for that type *)
                 let new_scope = SubTable inner_table in
-                let table_exceptions= type_verify_r inner_table ls exceptions (RHS([new_scope])) file
+                let table_exceptions= type_verify_r (Lazy.force inner_table) ls exceptions (RHS([new_scope])) file
                 in
                 assign_type_check expected_rh_type rest table_exceptions
             |ValueList(list_erh_type),((LEXEM(LexemValue rh_type,rh_value,cords))::rest)  -> 
@@ -827,7 +827,7 @@ let mod_assigns = Parser.assignments mod_lexems mod_file in
 
 let mod_exps =(match mod_file_table with
  |Some (SubTable mod_file_table) -> 
-         let x = type_verify_r mod_file_table  mod_assigns [] (RHS([Definition "mod_name"])) mod_file  in 
+         let x = type_verify_r (Lazy.force mod_file_table)  mod_assigns [] (RHS([Definition "mod_name"])) mod_file  in 
          (*
          let symbol_table_str=  Output.string_symbol_table outer_symbol_table in
          Printf.printf "Symbol table for mod file %s:\n%s\n" mod_file symbol_table_str; 
@@ -888,7 +888,7 @@ let rec mod_paths_r acc path_list =
                  )
              else
                  mod_paths_r acc rest_of_paths
-    |[] -> acc
+    |[] -> SymbolTable.order_requirements acc
     )
 in
 
@@ -924,14 +924,18 @@ let rec game_paths_r (acc) path_lists  =
                                 raise (File_not_found  ("corrupted game files" ^abs_game_file) )
                         )
                     |[] -> 
-                            acc
+                           SymbolTable.order_requirements acc
                     )
 in
 let updated_directory =  (game_paths_r [] directory) @ (mod_paths_r [] directory) in 
 
+
+(*
 let mod_file_path = match (Hashtbl.find_opt outer_symbol_table (Definition "modpath")) 
     with
-    |Some (TypeOption [(Literal path)]) ->  path
+    |Some (TypeOption [(Literal path)]) ->  
+            Printf.eprintf "Mod file path found in symbol table: %s\n" path;
+            path
     |Some (TypeOption paths) -> raise (Invalid_argument ("Multiple paths found mod file, expected only one, found: " ^ (String.concat ", " (List.map Output.string_symbol paths)) ) )
     |Some v -> raise (Invalid_argument ("Symbol Table Curruption, found " ^ (Output.string_symbol v) ) )
     |None -> raise (Invalid_argument "Path not found in symbol table for mod file")
@@ -942,6 +946,7 @@ in
 if  (Unix.realpath mod_file_path)  <> (Unix.realpath mod_home) then
     raise (Invalid_argument ("Mod file path in symbol table does not match the provided mod file path: " ^ mod_file_path ^ " vs " ^ mod_home) )
 else
+*)
 
 
 (mod_file,mod_exps) :: 
@@ -967,7 +972,7 @@ else
         let table = symbol_table_from_rhv current_context in
         (match table with
         |Some table ->
-            Hashtbl.add table (Definition "pwd") (Dir (Filename.dirname filepath));
+            Hashtbl.add (Lazy.force table) (Definition "pwd") (Dir (Filename.dirname filepath));
             let lexems = Lexer.lexer filepath in
             (match loc with
             |Some oc -> 
@@ -1011,7 +1016,7 @@ else
             
             (match parser_exceptions with
             |[] -> 
-                filepath,parser_exceptions@(type_verify_r table assigns [] (RHS([Type(symbol_table_key)])) filepath)
+                filepath,parser_exceptions@(type_verify_r (Lazy.force table) assigns [] (RHS([Type(symbol_table_key)])) filepath)
             |exp->
                 filepath,exp
             )
