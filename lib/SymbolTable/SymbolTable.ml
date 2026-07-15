@@ -4,10 +4,11 @@ let catalog_locations = Hashtbl.create 500
 let type_locations = Hashtbl.create 500
 
 let def : string option ref = ref None
+let children = ref [] 
 
 
 
-let append_table symbol_table symbols = 
+let append_table symbol_table symbols =
     let rec add_symbols symbols = match symbols with 
         |(lh_value, _)::tail when Hashtbl.mem symbol_table lh_value -> 
             add_symbols tail;
@@ -61,13 +62,15 @@ let make_order ordering =
 let dfs_file = (open_out "dfs_file.txt")
 let depth  = ref 0
 
-
+let catalogs= (open_out "catalogs.txt")
 
 let set_requirements () = 
      Hashtbl.iter (fun def_of_type types -> 
          List.iter (fun type_label ->
+Printf.fprintf catalogs "this %s needs \n" def_of_type ;
             match (Hashtbl.find_opt catalog_locations type_label) with
             | Some def_of_catalog ->
+                Printf.fprintf catalogs "this %s needs %s\n" def_of_type def_of_catalog;
                 append_locations def_of_catalog def_of_type requirements; 
             |None -> failwith (Printf.sprintf "Warning: Type %s was never defined t\n" type_label)
 
@@ -116,51 +119,70 @@ let order_requirements game_path =
 
 
 let symbol_table_init symbols =
-    lazy (
     let symbol_list_size = List.length symbols in
     (* Pre-size with 2x multiplier for better load factor (~50% load) *)
     let symbol_table = Hashtbl.create (symbol_list_size * 4) in
     let rec add_symbols symbols = match symbols with 
-        |((TypeDef.Definition str) as lh_value,rh_value)::tail -> 
+        |((TypeDef.Definition def_str) as lh_value,rh_value)::tail -> 
             Hashtbl.add symbol_table lh_value rh_value;
-            def:= (Some str);
-            Hashtbl.add requirements str [];
+             
+            List.iter (fun child ->
+                match child with
+                | TypeDef.Catalog(catagory,_) ->
+                    Hashtbl.add catalog_locations catagory def_str;
+                    Printf.fprintf catalogs "catalog %s is defined in %s\n"  catagory def_str;
+                | TypeDef.Type type_lable ->
+                    Printf.fprintf catalogs "type %s is in %s\n" type_lable def_str;
+                    append_locations  type_lable def_str type_locations;
+
+                | _ -> failwith (Printf.sprintf "Unexpected child type in definition: %s" (Output.string_symbol child)) 
+
+            ) !children;
+            children := [];
             add_symbols tail; 
-        |(lh_value, ((TypeDef.Type type_lable) as rh_value))::tail -> 
+        |(lh_value, ((TypeDef.Type _) as rh_value))::tail -> 
             Hashtbl.add symbol_table lh_value rh_value;
+            children := rh_value :: !children;
+            (*
             (match !def with
             | Some req ->
                 append_locations req type_lable type_locations;
             | None -> 
-            (*        failwith (Printf.sprintf "Warning: Type %s added without active definition requirement\n" type_lable
-                      *)
-            Printf.eprintf "Warning: Type %s added without active definition requirement\n" type_lable
+                    failwith (Printf.sprintf "Warning: Type %s added without active definition requirement\n" type_lable
+            failwith (Printf.sprintf "Error: Type %s added without active definition requirement\n" type_lable);
+
             );
+            *)
             add_symbols tail
-        |(TypeDef.Catalog(catagory,symtype),rhs)::tail-> 
+        |(TypeDef.Catalog(catagory,symtype)as c,rhs)::tail-> 
             Hashtbl.add symbol_table symtype (TypeDef.CatalogLeft(catagory,rhs));
+            children := c :: !children;
+            (*
             (match !def with
             | Some req ->
-                (if Hashtbl.mem catalog_locations catagory then 
+                (if not (Hashtbl.mem catalog_locations catagory) then 
                     Hashtbl.add catalog_locations catagory req
                  else 
-                    failwith (Printf.sprintf "Error: Catalog %s added without active definition requirement\n" catagory);
+                    failwith (Printf.sprintf "Added catagory twice %s \n" catagory);
+
                 )
             | None -> 
-                Printf.eprintf "Warning: Catalog %s added without active definition requirement\n" catagory;
+                failwith (Printf.sprintf "Error: Catalog %s added without active definition requirement\n" catagory);
 
-                    ()
             );
+            *)
 
             add_symbols tail 
-        |(lh_value,(TypeDef.Catalog(catagory,_) as rh_value))::tail-> 
+        |(lh_value,(TypeDef.Catalog(_,_) as rh_value))::tail-> 
             Hashtbl.add symbol_table lh_value rh_value;
-
+            children := rh_value :: !children;
+            (*
             (match !def with
             | Some req ->
-                append_requirements req catagory;
+                Hashtbl.add catalog_locations catagory req
             | None -> ()
             );
+            *)
 
             add_symbols tail 
         |(lh_value, rh_value)::[] ->
@@ -175,18 +197,17 @@ let symbol_table_init symbols =
     in
     add_symbols symbols; 
     symbol_table
-    )
 
  
     
 
 let combine_table_pair table_take table_give = 
-    Hashtbl.iter (fun key value -> Hashtbl.replace (Lazy.force table_take) key value) table_give ;;
+    Hashtbl.iter (fun key value -> Hashtbl.replace table_take key value) table_give ;;
 
 let combine_table_list tables = 
   (* Estimate size: sum of all table sizes, with 2x multiplier for load factor *)
   let estimated_size = List.fold_left (fun acc t -> acc + Hashtbl.length t) 0 tables in
-  let table = lazy (Hashtbl.create (max 500 (estimated_size * 2))) in
+  let table = Hashtbl.create (max 500 (estimated_size * 2)) in
   List.iter (fun t -> combine_table_pair table t) tables;
   table
 

@@ -619,11 +619,14 @@ let commons = [
     (
       Definition "triggered_modifiers_def",
         SubTable (symbol_table_init [
-            (Catalog("trigger_modifiers", Value Keyword), Inherit ([
+            Catalog("triggered_modifier", Value Keyword), Number; 
+           
+            (*(Catalog("trigger_modifiers", Value Keyword), Inherit ([
                 (Literal "trigger", Type "country_conditions_def");
                 (Literal "icon", Integer);
             ], [ "country_modifiers_def"])
             );
+            *)
         ])
     );
 ]

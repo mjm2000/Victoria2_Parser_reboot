@@ -140,7 +140,7 @@ and string_symbol pv = match pv with
     | SubTable (symbol_table) -> 
         let x = Hashtbl.fold (fun k v acc -> 
             Printf.sprintf "%s\n\t%s:%s" acc (string_symbol k) (string_symbol v)
-        ) (Lazy.force symbol_table) "" in
+        ) symbol_table "" in
         Printf.sprintf "SubTable(%s)" x
     | TypeOption (options) ->
         let x = List.fold_left (fun acc x -> 

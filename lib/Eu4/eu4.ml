@@ -56,7 +56,7 @@ let eu4_symbol_table =
         Definition "eu4_random_tile_file_def", rnw_tile_file;
         Definition "eu4_mission_task_body_def", eu4_mission_task_body;
         Definition "eu4_mission_province_task_body_def", eu4_mission_province_task_body;
-        Definition "mission_group_block_def", mission_group_block;
+        Definition "mission_group_block_def", SubTable mission_group_inner;
         Definition "eu4_mission_file_def", SubTable eu4_mission_file;
         Definition "scope", TypeOption [ Literal "ROOT"; Literal "FROM"; Literal "PREV"; Literal "THIS" ];
         Definition "target", TypeOption [ Type "scope"; Type "country_tag" ];

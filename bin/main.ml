@@ -34,7 +34,7 @@ let () =
             Some (Victoria2.victoria2_paths, Victoria2.victoria2_symbol_table)
     |Some "Eu4" ->
             Printf.eprintf "Eu4 Selected\n";
-            Some (Eu4.eu4_paths, Lazy.force Eu4.eu4_symbol_table)
+            Some (Eu4.eu4_paths, Eu4.eu4_symbol_table)
     |_ -> None
     in
     let doc = "Paradox Mod Checker" in

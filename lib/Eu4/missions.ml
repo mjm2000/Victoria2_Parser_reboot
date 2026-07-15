@@ -72,7 +72,6 @@ let mission_group_inner =
           ] );
     ]
 
-let mission_group_block = SubTable mission_group_inner
 
 let eu4_mission_file =
   symbol_table_init
